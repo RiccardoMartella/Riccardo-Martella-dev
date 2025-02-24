@@ -1,35 +1,20 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: 'bug'
-assignees: ''
+# Welcome to Assembly Station!
+
+## Report a Problem
+
+We greatly appreciate your feedback! If you encounter an issue or have suggestions for improvement, we invite you to report it by creating an **Issue** in this repository.
+
+Follow these simple steps to report a problem:
+
+1. Go to the **Issues** section of this repository: [Issues](https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues)
+2. Click on **New Issue**.
+3. Fill out the form with a detailed description of the issue, including:
+   - The version of **Unity** you are using.
+   - The version of the **Asset** you are using.
+   - A list of steps to reproduce the issue.
+   - Any error messages or Unity logs.
+4. If possible, attach a **screenshot** or **video** showing the issue.
+
+Your feedback is crucial to improving the asset and providing you with a better experience. Thank you so much for your support!
 
 ---
-
-**Describe the bug**  
-A clear and concise description of what the bug is related to in the asset.
-
-**To Reproduce**  
-Steps to reproduce the behavior:
-1. Go to '...' (e.g., "Import the asset into Unity")
-2. Click on '...' (e.g., "Drag the prefab into the scene")
-3. Scroll down to '...' (e.g., "Click the button that triggers the issue")
-4. See error (describe the error or behavior observed)
-
-**Expected behavior**  
-A clear and concise description of what you expected to happen when using the asset (e.g., "The asset should load without errors").
-
-**Unity Version**  
-- The version of **Unity** you're using: [e.g., Unity 2022.1.0f1]
-
-**Asset Version**  
-- The version of the **Asset** you're using: [e.g., Assembly Station v1.2.3]
-
-**Screenshots**  
-If applicable, add screenshots or videos that help explain your issue.
-
-**Desktop (please complete the following information):**
-- OS: [e.g., Windows 10, macOS Catalina]
-- Browser [if applicable]: [e.g., Chrome, Safari]
-- Unity Version: [e.g., Unity 2022.1.0f1]
