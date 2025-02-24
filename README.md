@@ -1,18 +1,20 @@
-# MyUnityAsset
+# Welcome to Assembly Station!
 
-Benvenuto in Assembly Station!
+## Report a Problem
 
-## Segnalare un problema
+We greatly appreciate your feedback! If you encounter an issue or have suggestions for improvement, we invite you to report it by creating an **Issue** in this repository.
 
-Se riscontri un problema con questo asset o hai suggerimenti su come migliorarlo, puoi segnalarlo creando un **Issue** in questa repository. Segui questi passaggi:
+Follow these simple steps to report a problem:
 
-1. Vai alla sezione **Issues** di questo repository: [Issues](https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues)
-2. Clicca su **New Issue**.
-3. Fornisci una descrizione chiara del problema, includendo:
-   - La versione di Unity che stai usando.
-   - La versione del tuo asset.
-   - Un elenco dei passaggi per riprodurre il problema.
-   - Eventuali messaggi di errore o log di Unity.
-4. Se possibile, includi uno screenshot o un video del problema.
+1. Go to the **Issues** section of this repository: [Issues](https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues)
+2. Click on **New Issue**.
+3. Fill out the form with a detailed description of the issue, including:
+   - The version of **Unity** you are using.
+   - The version of the **Asset** you are using.
+   - A list of steps to reproduce the issue.
+   - Any error messages or Unity logs.
+4. If possible, attach a **screenshot** or **video** showing the issue.
 
-Grazie per il tuo feedback!
+Your feedback is crucial to improving the asset and providing you with a better experience. Thank you so much for your support!
+
+---
