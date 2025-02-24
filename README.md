@@ -6,7 +6,7 @@ Benvenuto in Assembly Station!
 
 Se riscontri un problema con questo asset o hai suggerimenti su come migliorarlo, puoi segnalarlo creando un **Issue** in questa repository. Segui questi passaggi:
 
-1. Vai alla sezione **Issues** di questo repository: [Issues](https://github.com/RiccardoMartella/Assembly-Station-Documentation/issue)
+1. Vai alla sezione **Issues** di questo repository: [Issues](https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues)
 2. Clicca su **New Issue**.
 3. Fornisci una descrizione chiara del problema, includendo:
    - La versione di Unity che stai usando.
