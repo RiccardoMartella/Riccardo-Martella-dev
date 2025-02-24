@@ -31,5 +31,4 @@ If applicable, add screenshots or videos that help explain your issue.
 
 **Desktop (please complete the following information):**
 - OS: [e.g., Windows 10, macOS Catalina]
-- Browser [if applicable]: [e.g., Chrome, Safari]
 - Unity Version: [e.g., Unity 2022.1.0f1]
