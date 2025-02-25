@@ -23,14 +23,17 @@
         </a>
     </div>
     <div class="d-flex justify-content-end">
-        <div class="btn btn-success" id="tornaSu" id="tornaSu">            Torna Su
+        <div class="btn btn-success" id="tornaSu" id="tornaSu"> Torna Su
         </div>
     </div>
 
     <div class="container-wrapper mt-0 pt-0">
         <div class="section">
             <h1 class="mb-4">ASSEMBLY STATION</h1>
-            <p class="text-center">Assembly Station è un sistema di crafting e assemblaggio progettato per ottimizzare i processi di produzione. Che tu stia costruendo macchinari complessi, realizzando oggetti unici o migliorando i flussi di lavoro, il mio sistema offre strumenti intuitivi per assemblare componenti in modo efficiente e preciso. Inizia a creare con facilità e precisione!</p>
+            <p class="text-center">Assembly Station è un sistema di crafting e assemblaggio progettato per ottimizzare i
+                processi di produzione. Che tu stia costruendo macchinari complessi, realizzando oggetti unici o
+                migliorando i flussi di lavoro, il mio sistema offre strumenti intuitivi per assemblare componenti in
+                modo efficiente e preciso. Inizia a creare con facilità e precisione!</p>
             <div class=" d-flex justify-content-center">
                 <video controls class="w-75">
                     <source src="./video/introduzione.mp4" type="video/mp4">
@@ -69,10 +72,6 @@
                 <div>
                     <a href="mailto:" class="btn btn-light bg-transparent border-0">
                         <i class="fas fa-envelope fa-3x text-primary"></i>
-                    </a>
-
-                    <a href="e" class="btn btn-light bg-transparent border-0">
-                        <i class="fab fa-instagram fa-3x text-primary"></i>
                     </a>
 
                     <a href="" class="btn btn-light bg-transparent border-0">
@@ -131,6 +130,7 @@
                 <li><a href="#Pulsanti">5 - Pulsanti e Categorie per i Prefab</a></li>
                 <li><a href="#Categorie">6 - Tag/Categorie/Gruppi Pezzi</a></li>
                 <li><a href="#Risorse">7 - Risorse</a></li>
+                <li><a href="#Bug">8 - Possibili Bug</a></li>
             </ul>
         </div>
 
@@ -371,6 +371,26 @@
                 </div>
                 <div>
                     <img src="./image/replaceprefab.png" alt="Creazione del Prefab" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <h3>Camera</h3>
+                    <p>
+                        Una volta in gioco La camera che gira attorno al prefab instanziato avrà come punto di
+                        riferimento l' Orbit Camera Point che verrà sempre aggiunto in automatico con Add Name and
+                        Descriptions To
+                        Prefab.
+                    </p>
+                    <br>
+                    <hr>
+                    <p>
+                        in Editor potrai spostare il punto pivot di ObitalCameraPoint per far si che la camera sia piu
+                        bassa on alta in base alle necessità
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/orbitpoint.png" alt="Prefab posizionato in aria 2" onclick="zoomImage(this)">
                 </div>
             </div>
 
@@ -632,7 +652,11 @@
                         errore, ovviamente non ha senso lasciare una categoria vuota ma ho voluto farti vedere anche
                         questo esempio</p>
                     <hr>
-                    <p>Come vedrai nel video, ho duplicato il pulsante per poi cambiare il testo, questo perchè  ogni pulsante al suo interno ha uno script e un numero assegnato <u>fondamentale</u> per il funzionamento, perciò quando si aggiunge una nuova categoria basta duplicare cambiare il testo e non scordarsi di modificare il numero che andrà in progressione all'aggiunta delle categorie.</p>
+                    <p>Come vedrai nel video, ho duplicato il pulsante per poi cambiare il testo, questo perchè ogni
+                        pulsante al suo interno ha uno script e un numero assegnato <u>fondamentale</u> per il
+                        funzionamento, perciò quando si aggiunge una nuova categoria basta duplicare cambiare il testo e
+                        non scordarsi di modificare il numero che andrà in progressione all'aggiunta delle categorie.
+                    </p>
                 </div>
                 <div>
                     <video controls class="w-100">
@@ -768,7 +792,8 @@
                 <div>
                     <p>
 
-                        Per ritrovare il primo elemento, basta avviare la scena e cercare nella Hierarchy la lista Content Pieces
+                        Per ritrovare il primo elemento, basta avviare la scena e cercare nella Hierarchy la lista
+                        Content Pieces
                         il pezzo che
                         corrisponde al Gruppo e cambiare l'immagine ( <u> Nello SCRIPTABLE OBJECT come visto
                             all'inizio</u>).
@@ -786,26 +811,27 @@
 
             </div>
         </div>
+
         <div class="section">
-            <h2 class="text-uppercase" id="Risorse">7- RISORSE</h2>
+            <h2 class="text-uppercase" id="Risorse">7- RESOURCES</h2>
             <p class="text-center mt-4 mb-4">
-                La Sezione relativa alle risorse è più complessa e richiede conoscenze di programmazione.
-                Per ovvie ragioni non posso sapere quali e come le risorse vengono gestite nel tuo gioco, per questo ne
-                ho aggiunte alcune random.
+                The Resources section is more complex and requires programming knowledge.
+                For obvious reasons, I cannot know which and how the resources are managed in your game, so I have added
+                some random ones.
                 Iron, Plastic, Rubber.
 
-                Di base l'assembly station utilizza un sistema di risorse, in cui ogni pezzo avrà un costo e verrà
-                scalato
-                dall'inventario del player.
+                By default, the assembly station uses a resource system, where each piece has a cost and is deducted
+                from the player's inventory.
             </p>
 
             <div class="content mt-5">
                 <div>
                     <p class="mb-3">
-                        Le Risorse del player si trovano nella cartella
+                        The player's resources are located in the folder
                         <code>Assets > AssemblyStation > ScriptableObject > Resources Player</code>.
-                        questo è assegnato al Player test tramite lo <u>script(ResourcesComponentPLayer) che potete trovare
-                            in <strong>PLayer Test</strong> nella Hierarchy</u>
+                        this is assigned to the test Player through the <u>script(ResourcesComponentPLayer) that you can
+                            find
+                            in <strong>PLayer Test</strong> in the Hierarchy</u>
                     </p>
 
                 </div>
@@ -820,8 +846,8 @@
                 <div>
 
                     <p class="mt-5">
-                        Qui si assegneranno la quantità delle risorse, mentre nello script(PlayerResources) si puo
-                        gestire la logica.
+                        Here you will assign the quantity of resources, while in the script(PlayerResources) you can
+                        manage the logic.
                     </p>
                 </div>
 
@@ -835,14 +861,14 @@
             <div class="content mt-5">
                 <div>
                     <p>
-                        Come visto nel capitolo <a href="#PieceDescriptionR">4</a> questa è la sezione in cui si possono
-                        aggiungere i vari testi immagini etc nel singolo pezzo.
-                        Come si puo vedere ci sono 2 sezioni di cui non abbiamo parlato <u>RESOURCES VISIBLE</u> e
+                        As seen in chapter <a href="#PieceDescriptionR">4</a> this is the section where you can
+                        add the various texts, images, etc. in the single piece.
+                        As you can see, there are 2 sections we haven't talked about <u>RESOURCES VISIBLE</u> and
                         <u>RESOURCES.</u>
 
-                        Qui possono essere inseriti i costi per ogni pezzo e rendere visibile o meno le risorse.
+                        Here you can enter the costs for each piece and make the resources visible or not.
 
-                        esempio:
+                        example:
 
 
                     </p>
@@ -875,14 +901,51 @@
 
                 </div>
             </div>
-            <h4 class="text-center mt-5 text-danger"> ATTENZIONE!!!</h4>
-            <h5 class="text-center mb-3 text-danger "> Per i Pezzi che hanno un Gruppo Vale sempre la stessa regola,
-                viene preso il <a href="#first"><u>1 della lista</u> </a> Quindi le risorse andranno cambiate li.</h5>
+            <h4 class="text-center mt-5 text-danger"> ATTENTION!!!</h4>
+            <h5 class="text-center mb-3 text-danger "> For the pieces that have a Group, the same rule always applies,
+                the <a href="#first"><u>first in the list </u> </a>is taken. So the resources will need to be changed
+                there.</h5>
             <p class="text-center">
-                Nel caso dei pezzi con un Gruppo, ti ricordo che le risorse devono essere cambiate sempre nel
-                primo pezzo del Gruppo, in quanto i dati relativi a immagine, descrizione e costo
-                vengono presi da lì.
+                In the case of pieces with a Group, remember that the resources must always be changed in the
+                first piece of the Group, as the data related to image, description, and cost
+                are taken from there.
             </p>
+
+        </div>
+        <div class="section">
+            <h2 class="text-uppercase" id="Bug">8- POSSIBILI BUG</h2>
+
+
+            <div class="content mt-5">
+                <div>
+
+                    <p class="text-center mt-4 mb-4">
+                        Può succedere che, durante la build di determinati componenti, si verifichi questo tipo di
+                        errore.
+                    </p>
+                </div>
+                <div>
+                    <img class="mb-2" src="./image/bug.png" alt="Assembly Point" onclick="zoomImage(this)">
+                </div>
+            </div>
+            <div class="content mt-5">
+                <div>
+                    <p class="mt-5">
+                        Questo può accadere perché il pezzo potrebbe avere lo stesso nome di un altro già presente nel
+                        gioco. Per risolvere il problema, è sufficiente rinominarlo e assegnargli il relativo Scriptable
+                        Object.
+                    </p>
+                </div>
+
+
+                <div>
+                    <video controls class="w-100">
+                        <source src="./video/bug.mp4" type="video/mp4">
+                        <source src="./video/bug.mp4.webm" type="video/webm">
+                    </video>
+                </div>
+
+            </div>
         </div>
     </div>
     </div>
