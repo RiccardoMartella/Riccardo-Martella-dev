@@ -124,11 +124,13 @@
         </div>
 
         <div class="section" id="guida">
-            <h2>GUIDE:</h2>
+            <h2>GUIDA </h2>
+            <h2>Assembly Station</h2>
             <ul class="list">
+                <li><a href="#Presentazione">- Presentation -</a></li>
                 <li><a href="#installazione">1 - Installation</a></li>
                 <li><a href="#FBX">2 - FBX and Materials Guide</a></li>
-                <li><a href="#Prefab">3 - Instantiate Prefabs</a></li>
+                <li><a href="#Prefab">3 - Place Prefabs</a></li>
                 <li><a href="#Descrizione">4 - Add Descriptions and Images to Prefabs</a></li>
                 <li><a href="#Pulsanti">5 - Buttons and Categories for Prefabs</a></li>
                 <li><a href="#Categorie">6 - Tags/Categories/Groups of Pieces</a></li>
@@ -136,7 +138,103 @@
                 <li><a href="#Bug">8 - Known issue</a></li>
             </ul>
         </div>
-
+        <div class="section" id="Presentazione">
+            <h2 id="installation">PRESENTATION</h2>
+            <p class="text-center mt-4 mb-4">
+                Assembly Station is an assembly system that allows you to easily create in-game models from scratch.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                The process is very simple: the model is divided into pieces, initially made transparent to give the player the idea of assembling the model from scratch, piece by piece.  
+                By using various resources, it will be possible to progress until the assembly is complete.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                There are no limits: any model can be inserted. The more complex it is, the more effective the assembly process will be.  
+                If a model contains only a MeshRenderer or a SkinnedMeshRenderer, using Assembly Station may not make much sense, as it will be displayed as a single piece.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                Once the model is assembled, it will be possible to view, rotate, and zoom in on it to observe it from every angle.  
+                Depending on the context in which you use it, you can decide whether to place it in another part of the game or use it in other ways.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                As you will see in the guide, it is possible to create a copy of the model and insert it into the assembly.  
+                The choice between placing the original or the copy is up to you.
+            </p>
+        
+            <div class="content mt-5">
+                <div>
+                    <h3 class="text-center">UI</h3>
+                    <p>
+                        This is the interface that will be displayed when Assembly Station starts.  
+                        All texts can be modified at your discretion.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/first.png" alt="Example TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content">
+                <div>
+                    <p>
+                        After selecting the category and model, the name and description will appear, with the option to assemble it.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/present.png" alt="Example Input System" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content mt-5">
+                <div>
+                    <p>
+                        Once the button is pressed, the various pieces can be assembled.  
+                        As shown in the image, simply select a piece from the left panel to make it visible.  
+                        The right panel will display the resources required for assembly, along with the piece’s image, description, and the option to proceed with assembly.
+                    </p>
+                    <hr>
+                    <p>
+                        It will also be possible to save the assembled model, piece by piece, simply by pressing the <strong>SAVE BUILD</strong> button.  
+                        Below the SAVE button, the total number of assembled pieces, overall progress, and completion percentage will be displayed.
+                    </p>
+                    <hr>
+                    <p>
+                        The Toggle switch will allow you to make the model even more transparent.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/buildmodel.png" alt="Example TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content mt-5">
+                <div>
+                    <p>
+                        By pressing the L key, you can freely move around to view the model from every angle.  
+                        This function is also available in the model preview.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/freecamera.png" alt="Example TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content mt-5">
+                <div>
+                    <p>
+                        Once all the pieces have been assembled, the <strong>Place</strong> button will appear.  
+                        At this point, you can add logic to place the assembled model or use it in other ways.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/place.png" alt="Example TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <p class="text-center">
+                <strong>Tip: To avoid compromising the user experience by making them assemble hundreds of pieces, check out the <strong>Groups</strong> section in the guide.</strong>
+            </p>
+        </div>
+        
         <div class="section">
             <h2 id="installazione">1. INSTALLATION</h2>
             <p class="text-center text-center mt-4 mb-4">
@@ -245,7 +343,7 @@
         </div>
 
         <div class="section">
-            <h2 id="Prefab">3. INSTANTIATE PREFABS</h2>
+            <h2 id="Prefab">3. PLACE PREFABS</h2>
             <div class="content">
                 <div>
                     <p>
@@ -264,7 +362,7 @@
             <div class="content">
                 <div>
                     <p>
-                        The Assembly Station instantiates the prefab at a specific point called <strong>Assembly
+                        The Assembly Station Place the prefab at a specific point called <strong>Assembly
                             Point</strong>.
                     </p>
                 </div>
@@ -288,7 +386,7 @@
             <div class="content">
                 <div>
                     <p>
-                        When we instantiate the prefab, the pivot point corresponds to the Assembly Point. To ensure
+                        When we Place the prefab, the pivot point corresponds to the Assembly Point. To ensure
                         that the prefab does not float or intersect with the ground, you need to move the parent's
                         pivot. (Starting from the FBX)
                     </p>
@@ -381,7 +479,7 @@
                 <div>
                     <h3>Camera</h3>
                     <p>
-                        Once in game The camera that rotates around the instantiated prefab will have as a reference
+                        Once in game The camera that rotates around the place prefab will have as a reference
                         point the Orbit Camera Point that will always be added automatically with Add Name and
                         Descriptions To
                         Prefab.

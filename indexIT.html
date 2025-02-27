@@ -122,11 +122,13 @@
         </div>
 
         <div class="section" id="guida">
-            <h2>GUIDA:</h2>
+            <h2>GUIDA </h2>
+            <h2>Assembly Station</h2>
             <ul class="list">
+                <li><a href="#Presentazione">- Presentazione -</a></li>
                 <li><a href="#installazione">1 - Installazione</a></li>
                 <li><a href="#FBX">2 - Guida FBX e Materiali</a></li>
-                <li><a href="#Prefab">3 - Instanziare Prefab</a></li>
+                <li><a href="#Prefab">3 - Posizionare Prefab</a></li>
                 <li><a href="#Descrizione">4 - Aggiungere descrizioni e immagini Prefab</a></li>
                 <li><a href="#Pulsanti">5 - Pulsanti e Categorie per i Prefab</a></li>
                 <li><a href="#Categorie">6 - Tag/Categorie/Gruppi Pezzi</a></li>
@@ -134,7 +136,100 @@
                 <li><a href="#Bug">8 - Possibili Bug</a></li>
             </ul>
         </div>
-
+        <div class="section" id="Presentazione">
+            <h2 id="installazione">PRESENTAZIONE</h2>
+            <p class="text-center mt-4 mb-4">
+                Assembly Station è un sistema di assemblaggio che ti permette di creare facilmente, da zero, i modelli presenti nel gioco.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                Il funzionamento è molto semplice: il modello viene suddiviso in pezzi, inizialmente resi trasparenti per dare al giocatore l'idea di poter assemblare il modello da zero, pezzo dopo pezzo. Utilizzando le varie risorse, sarà possibile avanzare fino al completamento dell'assemblaggio.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                Non ci sono limiti: è possibile inserire qualsiasi modello. Più è complesso, più il processo di assemblaggio risulterà efficace.  
+                Se un modello contiene solo un MeshRenderer o uno SkinnedMeshRenderer, non avrà molto senso utilizzare Assembly Station, perché verrà visualizzato come un unico pezzo.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                Una volta assemblato il modello, sarà possibile visualizzarlo, ruotarlo e zoomarlo per osservarlo da ogni angolazione.  
+                Sta a voi, in base al contesto in cui lo utilizzerete, decidere se instanziarlo in un'altra parte del gioco o sfruttarlo in altri modi.
+            </p>
+            <p class="text-center mt-4 mb-4">
+                Come vedrete nella guida, è possibile creare una copia del modello e inserirla nell'assemblaggio.  
+                La scelta tra posizionare l'originale o la copia dipende da voi.
+            </p>
+        
+            <div class="content mt-5">
+                <div>
+                    <h3 class="text-center">UI</h3>
+                    <p>
+                        Questa è l'interfaccia che verrà visualizzata all'avvio di Assembly Station. Tutte i testi possono essere modificate a vostra discrezione.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/first.png" alt="Esempio TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content">
+                <div>
+                    <p>
+                        Dopo aver selezionato la categoria e il modello, verranno mostrati il nome e la descrizione, con la possibilità di assemblarlo.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/present.png" alt="Esempio Input System" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content mt-5">
+                <div>
+                    <p>
+                        Una volta premuto il pulsante, sarà possibile assemblare i vari pezzi. Come mostrato nell'immagine, basterà selezionare un pezzo nel pannello di sinistra per renderlo visibile.  
+                        Sul pannello di destra saranno presenti le risorse necessarie per assemblarlo, insieme all'immagine del pezzo, la sua descrizione e l'opzione per procedere con l'assemblaggio.
+                    </p>
+                    <hr>
+                    <p>
+                        Sarà inoltre possibile salvare il modello assemblato, pezzo dopo pezzo, semplicemente premendo il pulsante <strong>SAVE BUILD</strong>.  
+                        Sotto il pulsante SAVE verranno visualizzati il numero totale di pezzi assemblati, il progresso complessivo e la percentuale di completamento.
+                    </p>
+                    <hr>
+                    <p>
+                        Con l'interruttore Toggle sarà possibile rendere il modello ancora più trasparente.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/buildmodel.png" alt="Esempio TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content mt-5">
+                <div>
+                    <p>
+                        Premendo il tasto L, sarà possibile muoversi liberamente per visualizzare il modello da ogni angolazione.  
+                        Questa funzione è disponibile anche nell'anteprima del modello.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/freecamera.png" alt="Esempio TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <div class="content mt-5">
+                <div>
+                    <p>
+                        Una volta assemblati tutti i pezzi, verrà visualizzato il tasto <strong>Posizionare</strong>.  
+                        A questo punto potrete aggiungere la logica per posizionare il modello assemblato o utilizzarlo in altri modi.
+                    </p>
+                </div>
+                <div>
+                    <img src="./image/place.png" alt="Esempio TextMesh Pro" onclick="zoomImage(this)">
+                </div>
+            </div>
+        
+            <p class="text-center">
+                <strong>Consiglio: Per evitare di compromettere l'esperienza dell'utente facendogli assemblare centinaia di pezzi, consulta la sezione <strong>Gruppi</strong> nella guida.</strong>
+            </p>
+        </div>
+        
         <div class="section">
             <h2 id="installazione">1. INSTALLAZIONE</h2>
             <p class="text-center text-center mt-4 mb-4">
@@ -242,7 +337,7 @@
         </div>
 
         <div class="section">
-            <h2 id="Prefab">3. INSTANZIARE PREFAB</h2>
+            <h2 id="Prefab">3. POSIZIONARE PREFAB</h2>
             <div class="content">
                 <div>
                     <p>
