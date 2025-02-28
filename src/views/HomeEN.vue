@@ -1,7 +1,7 @@
 <template>
   <div>
     <LanguageSelector />
-    <BackToTopButton text="Back to Top" />
+  
     <MobileSidebarToggle />
 
     <div class="container-fluid mt-4">
@@ -37,8 +37,7 @@
 
               <div class="d-flex justify-content-center">
                 <video controls class="w-75">
-                  <source src="./video/introduction.mp4" type="video/mp4">
-                  <source src="./video/introduction.mp4.webm" type="video/webm">
+                  <source src="../assets/video/introduction.mp4" type="video/mp4">
                 </video>
               </div>
             </ContentSection>
@@ -205,7 +204,7 @@
 
 <script>
 import LanguageSelector from '@/components/LanguageSelector.vue'
-import BackToTopButton from '@/components/BackToTopButton.vue'
+
 import ContentSection from '@/components/ContentSection.vue'
 import ImageZoomable from '@/components/ImageZoomable.vue'
 import MobileSidebarToggle from '@/components/MobileSidebarToggle.vue'
@@ -214,7 +213,6 @@ export default {
   name: 'HomeEN',
   components: {
     LanguageSelector,
-    BackToTopButton,
     ContentSection,
     ImageZoomable,
     MobileSidebarToggle
