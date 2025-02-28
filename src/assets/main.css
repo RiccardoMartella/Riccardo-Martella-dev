@@ -1,35 +1,75 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root {
+  --color-white: #FFFFFF;
+  --color-light-gray: #F5F5F5;
+  --color-medium-gray: #E0E0E0;
+  --color-dark-gray: #757575;
+  --color-blu-primario: #00A3FF;
+  --color-blu-scuro: #0082CC;
+  --color-blu-chiaro: #4DBEFF;
+  --color-blu-sfondo: #E6F7FF;
+  --color-text-dark: #333333;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.btn-primary {
+  background-color: var(--color-blu-primario);
+  border-color: var(--color-blu-primario);
+  color: var(--color-white);
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: var(--color-blu-scuro);
+  border-color: var(--color-blu-scuro);
+  color: var(--color-white);
 }
+
+.btn-secondary {
+  background-color: var(--color-white);
+  border-color: var(--color-blu-primario);
+  color: var(--color-blu-primario);
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  background-color: var(--color-blu-sfondo);
+  border-color: var(--color-blu-scuro);
+  color: var(--color-blu-scuro);
+}
+
+.bg-light-custom {
+  background-color: var(--color-light-gray) !important;
+}
+
+.bg-panel {
+  background-color: var(--color-white) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.text-accent {
+  color: var(--color-blu-primario) !important;
+}
+
+.text-dark {
+  color: var(--color-text-dark) !important;
+}
+
+.text-muted {
+  color: var(--color-dark-gray) !important;
+}
+
+.bg-accent-light {
+  background-color: var(--color-blu-sfondo) !important;
+}
+
+.border-accent {
+  border-color: var(--color-blu-primario) !important;
+}
+

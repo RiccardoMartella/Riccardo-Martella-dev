@@ -1,25 +1,43 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
-import HomeHomeEN from './views/HomeEN.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Footer
+  }
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-    
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="app">
+    <Header />
+    <div class="main-content">
+      <RouterView />
     </div>
-  </header>
-
-  <RouterView />
+    <Footer />
+  </div>
 </template>
 
 <style scoped>
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(240, 240, 240);
+}
 
+.main-content {
+  flex: 1;
+  margin-top: 72px; /* Adjust this value to match your header height */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 60px; /* Smaller value for mobile */
+  }
+}
 </style>
