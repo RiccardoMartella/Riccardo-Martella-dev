@@ -1,5 +1,5 @@
 <script>
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
@@ -32,12 +32,12 @@ export default {
 
 .main-content {
   flex: 1;
-  margin-top: 72px; /* Adjust this value to match your header height */
+  margin-top: 72px; 
 }
 
 @media (max-width: 768px) {
   .main-content {
-    margin-top: 60px; /* Smaller value for mobile */
+    margin-top: 60px; 
   }
 }
 </style>
