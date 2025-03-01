@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Contact Us</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4">Contact Me</h1>
             <p class="lead">
                 I'm here to help you! Get in touch with me.
             </p>
@@ -31,11 +31,11 @@
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
-                      <i class="bi bi-discord text-accent"></i>
+                      <i class="bi bi-linkedin text-accent"></i>
                     </div>
                     <div>
-                      <p class="mb-0 fw-bold">Discord</p>
-                      <p class="mb-0">Join our Discord community</p>
+                      <p class="mb-0 fw-bold">LinkedIn</p>
+                      <p class="mb-0">Visit my LinkedIn profile</p>
                     </div>
                   </div>
                   
@@ -45,7 +45,7 @@
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">GitHub</p>
-                      <p class="mb-0">Report issues on our GitHub</p>
+                      <p class="mb-0">Report issues on my GitHub</p>
                     </div>
                   </div>
                 </div>
@@ -73,9 +73,8 @@
           </div>
 
           <div class="text-center mt-5">
-            <h5>Find us on social media</h5>
+            <h5>Find me on social media</h5>
             <div class="d-flex justify-content-center gap-4 mt-3">
-                <div class="d-flex justify-content-center gap-4 mt-3">
                 <a href="#" class="social-icon">
                 <i class="bi bi-github fs-3 text-accent"></i>
               </a>
@@ -85,7 +84,6 @@
               <a href="#" class="social-icon">
                 <i class="bi bi-linkedin fs-3 text-accent"></i>
               </a>
-            </div>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Contattaci</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4">Contattami</h1>
             <p class="lead">
                 Sono qui per aiutarti! Mettiti in contatto con me.
             </p>
@@ -16,7 +16,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                   <h4>Informazioni di contatto</h4>
                   <p class="text-muted mb-4">
-                    Non esitare a contattaemi per qualsiasi domanda, feedback o richiesta di assistenza.
+                    Non esitare a contattarmi per qualsiasi domanda, feedback o richiesta di assistenza.
                   </p>
                   
                   <div class="d-flex align-items-center mb-3">
@@ -35,7 +35,7 @@
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">Linkedin</p>
-                      <p class="mb-0">Unisciti alla nostra community Discord</p>
+                      <p class="mb-0">Visita il mio profilo LinkedIn</p>
                     </div>
                   </div>
                   
@@ -45,7 +45,7 @@
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">GitHub</p>
-                      <p class="mb-0">Segnala problemi sul nostro GitHub</p>
+                      <p class="mb-0">Segnala problemi sul mio GitHub</p>
                     </div>
                   </div>
                 </div>

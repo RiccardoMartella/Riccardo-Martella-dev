@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Report a Bug</h1>
             <p class="lead">
-              Found a bug or issue in Assembly Station? Let us know so we can fix it!
+              Found a bug or issue in Assembly Station? Let me know so I can fix it!
             </p>
           </div>
 
@@ -27,7 +27,7 @@
                   <i class="bi bi-clock-fill"></i>
                 </div>
                 <h4>Response Time</h4>
-                <p>We typically respond to bug reports within 48 hours with a fix or status update.</p>
+                <p>I'm currently the only developer, so I'll do my best to resolve issues as quickly as possible.</p>
               </div>
             </div>
             
@@ -43,6 +43,42 @@
           </div>
 
           <div class="card shadow-sm mb-5">
+            <div class="card-body">
+              <h4>Ways to Report Bugs</h4>
+              <div class="alert alert-info mb-4">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                <strong>Recommended:</strong> Using GitHub allows you to easily track the status of your bug report and follow updates as I work on fixes.
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <div class="d-flex align-items-center">
+                    <div class="bug-report-icon">
+                      <i class="bi bi-github"></i>
+                    </div>
+                    <div>
+                      <h5>GitHub Issues</h5>
+                      <p class="mb-1">Create an issue on my GitHub repository (recommended)</p>
+                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary" target="_blank">Open GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-center">
+                    <div class="bug-report-icon">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <div>
+                      <h5>Email</h5>
+                      <p class="mb-1">Send me an email with details</p>
+                      <a href="mailto:bugs@assemblystation.com" class="btn btn-outline-primary">Email Me</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="mb-4">
                 <div class="d-flex align-items-center mb-3">
@@ -50,7 +86,7 @@
                   <h2>Bug Report Form</h2>
                 </div>
                 <p class="text-muted">
-                  Please provide as much detail as possible to help us identify and resolve the issue quickly.
+                  If you prefer not to use GitHub, you can fill out this form to report an issue directly.
                 </p>
               </div>
               
@@ -116,38 +152,6 @@
             </div>
           </div>
 
-          <div class="card shadow-sm mb-5">
-            <div class="card-body">
-              <h4>Alternative Ways to Report Bugs</h4>
-              <div class="row mt-4">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <div class="d-flex align-items-center">
-                    <div class="bug-report-icon">
-                      <i class="bi bi-github"></i>
-                    </div>
-                    <div>
-                      <h5>GitHub Issues</h5>
-                      <p class="mb-1">Create an issue on our GitHub repository</p>
-                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-sm btn-outline-primary" target="_blank">Open GitHub</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center">
-                    <div class="bug-report-icon">
-                      <i class="bi bi-envelope"></i>
-                    </div>
-                    <div>
-                      <h5>Email</h5>
-                      <p class="mb-1">Send us an email with details</p>
-                      <a href="mailto:bugs@assemblystation.com" class="btn btn-sm btn-outline-primary">Email Us</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -157,7 +161,7 @@
               </h2>
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>After submitting a bug report, our team will review the issue and respond within 48 hours. We'll provide updates on the status of the fix and may request additional information if needed. Once fixed, you'll receive a notification and the fix will be included in the next update.</p>
+                  <p>After submitting a bug report, I will review the issue and respond as soon as possible. I'll provide updates on the status of the fix and may request additional information if needed. Once fixed, you'll receive a notification and the fix will be included in the next update.</p>
                 </div>
               </div>
             </div>
@@ -170,7 +174,7 @@
               </h2>
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>You can check the status of your report by logging into our support portal with the email you provided in the report. Alternatively, if you reported via GitHub, you can track the issue there. We also send email updates when there's progress on your reported issue.</p>
+                  <p>You can check the status of your report through the email you provided in the report. If you reported via GitHub, you can track the issue there. I also send email updates when there's progress on your reported issue.</p>
                 </div>
               </div>
             </div>

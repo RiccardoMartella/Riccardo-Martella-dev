@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Segnala un Bug</h1>
             <p class="lead">
-              Hai trovato un bug o un problema in Assembly Station? Faccelo sapere così possiamo risolverlo!
+              Hai trovato un bug o un problema in Assembly Station? Fammelo sapere così posso risolverlo!
             </p>
           </div>
 
@@ -27,7 +27,7 @@
                   <i class="bi bi-clock-fill"></i>
                 </div>
                 <h4>Tempo di Risposta</h4>
-                <p>Tipicamente rispondiamo alle segnalazioni entro 48 ore con una soluzione o un aggiornamento sullo stato.</p>
+                <p>Al momento sono l'unico sviluppatore, quindi farò del mio meglio per risolvere i problemi il prima possibile.</p>
               </div>
             </div>
             
@@ -43,6 +43,42 @@
           </div>
 
           <div class="card shadow-sm mb-5">
+            <div class="card-body">
+              <h4>Modi per Segnalare Bug</h4>
+              <div class="alert alert-info mb-4">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                <strong>Consigliato:</strong> Utilizzando GitHub potrai tenere traccia dello stato della tua segnalazione e seguire gli aggiornamenti mentre lavoro alle correzioni.
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <div class="d-flex align-items-center">
+                    <div class="bug-report-icon">
+                      <i class="bi bi-github"></i>
+                    </div>
+                    <div>
+                      <h5>GitHub Issues</h5>
+                      <p class="mb-1">Crea una issue sul mio repository GitHub (consigliato)</p>
+                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary" target="_blank">Apri GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-center">
+                    <div class="bug-report-icon">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <div>
+                      <h5>Email</h5>
+                      <p class="mb-1">Inviami una email con i dettagli</p>
+                      <a href="mailto:bugs@assemblystation.com" class="btn btn-outline-primary">Scrivi Email</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="mb-4">
                 <div class="d-flex align-items-center mb-3">
@@ -50,7 +86,7 @@
                   <h2>Modulo di Segnalazione Bug</h2>
                 </div>
                 <p class="text-muted">
-                  Fornisci quanti più dettagli possibili per aiutarci a identificare e risolvere rapidamente il problema.
+                  Se preferisci non utilizzare GitHub, puoi compilare questo modulo per segnalare un problema direttamente.
                 </p>
               </div>
               
@@ -116,38 +152,6 @@
             </div>
           </div>
 
-          <div class="card shadow-sm mb-5">
-            <div class="card-body">
-              <h4>Altri Modi per Segnalare Bug</h4>
-              <div class="row mt-4">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <div class="d-flex align-items-center">
-                    <div class="bug-report-icon">
-                      <i class="bi bi-github"></i>
-                    </div>
-                    <div>
-                      <h5>GitHub Issues</h5>
-                      <p class="mb-1">Crea una issue sul nostro repository GitHub</p>
-                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-sm btn-outline-primary" target="_blank">Apri GitHub</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center">
-                    <div class="bug-report-icon">
-                      <i class="bi bi-envelope"></i>
-                    </div>
-                    <div>
-                      <h5>Email</h5>
-                      <p class="mb-1">Inviaci una email con i dettagli</p>
-                      <a href="mailto:bugs@assemblystation.com" class="btn btn-sm btn-outline-primary">Scrivi Email</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -157,7 +161,7 @@
               </h2>
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>Dopo aver inviato una segnalazione, il nostro team esaminerà il problema e risponderà entro 48 ore. Forniremo aggiornamenti sullo stato della soluzione e potremmo richiedere ulteriori informazioni se necessario. Una volta risolto, riceverai una notifica e la correzione sarà inclusa nel prossimo aggiornamento.</p>
+                  <p>Dopo aver inviato una segnalazione, esaminerò il problema e risponderò appena possibile. Ti fornirò aggiornamenti sullo stato della soluzione e potrei richiedere ulteriori informazioni se necessario. Una volta risolto, riceverai una notifica e la correzione sarà inclusa nel prossimo aggiornamento.</p>
                 </div>
               </div>
             </div>
@@ -170,7 +174,7 @@
               </h2>
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>Puoi controllare lo stato della tua segnalazione accedendo al nostro portale di supporto con l'email che hai fornito nella segnalazione. In alternativa, se hai segnalato tramite GitHub, puoi seguire l'issue lì. Inviamo anche aggiornamenti via email quando c'è un progresso sul problema segnalato.</p>
+                  <p>Puoi controllare lo stato della tua segnalazione tramite l'email che hai fornito nella segnalazione. Se hai segnalato il problema tramite GitHub, puoi seguire l'issue direttamente lì. Invierò aggiornamenti via email quando ci saranno progressi sul problema segnalato.</p>
                 </div>
               </div>
             </div>
