@@ -83,7 +83,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1>
+            <!-- <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1> -->
             <p class="lead">
               Benvenuto nella documentazione ufficiale di Assembly Station, uno strumento completo per Unity che semplifica i meccanismi di assemblaggio e produzione nei tuoi giochi.
             </p>
@@ -267,7 +267,6 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
-/* Enhanced Logo Effects */
 .logo-spinner {
   position: absolute;
   top: 50%;

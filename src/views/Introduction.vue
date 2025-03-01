@@ -83,7 +83,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1>
+            <!-- <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1> -->
             <p class="lead">
               Welcome to the official documentation for Assembly Station, a comprehensive tool for Unity that streamlines assembly and crafting mechanics in your games.
             </p>
