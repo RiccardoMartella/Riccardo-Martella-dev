@@ -1,5 +1,5 @@
 <template>
-  <div class="content-section-wrapper">
+  <div class="content-section">
     <slot></slot>
   </div>
 </template>
@@ -11,11 +11,11 @@ export default {
 </script>
 
 <style scoped>
-.content-section-wrapper {
-  background-color: white;
+.content-section {
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  margin-bottom: 30px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
 }
 </style>

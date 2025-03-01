@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Report a Bug</h1>
             <p class="lead">
-              Found a bug or issue in Assembly Station? Let me know so I can fix it!
+                Have you found a bug or have a proposal to improve Assembly Station? Let me know so I can fix it!
             </p>
           </div>
 
