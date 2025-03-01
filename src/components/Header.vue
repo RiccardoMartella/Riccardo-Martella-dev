@@ -104,7 +104,7 @@ export default {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #00A3FF;
   transition: all 0.3s ease;
@@ -145,7 +145,7 @@ export default {
 }
 
 .header-logo {
-  height: 50px;
+  height: 45px;
   width: auto;
   transition: all 0.3s ease;
 }

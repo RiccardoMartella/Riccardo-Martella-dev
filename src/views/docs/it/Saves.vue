@@ -16,7 +16,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/save.png" 
+              src="/images/save.png" 
               alt="Pulsante Salva"
               caption="Pulsante per salvare il modello" 
               class="standard-image"

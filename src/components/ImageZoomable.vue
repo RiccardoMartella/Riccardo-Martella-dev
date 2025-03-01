@@ -1,7 +1,7 @@
 <template>
   <div class="image-container">
     <div class="image-wrapper" @click="openZoom">
-      <img :src="src" :alt="alt || 'Documentation image'" class="zoomable-image" />
+      <img :src="imagePath" :alt="alt || 'Documentation image'" class="zoomable-image" />
       <div class="zoom-indicator">
         <i class="bi bi-zoom-in"></i>
       </div>
@@ -13,7 +13,7 @@
         <button class="close-btn" @click.stop="closeZoom" aria-label="Close image">
           <i class="bi bi-x-lg"></i>
         </button>
-        <img :src="src" :alt="alt || 'Documentation image'" class="modal-image" />
+        <img :src="imagePath" :alt="alt || 'Documentation image'" class="modal-image" />
         <p v-if="caption || alt" class="modal-caption">{{ caption || alt }}</p>
       </div>
     </div>
@@ -44,6 +44,18 @@ export default {
   data() {
     return {
       isZoomed: false
+    }
+  },
+  computed: {
+    // This helps resolve image paths properly
+    imagePath() {
+      // If the path already includes import.meta, return as is
+      if (this.src.startsWith('/') && !this.src.startsWith('/src/')) {
+        return this.src;
+      }
+      
+      // Otherwise transform paths that start with /src/
+      return this.src.replace('/src/', '/');
     }
   },
   methods: {
