@@ -22,7 +22,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/resources.png" 
+              src="/images/resources.png" 
               alt="Percorso Resources"
               caption="Cartella Resources per i materiali"
             />
@@ -43,12 +43,12 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/Fbx2.png" 
+                src="/images/Fbx2.png" 
                 alt="Esempio Fbx2"
                 caption="Primo passaggio estrazione materiali"
               />
               <ImageZoomable 
-                src="/src/assets/images/Fbx3.png" 
+                src="/images/Fbx3.png" 
                 alt="Esempio Fbx3"
                 caption="Selezione cartella Resources"
               />
@@ -74,7 +74,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/FBX.png" 
+              src="/images/FBX.png" 
               alt="Esempio FBX"
               caption="Configurazione delle opzioni FBX"
             />

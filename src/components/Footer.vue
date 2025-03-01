@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-3 mb-4 mb-md-0">
             <div class="d-flex align-items-center mb-2">
-              <img src="/src/assets/logo.png" alt="Assembly Station Logo" class="footer-logo me-2">
+              <img src="/images/logo.png" alt="Assembly Station Logo" class="footer-logo me-2">
               <h5 class="mb-0 text-white">Assembly Station</h5>
             </div>
             <p class="text-white">Your comprehensive solution for assembly line documentation and management.</p>

@@ -31,7 +31,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/ResourcesPlayer.png" 
+              src="/images/ResourcesPlayer.png" 
               alt="Resources Player"
               caption="Configurazione delle risorse del giocatore" 
             />
@@ -52,7 +52,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/scriptresources.png" 
+              src="/images/scriptresources.png" 
               alt="Script Resources"
               caption="Script per la gestione delle risorse" 
             />
@@ -83,14 +83,14 @@
               <div class="image-row">
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/pieceResources.png" 
+                    src="/images/pieceResources.png" 
                     alt="Piece Resources"
                     caption="Configurazione risorse del pezzo" 
                   />
                 </div>
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/cost.png" 
+                    src="/images/cost.png" 
                     alt="Cost"
                     caption="Visualizzazione dei costi nel gioco" 
                   />
@@ -99,14 +99,14 @@
               <div class="image-row mt-4">
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/hidden.png" 
+                    src="/images/hidden.png" 
                     alt="Hidden"
                     caption="Configurazione con risorse nascoste" 
                   />
                 </div>
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/hiddengame.png" 
+                    src="/images/hiddengame.png" 
                     alt="Hidden Game"
                     caption="Visualizzazione in gioco senza mostare le risorse" 
                   />

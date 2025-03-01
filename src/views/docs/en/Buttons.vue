@@ -5,7 +5,7 @@
       
       <div class="hero-section">
         <ImageZoomable 
-          src="/src/assets/images/buttonimmage.png" 
+          src="/images/buttonimmage.png" 
           style="max-width: 400px;" 
           alt="Button Image"
           caption="Example of category buttons in the interface" 
@@ -29,7 +29,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/contentUi.png" 
+              src="/images/contentUi.png" 
               alt="Content UI"
               caption="Selecting Content UI in the Hierarchy" 
             />
@@ -56,7 +56,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/categoryprefab.png" 
+              src="/images/categoryprefab.png" 
               alt="Category Prefab"
               caption="Configuring the categories for prefabs in the inspector" 
             />
@@ -162,7 +162,7 @@
             <div class="comparison-item">
               <h5>Active Category</h5>
               <ImageZoomable 
-                src="/src/assets/images/active.png" 
+                src="/images/active.png" 
                 alt="Active"
                 caption="Correctly active category" 
               />
@@ -171,7 +171,7 @@
             <div class="comparison-item">
               <h5>Disabled Category</h5>
               <ImageZoomable 
-                src="/src/assets/images/noactive.png" 
+                src="/images/noactive.png" 
                 alt="Not Active" 
                 caption="Correctly disabled category" 
               />

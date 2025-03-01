@@ -5,7 +5,7 @@
       
       <div class="hero-section">
         <ImageZoomable 
-          src="/src/assets/images/buttonimmage.png" 
+          src="/images/buttonimmage.png" 
           style="max-width: 400px;" 
           alt="Immagine Pulsante"
           caption="Esempio di pulsanti di categoria nell'interfaccia" 
@@ -29,7 +29,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/contentUi.png" 
+              src="/images/contentUi.png" 
               alt="Content UI"
               caption="Selezione di Content UI nella Hierarchy" 
             />
@@ -56,7 +56,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/categoryprefab.png" 
+              src="/images/categoryprefab.png" 
               alt="Categoria Prefab"
               caption="Configurazione delle categorie per i prefab nell'inspector" 
             />
@@ -162,7 +162,7 @@
             <div class="comparison-item">
               <h5>Categoria Attiva</h5>
               <ImageZoomable 
-                src="/src/assets/images/active.png" 
+                src="/images/active.png" 
                 alt="Attivo"
                 caption="Categoria correttamente attiva" 
               />
@@ -171,7 +171,7 @@
             <div class="comparison-item">
               <h5>Categoria Disattivata</h5>
               <ImageZoomable 
-                src="/src/assets/images/noactive.png" 
+                src="/images/noactive.png" 
                 alt="Non Attivo" 
                 caption="Categoria correttamente disattivata" 
               />

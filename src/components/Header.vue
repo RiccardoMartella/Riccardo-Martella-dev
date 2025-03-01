@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar" :class="{'scrolled': isScrolled}">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="/src/assets/logo.png" alt="Assembly Station Logo" class="header-logo me-2">
+          <img src="/images/logo.png" alt="Assembly Station Logo" class="header-logo me-2">
           Assembly Station
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 

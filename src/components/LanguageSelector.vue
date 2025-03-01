@@ -1,11 +1,11 @@
 <template>
   <div class="language-selector">
     <a @click.prevent="switchLanguage('it')" class="lang-link" :class="{ active: currentLang === 'it' }">
-      <img src="/src/assets/images/Ita.png" class="img-flag" alt="Italia">
+      <img src="/public/images/Ita.png" class="img-flag" alt="Italia">
       <span>IT</span>
     </a>
     <a @click.prevent="switchLanguage('en')" class="lang-link" :class="{ active: currentLang === 'en' }">
-      <img src="/src/assets/images/en.png" class="img-flag" alt="English">
+      <img src="/public/images/en.png" class="img-flag" alt="English">
       <span>EN</span>
     </a>
   </div>
@@ -34,28 +34,28 @@ export default {
     switchLanguage(lang) {
       if (lang === this.currentLang) return;
       
-      // Get current route
+  
       const currentPath = this.$route.path;
       
-      // More precise path matching to ensure we stay on the same page type
+     
       if (currentPath === '/' || currentPath === '/it') {
-        // Introduction page
+      
         this.$router.push(lang === 'en' ? '/' : '/it');
       } else if (currentPath === '/homeEn' || currentPath === '/it/documentation') {
-        // Documentation page
+       
         this.$router.push(lang === 'en' ? '/homeEn' : '/it/documentation');
       } else if (currentPath === '/contacts' || currentPath === '/it/contacts') {
-        // Contacts page
+        
         this.$router.push(lang === 'en' ? '/contacts' : '/it/contacts');
       } else if (currentPath.includes('/report-bug') || currentPath.includes('/it/report-bug')) {
-        // Report Bug page - using includes() for more reliable matching
+    
         this.$router.push(lang === 'en' ? '/report-bug' : '/it/report-bug');
       } else if (currentPath.includes('/docs/') || currentPath.includes('/it/docs/')) {
-        // Documentation pages
+     
         const docPath = currentPath.split('/').pop();
         this.$router.push(lang === 'en' ? `/docs/${docPath}` : `/it/docs/${docPath}`);
       } else {
-        // Default fallback
+       
         this.$router.push(lang === 'en' ? '/' : '/it');
       }
     }

@@ -4,6 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
+            <img src="/images/logo.png" alt="Assembly Station Logo" class="intro-logo mb-4" />
             <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1>
             <p class="lead">
               Welcome to the official documentation for Assembly Station, a comprehensive tool for Unity that streamlines assembly and crafting mechanics in your games.
@@ -13,7 +14,7 @@
           <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-4">
-                <i class="bi bi-tools fs-1 text-accent me-3"></i>
+                <img src="/images/logo.png" alt="Assembly Station Logo" class="me-3" style="height: 40px; width: auto;" />
                 <h2>About Assembly Station</h2>
               </div>
               <p>Assembly Station is a crafting and assembly system designed to optimize production processes in Unity projects. Whether you are building complex machinery, creating unique items, or improving workflows, Assembly Station offers intuitive tools to assemble components efficiently and precisely.</p>
@@ -83,5 +84,11 @@ export default {
 .hover-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.intro-logo {
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 30px;
 }
 </style>

@@ -22,7 +22,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/resources.png" 
+              src="/images/resources.png" 
               alt="Resources Path"
               caption="Resources folder for materials"
               class="standard-image"
@@ -48,13 +48,13 @@
           <div class="content-media">
             <div class="image-stack">
               <ImageZoomable 
-                src="/src/assets/images/Fbx2.png" 
+                src="/images/Fbx2.png" 
                 alt="Example Fbx2"
                 caption="First step of material extraction"
                 class="standard-image"
               />
               <ImageZoomable 
-                src="/src/assets/images/Fbx3.png" 
+                src="/images/Fbx3.png" 
                 alt="Example Fbx3"
                 caption="Selecting the Resources folder"
                 class="standard-image mt-3"
@@ -79,7 +79,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/FBX.png" 
+              src="/images/FBX.png" 
               alt="Example FBX"
               caption="FBX options configuration"
               class="standard-image"

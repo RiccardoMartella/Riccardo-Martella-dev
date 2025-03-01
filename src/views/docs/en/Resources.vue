@@ -31,7 +31,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/ResourcesPlayer.png" 
+              src="/images/ResourcesPlayer.png" 
               alt="Resources Player"
               caption="Player resources configuration" 
             />
@@ -52,7 +52,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/scriptresources.png" 
+              src="/images/scriptresources.png" 
               alt="Script Resources"
               caption="Script for resource management" 
             />
@@ -83,14 +83,14 @@
               <div class="image-row">
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/pieceResources.png" 
+                    src="/images/pieceResources.png" 
                     alt="Piece Resources"
                     caption="Piece resources configuration" 
                   />
                 </div>
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/cost.png" 
+                    src="/images/cost.png" 
                     alt="Cost"
                     caption="Cost display in game" 
                   />
@@ -99,14 +99,14 @@
               <div class="image-row mt-4">
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/hidden.png" 
+                    src="/images/hidden.png" 
                     alt="Hidden"
                     caption="Configuration with hidden resources" 
                   />
                 </div>
                 <div class="image-card">
                   <ImageZoomable 
-                    src="/src/assets/images/hiddengame.png" 
+                    src="/images/hiddengame.png" 
                     alt="Hidden Game"
                     caption="In-game display without showing resources" 
                   />

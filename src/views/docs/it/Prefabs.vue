@@ -19,7 +19,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/pivot3.png" 
+              src="/images/pivot3.png" 
               alt="Assembly Point"
               caption="Punto di assemblaggio"
             />
@@ -39,7 +39,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/pivot2.png" 
+              src="/images/pivot2.png" 
               alt="Parent Pivot"
               caption="Pivot del genitore"
             />
@@ -59,7 +59,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/pivot.png" 
+              src="/images/pivot.png" 
               alt="Spostamento del Pivot"
               caption="Regolazione della posizione del pivot"
             />
@@ -79,7 +79,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/unpack.png" 
+              src="/images/unpack.png" 
               alt="Unpack Completely"
               caption="Operazione di Unpack Completely"
             />
@@ -109,12 +109,12 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/prefabguide2.png" 
+                src="/images/prefabguide2.png" 
                 alt="Spostamento fuori dal genitore" 
                 caption="Spostamento degli oggetti figli fuori dal genitore"
               />
               <ImageZoomable 
-                src="/src/assets/images/prefabguide.png" 
+                src="/images/prefabguide.png" 
                 alt="Creazione del Prefab"
                 caption="Regolazione finale del pivot"
               />
@@ -135,7 +135,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/lowpivot.png" 
+              src="/images/lowpivot.png" 
               alt="Prefab allineato in basso"
               caption="Prefab allineato con il terreno"
             />
@@ -155,7 +155,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/ak.png" 
+              src="/images/ak.png" 
               alt="Prefab posizionato in aria"
               caption="Prefab sospeso in aria"
             />
@@ -172,7 +172,7 @@
               Una volta fatto, seleziona tutti i figli e rimettili all'interno del genitore come prima. Quindi, trascina il genitore nella cartella (Prefab clone) e un Prefab verrà creato automaticamente.
             </p>
             <ImageZoomable 
-              src="/src/assets/images/prefabimg.png" 
+              src="/images/prefabimg.png" 
               alt="Immagine prefab" 
               class="img-fit-content" 
               caption="Aspetto del prefab finale"
@@ -181,7 +181,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/replaceprefab.png" 
+              src="/images/replaceprefab.png" 
               alt="Creazione del Prefab"
               caption="Processo di creazione del prefab"
             />
@@ -204,7 +204,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/orbitpoint.png" 
+              src="/images/orbitpoint.png" 
               alt="Orbital Camera Point"
               caption="Punto di riferimento per la camera orbitale"
             />

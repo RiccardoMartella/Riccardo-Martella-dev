@@ -16,7 +16,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/save.png" 
+              src="/images/save.png" 
               alt="Save Button"
               caption="Button for saving model progress"
               class="standard-image"
@@ -50,7 +50,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/savej.png" 
+              src="/images/savej.png" 
               alt="Save JSON Files"
               caption="JSON save files location and format"
               class="standard-image"
@@ -79,7 +79,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/save.png" 
+              src="/images/save.png" 
               alt="Save Button Example"
               caption="The save button records the current state of assembly"
               class="standard-image"

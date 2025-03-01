@@ -15,7 +15,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/bug.png" 
+              src="/images/bug.png" 
               alt="Error Message"
               caption="Example of an error message" 
               class="standard-image"

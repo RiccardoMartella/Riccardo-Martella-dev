@@ -19,7 +19,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/nocategory.png" 
+              src="/images/nocategory.png" 
               alt="No Category"
               caption="Displaying pieces without categories" 
             />
@@ -40,7 +40,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/Tag.png" 
+              src="/images/Tag.png" 
               alt="Tag"
               caption="Assigning tags to pieces" 
             />
@@ -60,7 +60,7 @@
           
           <div class="content-media centered">
             <ImageZoomable 
-              src="/src/assets/images/multicat.png" 
+              src="/images/multicat.png" 
               alt="Multiple Categories" 
               style="max-width: 350px;"
               caption="Visualizing pieces divided by categories" 
@@ -96,7 +96,7 @@
               In this case, the pieces do not have an assigned group and will therefore be displayed as 6 separate buttons.
             </p>
             <ImageZoomable 
-              src="/src/assets/images/testgruppi.png" 
+              src="/images/testgruppi.png" 
               alt="Test Groups"
               caption="Displaying pieces without grouping" 
             />
@@ -111,7 +111,7 @@
               <u>Any number of pieces can be combined into a group.</u>
             </p>
             <ImageZoomable 
-              src="/src/assets/images/fix.png" 
+              src="/images/fix.png" 
               alt="Fix"
               caption="Displaying grouped pieces" 
             />
@@ -157,7 +157,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/piceGroupFix.png" 
+              src="/images/piceGroupFix.png" 
               alt="Piece Group Fix"
               caption="Resource configuration in the first piece of the group" 
             />

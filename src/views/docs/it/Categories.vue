@@ -19,7 +19,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/nocategory.png" 
+              src="/images/nocategory.png" 
               alt="Nessuna Categoria"
               caption="Visualizzazione dei pezzi senza categorie" 
             />
@@ -40,7 +40,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/Tag.png" 
+              src="/images/Tag.png" 
               alt="Tag"
               caption="Assegnazione di tag ai pezzi" 
             />
@@ -60,7 +60,7 @@
           
           <div class="content-media centered">
             <ImageZoomable 
-              src="/src/assets/images/multicat.png" 
+              src="/images/multicat.png" 
               alt="Categorie Multiple" 
               style="max-width: 350px;"
               caption="Visualizzazione di pezzi divisi per categorie" 
@@ -96,7 +96,7 @@
               In questo caso, i pezzi non hanno un gruppo assegnato e saranno quindi visualizzati in 6 pulsanti separati.
             </p>
             <ImageZoomable 
-              src="/src/assets/images/testgruppi.png" 
+              src="/images/testgruppi.png" 
               alt="Gruppi di test"
               caption="Visualizzazione di pezzi senza raggruppamento" 
             />
@@ -111,7 +111,7 @@
               <u>Qualsiasi numero di pezzi può essere combinato in un gruppo.</u>
             </p>
             <ImageZoomable 
-              src="/src/assets/images/fix.png" 
+              src="/images/fix.png" 
               alt="Correzione"
               caption="Visualizzazione di pezzi raggruppati" 
             />
@@ -157,7 +157,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/piceGroupFix.png" 
+              src="/images/piceGroupFix.png" 
               alt="Correzione Gruppo Pezzi"
               caption="Configurazione delle risorse nel primo pezzo del gruppo" 
             />

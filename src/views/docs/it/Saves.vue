@@ -50,7 +50,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/savej.png" 
+              src="/images/savej.png" 
               alt="File di salvataggio JSON"
               caption="File JSON di salvataggio" 
               class="standard-image"
@@ -79,7 +79,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/save.png" 
+              src="/images/save.png" 
               alt="Esempio pulsante Salva"
               caption="Il pulsante di salvataggio registra lo stato attuale dell'assemblaggio" 
               class="standard-image"

@@ -30,7 +30,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/text.png" 
+              src="/images/text.png" 
               alt="Esempio di assegnazione font TextMesh Pro"
               caption="Pannello impostazioni font TextMesh Pro"
             />
@@ -72,7 +72,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/input.png" 
+              src="/images/input.png" 
               alt="Esempio di configurazione Input System"
               caption="Configurazione Unity Input System"
             />

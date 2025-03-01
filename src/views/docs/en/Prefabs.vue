@@ -20,7 +20,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/pivot3.png" 
+              src="/images/pivot3.png" 
               alt="Assembly Point"
               caption="The Assembly Point reference"
               class="right-aligned-image"
@@ -42,7 +42,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/pivot2.png" 
+              src="/images/pivot2.png" 
               alt="Parent Pivot"
               caption="The parent object's pivot point"
               class="right-aligned-image"
@@ -63,7 +63,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/pivot.png" 
+              src="/images/pivot.png" 
               alt="Moving the Pivot"
               caption="Adjusting the pivot position" 
             />
@@ -83,7 +83,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/unpack.png" 
+              src="/images/unpack.png" 
               alt="Unpack Completely"
               caption="Using the Unpack Completely option" 
             />
@@ -107,12 +107,12 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/prefabguide2.png" 
+                src="/images/prefabguide2.png" 
                 alt="Moving out of parent"
                 caption="Moving child objects out of the parent" 
               />
               <ImageZoomable 
-                src="/src/assets/images/prefabguide.png" 
+                src="/images/prefabguide.png" 
                 alt="Creating the Prefab"
                 caption="Final pivot adjustment" 
               />
@@ -133,7 +133,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/lowpivot.png" 
+              src="/images/lowpivot.png" 
               alt="Prefab aligned at the bottom"
               caption="Prefab aligned with the ground" 
             />
@@ -153,7 +153,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/ak.png" 
+              src="/images/ak.png" 
               alt="Prefab positioned in the air"
               caption="Model positioned in the air" 
             />
@@ -173,13 +173,13 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/prefabimg.png" 
+              src="/images/prefabimg.png" 
               alt="Prefab image"
               caption="Prefab creation" 
               class="img-fit-content" 
             />
             <ImageZoomable 
-              src="/src/assets/images/replaceprefab.png" 
+              src="/images/replaceprefab.png" 
               alt="Creating the Prefab"
               caption="Final prefab creation" 
             />
@@ -203,7 +203,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/orbitpoint.png" 
+              src="/images/orbitpoint.png" 
               alt="Orbital Camera Point"
               caption="Orbital Camera Point" 
             />

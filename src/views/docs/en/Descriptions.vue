@@ -28,13 +28,13 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/Addname.png" 
+                src="/images/Addname.png" 
                 alt="Add Name and Description"
                 caption="Menu for adding name and description"
                 class="standard-image"
               />
               <ImageZoomable 
-                src="/src/assets/images/prefabcloneadd.png" 
+                src="/images/prefabcloneadd.png" 
                 alt="Prefab Clone Add"
                 caption="Selecting the prefab clone folder"
                 class="standard-image"
@@ -61,13 +61,13 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/scriptabledescription.png" 
+                src="/images/scriptabledescription.png" 
                 alt="Scriptable Description"
                 caption="Description for child component"
                 class="standard-image"
               />
               <ImageZoomable 
-                src="/src/assets/images/scriptabletitle.png" 
+                src="/images/scriptabletitle.png" 
                 alt="Scriptable Title"
                 caption="Title for parent component"
                 class="standard-image"
@@ -95,14 +95,14 @@
             <div class="image-group">
               <p>Child</p>
               <ImageZoomable 
-                src="/src/assets/images/piecedescription.png" 
+                src="/images/piecedescription.png" 
                 alt="Piece Description"
                 caption="Piece description interface"
                 class="standard-image"
               />
               <p>Parent</p>
               <ImageZoomable 
-                src="/src/assets/images/prewdescription.png" 
+                src="/images/prewdescription.png" 
                 alt="Preview Description"
                 caption="Preview description interface"
                 class="standard-image"
@@ -125,13 +125,13 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/titlePrefab.png" 
+                src="/images/titlePrefab.png" 
                 alt="Title Prefab"
                 caption="Prefab title configuration" 
                 class="standard-image"
               />
               <ImageZoomable 
-                src="/src/assets/images/previewasset.png" 
+                src="/images/previewasset.png" 
                 alt="Preview Asset"
                 caption="Asset preview" 
                 class="standard-image"
@@ -156,13 +156,13 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/pieces.png" 
+                src="/images/pieces.png" 
                 alt="Pieces"
                 caption="List of pieces" 
                 class="standard-image"
               />
               <ImageZoomable 
-                src="/src/assets/images/pieceslist.png" 
+                src="/images/pieceslist.png" 
                 alt="Pieces List"
                 caption="Complete pieces list" 
                 class="standard-image"
@@ -184,7 +184,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/panelpreview.png" 
+              src="/images/panelpreview.png" 
               alt="Panel Preview"
               caption="Model preview panel" 
               class="standard-image"
@@ -205,7 +205,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/src/assets/images/piecespanel.png" 
+              src="/images/piecespanel.png" 
               alt="Pieces Panel"
               caption="Pieces preview panel" 
               class="standard-image"
@@ -243,13 +243,13 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/src/assets/images/imagepiece.png" 
+                src="/images/imagepiece.png" 
                 alt="Image Piece"
                 caption="Piece image configuration" 
                 class="standard-image"
               />
               <ImageZoomable 
-                src="/src/assets/images/imagepiecePanel.png" 
+                src="/images/imagepiecePanel.png" 
                 alt="Image Piece Panel"
                 caption="Piece image panel" 
                 class="standard-image"
