@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1>
             <p class="lead">
-              Welcome to the official documentation for Assembly Station, a comprehensive tool for Unity that streamlines assembly and crafting mechanics in your games.
+              Benvenuto nella documentazione ufficiale di Assembly Station, uno strumento completo per Unity che semplifica i meccanismi di assemblaggio e produzione nei tuoi giochi.
             </p>
           </div>
 
@@ -14,10 +14,10 @@
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-4">
                 <i class="bi bi-tools fs-1 text-accent me-3"></i>
-                <h2>About Assembly Station</h2>
+                <h2>Informazioni su Assembly Station</h2>
               </div>
-              <p>Assembly Station is a crafting and assembly system designed to optimize production processes in Unity projects. Whether you are building complex machinery, creating unique items, or improving workflows, Assembly Station offers intuitive tools to assemble components efficiently and precisely.</p>
-              <p>This documentation site provides comprehensive guides and resources to help you get started with Assembly Station and make the most out of its features.</p>
+              <p>Assembly Station è un sistema di assemblaggio progettato per ottimizzare i processi di produzione nei progetti Unity. Che tu stia costruendo macchinari complessi, creando oggetti unici o migliorando i flussi di lavoro, Assembly Station offre strumenti intuitivi per assemblare componenti in modo efficiente e preciso.</p>
+              <p>Questo sito di documentazione fornisce guide complete e risorse per aiutarti a iniziare con Assembly Station e a sfruttare al meglio le sue funzionalità.</p>
             </div>
           </div>
 
@@ -27,10 +27,10 @@
                 <div class="card-body p-4">
                   <div class="d-flex align-items-center mb-3">
                     <i class="bi bi-book fs-2 text-accent me-2"></i>
-                    <h3 class="h5 mb-0">Documentation</h3>
+                    <h3 class="h5 mb-0">Documentazione</h3>
                   </div>
-                  <p>Detailed guides and tutorials on how to use Assembly Station in your Unity projects.</p>
-                  <RouterLink to="/homeEn" class="btn btn-primary mt-3">Go to Documentation</RouterLink>
+                  <p>Guide dettagliate e tutorial su come utilizzare Assembly Station nei tuoi progetti Unity.</p>
+                  <RouterLink to="/it" class="btn btn-primary mt-3">Vai alla Documentazione</RouterLink>
                 </div>
               </div>
             </div>
@@ -39,19 +39,19 @@
                 <div class="card-body p-4">
                   <div class="d-flex align-items-center mb-3">
                     <i class="bi bi-play-circle fs-2 text-accent me-2"></i>
-                    <h3 class="h5 mb-0">Video Tutorials</h3>
+                    <h3 class="h5 mb-0">Video Tutorial</h3>
                   </div>
-                  <p>Step-by-step video tutorials to help you get started quickly and master advanced features.</p>
-                  <a href="#" class="btn btn-outline-primary mt-3">Watch Tutorials</a>
+                  <p>Tutorial video passo-passo per aiutarti a iniziare rapidamente e padroneggiare le funzionalità avanzate.</p>
+                  <a href="#" class="btn btn-outline-primary mt-3">Guarda i Tutorial</a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="text-center">
-            <h3 class="mb-4">Get Started Now</h3>
-            <RouterLink to="/homeEn" class="btn btn-lg btn-primary px-4 py-2">
-              Start Using Assembly Station
+            <h3 class="mb-4">Inizia Subito</h3>
+            <RouterLink to="/it" class="btn btn-lg btn-primary px-4 py-2">
+              Inizia a Usare Assembly Station
             </RouterLink>
           </div>
         </div>
@@ -62,7 +62,7 @@
 
 <script>
 export default {
-  name: 'Introduction'
+  name: 'IntroductionIT'
 }
 </script>
 

@@ -2,7 +2,6 @@
   <div class="sidebar-nav">
     <h4 class="sidebar-title">Contents</h4>
     <ul class="sidebar-list">
-      <li><a href="#Presentazione" class="sidebar-link">- Presentation -</a></li>
       <li><a href="#installazione" class="sidebar-link">1 - Installation</a></li>
       <li><a href="#FBX" class="sidebar-link">2 - FBX and Materials Guide</a></li>
       <li><a href="#Prefab" class="sidebar-link">3 - Place Prefabs</a></li>
@@ -20,7 +19,7 @@
 export default {
   name: 'SidebarNav',
   mounted() {
-    // Track active section based on scroll position
+
     window.addEventListener('scroll', this.highlightActiveSection);
   },
   beforeUnmount() {

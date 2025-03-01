@@ -8,12 +8,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+     
+          <ul class="navbar-nav me-auto ms-5">
             <li class="nav-item">
-              <RouterLink to="/" class="nav-link">Introduction</RouterLink>
+              <RouterLink :to="introPath" class="nav-link">{{ $route.path.includes('/it') ? 'Introduzione' : 'Introduction' }}</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/homeEn" class="nav-link">Documentation</RouterLink>
+              <RouterLink :to="docPath" class="nav-link">{{ $route.path.includes('/it') ? 'Documentazione' : 'Documentation' }}</RouterLink>
+            </li>
+          </ul>
+          
+         
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <RouterLink :to="contactPath" class="nav-link me-3">{{ $route.path.includes('/it') ? 'Contatti' : 'Contacts' }}</RouterLink>
+            </li>
+            <li class="nav-item">
+              <LanguageSelector />
             </li>
           </ul>
         </div>
@@ -23,12 +34,31 @@
 </template>
 
 <script>
+import LanguageSelector from '@/components/LanguageSelector.vue'
+
 export default {
   name: "AppHeader",
+  components: {
+    LanguageSelector
+  },
   data() {
     return {
       isScrolled: false,
       lastScrollPosition: 0
+    }
+  },
+  computed: {
+    isItalian() {
+      return this.$route.path.includes('/it');
+    },
+    introPath() {
+      return this.isItalian ? '/it' : '/';
+    },
+    docPath() {
+      return this.isItalian ? '/it/documentation' : '/homeEn';
+    },
+    contactPath() {
+      return this.isItalian ? '/it/contacts' : '/contacts';
     }
   },
   mounted() {
@@ -39,7 +69,6 @@ export default {
   },
   methods: {
     handleScroll() {
-      // Apply scrolled class when page is scrolled
       this.isScrolled = window.scrollY > 50;
     }
   }
@@ -85,6 +114,7 @@ export default {
   position: relative;
   transition: color 0.3s;
   color: #333333;
+  padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
@@ -103,5 +133,15 @@ export default {
   width: 100%;
   height: 2px;
   background-color: #00A3FF;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+  
+  .navbar-nav {
+    margin-top: 0.5rem;
+  }
 }
 </style>

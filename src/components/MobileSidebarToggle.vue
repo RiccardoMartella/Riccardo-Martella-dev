@@ -10,21 +10,35 @@
     
     <div class="mobile-sidebar" :class="{ 'open': isOpen }">
       <div class="mobile-sidebar-header">
-        <h5 class="m-0">Contents</h5>
+        <h5 class="m-0">{{ $route.path.includes('/it') ? 'Contenuti' : 'Contents' }}</h5>
         <button class="btn btn-close" @click="toggleSidebar" aria-label="Close sidebar"></button>
       </div>
       
       <ul class="mobile-sidebar-list">
-        <li><a href="#Presentazione" class="sidebar-link" @click="toggleSidebar">- Presentation -</a></li>
-        <li><a href="#installazione" class="sidebar-link" @click="toggleSidebar">1 - Installation</a></li>
-        <li><a href="#FBX" class="sidebar-link" @click="toggleSidebar">2 - FBX and Materials Guide</a></li>
-        <li><a href="#Prefab" class="sidebar-link" @click="toggleSidebar">3 - Place Prefabs</a></li>
-        <li><a href="#Descrizione" class="sidebar-link" @click="toggleSidebar">4 - Add Descriptions and Images</a></li>
-        <li><a href="#Pulsanti" class="sidebar-link" @click="toggleSidebar">5 - Buttons and Categories</a></li>
-        <li><a href="#Categorie" class="sidebar-link" @click="toggleSidebar">6 - Tags/Categories/Groups</a></li>
-        <li><a href="#Risorse" class="sidebar-link" @click="toggleSidebar">7 - Resources</a></li>
-        <li><a href="#Save" class="sidebar-link" @click="toggleSidebar">8 - Saves</a></li>
-        <li><a href="#Bug" class="sidebar-link" @click="toggleSidebar">9 - Known Issues</a></li>
+        <template v-if="$route.path.includes('/it')">
+          <!-- Italian links -->
+          <li><a href="#installazione" class="sidebar-link" @click="toggleSidebar">1 - Installazione</a></li>
+          <li><a href="#FBX" class="sidebar-link" @click="toggleSidebar">2 - Guida FBX e Materiali</a></li>
+          <li><a href="#Prefab" class="sidebar-link" @click="toggleSidebar">3 - Posizionare i Prefab</a></li>
+          <li><a href="#Descrizione" class="sidebar-link" @click="toggleSidebar">4 - Aggiungere Descrizioni e Immagini</a></li>
+          <li><a href="#Pulsanti" class="sidebar-link" @click="toggleSidebar">5 - Pulsanti e Categorie</a></li>
+          <li><a href="#Categorie" class="sidebar-link" @click="toggleSidebar">6 - Tag/Categorie/Gruppi</a></li>
+          <li><a href="#Risorse" class="sidebar-link" @click="toggleSidebar">7 - Risorse</a></li>
+          <li><a href="#Save" class="sidebar-link" @click="toggleSidebar">8 - Salvataggi</a></li>
+          <li><a href="#Bug" class="sidebar-link" @click="toggleSidebar">9 - Problemi Noti</a></li>
+        </template>
+        <template v-else>
+          <!-- English links -->
+          <li><a href="#installazione" class="sidebar-link" @click="toggleSidebar">1 - Get Start</a></li>
+          <li><a href="#FBX" class="sidebar-link" @click="toggleSidebar">2 - FBX and Materials Guide</a></li>
+          <li><a href="#Prefab" class="sidebar-link" @click="toggleSidebar">3 - Place Prefabs</a></li>
+          <li><a href="#Descrizione" class="sidebar-link" @click="toggleSidebar">4 - Add Descriptions and Images</a></li>
+          <li><a href="#Pulsanti" class="sidebar-link" @click="toggleSidebar">5 - Buttons and Categories</a></li>
+          <li><a href="#Categorie" class="sidebar-link" @click="toggleSidebar">6 - Tags/Categories/Groups</a></li>
+          <li><a href="#Risorse" class="sidebar-link" @click="toggleSidebar">7 - Resources</a></li>
+          <li><a href="#Save" class="sidebar-link" @click="toggleSidebar">8 - Saves</a></li>
+          <li><a href="#Bug" class="sidebar-link" @click="toggleSidebar">9 - Known Issues</a></li>
+        </template>
       </ul>
     </div>
     
@@ -43,6 +57,7 @@ export default {
   methods: {
     toggleSidebar() {
       this.isOpen = !this.isOpen;
+      // Prevent body scrolling when sidebar is open
       document.body.style.overflow = this.isOpen ? 'hidden' : '';
     }
   }
