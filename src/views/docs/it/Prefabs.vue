@@ -1,135 +1,214 @@
 <template>
-  <div>
+  <div class="doc-page">
     <ContentSection>
-      <h1>3. POSIZIONARE I PREFABS</h1>
+      <h1 class="doc-title">3. POSIZIONAMENTO PREFABS</h1>
       
-      <div class="content">
-        <div>
-          <p>
-            Una volta che i materiali sono separati, vai alla cartella Prefab Clone: <code>Assets > AssemblyStation > Prefab Clone</code>.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/prefabclone.png" alt="Cartella Prefab Clone" />
-        </div>
-      </div>
-
-      <div class="content mt-4">
-        <div>
-          <p>
-            L'Assembly Station posiziona il prefab in un punto specifico chiamato <strong>Assembly Point</strong>.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/pivot3.png" alt="Punto di Assemblaggio" />
-        </div>
-      </div>
-
-      <div class="content mt-4">
-        <div>
-          <p>
-            Quel punto si riferisce al pivot del genitore del prefab, che contiene tutti i "pezzi" che compongono il gameobject.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/pivot2.png" alt="Pivot del Genitore" />
-        </div>
-      </div>
-
-      <div class="content mt-4">
-        <div>
-          <p>
-            Quando posizioniamo il prefab, il punto pivot corrisponde all'Assembly Point. Per assicurarci che il prefab non fluttui o intersechi il terreno, è necessario spostare il pivot del genitore. (Partendo dal FBX)
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/pivot.png" alt="Spostare il Pivot" />
-        </div>
-      </div>
-
-      <div class="content mt-4">
-        <div>
-          <p>
-            In questo caso, come puoi vedere, il pivot è leggermente spostato verso l'alto. Quindi premiamo <em>Unpack Completely</em>.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/unpack.png" alt="Unpack Completely" />
-        </div>
-      </div>
-
-      <div class="content mt-4">
-        <div>
-          <p>
-            Seleziona tutto tranne il genitore (in questo caso <strong>Mech Rework</strong>) e sposta tutto fuori dal genitore.
-          </p>
-          <hr>
-          <p>Seleziona il genitore (Mech Rework) e sposta il pivot.</p>
-          <hr>
-          <p>
-            Per spostare il pivot, basta cliccare sulla freccia verde e spostarla verso il basso. Consiglio di attivare la vista 2D per una migliore visione.
-          </p>
-          <hr>
-          <p>Come puoi vedere, il modello non si muoverà nello spazio ma solo il pivot.</p>
-        </div>
-        <div>
-          <div>
-            <ImageZoomable src="/src/assets/images/prefabguide2.png" alt="Spostamento fuori dal genitore" class="mb-3" />
+      <p class="text-lead">
+        Una volta separati i materiali, vai alla cartella Prefab Clone: <code>Assets > AssemblyStation > Prefab Clone</code>.
+      </p>
+      
+      <div class="doc-section">
+        <h2 class="doc-section-title">ASSEMBLY POINT</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              L'Assembly Station posiziona il prefab in un punto specifico chiamato <strong>Assembly Point</strong>.
+            </p>
           </div>
-          <div>
-            <ImageZoomable src="/src/assets/images/prefabguide.png" alt="Creazione del Prefab" />
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/pivot3.png" 
+              alt="Assembly Point"
+              caption="Punto di assemblaggio"
+            />
           </div>
         </div>
       </div>
 
-      <div class="content mt-4">
-        <div>
-          <p>
-            In questo caso, il Mecha è allineato al fondo per farlo apparire appoggiato sul terreno. Quindi ho spostato il pivot leggermente verso il basso. Questo dipende da te in base a come vuoi visualizzare il modello.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/lowpivot.png" alt="Prefab allineato al fondo" />
-        </div>
-      </div>
-
-      <div class="content mt-4">
-        <div>
-          <p>
-            Puoi anche posizionare il modello in aria (ad esempio, se è un'arma). In questo caso, il pivot è molto basso, quindi il modello rimane sospeso.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/ak.png" alt="Prefab posizionato in aria" />
+      <div class="doc-section">
+        <h2 class="doc-section-title">PIVOT POINT</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Quel punto si riferisce al pivot del genitore del prefab, che contiene tutti i "pezzi" che compongono il gameobject.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/pivot2.png" 
+              alt="Parent Pivot"
+              caption="Pivot del genitore"
+            />
+          </div>
         </div>
       </div>
 
-      <div class="content mt-4">
-        <div>
-          <h3>Creazione del Prefab</h3>
-          <p>
-            Una volta fatto, seleziona tutti i figli e rimettili dentro il genitore come prima. Quindi, trascina il genitore nella cartella (Prefab clone) e un Prefab verrà creato automaticamente.
-          </p>
-          <ImageZoomable src="/src/assets/images/prefabimg.png" alt="Immagine Prefab" class="img-fit-content" />
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/replaceprefab.png" alt="Creazione del Prefab" />
+      <div class="doc-section">
+        <h2 class="doc-section-title">POSIZIONAMENTO DEL PREFAB</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Quando posizioniamo il prefab, il punto pivot corrisponde all'Assembly Point. Per assicurarsi che il prefab non fluttui o intersechi il terreno, è necessario spostare il pivot del genitore. (Partendo dall'FBX)
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/pivot.png" 
+              alt="Spostamento del Pivot"
+              caption="Regolazione della posizione del pivot"
+            />
+          </div>
         </div>
       </div>
 
-      <div class="content mt-4">
-        <div>
-          <h3>Camera</h3>
-          <p>
-            Una volta nel gioco, la camera che ruota attorno al prefab posizionato avrà come punto di riferimento l'Orbit Camera Point che verrà sempre aggiunto automaticamente con Add Name and Descriptions To Prefab.
-          </p>
-          <hr>
-          <p>
-            In modalità Editor, puoi spostare il punto pivot di ObitalCameraPoint per rendere la camera più bassa o più alta secondo necessità.
-          </p>
+      <div class="doc-section">
+        <h2 class="doc-section-title">UNPACK DEL PREFAB</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              In questo caso, come puoi vedere, il pivot è leggermente spostato verso l'alto. Quindi premiamo <em>Unpack Completely</em>.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/unpack.png" 
+              alt="Unpack Completely"
+              caption="Operazione di Unpack Completely"
+            />
+          </div>
         </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/orbitpoint.png" alt="Punto Camera Orbitale" />
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">REGOLAZIONE DEL PIVOT</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Seleziona tutto tranne il genitore (in questo caso <strong>Mech Rework</strong>) e sposta tutto fuori dal genitore.
+            </p>
+            <p>
+              Seleziona il genitore (Mech Rework) e sposta il pivot.
+            </p>
+            <p>
+              Per spostare il pivot, basta cliccare sulla freccia verde e spostarla verso il basso. Ti consiglio di attivare la vista 2D per una migliore visualizzazione.
+            </p>
+            <p>
+              Come puoi vedere, il modello non si muoverà nello spazio ma solo il pivot.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <div class="image-group">
+              <ImageZoomable 
+                src="/src/assets/images/prefabguide2.png" 
+                alt="Spostamento fuori dal genitore" 
+                caption="Spostamento degli oggetti figli fuori dal genitore"
+              />
+              <ImageZoomable 
+                src="/src/assets/images/prefabguide.png" 
+                alt="Creazione del Prefab"
+                caption="Regolazione finale del pivot"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">ALLINEAMENTO DEL PREFAB</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              In questo caso, il Mecha è allineato nella parte inferiore per farlo apparire appoggiato al terreno. Quindi ho spostato leggermente il pivot verso il basso. Questo dipende da te in base a come vuoi visualizzare il modello.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/lowpivot.png" 
+              alt="Prefab allineato in basso"
+              caption="Prefab allineato con il terreno"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">POSIZIONAMENTO IN ARIA</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              È possibile anche posizionare il modello in aria (ad esempio, se è un'arma). In questo caso, il pivot è molto basso, quindi il modello rimane sospeso.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/ak.png" 
+              alt="Prefab posizionato in aria"
+              caption="Prefab sospeso in aria"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">CREAZIONE DEL PREFAB</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Una volta fatto, seleziona tutti i figli e rimettili all'interno del genitore come prima. Quindi, trascina il genitore nella cartella (Prefab clone) e un Prefab verrà creato automaticamente.
+            </p>
+            <ImageZoomable 
+              src="/src/assets/images/prefabimg.png" 
+              alt="Immagine prefab" 
+              class="img-fit-content" 
+              caption="Aspetto del prefab finale"
+            />
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/replaceprefab.png" 
+              alt="Creazione del Prefab"
+              caption="Processo di creazione del prefab"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">CAMERA</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Una volta in gioco, la camera che ruota intorno al prefab posizionato avrà come punto di riferimento l'Orbit Camera Point che verrà sempre aggiunto automaticamente con Add Name and Descriptions To Prefab.
+            </p>
+            <p>
+              In modalità Editor, puoi spostare il punto pivot di ObitalCameraPoint per rendere la camera più bassa o più alta secondo necessità.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/orbitpoint.png" 
+              alt="Orbital Camera Point"
+              caption="Punto di riferimento per la camera orbitale"
+            />
+          </div>
         </div>
       </div>
     </ContentSection>
@@ -149,30 +228,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.content {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.content > div:first-child {
-  flex: 1;
-}
-
-.content > div:last-child {
-  flex: 1;
-}
+<style>
+@import '@/assets/styles/documentation.css';
 
 .img-fit-content {
   width: fit-content !important;
-}
-
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
 }
 </style>

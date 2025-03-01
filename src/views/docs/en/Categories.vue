@@ -1,108 +1,167 @@
 <template>
-  <div>
+  <div class="doc-page">
     <ContentSection>
-      <h1>6. TAGS/CATEGORIES/GROUPS OF PIECES</h1>
-      <p class="text-center mt-4 mb-4">
+      <h1 class="doc-title">6. TAGS/CATEGORIES/GROUPS OF PIECES</h1>
+      
+      <p class="text-lead">
         Once all the texts and images have been inserted, you can proceed with creating the TAGS and GROUPS.
       </p>
 
-      <div class="content mt-5">
-        <div>
-          <p>
-            Initially, each piece of the prefab will not have a tag and will therefore be visible in the panel in a single list.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/nocategory.png" alt="No Category" />
-        </div>
-      </div>
-
-      <div class="content mt-5">
-        <div>
-          <p>
-            If you want to divide the pieces by category, just create a tag and assign it to each piece for each category.
-            You can select multiple tags at the same time by holding down the CTRL key and selecting the various Pieces, otherwise by pressing the CTRL+SHIFT key.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/Tag.png" alt="Tag" />
+      <div class="doc-section">
+        <h2 class="doc-section-title">PIECES WITHOUT CATEGORIES</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              Initially, each piece of the prefab will not have a tag and will therefore be visible in the panel in a single list.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/nocategory.png" 
+              alt="No Category"
+              caption="Displaying pieces without categories" 
+            />
+          </div>
         </div>
       </div>
 
-      <div class="content mt-5">
-        <div>
-          <p>
-            By doing so, the pieces will be divided based on the tag you assigned.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/multicat.png" alt="Multiple Categories" style="width: 250px;" />
-        </div>
-      </div>
-
-      <h4 class="text-center mt-5 text-danger">ATTENTION!!!</h4>
-      <h4 class="text-center mb-3 text-danger">Pay attention to this part</h4>
-      <h3 class="text-center mb-5">GROUPS</h3>
-      <p class="text-center">
-        Each piece that contains a <u>SkinnedMeshRenderer or a MeshRenderer</u> will be displayed in
-        the panel. This means that, in the presence of models with hundreds of pieces, the resulting list will be
-        very long, making it difficult for the user to quickly find the desired piece.
-        <br>
-        To solve this problem, I introduced Groups, which allow you to organize the pieces into
-        specific categories, simplifying the search and management. To better clarify the concept, here is an example:
-      </p>
-
-      <div class="content mt-5 mb-3">
-        <div>
-          <p>
-            In this case, the pieces do not have an assigned group and will therefore be displayed in 6 buttons.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/testgruppi.png" alt="Test Groups" />
+      <div class="doc-section">
+        <h2 class="doc-section-title">ASSIGNING TAGS</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              If you want to divide the pieces by category, just create a tag and assign it to each piece for each category.
+              You can select multiple tags at the same time by holding down the CTRL key and selecting the various Pieces, otherwise by pressing the CTRL+SHIFT key.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/Tag.png" 
+              alt="Tag"
+              caption="Assigning tags to pieces" 
+            />
+          </div>
         </div>
       </div>
 
-      <div class="content mt-5 mb-3">
-        <div>
-          <p>
-            While once the group is assigned, here is the result:
-            <br>1 button for 6 pieces
+      <div class="doc-section">
+        <h2 class="doc-section-title">CATEGORY RESULTS</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              By doing so, the pieces will be divided based on the tag you assigned. The panel will show pieces organized by categories.
+            </p>
+          </div>
+          
+          <div class="content-media centered">
+            <ImageZoomable 
+              src="/src/assets/images/multicat.png" 
+              alt="Multiple Categories" 
+              style="max-width: 350px;"
+              caption="Visualizing pieces divided by categories" 
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section alert-section">
+        <h2 class="doc-section-title text-center text-danger">ATTENTION!!!</h2>
+        <h4 class="text-center mb-3 text-danger">Pay attention to this part</h4>
+        <h3 class="text-center mb-4">GROUPS</h3>
+        
+        <div class="alert-box alert-warning">
+          <p class="text-center">
+            Each piece that contains a <u>SkinnedMeshRenderer or a MeshRenderer</u> will be displayed in
+            the panel. This means that, in the presence of models with hundreds of pieces, the resulting list will be
+            very long, making it difficult for the user to quickly find the desired piece.
             <br><br>
-            <u>Any number of pieces can be combined into a group.</u>
+            To solve this problem, I introduced Groups, which allow you to organize the pieces into
+            specific categories, simplifying the search and management. To better clarify the concept, here is an example:
           </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/fix.png" alt="Fix" />
         </div>
       </div>
 
-      <div class="content mt-5 mb-3">
-        <div>
-          <p>
-            To assign the group, here is the video.
-          </p>
-        </div>
-        <div class="d-flex justify-content-center">
-          <video controls class="w-100" src="/src/assets/video/AssemblyStation-GuidaallInstallazione.mp4" type="video/mp4"></video>
+      <div class="doc-section">
+        <h2 class="doc-section-title">COMPARISON: PIECES WITH AND WITHOUT GROUPS</h2>
+        
+        <div class="content-block two-columns">
+          <div class="column">
+            <h4 class="sub-title">Without Groups</h4>
+            <p>
+              In this case, the pieces do not have an assigned group and will therefore be displayed as 6 separate buttons.
+            </p>
+            <ImageZoomable 
+              src="/src/assets/images/testgruppi.png" 
+              alt="Test Groups"
+              caption="Displaying pieces without grouping" 
+            />
+          </div>
+          
+          <div class="column">
+            <h4 class="sub-title">With Groups</h4>
+            <p>
+              Once the group is assigned, here is the result:
+              1 button for 6 pieces.
+              <br><br>
+              <u>Any number of pieces can be combined into a group.</u>
+            </p>
+            <ImageZoomable 
+              src="/src/assets/images/fix.png" 
+              alt="Fix"
+              caption="Displaying grouped pieces" 
+            />
+          </div>
         </div>
       </div>
 
-      <p id="first" class="text-center">
-        When using Groups, the image is automatically selected from the first piece of the group, as well as the description and name.
-      </p>
+      <div class="doc-section">
+        <h2 class="doc-section-title">VIDEO GUIDE FOR GROUP ASSIGNMENT</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              To assign the group, follow the video tutorial below that shows the complete process.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <video controls class="demo-video" src="/src/assets/video/AssemblyStation-GuidaallInstallazione.mp4" type="video/mp4"></video>
+            <p class="caption">Video tutorial for group assignment</p>
+          </div>
+        </div>
+      </div>
 
-      <div class="content mt-5 mb-3">
-        <div>
-          <p>
-            For the pieces that have a Group, the same rule always applies, the first in the list is taken. So the resources will need to be changed there.
-          </p>
-          <p>
-            <strong class="text-danger">This function is still under development to facilitate the insertion of the image in the Groups</strong>
+      <div class="doc-section">
+        <h2 class="doc-section-title">IMPORTANT: AUTOMATIC SELECTION</h2>
+        
+        <div class="info-box" id="first">
+          <p class="text-center">
+            When using Groups, the image is automatically selected from the <strong>first piece of the group</strong>, as well as the description and name.
           </p>
         </div>
-        <div class="d-flex justify-content-center">
-          <ImageZoomable src="/src/assets/images/piceGroupFix.png" alt="Piece Group Fix" />
+
+        <div class="content-block vertical mt-4">
+          <div class="content-text">
+            <p>
+              For the pieces that have a Group, the same rule always applies, the first in the list is taken. So the resources will need to be changed there.
+            </p>
+            <p>
+              <strong class="text-danger">This function is still under development to facilitate the insertion of the image in the Groups</strong>
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/piceGroupFix.png" 
+              alt="Piece Group Fix"
+              caption="Resource configuration in the first piece of the group" 
+            />
+          </div>
         </div>
       </div>
     </ContentSection>
@@ -122,31 +181,77 @@ export default {
 }
 </script>
 
-<style scoped>
-.content {
+<style>
+@import '@/assets/styles/documentation.css';
+
+/* Page specific styles */
+.vertical {
+  flex-direction: column !important;
+}
+
+.vertical .content-text {
+  margin-bottom: 20px;
+}
+
+.vertical .content-media {
+  width: 100%;
+}
+
+.centered {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 20px;
+  justify-content: center;
 }
 
-.content > div:first-child {
-  flex: 1;
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-.content > div:last-child {
-  flex: 1;
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
-video {
+.sub-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.info-box {
+  background-color: #e8f4f8;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 4px solid #17a2b8;
+}
+
+.demo-video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+.alert-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+  border-left: 4px solid #dc3545;
 }
 
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
+  .two-columns {
+    grid-template-columns: 1fr;
   }
 }
 </style>

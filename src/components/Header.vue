@@ -2,7 +2,10 @@
   <header>
     <nav class="navbar navbar-expand-lg custom-navbar" :class="{'scrolled': isScrolled}">
       <div class="container">
-        <a class="navbar-brand" href="#">Assembly Station</a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="/src/assets/logo.png" alt="Assembly Station Logo" class="header-logo me-2">
+          Assembly Station
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -139,6 +142,16 @@ export default {
   width: 100%;
   height: 2px;
   background-color: #00A3FF;
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.scrolled .header-logo {
+  height: 28px;
 }
 
 @media (max-width: 991.98px) {

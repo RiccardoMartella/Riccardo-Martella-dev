@@ -1,100 +1,183 @@
 <template>
-  <div>
+  <div class="doc-page">
     <ContentSection>
-      <h1>5. BUTTONS AND CATEGORIES FOR PREFABS</h1>
+      <h1 class="doc-title">5. BUTTONS AND CATEGORIES FOR PREFABS</h1>
       
-      <div class="d-flex justify-content-center mt-5">
-        <ImageZoomable src="/src/assets/images/buttonimmage.png" style="width: 30%;" alt="Button Image" />
-      </div>
-      <hr>
-      <p class="text-center mt-4 mb-4">
-        To insert the buttons, just go to the Hierarchy and select Content UI
-      </p>
-
-      <div class="content mt-5">
-        <div>
-          <p>
-            Content UI
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/contentUi.png" alt="Content UI" />
-        </div>
+      <div class="hero-section">
+        <ImageZoomable 
+          src="/src/assets/images/buttonimmage.png" 
+          style="max-width: 400px;" 
+          alt="Button Image"
+          caption="Example of category buttons in the interface" 
+        />
+        
+        <p class="text-lead text-center mt-4">
+          To insert the buttons, just go to the Hierarchy and select Content UI
+        </p>
       </div>
 
-      <div class="content mt-5">
-        <div>
-          <p>
-            In the inspector, a section will appear where you can insert the buttons and categories for the prefabs.
-            This mechanic is used to add various categories so that in the game the user can select the various models more easily.
-            <br><br>
-            This function adds the buttons in Editor mode, spacing them automatically between them.
-          </p>
-        </div>
-        <div>
-          <ImageZoomable src="/src/assets/images/categoryprefab.png" alt="Category Prefab" />
-        </div>
-      </div>
-
-      <h3 class="text-center mt-2">ATTENTION</h3>
-      <div class="content mt-5">
-        <div>
-          <div class="mb-5">
+      <div class="doc-section">
+        <h2 class="doc-section-title">ACCESSING CONTENT UI INTERFACE</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
             <p>
-              To better understand the functionality, I will help you with a video.
+              Content UI is the component that manages the user interface of the Assembly Station.
+              By selecting it, you can access the button and category settings.
             </p>
-            <hr>
-            <strong><u class="text-danger">PAY CLOSE ATTENTION TO THIS PART</u></strong>
-            <hr>
-            <p>Initially, the categories will be 3: Vehicles, Armory, Tools</p>
-            <hr>
-            <p>As you will see in the video, it is <u>Fundamental</u> to follow the order of the various lists</p>
-            <hr>
-            <p>The new buttons you will insert will be numbered in the list, so the models corresponding to the buttons must be in the same position in the Button list</p>
           </div>
-          <div class="pt-5">
-            <hr>
-            <p><u>Add a button to a previously created category:</u></p>
-            <p>As in the video:</p>
-            <hr>
-            <p>Element 0 - Car -> Element 0 - Sport Car<br>
-              (in your version not all prefabs are present as in the video, but it serves to make you understand that you will have to use the same procedure with your prefabs)
-            </p>
-            <hr>
-            <p class="text-danger"><strong>PRECISELY ASSIGN ALL CATEGORIES, BUTTONS, AND PREFABS AS IN THE VIDEO OTHERWISE IT WILL NOT WORK</strong></p>
-            <hr>
-            <p><strong>If you want to add a button to a previously created category, just follow the video ---></strong></p>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/contentUi.png" 
+              alt="Content UI"
+              caption="Selecting Content UI in the Hierarchy" 
+            />
           </div>
-        </div>
-        <div>
-          <video controls class="w-100 mb-5" src="/src/assets/video/CategoryPrefab.mp4" type="video/mp4"></video>
-          <video controls class="w-100" src="/src/assets/video/newCategory.mp4" type="video/mp4"></video>
         </div>
       </div>
 
-      <div class="content mt-5">
-        <div>
-          <hr>
-          <p>If you want to add a new category in addition to the first 3, follow the video ---></p>
-          <hr>
-          <p>To add a 4th category, as you will see in the video, I had to first add and assign the Tools category that in the previous video was not inserted in the list because there were no buttons assigned to a prefab.</p>
-          <hr>
-          <p>This is because, as I told you, it is fundamental to keep the lists numbered otherwise the system gives an error, obviously, it does not make sense to leave an empty category but I wanted to show you this example as well</p>
-          <hr>
-          <p>As you will see in the video, I duplicated the button to then change the text, this is because each button has a script and an assigned number <u>fundamental</u> for the functionality, so when adding a new category just duplicate, change the text and do not forget to change the number that will progress with the addition of categories.</p>
-        </div>
-        <div>
-          <video controls class="w-100" src="/src/assets/video/newCAtegory2.mp4" type="video/mp4"></video>
+      <div class="doc-section">
+        <h2 class="doc-section-title">CONFIGURING BUTTONS AND CATEGORIES</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <div class="feature-box">
+              <p>
+                In the inspector, a section will appear where you can insert the buttons and categories for the prefabs.
+                This mechanic is used to add various categories so that in the game the user can select the various models more easily.
+              </p>
+              <p>
+                <strong>Key functionality:</strong> This function adds the buttons in Editor mode, spacing them automatically between them 
+                for optimal interface arrangement.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/src/assets/images/categoryprefab.png" 
+              alt="Category Prefab"
+              caption="Configuring the categories for prefabs in the inspector" 
+            />
+          </div>
         </div>
       </div>
 
-      <p class="text-center">
-        <u><strong>Every time a category is added, it must be disabled<br>Only the first one should be left active</strong></u>
-      </p>
+      <div class="doc-section alert-section">
+        <h2 class="doc-section-title text-center">ATTENTION</h2>
+        
+        <div class="important-notice">
+          <p>
+            To better understand the functionality, we will follow a detailed video tutorial.
+          </p>
+          <div class="warning-banner">
+            <h4 class="text-danger text-center"><i class="bi bi-exclamation-triangle"></i> PAY CLOSE ATTENTION TO THIS PART <i class="bi bi-exclamation-triangle"></i></h4>
+          </div>
+          
+          <div class="key-points mt-3">
+            <div class="key-point">
+              <h5>Initial categories</h5>
+              <p>Initially, the categories will be 3: Vehicles, Armory, Tools</p>
+            </div>
+            
+            <div class="key-point">
+              <h5>List order</h5>
+              <p>It is <u>Fundamental</u> to follow the order of the various lists as shown in the video</p>
+            </div>
+            
+            <div class="key-point">
+              <h5>Numbering and correspondence</h5>
+              <p>The new buttons you will insert will be numbered in the list, so the models corresponding to the buttons must be in the same position in the Button list</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div class="d-flex justify-content-center">
-        <ImageZoomable src="/src/assets/images/active.png" alt="Active" />
-        <ImageZoomable src="/src/assets/images/noactive.png" alt="Not Active" class="w-50" />
+      <div class="doc-section">
+        <h2 class="doc-section-title">ADDING A BUTTON TO AN EXISTING CATEGORY</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <div class="step-guide">
+              <p><u>How to add a button to a previously created category:</u></p>
+              <p>Example from the video:</p>
+              <div class="example-code">
+                <p>Element 0 - Car → Element 0 - Sport Car</p>
+                <p class="note">(in your version not all prefabs are present as in the video, but it serves to make you understand that you will have to use the same procedure with your prefabs)</p>
+              </div>
+              
+              <div class="warning-text">
+                <p><strong>PRECISELY ASSIGN ALL CATEGORIES, BUTTONS, AND PREFABS AS IN THE VIDEO OTHERWISE IT WILL NOT WORK</strong></p>
+              </div>
+              
+              <p><strong>If you want to add a button to a previously created category, just follow the video tutorial below:</strong></p>
+            </div>
+          </div>
+          
+          <div class="content-media">
+            <video controls class="demo-video" src="/src/assets/video/CategoryPrefab.mp4" type="video/mp4"></video>
+            <p class="caption">Tutorial: Adding a button to an existing category</p>
+            
+            <video controls class="demo-video mt-4" src="/src/assets/video/newCategory.mp4" type="video/mp4"></video>
+            <p class="caption">Tutorial: Complete procedure for adding new buttons</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">ADDING A NEW CATEGORY</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <div class="info-box">
+              <p>If you want to add a new category in addition to the first 3, follow the video tutorial below.</p>
+              <hr>
+              <p>To add a 4th category, as you will see in the video, I had to first add and assign the Tools category that in the previous video was not inserted in the list because there were no buttons assigned to a prefab.</p>
+              <hr>
+              <p>This is because, as explained, it is fundamental to keep the lists correctly numbered otherwise the system gives an error. It doesn't make sense to leave an empty category, but I wanted to show you this example for completeness.</p>
+              <hr>
+              <p class="pro-tip"><strong>Tip:</strong> As you will see in the video, I duplicated the button to then change the text. This is because each button has a script and an assigned number <u>fundamental</u> for the functionality. When adding a new category, duplicate an existing button, change the text and update the number that will progress with the addition of categories.</p>
+            </div>
+          </div>
+          
+          <div class="content-media">
+            <video controls class="demo-video" src="/src/assets/video/newCAtegory2.mp4" type="video/mp4"></video>
+            <p class="caption">Tutorial: Procedure for adding a new category</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section final-section">
+        <h2 class="doc-section-title">ACTIVATION MANAGEMENT</h2>
+        
+        <div class="content-block vertical">
+          <div class="important-rule text-center">
+            <p class="mb-4">
+              <u><strong>Every time a category is added, it must be disabled<br>Only the first one should be left active</strong></u>
+            </p>
+          </div>
+          
+          <div class="image-comparison">
+            <div class="comparison-item">
+              <h5>Active Category</h5>
+              <ImageZoomable 
+                src="/src/assets/images/active.png" 
+                alt="Active"
+                caption="Correctly active category" 
+              />
+            </div>
+            
+            <div class="comparison-item">
+              <h5>Disabled Category</h5>
+              <ImageZoomable 
+                src="/src/assets/images/noactive.png" 
+                alt="Not Active" 
+                caption="Correctly disabled category" 
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </ContentSection>
   </div>
@@ -113,31 +196,132 @@ export default {
 }
 </script>
 
-<style scoped>
-.content {
+<style>
+@import '@/assets/styles/documentation.css';
+
+/* Page specific styles */
+.hero-section {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.vertical {
+  flex-direction: column !important;
+}
+
+.vertical .content-text {
+  margin-bottom: 20px;
+}
+
+.vertical .content-media {
+  width: 100%;
+}
+
+.demo-video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+.feature-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid #00A3FF;
+}
+
+.warning-banner {
+  background-color: #fff3cd;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.key-points {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.key-point {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+}
+
+.key-point h5 {
+  margin-bottom: 8px;
+  color: #17a2b8;
+}
+
+.example-code {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-family: monospace;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.warning-text {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.important-rule {
+  background-color: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.image-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   margin-top: 20px;
 }
 
-.content > div:first-child {
+.comparison-item {
+  text-align: center;
   flex: 1;
+  min-width: 250px;
 }
 
-.content > div:last-child {
-  flex: 1;
+.comparison-item h5 {
+  margin-bottom: 10px;
+  color: #495057;
 }
 
-video {
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+.pro-tip {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
 }
 
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
+.final-section {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
 }
 </style>
