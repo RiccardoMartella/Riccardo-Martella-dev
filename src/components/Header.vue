@@ -1,67 +1,134 @@
 <template>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Assembly Station</h1>
-      <nav class="nav">
-        <RouterLink to="/" class="nav-link">Home</RouterLink>
-        <RouterLink to="/about" class="nav-link">About</RouterLink>
-      </nav>
-    </div>
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar" :class="{'scrolled': isScrolled}">
+      <div class="container">
+        <a class="navbar-brand" href="#">Assembly Station</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Main Navigation Links -->
+          <ul class="navbar-nav me-auto ms-5">
+            <li class="nav-item">
+              <RouterLink :to="introPath" class="nav-link">{{ isItalian ? 'Introduzione' : 'Introduction' }}</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink :to="docPath" class="nav-link">{{ isItalian ? 'Documentazione' : 'Documentation' }}</RouterLink>
+            </li>
+          </ul>
+          
+          <!-- Right-aligned Links -->
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <RouterLink :to="bugPath" class="nav-link me-3">{{ isItalian ? 'Segnala Bug' : 'Report Bug' }}</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink :to="contactPath" class="nav-link me-3">{{ isItalian ? 'Contatti' : 'Contacts' }}</RouterLink>
+            </li>
+            <li class="nav-item">
+              <LanguageSelector />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 </template>
 
 <script>
+import LanguageSelector from '@/components/LanguageSelector.vue'
+
 export default {
-  name: "AppHeader"
+  name: "AppHeader",
+  components: {
+    LanguageSelector
+  },
+  data() {
+    return {
+      isScrolled: false,
+      lastScrollPosition: 0
+    }
+  },
+  computed: {
+    isItalian() {
+      return this.$route.path.includes('/it');
+    },
+    introPath() {
+      return this.isItalian ? '/it' : '/';
+    },
+    docPath() {
+      return this.isItalian ? '/it/docs/installation' : '/docs/installation';
+    },
+    contactPath() {
+      return this.isItalian ? '/it/contacts' : '/contacts';
+    },
+    bugPath() {
+      return this.isItalian ? '/it/report-bug' : '/report-bug';
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 50;
+    }
+  }
 }
 </script>
 
 <style scoped>
-.header {
-  position: sticky;
+.custom-navbar {
+  position: fixed;
   top: 0;
-  background-color: #2c3e50;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  left: 0;
   width: 100%;
+  z-index: 1030;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 1rem;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.8rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.custom-navbar.scrolled {
+  padding: 0.5rem 1rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.logo {
+.navbar-brand {
   font-size: 1.5rem;
-  margin: 0;
   font-weight: 600;
+  color: #00A3FF;
+  transition: all 0.3s ease;
 }
 
-.nav {
-  display: flex;
-  gap: 1.5rem;
+.scrolled .navbar-brand {
+  font-size: 1.3rem;
+}
+
+.navbar-brand:hover {
+  color: #4DBEFF;
 }
 
 .nav-link {
-  color: white;
-  text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s;
+  color: #333333;
+  padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
-  color: #42b983;
+  color: #00A3FF !important;
 }
 
 .nav-link.router-link-active {
-  color: #42b983;
+  color: #00A3FF !important;
 }
 
 .nav-link.router-link-active::after {
@@ -71,6 +138,16 @@ export default {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #42b983;
+  background-color: #00A3FF;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+  
+  .navbar-nav {
+    margin-top: 0.5rem;
+  }
 }
 </style>
