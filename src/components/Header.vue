@@ -21,6 +21,9 @@
          
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
+              <RouterLink :to="bugPath" class="nav-link me-3">{{ $route.path.includes('/it') ? 'Segnala Bug' : 'Report Bug' }}</RouterLink>
+            </li>
+            <li class="nav-item">
               <RouterLink :to="contactPath" class="nav-link me-3">{{ $route.path.includes('/it') ? 'Contatti' : 'Contacts' }}</RouterLink>
             </li>
             <li class="nav-item">
@@ -59,6 +62,9 @@ export default {
     },
     contactPath() {
       return this.isItalian ? '/it/contacts' : '/contacts';
+    },
+    bugPath() {
+      return this.isItalian ? '/it/report-bug' : '/report-bug';
     }
   },
   mounted() {

@@ -37,16 +37,19 @@ export default {
       // Get current route
       const currentPath = this.$route.path;
       
-      // Determine which page we're on and navigate to the corresponding language version
+      // More precise path matching to ensure we stay on the same page type
       if (currentPath === '/' || currentPath === '/it') {
-        // We're on an introduction page
+        // Introduction page
         this.$router.push(lang === 'en' ? '/' : '/it');
       } else if (currentPath === '/homeEn' || currentPath === '/it/documentation') {
-        // We're on a documentation page
+        // Documentation page
         this.$router.push(lang === 'en' ? '/homeEn' : '/it/documentation');
       } else if (currentPath === '/contacts' || currentPath === '/it/contacts') {
-        // We're on a contacts page
+        // Contacts page
         this.$router.push(lang === 'en' ? '/contacts' : '/it/contacts');
+      } else if (currentPath.includes('/report-bug') || currentPath.includes('/it/report-bug')) {
+        // Report Bug page - using includes() for more reliable matching
+        this.$router.push(lang === 'en' ? '/report-bug' : '/it/report-bug');
       } else {
         // Default fallback
         this.$router.push(lang === 'en' ? '/' : '/it');

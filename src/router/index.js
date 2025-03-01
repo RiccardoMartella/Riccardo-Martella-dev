@@ -21,6 +21,11 @@ const router = createRouter({
       component: () => import('@/views/Contacts.vue')
     },
     {
+      path: '/report-bug',
+      name: 'reportBug',
+      component: () => import('@/views/ReportBug.vue')
+    },
+    {
       path: '/it',
       name: 'introductionIT',
       component: () => import('@/views/IntroductionIT.vue')
@@ -34,6 +39,11 @@ const router = createRouter({
       path: '/it/contacts',
       name: 'contactsIT',
       component: () => import('@/views/ContactsIT.vue')
+    },
+    {
+      path: '/it/report-bug',
+      name: 'reportBugIT',
+      component: () => import('@/views/ReportBugIT.vue')
     }
   ]
 })

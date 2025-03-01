@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Contattaci</h1>
             <p class="lead">
-              Hai domande su Assembly Station? Siamo qui per aiutarti! Mettiti in contatto con il nostro team.
+                Sono qui per aiutarti! Mettiti in contatto con me.
             </p>
           </div>
 
@@ -16,7 +16,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                   <h4>Informazioni di contatto</h4>
                   <p class="text-muted mb-4">
-                    Non esitare a contattarci per qualsiasi domanda, feedback o richiesta di assistenza.
+                    Non esitare a contattaemi per qualsiasi domanda, feedback o richiesta di assistenza.
                   </p>
                   
                   <div class="d-flex align-items-center mb-3">
@@ -31,10 +31,10 @@
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
-                      <i class="bi bi-discord text-accent"></i>
+                      <i class="bi bi-linkedin text-accent"></i>
                     </div>
                     <div>
-                      <p class="mb-0 fw-bold">Discord</p>
+                      <p class="mb-0 fw-bold">Linkedin</p>
                       <p class="mb-0">Unisciti alla nostra community Discord</p>
                     </div>
                   </div>
@@ -51,7 +51,7 @@
                 </div>
                 
                 <div class="col-lg-6">
-                  <h4>Inviaci un messaggio</h4>
+                  <h4>Inviami un messaggio</h4>
                   <form>
                     <div class="mb-3">
                       <label for="name" class="form-label">Nome</label>

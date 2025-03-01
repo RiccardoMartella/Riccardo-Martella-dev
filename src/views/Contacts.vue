@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Contact Us</h1>
             <p class="lead">
-              Have questions about Assembly Station? We're here to help! Get in touch with our team.
+                I'm here to help you! Get in touch with me.
             </p>
           </div>
 
@@ -51,7 +51,7 @@
                 </div>
                 
                 <div class="col-lg-6">
-                  <h4>Send us a message</h4>
+                  <h4>Send me a message</h4>
                   <form>
                     <div class="mb-3">
                       <label for="name" class="form-label">Name</label>
