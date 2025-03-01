@@ -145,7 +145,7 @@ export default {
 }
 
 .header-logo {
-  height: 60px;
+  height: 50px;
   width: auto;
   transition: all 0.3s ease;
 }
