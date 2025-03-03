@@ -90,26 +90,26 @@
                 </p>
               </div>
               
-              <form>
+              <form name="reportbugen" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <div class="mb-3">
                   <label for="bugTitle" class="form-label">Bug Title</label>
-                  <input type="text" class="form-control" id="bugTitle" placeholder="Short description of the bug">
+                  <input type="text" class="form-control" id="bugTitle" name="bugTitle" placeholder="Short description of the bug">
                 </div>
                 
                 <div class="row mb-3">
                   <div class="col-md-6">
                     <label for="version" class="form-label">Assembly Station Version</label>
-                    <input type="text" class="form-control" id="version" placeholder="e.g. 1.2.5">
+                    <input type="text" class="form-control" id="version" name="version" placeholder="e.g. 1.2.5">
                   </div>
                   <div class="col-md-6">
                     <label for="unityVersion" class="form-label">Unity Version</label>
-                    <input type="text" class="form-control" id="unityVersion" placeholder="e.g. 2022.3.1f1">
+                    <input type="text" class="form-control" id="unityVersion" name="unityVersion" placeholder="e.g. 2022.3.1f1">
                   </div>
                 </div>
                 
                 <div class="mb-3">
                   <label for="severity" class="form-label">Bug Severity</label>
-                  <select class="form-select" id="severity">
+                  <select class="form-select" id="severity"  name="severity">
                     <option selected>Select severity level</option>
                     <option value="critical">Critical - App crashes or cannot function</option>
                     <option value="major">Major - Core functionality broken</option>
@@ -120,23 +120,23 @@
                 
                 <div class="mb-3">
                   <label for="bugDescription" class="form-label">Bug Description</label>
-                  <textarea class="form-control" id="bugDescription" rows="5" placeholder="Detailed description of what happens..."></textarea>
+                  <textarea class="form-control" id="bugDescription" name="bugDescription" rows="5" placeholder="Detailed description of what happens..."></textarea>
                 </div>
                 
                 <div class="mb-3">
                   <label for="reproduction" class="form-label">Steps to Reproduce</label>
-                  <textarea class="form-control" id="reproduction" rows="4" placeholder="1. Open scene... 2. Select object... 3. Click on..."></textarea>
+                  <textarea class="form-control" id="reproduction" name="reproduction" rows="4" placeholder="1. Open scene... 2. Select object... 3. Click on..."></textarea>
                 </div>
                 
                 <div class="mb-3">
                   <label for="expected" class="form-label">Expected Behavior</label>
-                  <textarea class="form-control" id="expected" rows="2" placeholder="What should happen instead?"></textarea>
+                  <textarea class="form-control" id="expected" name="expected" rows="2" placeholder="What should happen instead?"></textarea>
                 </div>
                 
                 <div class="mb-3">
                   <label class="form-label">Screenshots/Videos</label>
                   <div class="input-group">
-                    <input type="file" class="form-control" id="attachments" multiple>
+                    <input type="file" class="form-control" id="attachments" name="attachments" multiple>
                     <label class="input-group-text" for="attachments">Upload</label>
                   </div>
                   <div class="form-text">Attach any relevant screenshots or videos (optional)</div>
@@ -144,7 +144,7 @@
                 
                 <div class="mb-3">
                   <label for="email" class="form-label">Your Email (for follow-up)</label>
-                  <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+                  <input type="email" class="form-control" id="email"  name="email" placeholder="your.email@example.com">
                 </div>
                 
                 <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Submit Bug Report</button>
