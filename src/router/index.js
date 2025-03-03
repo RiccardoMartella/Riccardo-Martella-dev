@@ -1,171 +1,154 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
-import Introduction from '@/views/Introduction.vue'
-import IntroductionIT from '@/views/IntroductionIT.vue'
-import Contacts from '@/views/Contacts.vue'
-import ContactsIT from '@/views/ContactsIT.vue'
-
-import Installation from '@/views/docs/en/Installation.vue'
-import FBXGuide from '@/views/docs/en/FBXGuide.vue'
-import Prefabs from '@/views/docs/en/Prefabs.vue'
-import Descriptions from '@/views/docs/en/Descriptions.vue'
-import Buttons from '@/views/docs/en/Buttons.vue'
-import Categories from '@/views/docs/en/Categories.vue'
-import Resources from '@/views/docs/en/Resources.vue'
-import Saves from '@/views/docs/en/Saves.vue'
-import KnownIssues from '@/views/docs/en/KnownIssues.vue'
-
-import InstallationIT from '@/views/docs/it/Installation.vue'
-import FBXGuideIT from '@/views/docs/it/FBXGuide.vue'
-import PrefabsIT from '@/views/docs/it/Prefabs.vue'
-import DescriptionsIT from '@/views/docs/it/Descriptions.vue'
-import ButtonsIT from '@/views/docs/it/Buttons.vue'
-import CategoriesIT from '@/views/docs/it/Categories.vue'
-import ResourcesIT from '@/views/docs/it/Resources.vue'
-import SavesIT from '@/views/docs/it/Saves.vue'
-import KnownIssuesIT from '@/views/docs/it/KnownIssues.vue'
-
-const routes = [
-  // English routes
-  {
-    path: '/',
-    name: 'Introduction',
-    component: Introduction
-  },
-  {
-    path: '/contacts',
-    name: 'Contacts',
-    component: Contacts
-  },
-  {
-    path: '/report-bug',
-    name: 'ReportBug',
-    component: Contacts 
-  },
-  
-  
-  {
-    path: '/docs/installation',
-    name: 'Installation',
-    component: Installation
-  },
-  {
-    path: '/docs/fbx-guide',
-    name: 'FBXGuide',
-    component: FBXGuide
-  },
-  {
-    path: '/docs/prefabs',
-    name: 'Prefabs',
-    component: Prefabs
-  },
-  {
-    path: '/docs/descriptions',
-    name: 'Descriptions',
-    component: Descriptions
-  },
-  {
-    path: '/docs/buttons',
-    name: 'Buttons',
-    component: Buttons
-  },
-  {
-    path: '/docs/categories',
-    name: 'Categories',
-    component: Categories
-  },
-  {
-    path: '/docs/resources',
-    name: 'Resources',
-    component: Resources
-  },
-  {
-    path: '/docs/saves',
-    name: 'Saves',
-    component: Saves
-  },
-  {
-    path: '/docs/known-issues',
-    name: 'KnownIssues',
-    component: KnownIssues
-  },
-  
-  // Italian routes
-  {
-    path: '/it',
-    name: 'IntroductionIT',
-    component: IntroductionIT
-  },
-  {
-    path: '/it/contacts',
-    name: 'ContactsIT',
-    component: ContactsIT
-  },
-  {
-    path: '/it/report-bug',
-    name: 'ReportBugIT',
-    component: ContactsIT 
-  },
-  
-  {
-    path: '/it/docs/installation',
-    name: 'InstallationIT',
-    component: InstallationIT
-  },
-  {
-    path: '/it/docs/fbx-guide',
-    name: 'FBXGuideIT',
-    component: FBXGuideIT
-  },
-  {
-    path: '/it/docs/prefabs',
-    name: 'PrefabsIT',
-    component: PrefabsIT
-  },
-  {
-    path: '/it/docs/descriptions',
-    name: 'DescriptionsIT',
-    component: DescriptionsIT
-  },
-  {
-    path: '/it/docs/buttons',
-    name: 'ButtonsIT',
-    component: ButtonsIT
-  },
-  {
-    path: '/it/docs/categories',
-    name: 'CategoriesIT',
-    component: CategoriesIT
-  },
-  {
-    path: '/it/docs/resources',
-    name: 'ResourcesIT',
-    component: ResourcesIT
-  },
-  {
-    path: '/it/docs/saves',
-    name: 'SavesIT',
-    component: SavesIT
-  },
-  {
-    path: '/it/docs/known-issues',
-    name: 'KnownIssuesIT',
-    component: KnownIssuesIT
-  },
-  
-
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
-  }
-]
+import Introduction from '../views/Introduction.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
-  scrollBehavior() {
-    return { top: 0 }
-  }
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'introduction',
+      component: Introduction
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: () => import('@/views/Contacts.vue')
+    },
+    {
+      path: '/report-bug',
+      name: 'reportBug',
+      component: () => import('@/views/ReportBug.vue')
+    },
+    {
+      path: '/it',
+      name: 'introductionIT',
+      component: () => import('@/views/IntroductionIT.vue')
+    },
+    {
+      path: '/it/contacts',
+      name: 'contactsIT',
+      component: () => import('@/views/ContactsIT.vue')
+    },
+    {
+      path: '/it/report-bug',
+      name: 'reportBugIT',
+      component: () => import('@/views/ReportBugIT.vue')
+    },
+   
+    // Documentation routes - English
+    {
+      path: '/docs',
+      component: () => import('@/views/DocContainer.vue'),
+      children: [
+        {
+          path: '',
+          redirect: '/docs/installation'
+        },
+        {
+          path: 'installation',
+          name: 'docsInstallation',
+          component: () => import('@/views/docs/en/Installation.vue')
+        },
+        {
+          path: 'fbx-guide',
+          name: 'docsFBXGuide',
+          component: () => import('@/views/docs/en/FBXGuide.vue')
+        },
+        {
+          path: 'prefabs',
+          name: 'docsPrefabs',
+          component: () => import('@/views/docs/en/Prefabs.vue')
+        },
+        {
+          path: 'descriptions',
+          name: 'docsDescriptions',
+          component: () => import('@/views/docs/en/Descriptions.vue')
+        },
+        {
+          path: 'buttons',
+          name: 'docsButtons',
+          component: () => import('@/views/docs/en/Buttons.vue')
+        },
+        {
+          path: 'categories',
+          name: 'docsCategories',
+          component: () => import('@/views/docs/en/Categories.vue')
+        },
+        {
+          path: 'resources',
+          name: 'docsResources',
+          component: () => import('@/views/docs/en/Resources.vue')
+        },
+        {
+          path: 'saves',
+          name: 'docsSaves',
+          component: () => import('@/views/docs/en/Saves.vue')
+        },
+        {
+          path: 'known-issues',
+          name: 'docsKnownIssues',
+          component: () => import('@/views/docs/en/KnownIssues.vue')
+        }
+      ]
+    },
+    
+    // Documentation routes - Italian
+    {
+      path: '/it/docs',
+      component: () => import('@/views/DocContainer.vue'),
+      children: [
+        {
+          path: '',
+          redirect: '/it/docs/installation'
+        },
+        {
+          path: 'installation',
+          name: 'docsInstallationIT',
+          component: () => import('@/views/docs/it/Installation.vue')
+        },
+        {
+          path: 'fbx-guide',
+          name: 'docsFBXGuideIT',
+          component: () => import('@/views/docs/it/FBXGuide.vue')
+        },
+        {
+          path: 'prefabs',
+          name: 'docsPrefabsIT',
+          component: () => import('@/views/docs/it/Prefabs.vue')
+        },
+        {
+          path: 'descriptions',
+          name: 'docsDescriptionsIT',
+          component: () => import('@/views/docs/it/Descriptions.vue')
+        },
+        {
+          path: 'buttons',
+          name: 'docsButtonsIT',
+          component: () => import('@/views/docs/it/Buttons.vue')
+        },
+        {
+          path: 'categories',
+          name: 'docsCategoriesIT',
+          component: () => import('@/views/docs/it/Categories.vue')
+        },
+        {
+          path: 'resources',
+          name: 'docsResourcesIT',
+          component: () => import('@/views/docs/it/Resources.vue')
+        },
+        {
+          path: 'saves',
+          name: 'docsSavesIT',
+          component: () => import('@/views/docs/it/Saves.vue')
+        },
+        {
+          path: 'known-issues',
+          name: 'docsKnownIssuesIT',
+          component: () => import('@/views/docs/it/KnownIssues.vue')
+        }
+      ]
+    }
+  ]
 })
 
 export default router

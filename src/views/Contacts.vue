@@ -55,7 +55,7 @@
                 <div class="col-lg-6">
                   <h4>Send me a message</h4>
 
-                  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                  <form @submit.prevent="handleSubmit" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
                     <p class="d-none">
                       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -63,20 +63,26 @@
                     
                     <div class="mb-3">
                       <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required v-model="formData.name">
                     </div>
                     
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required v-model="formData.email">
                     </div>
                     
                     <div class="mb-3">
                       <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required v-model="formData.message"></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    <button type="submit" class="btn btn-primary w-100" :disabled="submitting">
+                      {{ submitting ? 'Sending...' : 'Send Message' }}
+                    </button>
+
+                    <div v-if="formSubmitted" class="alert alert-success mt-3">
+                      Thank you for your message! I'll get back to you soon.
+                    </div>
                   </form>
                 </div>
               </div>
@@ -105,7 +111,47 @@
 
 <script>
 export default {
-  name: 'Contacts'
+  name: 'Contacts',
+  data() {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        message: ''
+      },
+      submitting: false,
+      formSubmitted: false
+    }
+  },
+  methods: {
+    handleSubmit() {
+      this.submitting = true;
+      
+      const formData = new FormData();
+      formData.append('form-name', 'contact');
+      Object.keys(this.formData).forEach(key => {
+        formData.append(key, this.formData[key]);
+      });
+      
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(() => {
+          this.submitting = false;
+          this.formSubmitted = true;
+          this.formData = { name: '', email: '', message: '' };
+          setTimeout(() => {
+            this.formSubmitted = false;
+          }, 5000);
+        })
+        .catch(error => {
+          console.error('Form submission error:', error);
+          this.submitting = false;
+        });
+    }
+  }
 }
 </script>
 
