@@ -173,7 +173,7 @@ export default {
   position: relative;
   padding: 100px 0;
   overflow: hidden;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
 }
