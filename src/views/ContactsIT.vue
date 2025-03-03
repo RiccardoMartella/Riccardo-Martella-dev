@@ -52,18 +52,18 @@
                 
                 <div class="col-lg-6">
                   <h4>Inviami un messaggio</h4>
-                  <form name="contact" method="POST"  netlify>
+                  <form name="contactit" method="POST"  netlify>
                     <div class="mb-3">
                       <label for="name" class="form-label">Nome</label>
-                      <input type="text" class="form-control" id="name" placeholder="Il tuo nome">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Il tuo nome">
                     </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="La tua email">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="La tua email">
                     </div>
                     <div class="mb-3">
                       <label for="message" class="form-label">Messaggio</label>
-                      <textarea class="form-control" id="message" rows="5" placeholder="Il tuo messaggio"></textarea>
+                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Il tuo messaggio"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Invia Messaggio</button>
                   </form>
