@@ -91,6 +91,7 @@
               </div>
               
               <form name="reportbugit" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="reportbugit" />
                 <div class="mb-3">
                   <label for="bugTitle" class="form-label">Titolo del Bug</label>
                   <input type="text" class="form-control" id="bugTitle" name="bugTitle" placeholder="Breve descrizione del bug">
