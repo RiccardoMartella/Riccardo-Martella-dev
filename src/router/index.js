@@ -34,11 +34,7 @@ const router = createRouter({
       name: 'reportBugIT',
       component: () => import('@/views/ReportBugIT.vue')
     },
-    {
-      path: '/success',
-      name: 'success',
-      component: () => import('@/views/Success.vue')
-    },
+ 
     
     // Documentation routes - English
     {
