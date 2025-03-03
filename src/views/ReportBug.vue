@@ -70,7 +70,7 @@
                     <div>
                       <h5>Email</h5>
                       <p class="mb-1">Send me an email with details</p>
-                      <a href="mailto:bugs@assemblystation.com" class="btn btn-outline-primary">Email Me</a>
+                      <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary">Email Me</a>
                     </div>
                   </div>
                 </div>

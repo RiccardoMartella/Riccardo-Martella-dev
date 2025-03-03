@@ -21,17 +21,17 @@
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
-                      <i class="bi bi-envelope-fill text-accent"></i>
+                      <a href="mailto:riccardomartella77@gmail.com"><i class="bi bi-envelope-fill text-accent"></i></a>
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">Email</p>
-                      <p class="mb-0">support@assemblystation.com</p>
+                      <p class="mb-0">riccardomertella77@gmail.com</p>
                     </div>
                   </div>
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
-                      <i class="bi bi-linkedin text-accent"></i>
+                      <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/"><i class="bi bi-linkedin text-accent"></i></a>
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">Linkedin</p>
@@ -41,7 +41,7 @@
                   
                   <div class="d-flex align-items-center">
                     <div class="contact-icon-wrapper">
-                      <i class="bi bi-github text-accent"></i>
+                      <a href="https://github.com/RiccardoMartella"><i class="bi bi-github text-accent"></i></a>
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">GitHub</p>
@@ -75,13 +75,13 @@
           <div class="text-center mt-5">
             <h5>Seguimi sui social media</h5>
             <div class="d-flex justify-content-center gap-4 mt-3">
-                <a href="#" class="social-icon">
+              <a href="https://github.com/RiccardoMartella" class="social-icon">
                 <i class="bi bi-github fs-3 text-accent"></i>
               </a>
               <a href="#" class="social-icon">
                 <i class="bi bi-unity fs-3 text-accent"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/" class="social-icon">
                 <i class="bi bi-linkedin fs-3 text-accent"></i>
               </a>
             </div>

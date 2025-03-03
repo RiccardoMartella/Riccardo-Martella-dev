@@ -49,7 +49,7 @@
           <p class="mb-0 text-powered">Copyright © 2025 Assembly Station</p>
           <p style="font-size: 12px;" class="mb-0 text-dark">
             {{ isItalian ? 'Creato da ' : 'Powered by ' }}
-            <RouterLink :to="developerPath" class="text-dark">Riccardo Martella</RouterLink>
+           <a class="text-dark" href="https://www.linkedin.com/in/riccardo-martella-b91854252/">Riccardo Martella</a> 
           </p>
         </div>
       </div>
