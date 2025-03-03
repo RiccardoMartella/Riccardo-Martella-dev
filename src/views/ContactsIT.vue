@@ -52,7 +52,7 @@
                 
                 <div class="col-lg-6">
                   <h4>Inviami un messaggio</h4>
-                  <form>
+                  <form submit.prevent=""invioForm>
                     <div class="mb-3">
                       <label for="name" class="form-label">Nome</label>
                       <input type="text" class="form-control" id="name" placeholder="Il tuo nome">
@@ -93,8 +93,25 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  name: 'ContactsIT'
+  name: 'ContactsIT',
+  data() {
+    return {
+      nome: "",
+      email: "",
+      message: ""
+    };
+  },
+  methods: {
+    async invioForm() {
+      await axios.post("/.netlify/functions/form-handler", {
+        nome: this.nome,
+        email: this.email
+      });
+      alert("Inviato con successo!");
+    }
+  }
 }
 </script>
 
