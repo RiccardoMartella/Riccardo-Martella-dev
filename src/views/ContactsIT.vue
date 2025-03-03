@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Contattami</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4" id="contIt">Contattami</h1>
             <p class="lead">
                 Sono qui per aiutarti! Mettiti in contatto con me.
             </p>
@@ -102,7 +102,19 @@
 
 <script>
 export default {
-  name: 'ContactsIT'
+  name: 'ContactsIT',
+  mounted() {
+    // Gestione dello scrolling all'ID nella URL dopo che il componente è montato
+    this.$nextTick(() => {
+      if (window.location.hash) {
+        const id = window.location.hash.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  }
 }
 </script>
 

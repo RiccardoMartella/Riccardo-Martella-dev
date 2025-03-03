@@ -73,12 +73,12 @@
               If you're experiencing issues not covered in this documentation, feel free to contact me for support.
             </p>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <a href="#" class="btn btn-outline-primary">
+              <a href="https://github.com/RiccardoMartella" class="btn btn-outline-primary">
                 <i class="bi bi-github me-2"></i>Report Issue on GitHub
               </a>
-              <a href="#" class="btn btn-outline-primary">
-                <i class="bi bi-envelope me-2"></i>Contact via Email
-              </a>
+              <RouterLink to="/contacts#contEn" class="btn btn-outline-primary">
+                <i class="bi bi-envelope me-2"></i>Contact 
+              </RouterLink>
             </div>
           </div>
         </div>

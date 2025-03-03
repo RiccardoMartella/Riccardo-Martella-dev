@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Report a Bug</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4" id="bug">Report a Bug</h1>
             <p class="lead">
                 Have you found a bug or have a proposal to improve Assembly Station? Let me know so I can fix it!
             </p>
@@ -208,7 +208,21 @@
 
 <script>
 export default {
-  name: 'ReportBug'
+  name: 'ReportBug',
+  mounted() {
+    
+    this.$nextTick(() => {
+      if (window.location.hash) {
+        const id = window.location.hash.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100); 
+        }
+      }
+    });
+  }
 }
 </script>
 

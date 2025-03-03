@@ -71,12 +71,12 @@
               Se stai riscontrando problemi non trattati in questa documentazione, non esitare a contattarmi per supporto.
             </p>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <a href="#" class="btn btn-outline-primary">
-                <i class="bi bi-github me-2"></i>Segnala Problema su GitHub
-              </a>
-              <a href="#" class="btn btn-outline-primary">
-                <i class="bi bi-envelope me-2"></i>Contatta via Email
-              </a>
+              <RouterLink to="/it/report-bug#bug" class="btn btn-outline-primary">
+                <i class="bi bi-bug me-2"></i>Segnala Bug
+              </RouterLink>
+              <RouterLink to="/it/contacts#contIt" class="btn btn-outline-primary">
+                <i class="bi bi-envelope me-2"></i>Contattami 
+              </RouterLink>
             </div>
           </div>
         </div>

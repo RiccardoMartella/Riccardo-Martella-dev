@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Contact Me</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4" id="contEn">Contact Me</h1>
             <p class="lead">
                 I'm here to help you! Get in touch with me.
             </p>
@@ -102,7 +102,18 @@
 
 <script>
 export default {
-  name: 'Contacts'
+  name: 'Contacts',
+  mounted() {
+    this.$nextTick(() => {
+      if (window.location.hash) {
+        const id = window.location.hash.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  }
 }
 </script>
 

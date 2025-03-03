@@ -84,7 +84,7 @@ export default {
       return this.isItalian ? '/it/resources' : '/resources';
     },
     supportPath() {
-      return this.isItalian ? '/it/report-bug' : '/report-bug';
+      return this.isItalian ? '/it/report-bug#bug' : '/report-bug#bug';
     },
    
     termsPath() {
