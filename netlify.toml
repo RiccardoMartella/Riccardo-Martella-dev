@@ -15,6 +15,16 @@
     [forms.contactit.notifications]
       email = "riccardomartella77@gmail.com"
 
+      [forms.reportbugen]
+    name = "reportbugen"
+    [forms.reportbugen.notifications]
+      email = "riccardomartella77@gmail.com"
+
+      [forms.reportbugit]
+    name = "reportbugit"
+    [forms.reportbugit.notifications]
+      email = "riccardomartella77@gmail.com"
+
 # Redirect dopo invio del form (opzionale)
 [[redirects]]
   from = "/thankyou"
