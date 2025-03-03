@@ -7,6 +7,21 @@
     <title>Assembly Station</title>
   </head>
   <body>
+  
+    
+    <!-- Form nascosti per Netlify -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    
+    <form name="contactit" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

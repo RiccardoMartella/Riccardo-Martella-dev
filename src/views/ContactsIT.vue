@@ -3,7 +3,6 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <!-- Page header section -->
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Contattami</h1>
             <p class="lead">
@@ -14,7 +13,6 @@
           <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="row">
-                <!-- Contact info section -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                   <h4>Informazioni di contatto</h4>
                   <p class="text-muted mb-4">
@@ -54,35 +52,28 @@
                 
                 <div class="col-lg-6">
                   <h4>Inviami un messaggio</h4>
-
-                  <form @submit.prevent="handleSubmit" name="contatto" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
-                    <input type="hidden" name="form-name" value="contatto" />
+                  <form name="contactit" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contactit" />
                     <p class="d-none">
                       <label>Non compilare questo campo se sei umano: <input name="bot-field" /></label>
                     </p>
                     
                     <div class="mb-3">
                       <label for="name" class="form-label">Nome</label>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Il tuo nome" required v-model="formData.name">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Il tuo nome" required>
                     </div>
                     
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="La tua email" required v-model="formData.email">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="La tua email" required>
                     </div>
                     
                     <div class="mb-3">
                       <label for="message" class="form-label">Messaggio</label>
-                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Il tuo messaggio" required v-model="formData.message"></textarea>
+                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary w-100" :disabled="submitting">
-                      {{ submitting ? 'Invio in corso...' : 'Invia Messaggio' }}
-                    </button>
-
-                    <div v-if="formSubmitted" class="alert alert-success mt-3">
-                      Grazie per il tuo messaggio! Ti risponderò al più presto.
-                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Invia Messaggio</button>
                   </form>
                 </div>
               </div>
@@ -111,47 +102,7 @@
 
 <script>
 export default {
-  name: 'ContactsIT',
-  data() {
-    return {
-      formData: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      submitting: false,
-      formSubmitted: false
-    }
-  },
-  methods: {
-    handleSubmit() {
-      this.submitting = true;
-      
-      const formData = new FormData();
-      formData.append('form-name', 'contatto');
-      Object.keys(this.formData).forEach(key => {
-        formData.append(key, this.formData[key]);
-      });
-      
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(() => {
-          this.submitting = false;
-          this.formSubmitted = true;
-          this.formData = { name: '', email: '', message: '' };
-          setTimeout(() => {
-            this.formSubmitted = false;
-          }, 5000);
-        })
-        .catch(error => {
-          console.error('Errore invio form:', error);
-          this.submitting = false;
-        });
-    }
-  }
+  name: 'ContactsIT'
 }
 </script>
 
@@ -191,3 +142,16 @@ export default {
 
 .form-control:focus {
   border-color: #00A3FF;
+  box-shadow: 0 0 0 0.25rem rgba(0, 163, 255, 0.25);
+}
+
+.btn-primary {
+  background-color: #00A3FF;
+  border-color: #00A3FF;
+}
+
+.btn-primary:hover {
+  background-color: #0082CC;
+  border-color: #0082CC;
+}
+</style>
