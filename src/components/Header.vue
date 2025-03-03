@@ -19,6 +19,9 @@
             <li class="nav-item">
               <RouterLink :to="docPath" class="nav-link">{{ isItalian ? 'Documentazione' : 'Documentation' }}</RouterLink>
             </li>
+            <li class="nav-item">
+              <RouterLink :to="pricePath" class="nav-link">{{ isItalian ? 'Prezzi' : 'Pricing' }}</RouterLink>
+            </li>
           </ul>
           
           <ul class="navbar-nav align-items-center">
@@ -67,6 +70,9 @@ export default {
     },
     bugPath() {
       return this.isItalian ? '/it/report-bug' : '/report-bug';
+    },
+    pricePath() {
+      return this.isItalian ? '/it/pricing' : '/pricing';
     }
   },
   mounted() {

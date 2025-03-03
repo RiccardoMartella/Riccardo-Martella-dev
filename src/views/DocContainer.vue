@@ -2,15 +2,13 @@
   <div class="doc-container">
     <div class="container-fluid mt-4">
       <div class="row">
-        <!-- Sidebar Navigation -->
+
         <div class="col-lg-3 col-md-4 d-none d-md-block">
           <DocSidebar :isItalian="isItalian" />
         </div>
-
-        <!-- Mobile Sidebar Toggle -->
+   
         <MobileSidebarToggle />
-        
-        <!-- Main Content -->
+
         <div class="col-lg-9 col-md-8">
           <div class="content-wrapper">
             <router-view></router-view>
@@ -18,15 +16,14 @@
         </div>
       </div>
     </div>
-    
-    <!-- Floating Back-to-top Button -->
+
     <button 
       v-show="showBackToTop" 
       @click="scrollToTop" 
-      class="back-to-top-btn"
+      class="back-to-top-btn me-4"
       aria-label="Back to top"
     >
-      <i class="bi bi-arrow-up"></i>
+      <i class="bi bi-arrow-up "></i>
     </button>
   </div>
 </template>

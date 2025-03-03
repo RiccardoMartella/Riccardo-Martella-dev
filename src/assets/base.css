@@ -84,3 +84,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.iub__us-widget{
+background-color: #B3E4FF !important;
+}
