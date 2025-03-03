@@ -13,7 +13,7 @@
           <div class="col-md-3 mb-4 mb-md-0">
             <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Informazioni' : 'Info' }}</u></h5>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="https://github.com/RiccardoMartella" class="footer-link">{{ isItalian ? 'Chi Siamo' : 'About Us' }}</a></li>
+              <li class="mb-2"><a href="https://github.com/RiccardoMartella" class="footer-link">{{ isItalian ? 'Chi Sono' : 'About Me' }}</a></li>
               <!-- <li class="mb-2"><RouterLink :to="featuresPath" class="footer-link">{{ isItalian ? 'Funzionalità' : 'Features' }}</RouterLink></li> -->
               <!-- <li class="mb-2"><RouterLink :to="casesPath" class="footer-link">{{ isItalian ? 'Casi di Studio' : 'Case Studies' }}</RouterLink></li> -->
               <li class="mb-2"><RouterLink :to="contactPath" class="footer-link">{{ isItalian ? 'Contatti' : 'Contact' }}</RouterLink></li>
