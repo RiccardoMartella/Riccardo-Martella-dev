@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-lg custom-navbar" :class="{'scrolled': isScrolled}">
       <div class="container">
-        <router-link to="/" class="navbar-brand d-flex align-items-center">
+        <router-link :to="introPath" class="navbar-brand d-flex align-items-center">
           <img src="/images/logo.png" alt="Assembly Station Logo" class="header-logo me-2">
           Assembly Station
         </router-link>
