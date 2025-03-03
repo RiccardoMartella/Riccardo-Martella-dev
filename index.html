@@ -7,7 +7,6 @@
     <title>Assembly Station</title>
   </head>
   <body>
-  
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
@@ -18,6 +17,41 @@
       <input type="text" name="name" />
       <input type="email" name="email" />
       <textarea name="message"></textarea>
+    </form>
+
+    <form name="reportbugit" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" class="form-control" id="bugTitle" name="bugTitle" placeholder="Breve descrizione del bug">
+      <input type="text" class="form-control" id="version" name="version"  placeholder="es. 1.2.5">
+      <input type="text" class="form-control" id="unityVersion" name="unityVersion" placeholder="es. 2022.3.1f1">
+      <select class="form-select" id="severity" name="severity">
+        <option value="basso">Basso</option>
+        <option value="medio">Medio</option>
+        <option value="alto">Alto</option>
+        <option value="critico">Critico</option>
+      </select>
+      <textarea class="form-control" name="bugDescription"  placeholder="Descrizione dettagliata di cosa succede..."></textarea>
+      <textarea class="form-control"  name="reproduction"  placeholder="1. Apri la scena... 2. Seleziona l'oggetto... 3. Clicca su..."></textarea>
+      <textarea class="form-control"  name="expected" placeholder="Cosa dovrebbe succedere invece?"></textarea>
+      <input type="file" class="form-control" name="attachments" multiple>
+      <input type="email" class="form-control"  name="email" placeholder="tua.email@esempio.com">
+    </form>
+
+
+    <form name="reportbugen" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" class="form-control" id="bugTitle" name="bugTitle" placeholder="Breve descrizione del bug">
+      <input type="text" class="form-control" id="version" name="version"  placeholder="es. 1.2.5">
+      <input type="text" class="form-control" id="unityVersion" name="unityVersion" placeholder="es. 2022.3.1f1">
+      <select class="form-select" id="severity" name="severity">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="critical">Critical</option>
+      </select>
+      <textarea class="form-control" name="bugDescription"  placeholder="Descrizione dettagliata di cosa succede..."></textarea>
+      <textarea class="form-control"  name="reproduction"  placeholder="1. Apri la scena... 2. Seleziona l'oggetto... 3. Clicca su..."></textarea>
+      <textarea class="form-control"  name="expected" placeholder="Cosa dovrebbe succedere invece?"></textarea>
+      <input type="file" class="form-control" name="attachments" multiple>
+      <input type="email" class="form-control"  name="email" placeholder="tua.email@esempio.com">
     </form>
     
     <div id="app"></div>
