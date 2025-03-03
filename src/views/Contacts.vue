@@ -3,6 +3,7 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
+          <!-- Page header section -->
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Contact Me</h1>
             <p class="lead">
@@ -13,6 +14,7 @@
           <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="row">
+                <!-- Contact info section -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                   <h4>Contact Information</h4>
                   <p class="text-muted mb-4">
@@ -49,31 +51,33 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <div class="col-lg-6">
                   <h4>Send me a message</h4>
-                  <form name="contact" method="POST" netlify action="/success.html">
-                    <input type="hidden" name="form-name" value="contact">
-  <input type="hidden" name="form-name" value="contact">
-  
-  <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
-  </div>
-  
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
-  </div>
-  
-  <div class="mb-3">
-    <label for="message" class="form-label">Message</label>
-    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-  </div>
-  
-  <button type="submit" class="btn btn-primary w-100">Send Message</button>
-</form>
 
+                  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p class="d-none">
+                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                  </form>
                 </div>
               </div>
             </div>
