@@ -18,3 +18,14 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
+
+[forms]
+  [forms.contact]
+    name = "contact"
+    [forms.contact.notifications]
+      email = "riccardomartella77@gmail.com"
+
+  [forms.contatto]
+    name = "contatto"
+    [forms.contatto.notifications]
+      email = "riccardomartella77@gmail.com"

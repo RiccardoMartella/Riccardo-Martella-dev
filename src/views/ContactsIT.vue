@@ -55,7 +55,7 @@
                 <div class="col-lg-6">
                   <h4>Inviami un messaggio</h4>
 
-                  <form @submit.prevent="handleSubmit" name="contatto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                  <form @submit.prevent="handleSubmit" name="contatto" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
                     <input type="hidden" name="form-name" value="contatto" />
                     <p class="d-none">
                       <label>Non compilare questo campo se sei umano: <input name="bot-field" /></label>
@@ -191,16 +191,3 @@ export default {
 
 .form-control:focus {
   border-color: #00A3FF;
-  box-shadow: 0 0 0 0.25rem rgba(0, 163, 255, 0.25);
-}
-
-.btn-primary {
-  background-color: #00A3FF;
-  border-color: #00A3FF;
-}
-
-.btn-primary:hover {
-  background-color: #0082CC;
-  border-color: #0082CC;
-}
-</style>

@@ -55,7 +55,7 @@
                 <div class="col-lg-6">
                   <h4>Send me a message</h4>
 
-                  <form @submit.prevent="handleSubmit" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                  <form @submit.prevent="handleSubmit" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
                     <input type="hidden" name="form-name" value="contact" />
                     <p class="d-none">
                       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
