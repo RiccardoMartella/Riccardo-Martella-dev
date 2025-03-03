@@ -25,7 +25,7 @@
                 Assembly Station è lo strumento definitivo per creare istruzioni di assemblaggio interattive in Unity. Progettato per semplificare processi complessi con feedback visivo intuitivo.
               </p>
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
-                <a href="#" class="btn btn-primary btn-glow btn-lg shadow px-4">Ottieni Assembly Station</a>
+                <RouterLink to="/it/docs/installation" class="btn btn-primary btn-glow btn-lg shadow px-4">Ottieni Assembly Station</RouterLink>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
                   <div class="badge-item pulse" title="Creato per Unity">
                     <i class="bi bi-unity fs-4"></i>
@@ -41,7 +41,7 @@
           </div>
           
           <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
-            <div class="featured-visual position-relative float-element overflow-visible">
+            <div class="featured-visual position-relative overflow-visible">
               <div class="video-container">
                 <div class="video-overlay"></div>
                 <video class="featured-video" src="/src/assets/video/in.mp4" autoplay muted loop></video>
@@ -68,7 +68,7 @@
               </div>
               
               <div class="logo-container">
-                <div class="logo-spinner bottom-prominent">
+                <div class="logo-spinner bottom-prominent float-element">
                   <img src="/images/logo.png" alt="Assembly Station Logo" class="spinning-logo" />
                   <div class="glow-effect"></div>
                 </div>
@@ -108,7 +108,7 @@
                     <h3 class="h5 mb-0">Documentazione</h3>
                   </div>
                   <p>Guide dettagliate e tutorial su come utilizzare Assembly Station nei tuoi progetti Unity.</p>
-                  <RouterLink to="/it" class="btn btn-primary mt-3">Vai alla Documentazione</RouterLink>
+                  <RouterLink to="/it/docs/installation" class="btn btn-primary mt-3">Vai alla Documentazione</RouterLink>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@
                     <h3 class="h5 mb-0">Video Tutorial</h3>
                   </div>
                   <p>Tutorial video passo-passo per aiutarti a iniziare rapidamente e padroneggiare le funzionalità avanzate.</p>
-                  <a href="#" class="btn btn-outline-primary mt-3">Guarda i Tutorial</a>
+                  <RouterLink to="/it/tutorials" class="btn btn-outline-primary mt-3">Guarda i Tutorial</RouterLink>
                 </div>
               </div>
             </div>
@@ -128,7 +128,7 @@
 
           <div class="text-center">
             <h3 class="mb-4">Inizia Subito</h3>
-            <RouterLink to="/it" class="btn btn-lg btn-primary px-4 py-2">
+            <RouterLink to="/it/docs/installation" class="btn btn-lg btn-primary px-4 py-2">
               Inizia a Usare Assembly Station
             </RouterLink>
           </div>
@@ -143,7 +143,6 @@ export default {
   name: 'IntroductionIT'
 }
 </script>
-
 <style scoped>
 .introduction {
   padding-top: 20px;
@@ -163,7 +162,12 @@ export default {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Enhanced Hero Section */
+.intro-logo {
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 30px;
+}
+
 .hero-section {
   background: linear-gradient(135deg, #f0f8ff 0%, #f9fcff 100%);
   position: relative;
@@ -174,7 +178,6 @@ export default {
   align-items: center;
 }
 
-/* Animated Background Elements */
 .animated-bg {
   position: absolute;
   top: 0;
@@ -225,7 +228,6 @@ export default {
   animation-delay: 6s;
 }
 
-/* Decorative Tech Lines */
 .tech-line {
   position: absolute;
   background: linear-gradient(90deg, rgba(0,163,255,0) 0%, rgba(0,163,255,0.2) 50%, rgba(0,163,255,0) 100%);
@@ -253,7 +255,6 @@ export default {
   animation-delay: 5s;
 }
 
-/* Animated Heading */
 .reveal-text {
   position: relative;
   overflow: hidden;
@@ -269,8 +270,8 @@ export default {
 
 .logo-spinner {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 65%;
   transform: translate(-50%, -50%);
   z-index: 10;
   width: 200px;
@@ -282,18 +283,16 @@ export default {
 }
 
 .spinning-logo {
-  width: 100%;
+  width: 80%;
   height: auto;
-  filter: drop-shadow(0 0 15px rgba(255,255,255,0.9));
-  animation: spin-horizontal 8s infinite linear;
-  transform-style: preserve-3d;
-  transition: all 0.3s ease;
 }
+
 
 .logo-spinner:hover .spinning-logo {
   animation-play-state: paused;
   transform: scale(1.1) rotateY(0deg);
 }
+
 
 .glow-effect {
   position: absolute;
@@ -304,12 +303,10 @@ export default {
   animation: pulse-glow 3s infinite alternate;
 }
 
-/* Floating Animation for Featured Visual */
 .float-element {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Interactive UI Elements */
 .interactive-elements {
   position: absolute;
   top: 0;
@@ -350,7 +347,6 @@ export default {
   animation: extend 3s infinite alternate;
 }
 
-/* Particle Effects */
 .particle-container {
   position: absolute;
   width: 300px;
@@ -373,7 +369,6 @@ export default {
 .p4 { animation-delay: 7.2s; }
 .p5 { animation-delay: 9.6s; }
 
-/* Enhanced Button Effects */
 .btn-glow {
   position: relative;
   overflow: hidden;
@@ -397,7 +392,6 @@ export default {
   box-shadow: 0 10px 20px rgba(0, 163, 255, 0.3);
 }
 
-/* Badge Effects */
 .badge-item {
   display: flex;
   align-items: center;
@@ -426,7 +420,6 @@ export default {
   animation-delay: 1.5s;
 }
 
-/* Entry Animations */
 .fade-in-up {
   opacity: 0;
   transform: translateY(20px);
@@ -441,7 +434,6 @@ export default {
   animation-delay: 0.6s;
 }
 
-/* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
@@ -470,12 +462,8 @@ export default {
 }
 
 @keyframes orbit {
-  from { 
-    transform: rotate(0deg) translateX(100px) rotate(0deg); 
-  }
-  to { 
-    transform: rotate(360deg) translateX(100px) rotate(-360deg); 
-  }
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
 
 @keyframes pulse {
@@ -499,54 +487,9 @@ export default {
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .featured-visual {
-    height: 350px;
-  }
-  
-  .logo-spinner {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .tech-line {
-    display: none;
-  }
-  
-  .bottom-right-overflow {
-    bottom: -30px;
-    right: -30px;
-    width: 180px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  .featured-visual {
-    height: 300px;
-  }
-  
-  .logo-spinner {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .bottom-right-overflow {
-    bottom: -20px;
-    right: -20px;
-    width: 140px;
-    height: 140px;
-  }
-}
-
-/* Logo Container for Positioning */
 .logo-container {
   position: absolute;
   width: 100%;
@@ -557,7 +500,6 @@ export default {
   z-index: 20;
 }
 
-/* Enhanced Logo Effects - Repositioned to Bottom Right */
 .logo-spinner {
   position: absolute;
   display: flex;
@@ -568,151 +510,6 @@ export default {
   pointer-events: auto;
 }
 
-.bottom-right-overflow {
-  bottom: -40px;
-  right: -40px;
-  width: 220px;
-  height: 220px;
-  transform: rotate(15deg);
-  transition: all 0.5s ease;
-}
-
-.featured-visual:hover .bottom-right-overflow {
-  transform: rotate(0deg);
-}
-
-.spinning-logo {
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 15px rgba(255,255,255,0.9));
-  animation: spin-horizontal 15s infinite linear;
-  transform-style: preserve-3d;
-  transition: all 0.3s ease;
-}
-
-.logo-spinner:hover .spinning-logo {
-  animation-play-state: paused;
-  transform: scale(1.2) rotateY(0deg);
-  filter: drop-shadow(0 0 25px rgba(0, 163, 255, 0.9));
-}
-
-/* Updated Video Container to Accommodate Overflow */
-.video-container {
-  position: relative;
-  width: 90%;
-  height: 85%;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  margin: 0 auto;
-}
-
-/* Repositioned Logo */
-.bottom-prominent {
-  position: absolute;
-  bottom: -60px;
-  right: 20px;
-  width: 200px;
-  height: 200px;
-  transform: rotate(0deg);
-  transition: all 0.5s ease;
-  z-index: 50;
-}
-
-.featured-visual:hover .bottom-prominent {
-  transform: translateY(-10px) scale(1.05);
-}
-
-.particle-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-}
-
-.particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: rgba(0, 163, 255, 0.6);
-  border-radius: 50%;
-  animation: orbit 12s infinite linear;
-}
-
-.p1 { animation-delay: 0s; transform-origin: center; }
-.p2 { animation-delay: 1.2s; transform-origin: center; }
-.p3 { animation-delay: 2.4s; transform-origin: center; }
-.p4 { animation-delay: 3.6s; transform-origin: center; }
-.p5 { animation-delay: 4.8s; transform-origin: center; }
-.p6 { animation-delay: 6.0s; transform-origin: center; width: 6px; height: 6px; }
-.p7 { animation-delay: 7.2s; transform-origin: center; width: 6px; height: 6px; }
-.p8 { animation-delay: 8.4s; transform-origin: center; width: 6px; height: 6px; }
-.p9 { animation-delay: 9.6s; transform-origin: center; width: 4px; height: 4px; }
-.p10 { animation-delay: 10.8s; transform-origin: center; width: 4px; height: 4px; }
-
-.top-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.top-particle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background-color: rgba(0, 163, 255, 0.5);
-  border-radius: 50%;
-  top: -10px;
-  animation: fall 8s infinite linear;
-}
-
-.tp1 { left: 15%; animation-delay: 0s; width: 8px; height: 8px; }
-.tp2 { left: 30%; animation-delay: 2s; }
-.tp3 { left: 50%; animation-delay: 4s; }
-.tp4 { left: 70%; animation-delay: 1s; width: 4px; height: 4px; }
-.tp5 { left: 85%; animation-delay: 3s; }
-
-@keyframes fall {
-  0% {
-    top: -10px;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    top: 110%;
-    opacity: 0;
-  }
-}
-
-@keyframes orbit {
-  from { 
-    transform: rotate(0deg) translateX(80px) rotate(0deg); 
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  to { 
-    transform: rotate(360deg) translateX(80px) rotate(-360deg);
-    opacity: 0;
-  }
-}
-
-
 .featured-visual {
   height: 360px;
   position: relative;
@@ -721,8 +518,8 @@ export default {
 
 .video-container {
   position: relative;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -736,6 +533,20 @@ export default {
   object-fit: cover;
 }
 
+.bottom-prominent {
+  position: absolute;
+  bottom: -80px;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+  z-index: 50;
+}
+
+.featured-visual:hover .bottom-prominent {
+  transform: translateY(-15px) scale(1.05);
+}
 
 .particle-system {
   position: absolute;
@@ -752,7 +563,7 @@ export default {
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: rgba(0, 163, 255, 1); 
+  background-color: rgba(0, 163, 255, 1);
   border-radius: 50%;
   z-index: 41;
 }
@@ -768,23 +579,6 @@ export default {
 .p5 { top: 10%; left: 50%; animation-delay: 9s; width: 7px; height: 7px; }
 .p6 { top: 60%; left: 10%; animation-delay: 11s; width: 4px; height: 4px; }
 
-/* Larger Logo */
-.bottom-prominent {
-  position: absolute;
-  bottom: -80px;
-  right: 10%;
-  width: 250px;  /* Much larger */
-  height: 250px; /* Much larger */
-  transform: rotate(0deg);
-  transition: all 0.5s ease;
-  z-index: 50;
-}
-
-.featured-visual:hover .bottom-prominent {
-  transform: translateY(-15px) scale(1.05);
-}
-
-/* New Wandering Animation for Particles */
 @keyframes wander {
   0% {
     transform: translate(0, 0);
@@ -806,7 +600,6 @@ export default {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
   .featured-visual {
     height: 320px;
@@ -817,9 +610,18 @@ export default {
     height: 180px;
     bottom: -60px;
   }
+  
+  .tech-line {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 60px 0;
+  }
+  
   .featured-visual {
     height: 280px;
     margin-bottom: 60px;
@@ -829,6 +631,10 @@ export default {
     width: 160px;
     height: 160px;
     bottom: -50px;
+  }
+  
+  .bg-shape {
+    opacity: 0.03;
   }
 }
 </style>

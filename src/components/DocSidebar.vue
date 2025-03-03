@@ -37,7 +37,7 @@ export default {
         { number: "8", title: "Salvataggi", path: "saves" },
         { number: "9", title: "Problemi Noti", path: "known-issues" }
       ] : [
-        { number: "1", title: "Installation", path: "installation" },
+        { number: "1", title: "Get Start", path: "installation" },
         { number: "2", title: "FBX and Materials Guide", path: "fbx-guide" },
         { number: "3", title: "Place Prefabs", path: "prefabs" },
         { number: "4", title: "Add Descriptions and Images", path: "descriptions" },

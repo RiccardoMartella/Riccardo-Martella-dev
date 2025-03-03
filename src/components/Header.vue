@@ -2,16 +2,16 @@
   <header>
     <nav class="navbar navbar-expand-lg custom-navbar" :class="{'scrolled': isScrolled}">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <router-link to="/" class="navbar-brand d-flex align-items-center">
           <img src="/images/logo.png" alt="Assembly Station Logo" class="header-logo me-2">
           Assembly Station
-        </a>
+        </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- Main Navigation Links -->
+      
           <ul class="navbar-nav me-auto ms-5">
             <li class="nav-item">
               <RouterLink :to="introPath" class="nav-link">{{ isItalian ? 'Introduzione' : 'Introduction' }}</RouterLink>
@@ -21,7 +21,6 @@
             </li>
           </ul>
           
-          <!-- Right-aligned Links -->
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
               <RouterLink :to="bugPath" class="nav-link me-3">{{ isItalian ? 'Segnala Bug' : 'Report Bug' }}</RouterLink>

@@ -3,41 +3,40 @@
     <div class="footer-main py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 mb-4 mb-md-0">
+          <div class="col-md-3 mb-4 mb-md-0 d-flex">
             <div class="d-flex align-items-center mb-2">
               <img src="/images/logo.png" alt="Assembly Station Logo" class="footer-logo me-2">
               <h5 class="mb-0 text-white">Assembly Station</h5>
             </div>
-            <p class="text-white">Your comprehensive solution for assembly line documentation and management.</p>
           </div>
           
           <div class="col-md-3 mb-4 mb-md-0">
-            <h5 class="mb-3 title-color"><u>Info</u></h5>
+            <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Informazioni' : 'Info' }}</u></h5>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="footer-link">About Us</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Features</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Case Studies</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Contact</a></li>
+              <li class="mb-2"><RouterLink :to="aboutPath" class="footer-link">{{ isItalian ? 'Chi Siamo' : 'About Us' }}</RouterLink></li>
+              <!-- <li class="mb-2"><RouterLink :to="featuresPath" class="footer-link">{{ isItalian ? 'Funzionalità' : 'Features' }}</RouterLink></li> -->
+              <!-- <li class="mb-2"><RouterLink :to="casesPath" class="footer-link">{{ isItalian ? 'Casi di Studio' : 'Case Studies' }}</RouterLink></li> -->
+              <li class="mb-2"><RouterLink :to="contactPath" class="footer-link">{{ isItalian ? 'Contatti' : 'Contact' }}</RouterLink></li>
             </ul>
           </div>
           
           <div class="col-md-3 mb-4 mb-md-0">
-            <h5 class="mb-3 title-color"><u>Get Started</u> </h5>
+            <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Inizia' : 'Get Started' }}</u></h5>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="footer-link">Documentation</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Tutorials</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Resources</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Support</a></li>
+              <li class="mb-2"><RouterLink :to="docPath" class="footer-link">{{ isItalian ? 'Documentazione' : 'Documentation' }}</RouterLink></li>
+              <!-- <li class="mb-2"><RouterLink :to="tutorialsPath" class="footer-link">{{ isItalian ? 'Tutorial' : 'Tutorials' }}</RouterLink></li> -->
+              <!-- <li class="mb-2"><RouterLink :to="resourcesPath" class="footer-link">{{ isItalian ? 'Risorse' : 'Resources' }}</RouterLink></li> -->
+              <li class="mb-2"><RouterLink :to="supportPath" class="footer-link">{{ isItalian ? 'Supporto' : 'Support' }}</RouterLink></li>
             </ul>
           </div>
           
           <div class="col-md-3">
-            <h5 class="mb-3 title-color"><u>Legal</u></h5>
+            <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Legale' : 'Legal' }}</u></h5>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="footer-link">Terms of Service</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Privacy Policy</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Cookies</a></li>
-              <li class="mb-2"><a href="#" class="footer-link">Licenses</a></li>
+              <li class="mb-2"><RouterLink :to="termsPath" class="footer-link">{{ isItalian ? 'Termini di Servizio' : 'Terms of Service' }}</RouterLink></li>
+              <li class="mb-2"><RouterLink :to="privacyPath" class="footer-link">{{ isItalian ? 'Politica sulla Privacy' : 'Privacy Policy' }}</RouterLink></li>
+              <li class="mb-2"><RouterLink :to="cookiesPath" class="footer-link">{{ isItalian ? 'Cookies' : 'Cookies' }}</RouterLink></li>
+              <li class="mb-2"><RouterLink :to="licensesPath" class="footer-link">{{ isItalian ? 'Licenze' : 'Licenses' }}</RouterLink></li>
             </ul>
           </div>
         </div>
@@ -46,9 +45,12 @@
     
     <div class="footer-bottom py-3">
       <div class="container">
-        <div class="d-flex justify-content-center align-items-center flex-column" >
+        <div class="d-flex justify-content-center align-items-center flex-column">
           <p class="mb-0 text-powered">Copyright © 2025 Assembly Station</p>
-          <p style="font-size: 12px;" class="mb-0  text-dark">Powered by <a href="" class="text-dark">Riccardo Martella</a> </p>
+          <p style="font-size: 12px;" class="mb-0 text-dark">
+            {{ isItalian ? 'Creato da ' : 'Powered by ' }}
+            <RouterLink :to="developerPath" class="text-dark">Riccardo Martella</RouterLink>
+          </p>
         </div>
       </div>
     </div>
@@ -57,12 +59,59 @@
 
 <script>
 export default {
-  name: "AppFooter"
+  name: "AppFooter",
+  computed: {
+    isItalian() {
+      return this.$route.path.includes('/it');
+    },
+    // Info section paths
+    aboutPath() {
+      return this.isItalian ? '/it/about' : '/about';
+    },
+    featuresPath() {
+      return this.isItalian ? '/it/features' : '/features';
+    },
+    casesPath() {
+      return this.isItalian ? '/it/case-studies' : '/case-studies';
+    },
+    contactPath() {
+      return this.isItalian ? '/it/contacts' : '/contacts';
+    },
+   
+    docPath() {
+      return this.isItalian ? '/it/docs/installation' : '/docs/installation';
+    },
+    tutorialsPath() {
+      return this.isItalian ? '/it/tutorials' : '/tutorials';
+    },
+    resourcesPath() {
+      return this.isItalian ? '/it/resources' : '/resources';
+    },
+    supportPath() {
+      return this.isItalian ? '/it/report-bug' : '/report-bug';
+    },
+   
+    termsPath() {
+      return this.isItalian ? '/it/terms' : '/terms';
+    },
+    privacyPath() {
+      return this.isItalian ? '/it/privacy' : '/privacy';
+    },
+    cookiesPath() {
+      return this.isItalian ? '/it/cookies' : '/cookies';
+    },
+    licensesPath() {
+      return this.isItalian ? '/it/licenses' : '/licenses';
+    },
+   
+    developerPath() {
+      return this.isItalian ? '/it/about-developer' : '/about-developer';
+    }
+  }
 }
 </script>
 
 <style scoped>
-
 .title-color {
   color: #ffffff;
 }

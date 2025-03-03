@@ -1,5 +1,5 @@
 <template>
-  <div class="doc-page">
+  <div class="doc-page">  
     <ContentSection>
       <h1 class="doc-title">4. ADD DESCRIPTIONS AND IMAGES TO PREFABS</h1>
       

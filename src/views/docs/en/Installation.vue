@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">1. INSTALLATION</h1>
+      <h1 class="doc-title">1. GET START</h1>
       
       <p class="text-lead">
         The project internally uses <strong>Text Mesh Pro</strong> and <strong>Input System</strong>.

@@ -25,7 +25,7 @@
                 Assembly Station is the ultimate tool for creating interactive assembly instructions in Unity. Designed to streamline complex assembly processes with intuitive visual feedback.
               </p>
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
-                <a href="#" class="btn btn-primary btn-glow btn-lg shadow px-4">Get Assembly Station</a>
+                <RouterLink to="/docs/installation" class="btn btn-primary btn-glow btn-lg shadow px-4">Get Assembly Station</RouterLink>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
                   <div class="badge-item pulse" title="Made for Unity">
                     <i class="bi bi-unity fs-4"></i>
@@ -41,7 +41,7 @@
           </div>
           
           <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
-            <div class="featured-visual position-relative float-element overflow-visible">
+            <div class="featured-visual position-relative overflow-visible">
               <div class="video-container">
                 <div class="video-overlay"></div>
                 <video class="featured-video" src="/src/assets/video/in.mp4" autoplay muted loop></video>
@@ -68,7 +68,7 @@
               </div>
               
               <div class="logo-container">
-                <div class="logo-spinner bottom-prominent">
+                <div class="logo-spinner bottom-prominent  float-element">
                   <img src="/images/logo.png" alt="Assembly Station Logo" class="spinning-logo" />
                   <div class="glow-effect"></div>
                 </div>
@@ -83,7 +83,6 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <!-- <h1 class="display-4 fw-bold text-accent mb-4">Assembly Station</h1> -->
             <p class="lead">
               Welcome to the official documentation for Assembly Station, a comprehensive tool for Unity that streamlines assembly and crafting mechanics in your games.
             </p>
@@ -108,7 +107,7 @@
                     <h3 class="h5 mb-0">Documentation</h3>
                   </div>
                   <p>Detailed guides and tutorials on how to use Assembly Station in your Unity projects.</p>
-                  <RouterLink to="/homeEn" class="btn btn-primary mt-3">Go to Documentation</RouterLink>
+                  <RouterLink to="/docs/installation" class="btn btn-primary mt-3">Go to Documentation</RouterLink>
                 </div>
               </div>
             </div>
@@ -120,7 +119,7 @@
                     <h3 class="h5 mb-0">Video Tutorials</h3>
                   </div>
                   <p>Step-by-step video tutorials to help you get started quickly and master advanced features.</p>
-                  <a href="#" class="btn btn-outline-primary mt-3">Watch Tutorials</a>
+                  <RouterLink to="/tutorials" class="btn btn-outline-primary mt-3">Watch Tutorials</RouterLink>
                 </div>
               </div>
             </div>
@@ -128,7 +127,7 @@
 
           <div class="text-center">
             <h3 class="mb-4">Get Started Now</h3>
-            <RouterLink to="/homeEn" class="btn btn-lg btn-primary px-4 py-2">
+            <RouterLink to="/docs/installation" class="btn btn-lg btn-primary px-4 py-2">
               Start Using Assembly Station
             </RouterLink>
           </div>
@@ -271,8 +270,8 @@ export default {
 
 .logo-spinner {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 65%;
   transform: translate(-50%, -50%);
   z-index: 10;
   width: 200px;
@@ -284,18 +283,16 @@ export default {
 }
 
 .spinning-logo {
-  width: 100%;
+  width: 80%;
   height: auto;
-  filter: drop-shadow(0 0 15px rgba(255,255,255,0.9));
-  animation: spin-horizontal 8s infinite linear;
-  transform-style: preserve-3d;
-  transition: all 0.3s ease;
 }
+
 
 .logo-spinner:hover .spinning-logo {
   animation-play-state: paused;
   transform: scale(1.1) rotateY(0deg);
 }
+
 
 .glow-effect {
   position: absolute;

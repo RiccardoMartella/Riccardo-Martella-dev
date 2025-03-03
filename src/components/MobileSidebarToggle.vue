@@ -17,27 +17,27 @@
       <ul class="mobile-sidebar-list">
         <template v-if="$route.path.includes('/it')">
           <!-- Italian links -->
-          <li><a href="#installazione" class="sidebar-link" @click="toggleSidebar">1 - Installazione</a></li>
-          <li><a href="#FBX" class="sidebar-link" @click="toggleSidebar">2 - Guida FBX e Materiali</a></li>
-          <li><a href="#Prefab" class="sidebar-link" @click="toggleSidebar">3 - Posizionare i Prefab</a></li>
-          <li><a href="#Descrizione" class="sidebar-link" @click="toggleSidebar">4 - Aggiungere Descrizioni e Immagini</a></li>
-          <li><a href="#Pulsanti" class="sidebar-link" @click="toggleSidebar">5 - Pulsanti e Categorie</a></li>
-          <li><a href="#Categorie" class="sidebar-link" @click="toggleSidebar">6 - Tag/Categorie/Gruppi</a></li>
-          <li><a href="#Risorse" class="sidebar-link" @click="toggleSidebar">7 - Risorse</a></li>
-          <li><a href="#Save" class="sidebar-link" @click="toggleSidebar">8 - Salvataggi</a></li>
-          <li><a href="#Bug" class="sidebar-link" @click="toggleSidebar">9 - Problemi Noti</a></li>
+          <li><RouterLink to="/it/docs/installation" class="sidebar-link" @click="toggleSidebar">1 - Installazione</RouterLink></li>
+          <li><RouterLink to="/it/docs/fbx-guide" class="sidebar-link" @click="toggleSidebar">2 - Guida FBX e Materiali</RouterLink></li>
+          <li><RouterLink to="/it/docs/prefabs" class="sidebar-link" @click="toggleSidebar">3 - Posizionare i Prefab</RouterLink></li>
+          <li><RouterLink to="/it/docs/descriptions" class="sidebar-link" @click="toggleSidebar">4 - Aggiungere Descrizioni e Immagini</RouterLink></li>
+          <li><RouterLink to="/it/docs/buttons" class="sidebar-link" @click="toggleSidebar">5 - Pulsanti e Categorie</RouterLink></li>
+          <li><RouterLink to="/it/docs/categories" class="sidebar-link" @click="toggleSidebar">6 - Tag/Categorie/Gruppi</RouterLink></li>
+          <li><RouterLink to="/it/docs/resources" class="sidebar-link" @click="toggleSidebar">7 - Risorse</RouterLink></li>
+          <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="toggleSidebar">8 - Salvataggi</RouterLink></li>
+          <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="toggleSidebar">9 - Problemi Noti</RouterLink></li>
         </template>
         <template v-else>
           <!-- English links -->
-          <li><a href="#installazione" class="sidebar-link" @click="toggleSidebar">1 - Get Start</a></li>
-          <li><a href="#FBX" class="sidebar-link" @click="toggleSidebar">2 - FBX and Materials Guide</a></li>
-          <li><a href="#Prefab" class="sidebar-link" @click="toggleSidebar">3 - Place Prefabs</a></li>
-          <li><a href="#Descrizione" class="sidebar-link" @click="toggleSidebar">4 - Add Descriptions and Images</a></li>
-          <li><a href="#Pulsanti" class="sidebar-link" @click="toggleSidebar">5 - Buttons and Categories</a></li>
-          <li><a href="#Categorie" class="sidebar-link" @click="toggleSidebar">6 - Tags/Categories/Groups</a></li>
-          <li><a href="#Risorse" class="sidebar-link" @click="toggleSidebar">7 - Resources</a></li>
-          <li><a href="#Save" class="sidebar-link" @click="toggleSidebar">8 - Saves</a></li>
-          <li><a href="#Bug" class="sidebar-link" @click="toggleSidebar">9 - Known Issues</a></li>
+          <li><RouterLink to="/docs/installation" class="sidebar-link" @click="toggleSidebar">1 - Get Started</RouterLink></li>
+          <li><RouterLink to="/docs/fbx-guide" class="sidebar-link" @click="toggleSidebar">2 - FBX and Materials Guide</RouterLink></li>
+          <li><RouterLink to="/docs/prefabs" class="sidebar-link" @click="toggleSidebar">3 - Place Prefabs</RouterLink></li>
+          <li><RouterLink to="/docs/descriptions" class="sidebar-link" @click="toggleSidebar">4 - Add Descriptions and Images</RouterLink></li>
+          <li><RouterLink to="/docs/buttons" class="sidebar-link" @click="toggleSidebar">5 - Buttons and Categories</RouterLink></li>
+          <li><RouterLink to="/docs/categories" class="sidebar-link" @click="toggleSidebar">6 - Tags/Categories/Groups</RouterLink></li>
+          <li><RouterLink to="/docs/resources" class="sidebar-link" @click="toggleSidebar">7 - Resources</RouterLink></li>
+          <li><RouterLink to="/docs/saves" class="sidebar-link" @click="toggleSidebar">8 - Saves</RouterLink></li>
+          <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="toggleSidebar">9 - Known Issues</RouterLink></li>
         </template>
       </ul>
     </div>
@@ -57,7 +57,6 @@ export default {
   methods: {
     toggleSidebar() {
       this.isOpen = !this.isOpen;
-      // Prevent body scrolling when sidebar is open
       document.body.style.overflow = this.isOpen ? 'hidden' : '';
     }
   }
@@ -127,6 +126,7 @@ export default {
   text-decoration: none;
   color: #333;
   border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .mobile-sidebar-list .sidebar-link:hover,
