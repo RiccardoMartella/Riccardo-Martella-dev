@@ -52,7 +52,8 @@
                 
                 <div class="col-lg-6">
                   <h4>Send me a message</h4>
-                  <form name="contact" method="POST" netlify>
+                  <form name="contact" method="POST" netlify action="/success.html">
+                    <input type="hidden" name="form-name" value="contact">
   <input type="hidden" name="form-name" value="contact">
   
   <div class="mb-3">
