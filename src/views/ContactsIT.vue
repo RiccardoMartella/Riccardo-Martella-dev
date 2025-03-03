@@ -25,7 +25,7 @@
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">Email</p>
-                      <p class="mb-0">riccardomertella77@gmail.com</p>
+                      <p class="mb-0">riccardomartella77@gmail.com</p>
                     </div>
                   </div>
                   
