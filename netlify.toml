@@ -1,0 +1,20 @@
+# Netlify Configuration File
+
+# Handle SPA routing by redirecting all paths to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Settings for the build process
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Define headers for certain paths
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
