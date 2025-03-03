@@ -53,6 +53,8 @@
                 <div class="col-lg-6">
                   <h4>Inviami un messaggio</h4>
                   <form name="contactit" method="POST"  netlify>
+                    <input type="hidden" name="contactit" value="contact">
+
                     <div class="mb-3">
                       <label for="name" class="form-label">Nome</label>
                       <input type="text" class="form-control" id="name" name="name" placeholder="Il tuo nome">
