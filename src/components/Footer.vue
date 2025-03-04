@@ -1,6 +1,6 @@
 <template>
   <footer class="footer mt-4">
-    <div class="footer-main py-5">
+    <div class="footer-main py-5 pb-4">
       <div class="container">
         <div class="row">
           <div class="col-md-3 mb-4 mb-md-0 d-flex">
@@ -38,8 +38,21 @@
           </div>
         </div>
       </div>
+      <div class="social-icons ">
+        <a href="https://github.com/RiccardoMartella" class="social-icon-footer mx-2">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://discord.gg/9wJSxtUX2W" class="social-icon-footer mx-2">
+          <i class="bi bi-discord"></i>
+        </a>
+        <a href="#" class="social-icon-footer mx-2">
+          <i class="bi bi-unity"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/" class="social-icon-footer mx-2">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
     </div>
-    
     <div class="footer-bottom py-3">
       <div class="container">
         <div class="d-flex justify-content-center align-items-center flex-column">
@@ -149,6 +162,39 @@ export default {
 
 .donate-link i {
   color: #ff6b6b;
+}
+
+.discord-link {
+  color: #7289da;
+  font-weight: 500;
+}
+
+.discord-link:hover {
+  color: #5e73bc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 0 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #4dbeff;
+}
+
+.social-icon-footer:hover {
+  transform: translateY(-3px);
+  background-color: #e6f7ff;
+  color: #00A3FF;
 }
 
 h5 {

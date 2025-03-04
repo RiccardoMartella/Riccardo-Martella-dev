@@ -31,6 +31,16 @@
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
+                      <a href="https://discord.gg/9wJSxtUX2W"><i class="bi bi-discord text-accent"></i></a>
+                    </div>
+                    <div>
+                      <p class="mb-0 fw-bold">Discord</p>
+                      <p class="mb-0">Unisciti al server Discord</p>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="contact-icon-wrapper">
                       <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/"><i class="bi bi-linkedin text-accent"></i></a>
                     </div>
                     <div>
@@ -47,6 +57,11 @@
                       <p class="mb-0 fw-bold">GitHub</p>
                       <p class="mb-0">Segnala problemi sul mio GitHub</p>
                     </div>
+                  </div>
+                  
+                  <div class="alert alert-info mt-4">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Verifica su Discord:</strong> Una volta acquistato l'asset, inviami su Discord in privato il numero d'ordine e verrai verificato.
                   </div>
                 </div>
                 
@@ -87,6 +102,9 @@
             <div class="d-flex justify-content-center gap-4 mt-3">
               <a href="https://github.com/RiccardoMartella" class="social-icon">
                 <i class="bi bi-github fs-3 text-accent"></i>
+              </a>
+              <a href="https://discord.gg/9wJSxtUX2W" class="social-icon">
+                <i class="bi bi-discord fs-3 text-accent"></i>
               </a>
               <a href="#" class="social-icon">
                 <i class="bi bi-unity fs-3 text-accent"></i>

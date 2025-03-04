@@ -54,31 +54,53 @@
                 <i class="bi bi-info-circle-fill me-2"></i>
                 <strong>Consigliato:</strong> Utilizzando GitHub potrai tenere traccia dello stato della tua segnalazione e seguire gli aggiornamenti mentre lavoro alle correzioni.
               </div>
-              <div class="row mt-4">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <div class="d-flex align-items-center">
-                    <div class="bug-report-icon">
-                      <i class="bi bi-github"></i>
-                    </div>
-                    <div>
-                      <h5>GitHub Issues</h5>
-                      <p class="mb-1">Crea una issue sul mio repository GitHub (consigliato)</p>
-                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary" target="_blank">Apri GitHub</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center">
-                    <div class="bug-report-icon">
-                      <i class="bi bi-envelope"></i>
-                    </div>
-                    <div>
-                      <h5>Email</h5>
-                      <p class="mb-1">Inviami una email con i dettagli</p>
-                      <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary">Email Me</a>
+              <div class="row mt-4 equal-height-row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="bug-report-method h-100">
+                    <div class="d-flex align-items-center">
+                      <div class="bug-report-icon">
+                        <i class="bi bi-github"></i>
+                      </div>
+                      <div>
+                        <h5>GitHub Issues</h5>
+                        <p class="mb-1">Crea una issue sul mio repository GitHub (consigliato)</p>
+                        <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary" target="_blank">Apri GitHub</a>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="bug-report-method h-100">
+                    <div class="d-flex align-items-center">
+                      <div class="bug-report-icon">
+                        <i class="bi bi-discord"></i>
+                      </div>
+                      <div>
+                        <h5>Discord</h5>
+                        <p class="mb-1">Unisciti alla nostra community per supporto</p>
+                        <a href="https://discord.gg/9wJSxtUX2W" class="btn btn-primary" target="_blank">Unisciti a Discord</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="bug-report-method h-100">
+                    <div class="d-flex align-items-center">
+                      <div class="bug-report-icon">
+                        <i class="bi bi-envelope"></i>
+                      </div>
+                      <div>
+                        <h5>Email</h5>
+                        <p class="mb-1">Inviami una email con i dettagli</p>
+                        <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary">Email Me</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 alert alert-secondary">
+                <i class="bi bi-shield-check me-2"></i>
+                <strong>Verifica:</strong> Dopo aver acquistato l'asset, inviami in privato su Discord il numero d'ordine per essere verificato.
               </div>
             </div>
           </div>
@@ -328,5 +350,24 @@ export default {
   font-size: 0.8rem;
   margin-top: 5px;
   color: #6c757d;
+}
+
+.equal-height-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.equal-height-row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.bug-report-method {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
 }
 </style>

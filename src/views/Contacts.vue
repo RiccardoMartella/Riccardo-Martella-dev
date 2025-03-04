@@ -4,9 +4,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4" id="contEn">Contact Me</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4" id="cont">Contact Me</h1>
             <p class="lead">
-                I'm here to help you! Get in touch with me.
+                I'm here to help! Get in touch with me.
             </p>
           </div>
 
@@ -16,7 +16,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                   <h4>Contact Information</h4>
                   <p class="text-muted mb-4">
-                    Please feel free to reach out with any questions, feedback, or support requests.
+                    Don't hesitate to contact me for any questions, feedback, or assistance requests.
                   </p>
                   
                   <div class="d-flex align-items-center mb-3">
@@ -31,10 +31,20 @@
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
-                     <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/"><i class="bi bi-linkedin text-accent"></i></a>
+                      <a href="https://discord.gg/9wJSxtUX2W"><i class="bi bi-discord text-accent"></i></a>
                     </div>
                     <div>
-                      <p class="mb-0 fw-bold"> LinkedIn</p>
+                      <p class="mb-0 fw-bold">Discord</p>
+                      <p class="mb-0">Join our Discord server</p>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="contact-icon-wrapper">
+                      <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/"><i class="bi bi-linkedin text-accent"></i></a>
+                    </div>
+                    <div>
+                      <p class="mb-0 fw-bold">Linkedin</p>
                       <p class="mb-0">Visit my LinkedIn profile</p>
                     </div>
                   </div>
@@ -48,12 +58,17 @@
                       <p class="mb-0">Report issues on my GitHub</p>
                     </div>
                   </div>
+                  
+                  <div class="alert alert-info mt-4">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Discord Verification:</strong> After purchasing the asset, please send me your order number via Discord private message to get verified.
+                  </div>
                 </div>
                 
                 <div class="col-lg-6">
-                  <h4>Send me a message</h4>
-                  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact" />
+                  <h4>Send Me a Message</h4>
+                  <form name="contacten" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contacten" />
                     <p class="d-none">
                       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                     </p>
@@ -68,7 +83,7 @@
                       <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
                     </div>
                     <div><p class="form-text">"The data entered will be used exclusively to respond to your request. They will not be shared with third parties."</p></div>
-
+                    
                     <div class="mb-3">
                       <label for="message" class="form-label">Message</label>
                       <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
@@ -82,10 +97,13 @@
           </div>
 
           <div class="text-center mt-5">
-            <h5>Find me on social media</h5>
+            <h5>Follow me on social media</h5>
             <div class="d-flex justify-content-center gap-4 mt-3">
-                <a href="https://github.com/RiccardoMartella" class="social-icon">
+              <a href="https://github.com/RiccardoMartella" class="social-icon">
                 <i class="bi bi-github fs-3 text-accent"></i>
+              </a>
+              <a href="https://discord.gg/9wJSxtUX2W" class="social-icon">
+                <i class="bi bi-discord fs-3 text-accent"></i>
               </a>
               <a href="#" class="social-icon">
                 <i class="bi bi-unity fs-3 text-accent"></i>
