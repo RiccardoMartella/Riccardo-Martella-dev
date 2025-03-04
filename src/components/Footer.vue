@@ -33,9 +33,7 @@
           <div class="col-md-3">
             <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Legale' : 'Legal' }}</u></h5>
             <ul class="list-unstyled">
-              <li class="mb-2"><RouterLink :to="termsPath" class="footer-link">{{ isItalian ? 'Termini di Servizio' : 'Terms of Service' }}</RouterLink></li>
               <li class="mb-2"><RouterLink :to="privacyPath" class="footer-link">{{ isItalian ? 'Politica sulla Privacy' : 'Privacy Policy' }}</RouterLink></li>
-              <li class="mb-2"><RouterLink :to="cookiesPath" class="footer-link">{{ isItalian ? 'Cookies' : 'Cookies' }}</RouterLink></li>
               <li class="mb-2"><RouterLink :to="licensesPath" class="footer-link">{{ isItalian ? 'Licenze' : 'Licenses' }}</RouterLink></li>
             </ul>
           </div>
@@ -93,9 +91,7 @@ export default {
     privacyPath() {
       return this.isItalian ? '/it/privacy' : '/privacy';
     },
-    cookiesPath() {
-      return this.isItalian ? '/it/cookies' : '/cookies';
-    },
+
     licensesPath() {
       return this.isItalian ? '/it/licenses' : '/licenses';
     },

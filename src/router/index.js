@@ -42,11 +42,6 @@ const router = createRouter({
       component: () => import('@/components/Privacy.vue')
     },
     {
-      path: '/cookie',
-      name: 'cookie',
-      component: () => import('@/components/Cookie.vue')
-    },
-    {
       path: '/pricing',
       name: 'pricing',
       component: Pricing

@@ -147,7 +147,8 @@
                   <label for="email" class="form-label">Your Email (for follow-up)</label>
                   <input type="email" class="form-control" id="email"  name="email" placeholder="your.email@example.com">
                 </div>
-                
+                <div><p class="form-text">"The data entered will be used exclusively to respond to your request. They will not be shared with third parties."</p></div>
+
                 <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Submit Bug Report</button>
               </form>
             </div>

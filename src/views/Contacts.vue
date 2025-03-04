@@ -67,7 +67,8 @@
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
                     </div>
-                    
+                    <div><p class="form-text">"The data entered will be used exclusively to respond to your request. They will not be shared with third parties."</p></div>
+
                     <div class="mb-3">
                       <label for="message" class="form-label">Message</label>
                       <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>

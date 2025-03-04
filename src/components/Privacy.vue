@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <a 
-      href="https://www.iubenda.com/privacy-policy/82562185" 
-      class="iubenda-white iubenda-embed" 
+      href="https://www.iubenda.com/privacy-policy/82562185"
+      class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" 
       title="Privacy Policy"
       target="_blank"
     >

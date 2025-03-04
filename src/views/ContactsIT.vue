@@ -67,6 +67,8 @@
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" name="email" placeholder="La tua email" required>
                     </div>
+                    <div><p class="form-text">"I dati inseriti saranno utilizzati esclusivamente per rispondere alla tua richiesta. Non saranno condivisi con terze parti."</p></div>
+
                     
                     <div class="mb-3">
                       <label for="message" class="form-label">Messaggio</label>

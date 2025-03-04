@@ -147,7 +147,7 @@
                   <label for="email" class="form-label">La tua Email (per follow-up)</label>
                   <input type="email" class="form-control" id="email"  name="email" placeholder="tua.email@esempio.com">
                 </div>
-                
+                <div><p class="form-text">"I dati inseriti saranno utilizzati esclusivamente per rispondere alla tua richiesta. Non saranno condivisi con terze parti."</p></div>
                 <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Invia Segnalazione</button>
               </form>
             </div>
