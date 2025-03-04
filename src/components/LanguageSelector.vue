@@ -34,28 +34,24 @@ export default {
     switchLanguage(lang) {
       if (lang === this.currentLang) return;
       
-  
       const currentPath = this.$route.path;
       
-     
       if (currentPath === '/' || currentPath === '/it') {
-      
         this.$router.push(lang === 'en' ? '/' : '/it');
       } else if (currentPath === '/homeEn' || currentPath === '/it/documentation') {
-       
         this.$router.push(lang === 'en' ? '/homeEn' : '/it/documentation');
       } else if (currentPath === '/contacts' || currentPath === '/it/contacts') {
-        
         this.$router.push(lang === 'en' ? '/contacts' : '/it/contacts');
       } else if (currentPath.includes('/report-bug') || currentPath.includes('/it/report-bug')) {
-    
         this.$router.push(lang === 'en' ? '/report-bug' : '/it/report-bug');
-      } else if (currentPath.includes('/docs/') || currentPath.includes('/it/docs/')) {
-     
+      } else if (currentPath === '/pricing' || currentPath === '/it/pricing') {
+        this.$router.push(lang === 'en' ? '/pricing' : '/it/pricing');
+      } else if (currentPath === '/privacy' || currentPath === '/it/privacy') {
+        this.$router.push(lang === 'en' ? '/privacy' : '/it/privacy');
+      }  else if (currentPath.includes('/docs/') || currentPath.includes('/it/docs/')) {
         const docPath = currentPath.split('/').pop();
         this.$router.push(lang === 'en' ? `/docs/${docPath}` : `/it/docs/${docPath}`);
       } else {
-       
         this.$router.push(lang === 'en' ? '/' : '/it');
       }
     }

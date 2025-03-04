@@ -6,8 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Pricing</h1>
             <p class="lead">
-              Simple, transparent pricing with everything you need to create amazing assembly guides.
-            </p>
+              One single price, complete access: everything you need to excel in assembly guides            </p>
           </div>
 
           <div class="card pricing-card shadow mb-5">
@@ -26,11 +25,7 @@
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
                     <span>Complete Unity Asset for Assembly Instructions</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>User-friendly Interface with Drag &amp; Drop Functions</span>
-                  </li>
+                  </li>     
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
                     <span>Full Source Code Access</span>
@@ -49,7 +44,7 @@
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Unity 2021.3 LTS Compatibility</span>
+                    <span>Unity 6000.0.23f1 LTS Compatibility</span>
                   </li>
                 </ul>
               </div>
@@ -190,7 +185,7 @@ export default {
 }
 
 .price {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 

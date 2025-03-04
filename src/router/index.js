@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Introduction from '../views/Introduction.vue'
 import Pricing from '@/views/Pricing.vue'
 import PricingIT from '@/views/PricingIT.vue'
+import Privacy from '@/views/Privacy.vue'
+import PrivacyIT from '@/views/PrivacyIT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,7 +41,12 @@ const router = createRouter({
     {
       path: '/privacy',
       name: 'privacy',
-      component: () => import('@/components/Privacy.vue')
+      component: Privacy
+    },
+    {
+      path: '/it/privacy',
+      name: 'privacy-it',
+      component: PrivacyIT
     },
     {
       path: '/pricing',

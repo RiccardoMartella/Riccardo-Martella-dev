@@ -14,9 +14,10 @@
             <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Informazioni' : 'Info' }}</u></h5>
             <ul class="list-unstyled">
               <li class="mb-2"><a href="https://github.com/RiccardoMartella" class="footer-link">{{ isItalian ? 'Chi Sono' : 'About Me' }}</a></li>
-              <!-- <li class="mb-2"><RouterLink :to="featuresPath" class="footer-link">{{ isItalian ? 'Funzionalità' : 'Features' }}</RouterLink></li> -->
-              <!-- <li class="mb-2"><RouterLink :to="casesPath" class="footer-link">{{ isItalian ? 'Casi di Studio' : 'Case Studies' }}</RouterLink></li> -->
               <li class="mb-2"><RouterLink :to="contactPath" class="footer-link">{{ isItalian ? 'Contatti' : 'Contact' }}</RouterLink></li>
+              <li class="mb-2"><a :href="donateLink" target="_blank" class="footer-link donate-link">
+                <i class="bi bi-heart-fill me-1"></i>{{ isItalian ? 'Supportami' : 'Donate' }}
+              </a></li>
             </ul>
           </div>
           
@@ -24,8 +25,6 @@
             <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Inizia' : 'Get Started' }}</u></h5>
             <ul class="list-unstyled">
               <li class="mb-2"><RouterLink :to="docPath" class="footer-link">{{ isItalian ? 'Documentazione' : 'Documentation' }}</RouterLink></li>
-              <!-- <li class="mb-2"><RouterLink :to="tutorialsPath" class="footer-link">{{ isItalian ? 'Tutorial' : 'Tutorials' }}</RouterLink></li> -->
-              <!-- <li class="mb-2"><RouterLink :to="resourcesPath" class="footer-link">{{ isItalian ? 'Risorse' : 'Resources' }}</RouterLink></li> -->
               <li class="mb-2"><RouterLink :to="supportPath" class="footer-link">{{ isItalian ? 'Supporto' : 'Support' }}</RouterLink></li>
             </ul>
           </div>
@@ -71,7 +70,6 @@ export default {
     contactPath() {
       return this.isItalian ? '/it/contacts' : '/contacts';
     },
-   
     docPath() {
       return this.isItalian ? '/it/docs/installation' : '/docs/installation';
     },
@@ -84,20 +82,21 @@ export default {
     supportPath() {
       return this.isItalian ? '/it/report-bug#bug' : '/report-bug#bug';
     },
-   
     termsPath() {
       return this.isItalian ? '/it/terms' : '/terms';
     },
     privacyPath() {
       return this.isItalian ? '/it/privacy' : '/privacy';
     },
-
     licensesPath() {
       return this.isItalian ? '/it/licenses' : '/licenses';
     },
-   
     developerPath() {
       return this.isItalian ? '/it/about-developer' : '/about-developer';
+    },
+    donateLink() {
+      
+      return "https://paypal.me/riccardomartella";
     }
   }
 }
@@ -137,6 +136,19 @@ export default {
 .footer-link:hover {
   color: #00A3FF;
   text-decoration: none;
+}
+
+.donate-link {
+  color: #fff2cc;
+  font-weight: 500;
+}
+
+.donate-link:hover {
+  color: #ffdd57;
+}
+
+.donate-link i {
+  color: #ff6b6b;
 }
 
 h5 {

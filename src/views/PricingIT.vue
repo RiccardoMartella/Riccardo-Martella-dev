@@ -6,8 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Prezzi</h1>
             <p class="lead">
-              Prezzi semplici e trasparenti con tutto il necessario per creare guide di assemblaggio straordinarie.
-            </p>
+              Un unico prezzo, accesso completo: tutto ciò che ti serve per eccellere nelle guide di assemblaggio.            </p>
           </div>
 
           <div class="card pricing-card shadow mb-5">
@@ -29,10 +28,6 @@
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Interfaccia intuitiva con funzioni Drag &amp; Drop</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
                     <span>Accesso completo al codice sorgente</span>
                   </li>
                   <li>
@@ -49,7 +44,7 @@
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Compatibilità con Unity 2021.3 LTS</span>
+                    <span>Compatibilità con Unity 6000.0.23f1 LTS</span>
                   </li>
                 </ul>
               </div>
@@ -190,7 +185,7 @@ export default {
 }
 
 .price {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 

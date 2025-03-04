@@ -28,6 +28,11 @@
                 </div>
                 <h4>Tempo di Risposta</h4>
                 <p>Al momento sono l'unico sviluppatore, quindi farò del mio meglio per risolvere i problemi il prima possibile.</p>
+                <div class="support-developer mt-3">
+                  <a href="https://paypal.me/riccardomartella" target="_blank" class="support-link">
+                    <i class="bi bi-heart-fill me-1"></i> Supporta il mio lavoro
+                  </a>
+                </div>
               </div>
             </div>
             
@@ -293,5 +298,35 @@ export default {
 
 .accordion-button::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300A3FF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.support-developer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #cce5ff;
+}
+
+.support-link {
+  color: #00A3FF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.support-link:hover {
+  color: #0082CC;
+}
+
+.support-link i {
+  color: #ff6b6b;
+  margin-right: 5px;
+}
+
+.support-text {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #6c757d;
 }
 </style>
