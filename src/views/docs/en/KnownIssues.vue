@@ -73,7 +73,7 @@
               If you're experiencing issues not covered in this documentation, feel free to contact me for support.
             </p>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <a href="https://github.com/RiccardoMartella" class="btn btn-outline-primary">
+              <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-outline-primary">
                 <i class="bi bi-github me-2"></i>Report Issue on GitHub
               </a>
               <RouterLink to="/contacts#contEn" class="btn btn-outline-primary">
