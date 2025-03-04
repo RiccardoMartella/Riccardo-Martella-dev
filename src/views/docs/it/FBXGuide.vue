@@ -36,8 +36,10 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              Per estrarre i materiali, vai qui:
+              Per estrarre i materiali, andare al seguente percorso:
             </p>
+            <p class="mt-4">
+              E seleziona la cartella Risorse come mostrato nelle immagini a destra.            </p>
           </div>
           
           <div class="content-media">
@@ -53,9 +55,6 @@
                 caption="Selezione cartella Resources"
               />
             </div>
-            <p class="caption">
-              E seleziona la cartella Resources.
-            </p>
           </div>
         </div>
       </div>
@@ -100,4 +99,51 @@ export default {
 
 <style>
 @import '@/assets/styles/documentation.css';
+
+.content-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.content-text {
+  flex: 3;
+}
+
+.content-media {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.standard-image {
+  max-width: 100%;
+  width: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+  }
+  
+  .content-media {
+    align-items: center;
+    margin-top: 20px;
+  }
+}
 </style>

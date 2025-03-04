@@ -23,7 +23,7 @@
           <div class="content-text">
             <p>
               Le risorse del giocatore si trovano nella cartella 
-              <code>Assets > AssemblyStation > ScriptableObject > Resources Player</code>.
+              <code>Assets > AssemblyStation > ScriptableObject > PlayerResources</code>.
               Questo è assegnato al Player di test attraverso lo <u>script (ResourcesComponentPLayer) che puoi trovare
               in <strong>PLayer Test</strong> nella Hierarchy</u>
             </p>

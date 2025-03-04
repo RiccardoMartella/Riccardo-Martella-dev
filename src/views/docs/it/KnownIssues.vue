@@ -71,9 +71,9 @@
               Se stai riscontrando problemi non trattati in questa documentazione, non esitare a contattarmi per supporto.
             </p>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <RouterLink to="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-outline-primary">
-                <i class="bi bi-bug me-2"></i>Segnala Bug
-              </RouterLink>
+            <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-outline-primary">
+              <i class="bi bi-bug me-2"></i>Segnala Bug
+            </a>
               <RouterLink to="/it/contacts#contIt" class="btn btn-outline-primary">
                 <i class="bi bi-envelope me-2"></i>Contattami 
               </RouterLink>

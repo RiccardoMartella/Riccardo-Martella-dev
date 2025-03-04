@@ -1,7 +1,15 @@
 <template>
   <div class="doc-page">
     <ContentSection>
+      <div class="disclaimer-box mb-4">
+        <div class="disclaimer-icon"><i class="bi bi-info-circle-fill"></i></div>
+        <div class="disclaimer-content">
+          <h4>Important Disclaimer</h4>
+          <p>The images and videos in this documentation might not exactly match the current appearance of the asset, as Assembly Station is constantly evolving and being updated. I am committed to regularly updating this documentation to keep it as closely aligned as possible with the latest versions of the asset. Additionally, I've avoided using overly technical language to make this documentation more accessible and easier to understand for everyone.</p>
+        </div>
+      </div>
       <h1 class="doc-title">1. GET START</h1>
+      
       
       <p class="text-lead">
         The project internally uses <strong>Text Mesh Pro</strong> and <strong>Input System</strong>.
@@ -100,6 +108,44 @@ export default {
 
 <style>
 @import '@/assets/styles/documentation.css';
+
+.disclaimer-box {
+  display: flex;
+  background-color: #e6f7ff;
+  border-left: 4px solid #00A3FF;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.disclaimer-icon {
+  font-size: 24px;
+  color: #00A3FF;
+  margin-right: 15px;
+  margin-top: 0;
+}
+
+.disclaimer-content h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #00A3FF;
+}
+
+.disclaimer-content p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-box {
+    flex-direction: column;
+  }
+  
+  .disclaimer-icon {
+    margin-bottom: 10px;
+  }
+}
 
 .standard-image {
   max-width: 100%;

@@ -23,7 +23,7 @@
           <div class="content-text">
             <p>
               The player's resources are located in the folder: 
-              <code>Assets > AssemblyStation > ScriptableObject > Resources Player</code>.
+              <code>Assets > AssemblyStation > ScriptableObject > PlayerResources </code>.
               This is assigned to the test Player through the <u>script (ResourcesComponentPLayer) that you can find
               in <strong>PLayer Test</strong> in the Hierarchy</u>
             </p>

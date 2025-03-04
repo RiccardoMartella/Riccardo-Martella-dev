@@ -35,9 +35,7 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              That point refers to the pivot of the prefab's parent, which contains all the "pieces" that make up the gameobject.
-              Properly positioning this pivot is crucial for correct model placement.
-            </p>
+              That point refers to the parent pivot, which contains all the "pieces" that make up the gameobject. Positioning this pivot correctly is critical to the correct positioning of the model.            </p>
           </div>
           
           <div class="content-media">
