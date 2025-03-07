@@ -34,8 +34,9 @@ export default {
         { number: "5", title: "Pulsanti e Categorie", path: "buttons" },
         { number: "6", title: "Tag/Categorie/Gruppi", path: "categories" },
         { number: "7", title: "Risorse", path: "resources" },
-        { number: "8", title: "Salvataggi", path: "saves" },
-        { number: "9", title: "Problemi Noti", path: "known-issues" }
+        { number: "8", title: "Effetti Sonori & Visivi", path: "effects" },
+        { number: "9", title: "Salvataggi", path: "saves" },
+        { number: "10", title: "Problemi Noti", path: "known-issues" }
       ] : [
         { number: "1", title: "Get Start", path: "installation" },
         { number: "2", title: "FBX and Materials Guide", path: "fbx-guide" },
@@ -44,8 +45,9 @@ export default {
         { number: "5", title: "Buttons and Categories", path: "buttons" },
         { number: "6", title: "Tags/Categories/Groups", path: "categories" },
         { number: "7", title: "Resources", path: "resources" },
-        { number: "8", title: "Saves", path: "saves" },
-        { number: "9", title: "Known Issues", path: "known-issues" }
+        { number: "8", title: "Sound & Visual Effects", path: "effects" },
+        { number: "9", title: "Saves", path: "saves" },
+        { number: "10", title: "Known Issues", path: "known-issues" }
       ]
     }
   }

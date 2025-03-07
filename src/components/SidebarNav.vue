@@ -9,8 +9,9 @@
       <li><a href="#Pulsanti" class="sidebar-link">5 - Buttons and Categories</a></li>
       <li><a href="#Categorie" class="sidebar-link">6 - Tags/Categories/Groups</a></li>
       <li><a href="#Risorse" class="sidebar-link">7 - Resources</a></li>
-      <li><a href="#Save" class="sidebar-link">8 - Saves</a></li>
-      <li><a href="#Bug" class="sidebar-link">9 - Known Issues</a></li>
+      <li><a href="#Effetti" class="sidebar-link">8 - Sound & Visual Effects</a></li>
+      <li><a href="#Save" class="sidebar-link">9 - Saves</a></li>
+      <li><a href="#Bug" class="sidebar-link">10 - Known Issues</a></li>
     </ul>
   </div>
 </template>

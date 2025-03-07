@@ -24,8 +24,9 @@
           <li><RouterLink to="/it/docs/buttons" class="sidebar-link" @click="toggleSidebar">5 - Pulsanti e Categorie</RouterLink></li>
           <li><RouterLink to="/it/docs/categories" class="sidebar-link" @click="toggleSidebar">6 - Tag/Categorie/Gruppi</RouterLink></li>
           <li><RouterLink to="/it/docs/resources" class="sidebar-link" @click="toggleSidebar">7 - Risorse</RouterLink></li>
-          <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="toggleSidebar">8 - Salvataggi</RouterLink></li>
-          <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="toggleSidebar">9 - Problemi Noti</RouterLink></li>
+          <li><RouterLink to="/it/docs/effects" class="sidebar-link" @click="toggleSidebar">8 - Effetti Sonori & Visivi</RouterLink></li>
+          <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="toggleSidebar">9 - Salvataggi</RouterLink></li>
+          <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="toggleSidebar">10 - Problemi Noti</RouterLink></li>
         </template>
         <template v-else>
           <!-- English links -->
@@ -36,8 +37,9 @@
           <li><RouterLink to="/docs/buttons" class="sidebar-link" @click="toggleSidebar">5 - Buttons and Categories</RouterLink></li>
           <li><RouterLink to="/docs/categories" class="sidebar-link" @click="toggleSidebar">6 - Tags/Categories/Groups</RouterLink></li>
           <li><RouterLink to="/docs/resources" class="sidebar-link" @click="toggleSidebar">7 - Resources</RouterLink></li>
-          <li><RouterLink to="/docs/saves" class="sidebar-link" @click="toggleSidebar">8 - Saves</RouterLink></li>
-          <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="toggleSidebar">9 - Known Issues</RouterLink></li>
+          <li><RouterLink to="/docs/effects" class="sidebar-link" @click="toggleSidebar">8 - Sound & Visual Effects</RouterLink></li>
+          <li><RouterLink to="/docs/saves" class="sidebar-link" @click="toggleSidebar">9 - Saves</RouterLink></li>
+          <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="toggleSidebar">10 - Known Issues</RouterLink></li>
         </template>
       </ul>
     </div>

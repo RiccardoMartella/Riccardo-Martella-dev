@@ -98,6 +98,11 @@ const router = createRouter({
           component: () => import('@/views/docs/en/Categories.vue')
         },
         {
+          path: 'effects',
+          name: 'docsEffects',
+          component: () => import('@/views/docs/en/Effects.vue')
+        },
+        {
           path: 'resources',
           name: 'docsResources',
           component: () => import('@/views/docs/en/Resources.vue')
@@ -158,6 +163,11 @@ const router = createRouter({
           path: 'resources',
           name: 'docsResourcesIT',
           component: () => import('@/views/docs/it/Resources.vue')
+        },
+        {
+          path: 'effects',
+          name: 'docsEffectsIT',
+          component: () => import('@/views/docs/it/Effects.vue')
         },
         {
           path: 'saves',
