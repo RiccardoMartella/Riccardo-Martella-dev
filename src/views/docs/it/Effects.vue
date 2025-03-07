@@ -2,7 +2,7 @@
   <div class="doc-page">
     <ContentSection>
     
-      <h1 class="doc-title">EFFETTI SONORI & VISIVI</h1>
+      <h1 class="doc-title">8. EFFETTI SONORI & VISIVI</h1>
       
       <p class="text-lead">
         Durante la costruzione di un componente in Assembly Station, vengono riprodotti effetti sonori personalizzati e particelle visive per migliorare l'esperienza utente. Ogni modello può avere il proprio suono ed effetto visivo caratteristico.

@@ -2,7 +2,7 @@
   <div class="doc-page">
     <ContentSection>
 
-      <h1 class="doc-title">SOUND & VISUAL EFFECTS</h1>
+      <h1 class="doc-title">8. SOUND & VISUAL EFFECTS</h1>
       
       <p class="text-lead">
         When building a component in Assembly Station, custom sound effects and visual particles play to enhance the user experience. Each model can have its own characteristic sound and visual effect.

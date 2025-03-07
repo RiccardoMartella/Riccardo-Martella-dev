@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">8. SAVES</h1>
+      <h1 class="doc-title">9. SAVES</h1>
 
       <div class="doc-section">
         <h2 class="doc-section-title">SAVING THE MODEL</h2>

@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">9. PROBLEMI NOTI</h1>
+      <h1 class="doc-title">10. PROBLEMI NOTI</h1>
       
       <div class="doc-section">
         <h2 class="doc-section-title">ERRORI COMUNI</h2>
