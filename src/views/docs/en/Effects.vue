@@ -1,13 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <div class="disclaimer-box mb-4">
-        <div class="disclaimer-icon"><i class="bi bi-info-circle-fill"></i></div>
-        <div class="disclaimer-content">
-          <h4>Important Disclaimer</h4>
-          <p>The images and videos in this documentation might not exactly match the current appearance of the asset, as Assembly Station is constantly evolving and being updated. I am committed to regularly updating this documentation to keep it as closely aligned as possible with the latest versions of the asset. Additionally, I've avoided using overly technical language to make this documentation more accessible and easier to understand for everyone.</p>
-        </div>
-      </div>
+
       <h1 class="doc-title">SOUND & VISUAL EFFECTS</h1>
       
       <p class="text-lead">

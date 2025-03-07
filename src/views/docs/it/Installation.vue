@@ -1,13 +1,6 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <div class="disclaimer-box mb-4">
-        <div class="disclaimer-icon"><i class="bi bi-info-circle-fill"></i></div>
-        <div class="disclaimer-content">
-          <h4>Nota Importante</h4>
-          <p>Le immagini e i video presenti nella documentazione potrebbero non riflettere esattamente l'aspetto attuale dell'asset, poiché Assembly Station è in costante evoluzione e aggiornamento. Mi impegno ad aggiornare regolarmente questa documentazione per mantenerla il più possibile allineata con le ultime versioni dell'asset. Inoltre, ho evitato di utilizzare un linguaggio troppo tecnico per rendere la documentazione facilmente comprensibile a tutti.</p>
-        </div>
-      </div>
       <h1 class="doc-title">1. INSTALLAZIONE</h1>
       
       
