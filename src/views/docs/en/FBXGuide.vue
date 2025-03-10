@@ -85,6 +85,24 @@
               class="standard-image"
             />
           </div>
+          
+        </div>
+        <div class="content-block">
+          <div class="content-text">
+            <p>For better organization I recommend creating a folder for each model and putting the materials inside it.
+              as in the example on the side.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/path.jpg" 
+              alt="Configurazione percorso materiali"
+              caption="Configurazione opzioni percorso materiali"
+              class="standard-image"
+            />
+          </div>
+          
         </div>
       </div>
     </ContentSection>

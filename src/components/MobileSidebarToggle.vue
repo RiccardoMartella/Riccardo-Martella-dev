@@ -73,7 +73,7 @@ export default {
 
 .mobile-toggle-btn {
   position: fixed;
-  bottom: 20px;
+  top: 85px; /* Position moved to top instead of bottom */
   right: 20px;
   width: 50px;
   height: 50px;
