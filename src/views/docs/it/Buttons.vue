@@ -116,11 +116,22 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video" src="/src/assets/video/CategoryPrefab.mp4" type="video/mp4"></video>
-            <p class="caption">Tutorial: Aggiungere un pulsante a una categoria esistente</p>
+            <VideoPlayer 
+              src="https://drive.google.com/file/d/1RrpNNrosF99Vwd0OD2RE7OV_AZZOb5Ul/preview"
+              poster="/images/tutorial-thumb-1.jpg"
+              caption="Tutorial: Aggiungere un pulsante a una categoria esistente"
+              customControls="true"
+              isDriveVideo="true"
+            />
             
-            <video controls class="demo-video mt-4" src="/src/assets/video/newCategory.mp4" type="video/mp4"></video>
-            <p class="caption">Tutorial: Procedura completa per aggiungere nuovi pulsanti</p>
+            <VideoPlayer 
+              src="https://drive.google.com/file/d/1MAZ0JmpxFm6X3AUminXSvHZo60RMkF4e/preview"
+              poster="/images/tutorial-thumb-2.jpg"
+              caption="Tutorial: Procedura completa per aggiungere nuovi pulsanti"
+              customControls="true"
+              isDriveVideo="true"
+              class="mt-4"
+            />
           </div>
         </div>
       </div>
@@ -142,8 +153,13 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video" src="/src/assets/video/newCAtegory2.mp4" type="video/mp4"></video>
-            <p class="caption">Tutorial: Procedura per aggiungere una nuova categoria</p>
+            <VideoPlayer 
+              src="https://drive.google.com/file/d/1pI9TWQXDH4r9bJ-rpScuYVpb-PovzYg9/preview"
+              poster="/images/tutorial-thumb-3.jpg"
+              caption="Tutorial: Procedura per aggiungere una nuova categoria"
+              customControls="true"
+              isDriveVideo="true"
+            />
           </div>
         </div>
       </div>
@@ -186,12 +202,14 @@
 <script>
 import ContentSection from '@/components/ContentSection.vue'
 import ImageZoomable from '@/components/ImageZoomable.vue'
+import VideoPlayer from '@/components/VideoPlayer.vue'
 
 export default {
   name: 'ButtonsIT',
   components: {
     ContentSection,
-    ImageZoomable
+    ImageZoomable,
+    VideoPlayer
   }
 }
 </script>

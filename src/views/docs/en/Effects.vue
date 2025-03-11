@@ -86,12 +86,14 @@
 <script>
 import ContentSection from '@/components/ContentSection.vue'
 import ImageZoomable from '@/components/ImageZoomable.vue'
+import VideoPlayer from '@/components/VideoPlayer.vue'
 
 export default {
   name: 'Effects',
   components: {
     ContentSection,
-    ImageZoomable
+    ImageZoomable,
+    VideoPlayer
   }
 }
 </script>

@@ -1,7 +1,17 @@
 <template>
   <div class="video-container">
     <div class="video-wrapper">
-      <video 
+      <!-- Google Drive iframe for embedded videos - no custom controls -->
+      <iframe v-if="isDriveVideo"
+        :src="getDriveEmbedUrl(src)"
+        class="drive-video"
+        allowfullscreen
+        referrerpolicy="no-referrer"
+        frameborder="0">
+      </iframe>
+      
+      <!-- Regular HTML5 video element for direct video files -->
+      <video v-else
         ref="videoPlayer" 
         :src="src" 
         :poster="poster" 
@@ -27,7 +37,8 @@
         </div>
       </div>
       
-      <div v-if="customControls" class="custom-controls" :class="{ 'playing': isPlaying || isControlsVisible }">
+      <!-- Custom controls only for direct videos, not for Drive videos -->
+      <div v-if="customControls && !isDriveVideo" class="custom-controls" :class="{ 'playing': isPlaying || isControlsVisible }">
         <div class="progress-container" @click="seek">
           <div class="progress-bar">
             <div class="progress-fill" :style="{ width: `${progressPercent}%` }"></div>
@@ -53,7 +64,8 @@
         </div>
       </div>
       
-      <div class="video-overlay" v-if="!isPlaying && customControls" @click="togglePlay">
+      <!-- Play overlay only for direct videos, not for Drive videos -->
+      <div class="video-overlay" v-if="!isPlaying && customControls && !isDriveVideo" @click="togglePlay">
         <div class="play-overlay-btn">
           <i class="bi bi-play-fill"></i>
         </div>
@@ -87,6 +99,14 @@ export default {
     muted: {
       type: Boolean,
       default: false
+    },
+    isDriveVideo: {
+      type: Boolean,
+      default: false
+    },
+    autoplay: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -103,38 +123,60 @@ export default {
     }
   },
   mounted() {
-    document.addEventListener('fullscreenchange', this.handleFullscreenChange);
-    document.addEventListener('webkitfullscreenchange', this.handleFullscreenChange);
-    document.addEventListener('mozfullscreenchange', this.handleFullscreenChange);
-    document.addEventListener('MSFullscreenChange', this.handleFullscreenChange);
-    
-    // Add mouse movement tracking for controls visibility
-    const videoWrapper = this.$el.querySelector('.video-wrapper');
-    videoWrapper.addEventListener('mousemove', this.showControls);
-    videoWrapper.addEventListener('mouseleave', this.hideControls);
+    // Only apply these listeners for HTML5 video, not for Drive videos
+    if (!this.isDriveVideo) {
+      document.addEventListener('fullscreenchange', this.handleFullscreenChange);
+      document.addEventListener('webkitfullscreenchange', this.handleFullscreenChange);
+      document.addEventListener('mozfullscreenchange', this.handleFullscreenChange);
+      document.addEventListener('MSFullscreenChange', this.handleFullscreenChange);
+      
+      const videoWrapper = this.$el.querySelector('.video-wrapper');
+      videoWrapper.addEventListener('mousemove', this.showControls);
+      videoWrapper.addEventListener('mouseleave', this.hideControls);
+    }
   },
   beforeUnmount() {
-    document.removeEventListener('fullscreenchange', this.handleFullscreenChange);
-    document.removeEventListener('webkitfullscreenchange', this.handleFullscreenChange);
-    document.removeEventListener('mozfullscreenchange', this.handleFullscreenChange);
-    document.removeEventListener('MSFullscreenChange', this.handleFullscreenChange);
-    
-    const videoWrapper = this.$el.querySelector('.video-wrapper');
-    videoWrapper.removeEventListener('mousemove', this.showControls);
-    videoWrapper.removeEventListener('mouseleave', this.hideControls);
-    
-    clearTimeout(this.controlsTimeout);
+    if (!this.isDriveVideo) {
+      document.removeEventListener('fullscreenchange', this.handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', this.handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', this.handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', this.handleFullscreenChange);
+      
+      const videoWrapper = this.$el.querySelector('.video-wrapper');
+      if (videoWrapper) {
+        videoWrapper.removeEventListener('mousemove', this.showControls);
+        videoWrapper.removeEventListener('mouseleave', this.hideControls);
+      }
+      
+      clearTimeout(this.controlsTimeout);
+    }
   },
   methods: {
+    getDriveEmbedUrl(url) {
+      // If it's already a preview URL, just return it
+      if (url.includes('/preview')) {
+        return url;
+      }
+      
+      // Otherwise, convert to preview URL
+      // Example: https://drive.google.com/file/d/FILE_ID/view -> https://drive.google.com/file/d/FILE_ID/preview
+      return url.replace('/view', '/preview');
+    },
     togglePlay() {
+      if (this.isDriveVideo) return;
+      
       const video = this.$refs.videoPlayer;
-      if (this.isPlaying) {
-        video.pause();
-      } else {
-        video.play();
+      if (video) {
+        if (this.isPlaying) {
+          video.pause();
+        } else {
+          video.play();
+        }
       }
     },
     toggleFullscreen() {
+      if (this.isDriveVideo) return;
+      
       const videoWrapper = this.$el.querySelector('.video-wrapper');
       
       if (!this.isFullscreen) {
@@ -468,5 +510,14 @@ export default {
 
 .retry-btn:hover {
   background-color: #0082CC;
+}
+
+.drive-video {
+  width: 100%;
+  height: 500px;
+  border: none;
+  display: block;
+  border-radius: 10px;
+  background-color: #000;
 }
 </style>

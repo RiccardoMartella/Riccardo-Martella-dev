@@ -130,7 +130,7 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video" src="/src/assets/video/AssemblyStation-GuidaallInstallazione.mp4" type="video/mp4"></video>
+            <video controls class="demo-video" src="https://drive.google.com/file/d/1ZXdrXtiARapP7-mlNywxegY36iOnCVMg/view?usp=drive_link" type="video/mp4"></video>
             <p class="caption">Video tutorial for group assignment</p>
           </div>
         </div>

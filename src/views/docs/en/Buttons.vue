@@ -116,11 +116,22 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video" src="/src/assets/video/CategoryPrefab.mp4" type="video/mp4"></video>
-            <p class="caption">Tutorial: Adding a button to an existing category</p>
+            <VideoPlayer 
+              src="https://drive.google.com/file/d/1RrpNNrosF99Vwd0OD2RE7OV_AZZOb5Ul/preview"
+              poster="/images/tutorial-thumb-1.jpg"
+              caption="Tutorial: Adding a button to an existing category"
+              customControls="true"
+              isDriveVideo="true"
+            />
             
-            <video controls class="demo-video mt-4" src="/src/assets/video/newCategory.mp4" type="video/mp4"></video>
-            <p class="caption">Tutorial: Complete procedure for adding new buttons</p>
+            <VideoPlayer 
+              src="https://drive.google.com/file/d/1MAZ0JmpxFm6X3AUminXSvHZo60RMkF4e/preview"
+              poster="/images/tutorial-thumb-2.jpg"
+              caption="Tutorial: Complete procedure for adding new buttons"
+              customControls="true"
+              isDriveVideo="true"
+              class="mt-4"
+            />
           </div>
         </div>
       </div>
@@ -142,8 +153,13 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video" src="/src/assets/video/newCAtegory2.mp4" type="video/mp4"></video>
-            <p class="caption">Tutorial: Procedure for adding a new category</p>
+            <VideoPlayer 
+              src="https://drive.google.com/file/d/1pI9TWQXDH4r9bJ-rpScuYVpb-PovzYg9/preview"
+              poster="/images/tutorial-thumb-3.jpg"
+              caption="Tutorial: Procedure for adding a new category"
+              customControls="true"
+              isDriveVideo="true"
+            />
           </div>
         </div>
       </div>

@@ -44,7 +44,15 @@
             <div class="featured-visual position-relative overflow-visible">
               <div class="video-container">
                 <div class="video-overlay"></div>
-                <video class="featured-video" src="/src/assets/video/in.mp4" autoplay muted loop></video>
+                <!-- Updated Google Drive iframe with autoplay and no controls -->
+                <iframe 
+                  class="featured-video drive-link" 
+                  src="https://drive.google.com/file/d/1k9m7aKKKyCRdDo_NHZAWT9OTyhRthgvd/preview?autoplay=1&controls=0" 
+                  allowfullscreen 
+                  allow="autoplay"
+                  referrerpolicy="no-referrer"
+                  frameborder="0">
+                </iframe>
                 
                 <div class="interactive-elements">
                   <div class="ui-element ui-top-right">
@@ -636,5 +644,13 @@ export default {
   .bg-shape {
     opacity: 0.03;
   }
+}
+
+/* Additional CSS for iframe styling */
+iframe.featured-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
 }
 </style>
