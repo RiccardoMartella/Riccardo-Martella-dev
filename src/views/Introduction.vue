@@ -39,14 +39,14 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
             <div class="featured-visual position-relative overflow-visible">
               <div class="video-container">
                 <div class="video-overlay"></div>
-                <video controls class="demo-video w-100" src="/public/videos/introduction2.mp4" type="video/mp4"></video>
+                <video class="featured-video" src="/public/videos/introduction2.mp4" autoplay muted loop></video>
 
-                
+
                 <div class="interactive-elements">
                   <div class="ui-element ui-top-right">
                     <div class="ui-dot"></div>
@@ -58,7 +58,10 @@
                   </div>
                 </div>
               </div>
-              
+              <div class="credits-section">
+    <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472">3D model</a></p>
+</div>
+
               <div class="particle-system">
                 <div class="particle wandering-particle p1"></div>
                 <div class="particle wandering-particle p2"></div>
@@ -67,7 +70,7 @@
                 <div class="particle wandering-particle p5"></div>
                 <div class="particle wandering-particle p6"></div>
               </div>
-              
+
               <div class="logo-container">
                 <div class="logo-spinner bottom-prominent  float-element">
                   <img src="/images/logo.png" alt="Assembly Station Logo" class="spinning-logo" />
@@ -638,8 +641,25 @@ export default {
     opacity: 0.03;
   }
 }
+.credits-section {
+  text-align: left;
+}
 
-/* Additional CSS for iframe styling */
+.credits-section p {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+
+.credits-section a {
+  color: #888;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.credits-section a:hover {
+  color: #555;
+}
 iframe.featured-video {
   width: 100%;
   height: 100%;

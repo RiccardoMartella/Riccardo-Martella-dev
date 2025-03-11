@@ -1,7 +1,6 @@
 <template>
   <div class="video-container">
     <div class="video-wrapper">
-      <!-- Google Drive iframe for embedded videos - no custom controls -->
       <iframe v-if="isDriveVideo"
         :src="getDriveEmbedUrl(src)"
         class="drive-video"
@@ -10,7 +9,6 @@
         frameborder="0">
       </iframe>
       
-      <!-- Regular HTML5 video element for direct video files -->
       <video v-else
         ref="videoPlayer" 
         :src="src" 
@@ -37,7 +35,6 @@
         </div>
       </div>
       
-      <!-- Custom controls only for direct videos, not for Drive videos -->
       <div v-if="customControls && !isDriveVideo" class="custom-controls" :class="{ 'playing': isPlaying || isControlsVisible }">
         <div class="progress-container" @click="seek">
           <div class="progress-bar">
@@ -64,7 +61,6 @@
         </div>
       </div>
       
-      <!-- Play overlay only for direct videos, not for Drive videos -->
       <div class="video-overlay" v-if="!isPlaying && customControls && !isDriveVideo" @click="togglePlay">
         <div class="play-overlay-btn">
           <i class="bi bi-play-fill"></i>
