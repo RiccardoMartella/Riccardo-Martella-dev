@@ -13,8 +13,19 @@
         @ended="isPlaying = false"
         @timeupdate="updateProgress"
         @loadedmetadata="onMetadataLoaded"
+        @error="handleVideoError"
         class="video-element"
-      ></video>
+      >
+        <p>Your browser does not support the video element or the video failed to load. Please try a different browser or check your connection.</p>
+      </video>
+      
+      <div v-if="hasError" class="video-error-overlay">
+        <div class="error-message">
+          <i class="bi bi-exclamation-triangle-fill"></i>
+          <p>{{ errorMessage }}</p>
+          <button @click="retryLoadVideo" class="retry-btn">Retry</button>
+        </div>
+      </div>
       
       <div v-if="customControls" class="custom-controls" :class="{ 'playing': isPlaying || isControlsVisible }">
         <div class="progress-container" @click="seek">
@@ -86,7 +97,9 @@ export default {
       duration: 0,
       progressPercent: 0,
       isControlsVisible: false,
-      controlsTimeout: null
+      controlsTimeout: null,
+      hasError: false,
+      errorMessage: 'Video failed to load. Please try again.'
     }
   },
   mounted() {
@@ -191,6 +204,22 @@ export default {
     hideControls() {
       if (this.isPlaying) {
         this.isControlsVisible = false;
+      }
+    },
+    handleVideoError(e) {
+      console.error("Video error:", e);
+      this.hasError = true;
+    },
+    retryLoadVideo() {
+      const video = this.$refs.videoPlayer;
+      this.hasError = false;
+      
+      if (video) {
+        video.load();
+        video.play().catch(err => {
+          console.error("Error playing video:", err);
+          this.hasError = true;
+        });
       }
     }
   }
@@ -396,5 +425,48 @@ export default {
   max-height: 100vh;
   max-width: 100vw;
   border-radius: 0;
+}
+
+.video-error-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.error-message {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.error-message i {
+  font-size: 40px;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+.error-message p {
+  margin-bottom: 15px;
+}
+
+.retry-btn {
+  background-color: #00A3FF;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.retry-btn:hover {
+  background-color: #0082CC;
 }
 </style>
