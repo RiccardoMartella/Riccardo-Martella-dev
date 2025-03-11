@@ -8,6 +8,7 @@
             <p class="lead">
               Impara a utilizzare Assembly Station con questi video tutorial passo-passo che coprono tutto, dalla creazione di prefab alla gestione delle risorse.
             </p>
+            
           </div>
           
           <div class="tutorial-list">
