@@ -120,7 +120,7 @@
                     <h3 class="h5 mb-0">Video Tutorial</h3>
                   </div>
                   <p>Tutorial video passo-passo per aiutarti a iniziare rapidamente e padroneggiare le funzionalità avanzate.</p>
-                  <RouterLink to="/it/docs/installation" class="btn btn-outline-primary mt-3">Guarda i Tutorial</RouterLink>
+                  <RouterLink to="/it/tutorials" class="btn btn-outline-primary mt-3">Guarda i Tutorial</RouterLink>
                 </div>
               </div>
             </div>

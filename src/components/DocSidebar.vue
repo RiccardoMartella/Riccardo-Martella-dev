@@ -1,6 +1,15 @@
 <template>
   <div class="sidebar-container">
     <h4 class="sidebar-title">{{ isItalian ? 'Documentazione' : 'Documentation' }}</h4>
+    
+   
+    <div class="tutorial-link-container">
+      <router-link :to="isItalian ? '/it/tutorials#tutorials' : '/tutorials#tutorials'" class="tutorial-link">
+        <i class="bi bi-play-circle-fill me-2"></i>
+        {{ isItalian ? 'Video Tutorial' : 'Video Tutorials' }}
+      </router-link>
+    </div>
+    
     <ul class="sidebar-list">
       <li v-for="(item, index) in menuItems" :key="index">
         <router-link :to="baseRoute + item.path" class="sidebar-link">
@@ -78,6 +87,30 @@ export default {
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #e0e0e0;
   text-align: center;
+}
+
+.tutorial-link-container {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tutorial-link {
+  display: flex;
+  align-items: center;
+  background-color: #00A3FF;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tutorial-link:hover {
+  background-color: #0082CC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 163, 255, 0.3);
 }
 
 .sidebar-list {

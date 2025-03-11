@@ -14,6 +14,16 @@
         <button class="btn btn-close" @click="toggleSidebar" aria-label="Close sidebar"></button>
       </div>
       
+      <!-- New Video Tutorials Link -->
+      <div class="mobile-tutorial-link-container">
+        <RouterLink :to="$route.path.includes('/it') ? '/it/tutorials' : '/tutorials'" 
+                  class="mobile-tutorial-link" 
+                  @click="toggleSidebar">
+          <i class="bi bi-play-circle-fill me-2"></i>
+          {{ $route.path.includes('/it') ? 'Video Tutorial' : 'Video Tutorials' }}
+        </RouterLink>
+      </div>
+      
       <ul class="mobile-sidebar-list">
         <template v-if="$route.path.includes('/it')">
           <!-- Italian links -->
@@ -145,5 +155,28 @@ export default {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1045;
+}
+
+.mobile-tutorial-link-container {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-tutorial-link {
+  display: flex;
+  align-items: center;
+  background-color: #00A3FF;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.mobile-tutorial-link:hover,
+.mobile-tutorial-link:active {
+  background-color: #0082CC;
 }
 </style>

@@ -58,6 +58,16 @@ const router = createRouter({
       name: 'pricing-it',
       component: PricingIT
     },
+    {
+      path: '/tutorials',
+      name: 'Tutorials',
+      component: () => import('../views/Tutorials.vue')
+    },
+    {
+      path: '/it/tutorials',
+      name: 'TutorialsIT',
+      component: () => import('../views/TutorialsIT.vue')
+    },
     // Documentation routes - English
     {
       path: '/docs',

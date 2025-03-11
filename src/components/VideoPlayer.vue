@@ -11,13 +11,35 @@
         @play="isPlaying = true"
         @pause="isPlaying = false"
         @ended="isPlaying = false"
+        @timeupdate="updateProgress"
+        @loadedmetadata="onMetadataLoaded"
         class="video-element"
       ></video>
       
-      <div v-if="customControls" class="custom-controls" :class="{ 'playing': isPlaying }">
-        <button class="play-btn" @click="togglePlay" :aria-label="isPlaying ? 'Pause' : 'Play'">
-          <i :class="['bi', isPlaying ? 'bi-pause-fill' : 'bi-play-fill']"></i>
-        </button>
+      <div v-if="customControls" class="custom-controls" :class="{ 'playing': isPlaying || isControlsVisible }">
+        <div class="progress-container" @click="seek">
+          <div class="progress-bar">
+            <div class="progress-fill" :style="{ width: `${progressPercent}%` }"></div>
+          </div>
+        </div>
+        
+        <div class="controls-row">
+          <div class="left-controls">
+            <button class="play-btn" @click="togglePlay" :aria-label="isPlaying ? 'Pause' : 'Play'">
+              <i :class="['bi', isPlaying ? 'bi-pause-fill' : 'bi-play-fill']"></i>
+            </button>
+            
+            <div class="time-display">
+              {{ formatTime(currentTime) }} / {{ formatTime(duration) }}
+            </div>
+          </div>
+          
+          <div class="right-controls">
+            <button class="fullscreen-btn" @click="toggleFullscreen" :aria-label="isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'">
+              <i :class="['bi', isFullscreen ? 'bi-fullscreen-exit' : 'bi-fullscreen']"></i>
+            </button>
+          </div>
+        </div>
       </div>
       
       <div class="video-overlay" v-if="!isPlaying && customControls" @click="togglePlay">
@@ -58,8 +80,37 @@ export default {
   },
   data() {
     return {
-      isPlaying: false
+      isPlaying: false,
+      isFullscreen: false,
+      currentTime: 0,
+      duration: 0,
+      progressPercent: 0,
+      isControlsVisible: false,
+      controlsTimeout: null
     }
+  },
+  mounted() {
+    document.addEventListener('fullscreenchange', this.handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', this.handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', this.handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', this.handleFullscreenChange);
+    
+    // Add mouse movement tracking for controls visibility
+    const videoWrapper = this.$el.querySelector('.video-wrapper');
+    videoWrapper.addEventListener('mousemove', this.showControls);
+    videoWrapper.addEventListener('mouseleave', this.hideControls);
+  },
+  beforeUnmount() {
+    document.removeEventListener('fullscreenchange', this.handleFullscreenChange);
+    document.removeEventListener('webkitfullscreenchange', this.handleFullscreenChange);
+    document.removeEventListener('mozfullscreenchange', this.handleFullscreenChange);
+    document.removeEventListener('MSFullscreenChange', this.handleFullscreenChange);
+    
+    const videoWrapper = this.$el.querySelector('.video-wrapper');
+    videoWrapper.removeEventListener('mousemove', this.showControls);
+    videoWrapper.removeEventListener('mouseleave', this.hideControls);
+    
+    clearTimeout(this.controlsTimeout);
   },
   methods: {
     togglePlay() {
@@ -68,6 +119,78 @@ export default {
         video.pause();
       } else {
         video.play();
+      }
+    },
+    toggleFullscreen() {
+      const videoWrapper = this.$el.querySelector('.video-wrapper');
+      
+      if (!this.isFullscreen) {
+        if (videoWrapper.requestFullscreen) {
+          videoWrapper.requestFullscreen();
+        } else if (videoWrapper.webkitRequestFullscreen) {
+          videoWrapper.webkitRequestFullscreen();
+        } else if (videoWrapper.msRequestFullscreen) {
+          videoWrapper.msRequestFullscreen();
+        } else if (videoWrapper.mozRequestFullScreen) {
+          videoWrapper.mozRequestFullScreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        }
+      }
+    },
+    handleFullscreenChange() {
+      this.isFullscreen = Boolean(
+        document.fullscreenElement || 
+        document.webkitFullscreenElement || 
+        document.mozFullScreenElement ||
+        document.msFullscreenElement
+      );
+    },
+    updateProgress() {
+      const video = this.$refs.videoPlayer;
+      this.currentTime = video.currentTime;
+      this.progressPercent = (video.currentTime / video.duration) * 100 || 0;
+    },
+    onMetadataLoaded() {
+      const video = this.$refs.videoPlayer;
+      this.duration = video.duration;
+    },
+    seek(event) {
+      const progressBar = event.currentTarget;
+      const bounds = progressBar.getBoundingClientRect();
+      const x = event.clientX - bounds.left;
+      const percentage = x / bounds.width;
+      
+      const video = this.$refs.videoPlayer;
+      video.currentTime = percentage * video.duration;
+    },
+    formatTime(seconds) {
+      if (!seconds || isNaN(seconds)) return '0:00';
+      
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = Math.floor(seconds % 60);
+      return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    },
+    showControls() {
+      this.isControlsVisible = true;
+      clearTimeout(this.controlsTimeout);
+      this.controlsTimeout = setTimeout(() => {
+        if (this.isPlaying) {
+          this.isControlsVisible = false;
+        }
+      }, 3000); 
+    },
+    hideControls() {
+      if (this.isPlaying) {
+        this.isControlsVisible = false;
       }
     }
   }
@@ -131,7 +254,7 @@ export default {
 }
 
 .play-overlay-btn i {
-  margin-left: 5px; /* Adjust for visual centering */
+  margin-left: 5px; 
 }
 
 .video-overlay:hover .play-overlay-btn {
@@ -144,12 +267,12 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 10px 15px 15px;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .custom-controls.playing {
@@ -160,14 +283,65 @@ export default {
   opacity: 1;
 }
 
-.play-btn {
-  width: 40px;
-  height: 40px;
+.progress-container {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.progress-container:hover .progress-bar {
+  height: 6px;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #00A3FF;
+  border-radius: 2px;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left-controls, .right-controls {
+  display: flex;
+  align-items: center;
+}
+
+.time-display {
+  color: white;
+  font-size: 13px;
+  margin-left: 12px;
+  font-family: monospace;
+}
+
+.play-btn, .fullscreen-btn {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -175,7 +349,52 @@ export default {
   transition: background-color 0.2s ease;
 }
 
-.play-btn:hover {
+.play-btn:hover, .fullscreen-btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+:fullscreen .video-wrapper {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:fullscreen .video-element {
+  max-height: 100vh;
+  max-width: 100vw;
+  border-radius: 0;
+}
+
+:-webkit-full-screen .video-wrapper {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:-webkit-full-screen .video-element {
+  max-height: 100vh;
+  max-width: 100vw;
+  border-radius: 0;
+}
+
+:-moz-full-screen .video-wrapper {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:-moz-full-screen .video-element {
+  max-height: 100vh;
+  max-width: 100vw;
+  border-radius: 0;
 }
 </style>
