@@ -19,7 +19,7 @@
                   In this video, you'll learn how to create a prefab, set the pivot correctly, add materials, descriptions, names, and other essential properties.
                 </p>
                 <VideoPlayer 
-                  src="/src/assets/video/Video1.mp4" 
+                  src="/assets/video/Video1.mp4" 
                   poster="/images/tutorial-thumb-1.jpg"
                   customControls="true"
                   caption="Tutorial: Creating and Setting Up Prefabs"
@@ -35,7 +35,7 @@
                   This video demonstrates how to create and manage category buttons for each prefab to organize your assembly system.
                 </p>
                 <VideoPlayer 
-                  src="/src/assets/video/Video2.mp4" 
+                  src="/assets/video/Video2.mp4" 
                   poster="/images/tutorial-thumb-2.jpg"
                   customControls="true"
                   caption="Tutorial: Creating Category Buttons for Prefabs"
@@ -51,7 +51,7 @@
                   In this tutorial, we'll cover how to create and manage tags for each component to enhance organization and filtering.
                 </p>
                 <VideoPlayer 
-                  src="/src/assets/video/Video3.mp4" 
+                  src="/assets/video/Video3.mp4" 
                   poster="/images/tutorial-thumb-3.jpg"
                   customControls="true"
                   caption="Tutorial: Creating and Managing Tags for Components"
@@ -67,7 +67,7 @@
                   This video demonstrates how the Assembly Station system works and how users can interact with it to build their models.
                 </p>
                 <VideoPlayer 
-                  src="/src/assets/video/Video4.mp4" 
+                  src="/assets/video/Video4.mp4" 
                   poster="/images/tutorial-thumb-4.jpg"
                   customControls="true"
                   caption="Tutorial: Using the Assembly System"
@@ -83,7 +83,7 @@
                   Learn how to manage and create groups for components, allowing for better organization and more complex structures.
                 </p>
                 <VideoPlayer 
-                  src="/src/assets/video/Video5.mp4" 
+                  src="/assets/video/Video5.mp4" 
                   poster="/images/tutorial-thumb-5.jpg"
                   customControls="true"
                   caption="Tutorial: Managing Component Groups"
@@ -99,7 +99,7 @@
                   In this final tutorial, we'll cover how to manage resources for each component in your Assembly Station project.
                 </p>
                 <VideoPlayer 
-                  src="/src/assets/video/Video6.mp4" 
+                  src="/assets/video/Video6.mp4" 
                   poster="/images/tutorial-thumb-6.jpg"
                   customControls="true"
                   caption="Tutorial: Managing Resources for Components"
