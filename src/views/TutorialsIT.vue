@@ -105,7 +105,7 @@
                   In questo video gestiremo le risorse di ogni pezzo nel tuo progetto Assembly Station.
                 </p>
                 <VideoPlayer 
-                  src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/view?usp=drive_link" 
+                  src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/preview" 
                   poster="/images/tutorial-thumb-6.jpg"
                   customControls="true"
                   caption="Tutorial: Gestione delle risorse per i componenti"

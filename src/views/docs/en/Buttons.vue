@@ -116,22 +116,25 @@
           </div>
           
           <div class="content-media">
-            <VideoPlayer 
+            <iframe 
               src="https://drive.google.com/file/d/1RrpNNrosF99Vwd0OD2RE7OV_AZZOb5Ul/preview"
-              poster="/images/tutorial-thumb-1.jpg"
-              caption="Tutorial: Adding a button to an existing category"
-              customControls="true"
-              isDriveVideo="true"
-            />
+              class="demo-video"
+              allowfullscreen
+              allow="autoplay; encrypted-media"
+              loading="lazy"
+              frameborder="0">
+            </iframe>
+            <p class="caption">Tutorial: Adding a button to an existing category</p>
             
-            <VideoPlayer 
+            <iframe 
               src="https://drive.google.com/file/d/1MAZ0JmpxFm6X3AUminXSvHZo60RMkF4e/preview"
-              poster="/images/tutorial-thumb-2.jpg"
-              caption="Tutorial: Complete procedure for adding new buttons"
-              customControls="true"
-              isDriveVideo="true"
-              class="mt-4"
-            />
+              class="demo-video mt-4"
+              allowfullscreen
+              allow="autoplay; encrypted-media"
+              loading="lazy"
+              frameborder="0">
+            </iframe>
+            <p class="caption">Tutorial: Complete procedure for adding new buttons</p>
           </div>
         </div>
       </div>
@@ -153,13 +156,15 @@
           </div>
           
           <div class="content-media">
-            <VideoPlayer 
+            <iframe 
               src="https://drive.google.com/file/d/1pI9TWQXDH4r9bJ-rpScuYVpb-PovzYg9/preview"
-              poster="/images/tutorial-thumb-3.jpg"
-              caption="Tutorial: Procedure for adding a new category"
-              customControls="true"
-              isDriveVideo="true"
-            />
+              class="demo-video"
+              allowfullscreen
+              allow="autoplay; encrypted-media"
+              loading="lazy"
+              frameborder="0">
+            </iframe>
+            <p class="caption">Tutorial: Procedure for adding a new category</p>
           </div>
         </div>
       </div>
@@ -239,6 +244,7 @@ export default {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  height: 400px; /* Add height for iframe */
 }
 
 .caption {

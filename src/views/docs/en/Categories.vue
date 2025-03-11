@@ -130,7 +130,12 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video" src="https://drive.google.com/file/d/1ZXdrXtiARapP7-mlNywxegY36iOnCVMg/view?usp=drive_link" type="video/mp4"></video>
+            <iframe 
+              src="https://drive.google.com/file/d/1ZXdrXtiARapP7-mlNywxegY36iOnCVMg/preview" 
+              class="demo-video" 
+              allowfullscreen
+              frameborder="0">
+            </iframe>
             <p class="caption">Video tutorial for group assignment</p>
           </div>
         </div>
@@ -232,6 +237,7 @@ export default {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 400px; /* Add height for iframe */
 }
 
 .caption {

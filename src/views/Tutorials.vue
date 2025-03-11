@@ -104,7 +104,7 @@
                   In this final tutorial, we'll cover how to manage resources for each component in your Assembly Station project.
                 </p>
                 <VideoPlayer 
-                  src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/view?usp=drive_link" 
+                  src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/preview" 
                   poster="/images/tutorial-thumb-6.jpg"
                   customControls="true"
                   caption="Tutorial: Managing Resources for Components"

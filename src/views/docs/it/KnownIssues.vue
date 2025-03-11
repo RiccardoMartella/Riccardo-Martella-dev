@@ -38,7 +38,12 @@
           </div>
           
           <div class="content-media">
-            <video controls class="demo-video w-100" src="/src/assets/video/bug.mp4" type="video/mp4"></video>
+            <iframe 
+              src="https://drive.google.com/file/d/1TlwnzGk7BlYGlXtUeG48Wq4BHL0gjOV4/preview" 
+              class="demo-video w-100" 
+              allowfullscreen
+              frameborder="0">
+            </iframe>
           </div>
         </div>
       </div>
@@ -104,6 +109,7 @@ export default {
 .demo-video {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  height: 400px; /* Add height for iframe */
 }
 
 .step-list {

@@ -116,22 +116,21 @@
           </div>
           
           <div class="content-media">
-            <VideoPlayer 
+            <iframe 
               src="https://drive.google.com/file/d/1RrpNNrosF99Vwd0OD2RE7OV_AZZOb5Ul/preview"
-              poster="/images/tutorial-thumb-1.jpg"
-              caption="Tutorial: Aggiungere un pulsante a una categoria esistente"
-              customControls="true"
-              isDriveVideo="true"
-            />
+              class="demo-video"
+              allowfullscreen
+              frameborder="0">
+            </iframe>
+            <p class="caption">Tutorial: Aggiungere un pulsante a una categoria esistente</p>
             
-            <VideoPlayer 
+            <iframe 
               src="https://drive.google.com/file/d/1MAZ0JmpxFm6X3AUminXSvHZo60RMkF4e/preview"
-              poster="/images/tutorial-thumb-2.jpg"
-              caption="Tutorial: Procedura completa per aggiungere nuovi pulsanti"
-              customControls="true"
-              isDriveVideo="true"
-              class="mt-4"
-            />
+              class="demo-video mt-4"
+              allowfullscreen
+              frameborder="0">
+            </iframe>
+            <p class="caption">Tutorial: Procedura completa per aggiungere nuovi pulsanti</p>
           </div>
         </div>
       </div>
@@ -153,13 +152,13 @@
           </div>
           
           <div class="content-media">
-            <VideoPlayer 
+            <iframe 
               src="https://drive.google.com/file/d/1pI9TWQXDH4r9bJ-rpScuYVpb-PovzYg9/preview"
-              poster="/images/tutorial-thumb-3.jpg"
-              caption="Tutorial: Procedura per aggiungere una nuova categoria"
-              customControls="true"
-              isDriveVideo="true"
-            />
+              class="demo-video"
+              allowfullscreen
+              frameborder="0">
+            </iframe>
+            <p class="caption">Tutorial: Procedura per aggiungere una nuova categoria</p>
           </div>
         </div>
       </div>
@@ -202,14 +201,12 @@
 <script>
 import ContentSection from '@/components/ContentSection.vue'
 import ImageZoomable from '@/components/ImageZoomable.vue'
-import VideoPlayer from '@/components/VideoPlayer.vue'
 
 export default {
   name: 'ButtonsIT',
   components: {
     ContentSection,
-    ImageZoomable,
-    VideoPlayer
+    ImageZoomable
   }
 }
 </script>
@@ -241,6 +238,7 @@ export default {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  height: 400px; /* Add height for iframe */
 }
 
 .caption {

@@ -44,15 +44,8 @@
             <div class="featured-visual position-relative overflow-visible">
               <div class="video-container">
                 <div class="video-overlay"></div>
-                <!-- Updated Google Drive iframe with autoplay and no controls -->
-                <iframe 
-                  class="featured-video drive-link" 
-                  src="https://drive.google.com/file/d/1k9m7aKKKyCRdDo_NHZAWT9OTyhRthgvd/preview?autoplay=1&controls=0" 
-                  allowfullscreen 
-                  allow="autoplay"
-                  referrerpolicy="no-referrer"
-                  frameborder="0">
-                </iframe>
+                <video controls class="demo-video w-100" src="/public/videos/introduction2.mp4" type="video/mp4"></video>
+
                 
                 <div class="interactive-elements">
                   <div class="ui-element ui-top-right">

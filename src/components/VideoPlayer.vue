@@ -123,6 +123,9 @@ export default {
     }
   },
   mounted() {
+    if (this.isDriveVideo) {
+      this.handleDriveVideo();
+    }
     // Only apply these listeners for HTML5 video, not for Drive videos
     if (!this.isDriveVideo) {
       document.addEventListener('fullscreenchange', this.handleFullscreenChange);
@@ -262,6 +265,16 @@ export default {
           console.error("Error playing video:", err);
           this.hasError = true;
         });
+      }
+    },
+    handleDriveVideo() {
+      // Ensure Google Drive URL is properly formatted
+      if (this.isDriveVideo && this.src) {
+        // Make sure the URL ends with /preview
+        if (!this.src.endsWith('/preview')) {
+          // Replace /view... with /preview
+          this.src = this.src.replace(/\/view.*$/, '/preview');
+        }
       }
     }
   }
