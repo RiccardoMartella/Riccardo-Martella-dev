@@ -18,13 +18,17 @@
                 <p class="tutorial-description">
                   In this video, you'll learn how to create a prefab, set the pivot correctly, add materials, descriptions, names, and other essential properties.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1t0yPtYlvrkfJlOYvIYyehjkBX8YPr8RT/preview" 
-                  poster="/images/tutorial-thumb-1.jpg"
-                  customControls="true"
-                  caption="Tutorial: Creating and Setting Up Prefabs"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1t0yPtYlvrkfJlOYvIYyehjkBX8YPr8RT/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Creating and Setting Up Prefabs</p>
+                </div>
               </div>
             </div>
             
@@ -35,13 +39,17 @@
                 <p class="tutorial-description">
                   This video demonstrates how to create and manage category buttons for each prefab to organize your assembly system.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1Vb5NODQTgTIJHTVWuC0YTX9VCRuIWRns/preview" 
-                  poster="/images/tutorial-thumb-2.jpg"
-                  customControls="true"
-                  caption="Tutorial: Creating Category Buttons for Prefabs"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1Vb5NODQTgTIJHTVWuC0YTX9VCRuIWRns/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Creating Category Buttons for Prefabs</p>
+                </div>
               </div>
             </div>
             
@@ -52,13 +60,17 @@
                 <p class="tutorial-description">
                   In this tutorial, we'll cover how to create and manage tags for each component to enhance organization and filtering.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1D--fIEBwIC--DzzeFx3Uy_N6_38EZ2Zr/preview" 
-                  poster="/images/tutorial-thumb-3.jpg"
-                  customControls="true"
-                  caption="Tutorial: Creating and Managing Tags for Components"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1D--fIEBwIC--DzzeFx3Uy_N6_38EZ2Zr/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Creating and Managing Tags for Components</p>
+                </div>
               </div>
             </div>
             
@@ -69,13 +81,17 @@
                 <p class="tutorial-description">
                   This video demonstrates how the Assembly Station system works and how users can interact with it to build their models.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1AFBJwb4sd8jelOKJVN0Jp9z2i-WFm5OU/preview" 
-                  poster="/images/tutorial-thumb-4.jpg"
-                  customControls="true"
-                  caption="Tutorial: Using the Assembly System"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1AFBJwb4sd8jelOKJVN0Jp9z2i-WFm5OU/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Using the Assembly System</p>
+                </div>
               </div>
             </div>
             
@@ -86,13 +102,17 @@
                 <p class="tutorial-description">
                   Learn how to manage and create groups for components, allowing for better organization and more complex structures.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/19XYVbMKDHW4XBbSPeDh2MwLr7VV-oXxR/preview" 
-                  poster="/images/tutorial-thumb-5.jpg"
-                  customControls="true"
-                  caption="Tutorial: Managing Component Groups"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/19XYVbMKDHW4XBbSPeDh2MwLr7VV-oXxR/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Managing Component Groups</p>
+                </div>
               </div>
             </div>
             
@@ -103,13 +123,17 @@
                 <p class="tutorial-description">
                   In this final tutorial, we'll cover how to manage resources for each component in your Assembly Station project.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/preview" 
-                  poster="/images/tutorial-thumb-6.jpg"
-                  customControls="true"
-                  caption="Tutorial: Managing Resources for Components"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Managing Resources for Components</p>
+                </div>
               </div>
             </div>
           </div>
@@ -144,13 +168,8 @@
 </template>
 
 <script>
-import VideoPlayer from '@/components/VideoPlayer.vue'
-
 export default {
-  name: 'Tutorials',
-  components: {
-    VideoPlayer
-  }
+  name: 'Tutorials'
 }
 </script>
 
@@ -207,5 +226,26 @@ export default {
 .btn-outline-primary:hover {
   background-color: #00A3FF;
   color: white;
+}
+
+.video-container {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.tutorial-video {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #000;
+}
+
+.video-caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 </style>

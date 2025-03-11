@@ -1,14 +1,35 @@
 <template>
   <div class="video-container">
     <div class="video-wrapper">
-      <iframe v-if="isDriveVideo"
-        :src="getDriveEmbedUrl(src)"
-        class="drive-video"
-        allowfullscreen
-        referrerpolicy="no-referrer"
-        frameborder="0">
-      </iframe>
+      <!-- Google Drive Video Handling -->
+      <div v-if="isDriveVideo" class="drive-video-container">
+        <div class="drive-embed-message">
+          <i class="bi bi-play-circle-fill"></i>
+          <p>Google Drive Video</p>
+          <div class="drive-video-actions">
+            <a :href="src" target="_blank" class="btn btn-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i>
+              Open Video in New Tab
+            </a>
+            <button @click="tryEmbedDrive" class="btn btn-outline-light btn-sm ms-2">
+              <i class="bi bi-eye me-1"></i>
+              Try to Load Preview
+            </button>
+          </div>
+        </div>
+        
+        <iframe v-if="showDriveEmbed" 
+          :src="getDriveEmbedUrl(src)"
+          class="drive-video"
+          allowfullscreen
+          referrerpolicy="no-referrer"
+          allow="autoplay; encrypted-media"
+          loading="lazy"
+          frameborder="0">
+        </iframe>
+      </div>
       
+      <!-- Standard Video Player -->
       <video v-else
         ref="videoPlayer" 
         :src="src" 
@@ -27,6 +48,7 @@
         <p>Your browser does not support the video element or the video failed to load. Please try a different browser or check your connection.</p>
       </video>
       
+      <!-- Error display -->
       <div v-if="hasError" class="video-error-overlay">
         <div class="error-message">
           <i class="bi bi-exclamation-triangle-fill"></i>
@@ -35,6 +57,7 @@
         </div>
       </div>
       
+      <!-- Custom controls for standard video -->
       <div v-if="customControls && !isDriveVideo" class="custom-controls" :class="{ 'playing': isPlaying || isControlsVisible }">
         <div class="progress-container" @click="seek">
           <div class="progress-bar">
@@ -115,7 +138,8 @@ export default {
       isControlsVisible: false,
       controlsTimeout: null,
       hasError: false,
-      errorMessage: 'Video failed to load. Please try again.'
+      errorMessage: 'Video failed to load. Please try again.',
+      showDriveEmbed: false
     }
   },
   mounted() {
@@ -151,15 +175,29 @@ export default {
     }
   },
   methods: {
+    tryEmbedDrive() {
+      this.showDriveEmbed = true;
+    },
     getDriveEmbedUrl(url) {
       // If it's already a preview URL, just return it
       if (url.includes('/preview')) {
         return url;
       }
       
-      // Otherwise, convert to preview URL
-      // Example: https://drive.google.com/file/d/FILE_ID/view -> https://drive.google.com/file/d/FILE_ID/preview
-      return url.replace('/view', '/preview');
+      // Convert to preview URL and ensure we're using the correct format
+      let embedUrl = url.replace('/view', '/preview');
+      
+      // Handle other URL formats
+      if (url.includes('drive.google.com/file/d/')) {
+        // Extract the file ID
+        const fileIdMatch = url.match(/\/d\/([^/]+)/);
+        if (fileIdMatch && fileIdMatch[1]) {
+          const fileId = fileIdMatch[1];
+          embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+        }
+      }
+      
+      return embedUrl;
     },
     togglePlay() {
       if (this.isDriveVideo) return;
@@ -264,14 +302,8 @@ export default {
       }
     },
     handleDriveVideo() {
-      // Ensure Google Drive URL is properly formatted
-      if (this.isDriveVideo && this.src) {
-        // Make sure the URL ends with /preview
-        if (!this.src.endsWith('/preview')) {
-          // Replace /view... with /preview
-          this.src = this.src.replace(/\/view.*$/, '/preview');
-        }
-      }
+      // Initial state: don't automatically show embed due to CSP issues
+      this.showDriveEmbed = false;
     }
   }
 }
@@ -528,5 +560,42 @@ export default {
   display: block;
   border-radius: 10px;
   background-color: #000;
+}
+
+.drive-video-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drive-embed-message {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.drive-embed-message i {
+  font-size: 3rem;
+  color: #00A3FF;
+  margin-bottom: 1rem;
+}
+
+.drive-video-actions {
+  margin-top: 1.5rem;
 }
 </style>

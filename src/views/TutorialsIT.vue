@@ -8,7 +8,6 @@
             <p class="lead">
               Impara a utilizzare Assembly Station con questi video tutorial passo-passo che coprono tutto, dalla creazione di prefab alla gestione delle risorse.
             </p>
-
           </div>
           
           <div class="tutorial-list">
@@ -19,13 +18,17 @@
                 <p class="tutorial-description">
                   In questo video vedremo come realizzare un prefab, impostare il pivot correttamente, aggiungere i materiali, le descrizioni, i nomi e altre proprietà essenziali.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1t0yPtYlvrkfJlOYvIYyehjkBX8YPr8RT/preview" 
-                  poster="/images/tutorial-thumb-1.jpg"
-                  customControls="true"
-                  caption="Tutorial: Creazione e configurazione dei Prefab"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1t0yPtYlvrkfJlOYvIYyehjkBX8YPr8RT/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Creazione e configurazione dei Prefab</p>
+                </div>
               </div>
             </div>
             
@@ -36,13 +39,17 @@
                 <p class="tutorial-description">
                   In questo video gestiremo la creazione dei pulsanti categorie per ogni prefab per organizzare il tuo sistema di assemblaggio.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1Vb5NODQTgTIJHTVWuC0YTX9VCRuIWRns/preview" 
-                  poster="/images/tutorial-thumb-2.jpg"
-                  customControls="true"
-                  caption="Tutorial: Creazione di pulsanti di categoria per i Prefab"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1Vb5NODQTgTIJHTVWuC0YTX9VCRuIWRns/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Creazione di pulsanti di categoria per i Prefab</p>
+                </div>
               </div>
             </div>
             
@@ -53,13 +60,17 @@
                 <p class="tutorial-description">
                   In questo video gestiremo la creazione dei tag per ogni pezzo per migliorare l'organizzazione e il filtraggio.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1D--fIEBwIC--DzzeFx3Uy_N6_38EZ2Zr/preview" 
-                  poster="/images/tutorial-thumb-3.jpg"
-                  customControls="true"
-                  caption="Tutorial: Creazione e gestione dei tag per i componenti"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1D--fIEBwIC--DzzeFx3Uy_N6_38EZ2Zr/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Creazione e gestione dei tag per i componenti</p>
+                </div>
               </div>
             </div>
             
@@ -70,13 +81,17 @@
                 <p class="tutorial-description">
                   In questo video mostrerò il funzionamento di Assembly Station e come gli utenti possono interagire con esso per costruire i loro modelli.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1AFBJwb4sd8jelOKJVN0Jp9z2i-WFm5OU/preview" 
-                  poster="/images/tutorial-thumb-4.jpg"
-                  customControls="true"
-                  caption="Tutorial: Utilizzo del sistema di assemblaggio"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1AFBJwb4sd8jelOKJVN0Jp9z2i-WFm5OU/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Utilizzo del sistema di assemblaggio</p>
+                </div>
               </div>
             </div>
             
@@ -87,13 +102,17 @@
                 <p class="tutorial-description">
                   In questo video gestiremo i gruppi per ogni pezzo, consentendo una migliore organizzazione e strutture più complesse.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/19XYVbMKDHW4XBbSPeDh2MwLr7VV-oXxR/preview" 
-                  poster="/images/tutorial-thumb-5.jpg"
-                  customControls="true"
-                  caption="Tutorial: Gestione dei gruppi di componenti"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/19XYVbMKDHW4XBbSPeDh2MwLr7VV-oXxR/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Gestione dei gruppi di componenti</p>
+                </div>
               </div>
             </div>
             
@@ -104,13 +123,17 @@
                 <p class="tutorial-description">
                   In questo video gestiremo le risorse di ogni pezzo nel tuo progetto Assembly Station.
                 </p>
-                <VideoPlayer 
-                  src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/preview" 
-                  poster="/images/tutorial-thumb-6.jpg"
-                  customControls="true"
-                  caption="Tutorial: Gestione delle risorse per i componenti"
-                  isDriveVideo="true"
-                />
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1LSGC7qj9QBW04vayXZTv0j-pfxTfinXM/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Gestione delle risorse per i componenti</p>
+                </div>
               </div>
             </div>
           </div>
@@ -145,13 +168,8 @@
 </template>
 
 <script>
-import VideoPlayer from '@/components/VideoPlayer.vue'
-
 export default {
-  name: 'TutorialsIT',
-  components: {
-    VideoPlayer
-  }
+  name: 'TutorialsIT'
 }
 </script>
 
@@ -208,5 +226,26 @@ export default {
 .btn-outline-primary:hover {
   background-color: #00A3FF;
   color: white;
+}
+
+.video-container {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.tutorial-video {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #000;
+}
+
+.video-caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 </style>
