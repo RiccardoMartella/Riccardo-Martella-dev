@@ -4,6 +4,8 @@ import Pricing from '@/views/Pricing.vue'
 import PricingIT from '@/views/PricingIT.vue'
 import Privacy from '@/views/Privacy.vue'
 import PrivacyIT from '@/views/PrivacyIT.vue'
+import CookiePolicy from '@/views/CookiePolicy.vue'
+import CookiePolicyIT from '@/views/CookiePolicyIT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -190,6 +192,18 @@ const router = createRouter({
           component: () => import('@/views/docs/it/KnownIssues.vue')
         }
       ]
+    },
+    
+    // Cookie Policy routes
+    {
+      path: '/cookie-policy',
+      name: 'CookiePolicy',
+      component: CookiePolicy
+    },
+    {
+      path: '/it/cookie-policy',
+      name: 'CookiePolicyIT',
+      component: CookiePolicyIT
     }
   ]
 })

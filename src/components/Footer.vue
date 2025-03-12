@@ -33,6 +33,7 @@
             <h5 class="mb-3 title-color"><u>{{ isItalian ? 'Legale' : 'Legal' }}</u></h5>
             <ul class="list-unstyled">
               <li class="mb-2"><RouterLink :to="privacyPath" class="footer-link">{{ isItalian ? 'Politica sulla Privacy' : 'Privacy Policy' }}</RouterLink></li>
+              <li class="mb-2"><RouterLink :to="cookiePolicyPath" class="footer-link">{{ isItalian ? 'Politica sui Cookie' : 'Cookie Policy' }}</RouterLink></li>
               <li class="mb-2"><RouterLink :to="licensesPath" class="footer-link">{{ isItalian ? 'Licenze' : 'Licenses' }}</RouterLink></li>
             </ul>
           </div>
@@ -61,6 +62,7 @@
             {{ isItalian ? 'Creato da ' : 'Powered by ' }}
            <a class="text-dark" href="https://www.linkedin.com/in/riccardo-martella-b91854252/">Riccardo Martella</a> 
           </p>
+          <RouterLink to="/cookie-policy" class="me-3">{{ isItalian ? 'Politica sui Cookie' : 'Cookie Policy' }}</RouterLink>
         </div>
       </div>
     </div>
@@ -106,6 +108,9 @@ export default {
     },
     developerPath() {
       return this.isItalian ? '/it/about-developer' : '/about-developer';
+    },
+    cookiePolicyPath() {
+      return this.isItalian ? '/it/cookie-policy' : '/cookie-policy';
     },
     donateLink() {
       

@@ -22,7 +22,25 @@
                   Informativa sulla Privacy
                 </a>
               </div>
+              
+              <div class="mt-4">
+                <p>
+                  Questa Informativa sulla Privacy descrive come raccogliamo, utilizziamo e proteggiamo le tue informazioni personali.
+                  Ci impegniamo a garantire la sicurezza e la riservatezza dei tuoi dati.
+                </p>
+                <p>
+                  Quando utilizzi il nostro sito web o i nostri servizi, potrebbero essere raccolte alcune informazioni per migliorare 
+                  la tua esperienza e aiutarci a comprendere meglio come gli utenti interagiscono con la nostra piattaforma.
+                  Raccogliamo solo i dati necessari e li utilizziamo nei modi descritti in questa informativa.
+                </p>
+              </div>
             </div>
+          </div>
+          
+          <div class="text-center mt-5">
+            <RouterLink to="/it" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left me-2"></i> Torna alla Home
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -56,9 +74,11 @@ export default {
   color: #00A3FF;
 }
 
+
 .privacy-content {
-  min-height: 500px;
+ text-align: center;
 }
+
 
 a {
   color: #00A3FF;

@@ -22,7 +22,25 @@
                   Privacy Policy
                 </a>
               </div>
+              
+              <div class="mt-4">
+                <p>
+                  This Privacy Policy outlines how we collect, use, and protect your personal information.
+                  We are committed to ensuring the security and confidentiality of your data.
+                </p>
+                <p>
+                  When you use our website or services, certain information may be collected to improve your experience
+                  and help us better understand how users interact with our platform. We only collect data that is 
+                  necessary and use it in ways described in this policy.
+                </p>
+              </div>
             </div>
+          </div>
+          
+          <div class="text-center mt-5">
+            <RouterLink to="/" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left me-2"></i> Return to Home
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -57,7 +75,7 @@ export default {
 }
 
 .privacy-content {
-  min-height: 500px;
+ text-align: center;
 }
 
 a {
