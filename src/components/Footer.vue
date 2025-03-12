@@ -62,7 +62,6 @@
             {{ isItalian ? 'Creato da ' : 'Powered by ' }}
            <a class="text-dark" href="https://www.linkedin.com/in/riccardo-martella-b91854252/">Riccardo Martella</a> 
           </p>
-          <RouterLink to="/cookie-policy" class="me-3">{{ isItalian ? 'Politica sui Cookie' : 'Cookie Policy' }}</RouterLink>
         </div>
       </div>
     </div>
