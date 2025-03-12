@@ -1,5 +1,5 @@
 <template>
-  <div class="introduction">
+  <div class="introduction" id="home2">
     <div class="hero-section py-5">
       <div class="animated-bg">
         <div class="bg-shape shape-1"></div>

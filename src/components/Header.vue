@@ -91,7 +91,7 @@ export default {
       return this.$route.path.includes("/it");
     },
     introPath() {
-      return this.isItalian ? "/it" : "/";
+      return this.isItalian ? "/it#home2" : "/#home2";
     },
     docPath() {
       return this.isItalian ? "/it/docs/installation" : "/docs/installation";
@@ -122,7 +122,7 @@ export default {
     toggleNavbar() {
       this.isNavOpen = !this.isNavOpen;
     },
-    // Optional: Close navbar when clicking on a link
+    
     closeNavbar() {
       this.isNavOpen = false;
     }
