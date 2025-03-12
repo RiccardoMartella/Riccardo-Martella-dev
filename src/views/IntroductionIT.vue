@@ -103,31 +103,55 @@
           </div>
 
           <div class="row g-4 mb-5">
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm hover-card">
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-book fs-2 text-accent me-2"></i>
-                    <h3 class="h5 mb-0">Documentazione</h3>
-                  </div>
-                  <p>Guide dettagliate e tutorial su come utilizzare Assembly Station nei tuoi progetti Unity.</p>
-                  <RouterLink to="/it/docs/installation" class="btn btn-primary mt-3">Vai alla Documentazione</RouterLink>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm hover-card">
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-center mb-3">
-                    <i class="bi bi-play-circle fs-2 text-accent me-2"></i>
-                    <h3 class="h5 mb-0">Video Tutorial</h3>
-                  </div>
-                  <p>Tutorial video passo-passo per aiutarti a iniziare rapidamente e padroneggiare le funzionalità avanzate.</p>
-                  <RouterLink to="/it/tutorials" class="btn btn-outline-primary mt-3">Guarda i Tutorial</RouterLink>
-                </div>
-              </div>
-            </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm hover-card">
+      <div class="card-body p-4 d-flex flex-column">
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-book fs-2 text-accent me-2"></i>
+            <h3 class="h5 mb-0">Documentazione</h3>
           </div>
+          <p>Guide dettagliate e tutorial su come utilizzare Assembly Station nei tuoi progetti Unity.</p>
+        </div>
+        <div class="mt-auto">
+          <RouterLink to="/it/docs/installation" class="btn btn-primary mt-3">Vai alla Documentazione</RouterLink>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm hover-card">
+      <div class="card-body p-4 d-flex flex-column">
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-play-circle fs-2 text-accent me-2"></i>
+            <h3 class="h5 mb-0">Video Tutorial</h3>
+          </div>
+          <p>Tutorial video passo-passo per aiutarti a iniziare rapidamente e padroneggiare le funzionalità avanzate.</p>
+        </div>
+        <div class="mt-auto">
+          <RouterLink to="/it/tutorials" class="btn btn-outline-primary mt-3">Guarda i Tutorial</RouterLink>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm hover-card">
+      <div class="card-body p-4 d-flex flex-column">
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-clock-history fs-2 text-accent me-2"></i>
+            <h3 class="h5 mb-0">Cronologia Versioni</h3>
+          </div>
+          <p>Controlla tutte le versioni rilasciate e scaricale direttamente dall'Unity Asset Store.</p>
+        </div>
+        <div class="mt-auto">
+          <RouterLink to="/it/versions" class="btn btn-outline-primary mt-3">Visualizza Rilasci</RouterLink>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
           <div class="text-center">
             <h3 class="mb-4">Inizia Subito</h3>

@@ -26,6 +26,7 @@
             <ul class="list-unstyled">
               <li class="mb-2"><RouterLink :to="docPath" class="footer-link">{{ isItalian ? 'Documentazione' : 'Documentation' }}</RouterLink></li>
               <li class="mb-2"><RouterLink :to="supportPath" class="footer-link">{{ isItalian ? 'Supporto' : 'Support' }}</RouterLink></li>
+              <li class="mb-2"><RouterLink :to="versionsPath" class="footer-link">{{ isItalian ? 'Versioni' : 'Version History' }}</RouterLink></li>
             </ul>
           </div>
           
@@ -114,6 +115,9 @@ export default {
     donateLink() {
       
       return "https://paypal.me/riccardomartella";
+    },
+    versionsPath() {
+      return this.isItalian ? '/it/versions' : '/versions';
     }
   }
 }

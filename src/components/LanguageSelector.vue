@@ -75,7 +75,10 @@ export default {
         );
       }else if (currentPath === "/tutorials" || currentPath === "/it/tutorials") {
         this.$router.push(lang === "en" ? "/tutorials" : "/it/tutorials");
-      } else {
+      }else if (currentPath === "/versions" || currentPath === "/it/versions") {
+        this.$router.push(lang === "en" ? "/versions" : "/it/versions");
+      }
+       else {
         this.$router.push(lang === "en" ? "/" : "/it");
       }
     },

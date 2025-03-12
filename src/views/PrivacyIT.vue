@@ -52,7 +52,7 @@
 export default {
   name: 'PrivacyIT',
   mounted() {
-    // Carica lo script Iubenda in modo sicuro
+ 
     if (!document.getElementById('iubenda-script')) {
       const script = document.createElement('script');
       script.id = 'iubenda-script';

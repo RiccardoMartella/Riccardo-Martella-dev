@@ -8,6 +8,7 @@
             <ul class="list-unstyled">
               <li><RouterLink to="/it/docs/installation">Documentazione</RouterLink></li>
               <li><RouterLink to="/it/tutorials">Video Tutorial</RouterLink></li>
+              <li><RouterLink to="/it/versions">Versioni</RouterLink></li>
               <li><RouterLink to="/it/report-bug">Segnala Problemi</RouterLink></li>
               <li><RouterLink to="/it/cookie-policy">Politica dei Cookie</RouterLink></li>
             </ul>

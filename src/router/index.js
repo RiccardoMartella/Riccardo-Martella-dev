@@ -6,6 +6,8 @@ import Privacy from '@/views/Privacy.vue'
 import PrivacyIT from '@/views/PrivacyIT.vue'
 import CookiePolicy from '@/views/CookiePolicy.vue'
 import CookiePolicyIT from '@/views/CookiePolicyIT.vue'
+import Versions from '@/views/Versions.vue'
+import VersionsIT from '@/views/VersionsIT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -204,6 +206,18 @@ const router = createRouter({
       path: '/it/cookie-policy',
       name: 'CookiePolicyIT',
       component: CookiePolicyIT
+    },
+    
+    // Versions routes
+    {
+      path: '/versions',
+      name: 'versions',
+      component: Versions
+    },
+    {
+      path: '/it/versions',
+      name: 'versions-it',
+      component: VersionsIT
     }
   ]
 })
