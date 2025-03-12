@@ -77,6 +77,8 @@ export default {
         this.$router.push(lang === "en" ? "/tutorials" : "/it/tutorials");
       }else if (currentPath === "/versions" || currentPath === "/it/versions") {
         this.$router.push(lang === "en" ? "/versions" : "/it/versions");
+      }else if (currentPath === "/beta" || currentPath === "/it/beta") {
+        this.$router.push(lang === "en" ? "/beta" : "/it/beta");
       }
        else {
         this.$router.push(lang === "en" ? "/" : "/it");

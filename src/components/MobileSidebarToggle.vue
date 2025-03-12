@@ -25,31 +25,37 @@
       </div>
       
       <ul class="mobile-sidebar-list">
-        <template v-if="$route.path.includes('/it')">
+        <template v-if="isItalian">
           <!-- Italian links -->
-          <li><RouterLink to="/it/docs/installation" class="sidebar-link" @click="toggleSidebar">1 - Installazione</RouterLink></li>
-          <li><RouterLink to="/it/docs/fbx-guide" class="sidebar-link" @click="toggleSidebar">2 - Guida FBX e Materiali</RouterLink></li>
-          <li><RouterLink to="/it/docs/prefabs" class="sidebar-link" @click="toggleSidebar">3 - Posizionare i Prefab</RouterLink></li>
-          <li><RouterLink to="/it/docs/descriptions" class="sidebar-link" @click="toggleSidebar">4 - Aggiungere Descrizioni e Immagini</RouterLink></li>
-          <li><RouterLink to="/it/docs/buttons" class="sidebar-link" @click="toggleSidebar">5 - Pulsanti e Categorie</RouterLink></li>
-          <li><RouterLink to="/it/docs/categories" class="sidebar-link" @click="toggleSidebar">6 - Tag/Categorie/Gruppi</RouterLink></li>
-          <li><RouterLink to="/it/docs/resources" class="sidebar-link" @click="toggleSidebar">7 - Risorse</RouterLink></li>
-          <li><RouterLink to="/it/docs/effects" class="sidebar-link" @click="toggleSidebar">8 - Effetti Sonori & Visivi</RouterLink></li>
-          <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="toggleSidebar">9 - Salvataggi</RouterLink></li>
-          <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="toggleSidebar">10 - Problemi Noti</RouterLink></li>
+          <li><RouterLink to="/it/docs/installation" class="sidebar-link" @click="hideMobileSidebar">1 - Installazione</RouterLink></li>
+          <li><RouterLink to="/it/docs/fbx-guide" class="sidebar-link" @click="hideMobileSidebar">2 - Guida FBX e Materiali</RouterLink></li>
+          <li><RouterLink to="/it/docs/prefabs" class="sidebar-link" @click="hideMobileSidebar">3 - Posizionare i Prefab</RouterLink></li>
+          <li><RouterLink to="/it/docs/descriptions" class="sidebar-link" @click="hideMobileSidebar">4 - Aggiungere Descrizioni e Immagini</RouterLink></li>
+          <li><RouterLink to="/it/docs/buttons" class="sidebar-link" @click="hideMobileSidebar">5 - Pulsanti e Categorie</RouterLink></li>
+          <li><RouterLink to="/it/docs/categories" class="sidebar-link" @click="hideMobileSidebar">6 - Tag/Categorie/Gruppi</RouterLink></li>
+          <li><RouterLink to="/it/docs/resources" class="sidebar-link" @click="hideMobileSidebar">7 - Risorse</RouterLink></li>
+          <li><RouterLink to="/it/docs/effects" class="sidebar-link" @click="hideMobileSidebar">8 - Effetti Sonori & Visivi</RouterLink></li>
+          <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Salvataggi</RouterLink></li>
+          <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Problemi Noti</RouterLink></li>
+          <li><RouterLink to="/it/beta" class="beta-mobile-link" @click="hideMobileSidebar">
+            <span class="beta-mobile-badge">BETA</span> Funzionalità Beta
+          </RouterLink></li>
         </template>
         <template v-else>
           <!-- English links -->
-          <li><RouterLink to="/docs/installation" class="sidebar-link" @click="toggleSidebar">1 - Get Started</RouterLink></li>
-          <li><RouterLink to="/docs/fbx-guide" class="sidebar-link" @click="toggleSidebar">2 - FBX and Materials Guide</RouterLink></li>
-          <li><RouterLink to="/docs/prefabs" class="sidebar-link" @click="toggleSidebar">3 - Place Prefabs</RouterLink></li>
-          <li><RouterLink to="/docs/descriptions" class="sidebar-link" @click="toggleSidebar">4 - Add Descriptions and Images</RouterLink></li>
-          <li><RouterLink to="/docs/buttons" class="sidebar-link" @click="toggleSidebar">5 - Buttons and Categories</RouterLink></li>
-          <li><RouterLink to="/docs/categories" class="sidebar-link" @click="toggleSidebar">6 - Tags/Categories/Groups</RouterLink></li>
-          <li><RouterLink to="/docs/resources" class="sidebar-link" @click="toggleSidebar">7 - Resources</RouterLink></li>
-          <li><RouterLink to="/docs/effects" class="sidebar-link" @click="toggleSidebar">8 - Sound & Visual Effects</RouterLink></li>
-          <li><RouterLink to="/docs/saves" class="sidebar-link" @click="toggleSidebar">9 - Saves</RouterLink></li>
-          <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="toggleSidebar">10 - Known Issues</RouterLink></li>
+          <li><RouterLink to="/docs/installation" class="sidebar-link" @click="hideMobileSidebar">1 - Get Started</RouterLink></li>
+          <li><RouterLink to="/docs/fbx-guide" class="sidebar-link" @click="hideMobileSidebar">2 - FBX and Materials Guide</RouterLink></li>
+          <li><RouterLink to="/docs/prefabs" class="sidebar-link" @click="hideMobileSidebar">3 - Place Prefabs</RouterLink></li>
+          <li><RouterLink to="/docs/descriptions" class="sidebar-link" @click="hideMobileSidebar">4 - Add Descriptions and Images</RouterLink></li>
+          <li><RouterLink to="/docs/buttons" class="sidebar-link" @click="hideMobileSidebar">5 - Buttons and Categories</RouterLink></li>
+          <li><RouterLink to="/docs/categories" class="sidebar-link" @click="hideMobileSidebar">6 - Tags/Categories/Groups</RouterLink></li>
+          <li><RouterLink to="/docs/resources" class="sidebar-link" @click="hideMobileSidebar">7 - Resources</RouterLink></li>
+          <li><RouterLink to="/docs/effects" class="sidebar-link" @click="hideMobileSidebar">8 - Sound & Visual Effects</RouterLink></li>
+          <li><RouterLink to="/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Saves</RouterLink></li>
+          <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Known Issues</RouterLink></li>
+          <li><RouterLink to="/beta" class="beta-mobile-link" @click="hideMobileSidebar">
+            <span class="beta-mobile-badge">BETA</span> Beta Features
+          </RouterLink></li>
         </template>
       </ul>
     </div>
@@ -178,5 +184,27 @@ export default {
 .mobile-tutorial-link:hover,
 .mobile-tutorial-link:active {
   background-color: #0082CC;
+}
+
+.beta-mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1rem;
+  background-color: #e6f7ff;
+  border-left: 3px solid #00A3FF;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.beta-mobile-badge {
+  background-color: #00A3FF;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 </style>

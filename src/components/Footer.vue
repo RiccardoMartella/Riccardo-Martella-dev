@@ -118,6 +118,9 @@ export default {
     },
     versionsPath() {
       return this.isItalian ? '/it/versions' : '/versions';
+    },
+    betaPath() {
+      return this.isItalian ? '/it/beta' : '/beta';
     }
   }
 }

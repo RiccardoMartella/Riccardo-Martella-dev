@@ -218,6 +218,18 @@ const router = createRouter({
       path: '/it/versions',
       name: 'versions-it',
       component: VersionsIT
+    },
+    
+    // Beta routes
+    {
+      path: '/beta',
+      name: 'beta',
+      component: () => import('@/views/Beta.vue')
+    },
+    {
+      path: '/it/beta',
+      name: 'beta-it',
+      component: () => import('@/views/BetaIT.vue')
     }
   ]
 })
