@@ -47,14 +47,11 @@ export default {
     }
   },
   computed: {
-    // This helps resolve image paths properly
     imagePath() {
-      // If the path already includes import.meta, return as is
+
       if (this.src.startsWith('/') && !this.src.startsWith('/src/')) {
         return this.src;
       }
-      
-      // Otherwise transform paths that start with /src/
       return this.src.replace('/src/', '/');
     }
   },
