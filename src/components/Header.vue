@@ -19,15 +19,14 @@
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          @click="toggleNavbar"
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="navbarNav">
           <ul class="navbar-nav me-auto ms-5">
             <li class="nav-item">
               <RouterLink :to="introPath" class="nav-link">{{
@@ -84,6 +83,7 @@ export default {
     return {
       isScrolled: false,
       lastScrollPosition: 0,
+      isNavOpen: false,
     };
   },
   computed: {
@@ -119,6 +119,13 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 50;
     },
+    toggleNavbar() {
+      this.isNavOpen = !this.isNavOpen;
+    },
+    // Optional: Close navbar when clicking on a link
+    closeNavbar() {
+      this.isNavOpen = false;
+    }
   },
 };
 </script>
@@ -218,10 +225,15 @@ export default {
 @media (max-width: 991.98px) {
   .navbar-collapse {
     padding: 1rem 0;
+    transition: all 0.3s ease;
   }
 
   .navbar-nav {
     margin-top: 0.5rem;
+  }
+  
+  .navbar-collapse.show {
+    display: block;
   }
 }
 </style>
