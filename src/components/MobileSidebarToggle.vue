@@ -72,10 +72,19 @@ export default {
       isOpen: false
     }
   },
+  computed: {
+    isItalian() {
+      return this.$route.path.includes('/it');
+    }
+  },
   methods: {
     toggleSidebar() {
       this.isOpen = !this.isOpen;
       document.body.style.overflow = this.isOpen ? 'hidden' : '';
+    },
+    hideMobileSidebar() {
+      this.isOpen = false;
+      document.body.style.overflow = '';
     }
   }
 }

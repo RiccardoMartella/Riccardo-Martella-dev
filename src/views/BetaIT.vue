@@ -62,7 +62,7 @@
           <div class="feature-card card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="feature-header">
-                <h2 class="text-accent">Sistema di Animazione Avanzato</h2>
+                <h2 class="text-accent">Sistema di assemblaggio avanzato</h2>
                 <span class="feature-status">In sviluppo</span>
               </div>
               
