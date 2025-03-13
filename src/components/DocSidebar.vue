@@ -46,6 +46,7 @@ export default {
         { number: "8", title: "Effetti Sonori & Visivi", path: "docs/effects" },
         { number: "9", title: "Salvataggi", path: "docs/saves" },
         { number: "10", title: "Problemi Noti", path: "docs/known-issues" },
+        { number: "11", title: "Impostazioni Generali", path: "docs/Settings" },
         { title: "Funzionalità Beta", path: "beta", isBeta: true }
       ] : [
         { number: "1", title: "Get Start", path: "docs/installation" },
@@ -58,6 +59,7 @@ export default {
         { number: "8", title: "Sound & Visual Effects", path: "docs/effects" },
         { number: "9", title: "Saves", path: "docs/saves" },
         { number: "10", title: "Known Issues", path: "docs/known-issues" },
+        { number: "11", title: "General Settings", path: "docs/Settings" },
         { title: "Beta Features", path: "beta", isBeta: true }
       ];
       
