@@ -134,7 +134,7 @@ const router = createRouter({
         {
           path: 'settings',
           name: 'settings',
-          component: () => import('@/views/docs/en/settings.vue')
+          component: () => import('@/views/docs/en/Settings.vue')
         }
       ]
     },
@@ -201,7 +201,7 @@ const router = createRouter({
         {
           path: 'settings',
           name: 'settingsIT',
-          component: () => import('@/views/docs/it/settings.vue')
+          component: () => import('@/views/docs/it/Settings.vue')
         }
       ]
     },
