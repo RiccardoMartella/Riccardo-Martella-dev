@@ -37,6 +37,7 @@
           <li><RouterLink to="/it/docs/effects" class="sidebar-link" @click="hideMobileSidebar">8 - Effetti Sonori & Visivi</RouterLink></li>
           <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Salvataggi</RouterLink></li>
           <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Problemi Noti</RouterLink></li>
+          <li><RouterLink to="/it/docs/settings" class="sidebar-link" @click="hideMobileSidebar">11 - Impostazioni</RouterLink></li>
           <li><RouterLink to="/it/beta" class="beta-mobile-link" @click="hideMobileSidebar">
             <span class="beta-mobile-badge">BETA</span> Funzionalità Beta
           </RouterLink></li>
@@ -53,6 +54,7 @@
           <li><RouterLink to="/docs/effects" class="sidebar-link" @click="hideMobileSidebar">8 - Sound & Visual Effects</RouterLink></li>
           <li><RouterLink to="/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Saves</RouterLink></li>
           <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Known Issues</RouterLink></li>
+          <li><RouterLink to="/docs/settings" class="sidebar-link" @click="hideMobileSidebar">11 - Settings</RouterLink></li>
           <li><RouterLink to="/beta" class="beta-mobile-link" @click="hideMobileSidebar">
             <span class="beta-mobile-badge">BETA</span> Beta Features
           </RouterLink></li>

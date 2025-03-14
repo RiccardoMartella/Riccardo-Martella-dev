@@ -17,4 +17,10 @@ Follow these simple steps to report a problem:
 
 Your feedback is crucial to improving the asset and providing you with a better experience. Thank you so much for your support!
 
+## Contribute to the documentation
+If you see any inaccuracies or areas that could be improved, I welcome your contributions! Feel free to create a Pull Request with your suggested changes or open an Issue to share your ideas and feedback.
+
+Your support and involvement are essential to improving the resource and providing a better experience for everyone. Thank you very much for your contribution!
+
+
 ---

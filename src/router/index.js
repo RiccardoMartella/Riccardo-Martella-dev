@@ -130,6 +130,11 @@ const router = createRouter({
           path: 'known-issues',
           name: 'docsKnownIssues',
           component: () => import('@/views/docs/en/KnownIssues.vue')
+        },
+        {
+          path: 'settings',
+          name: 'settings',
+          component: () => import('@/views/docs/en/Settings.vue')
         }
       ]
     },
@@ -192,6 +197,11 @@ const router = createRouter({
           path: 'known-issues',
           name: 'docsKnownIssuesIT',
           component: () => import('@/views/docs/it/KnownIssues.vue')
+        },
+        {
+          path: 'settings',
+          name: 'settingsIT',
+          component: () => import('@/views/docs/it/Settings.vue')
         }
       ]
     },
