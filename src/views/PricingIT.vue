@@ -32,10 +32,6 @@
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Aggiornamenti gratuiti</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
                     <span>Documentazione completa</span>
                   </li>
                   <li>

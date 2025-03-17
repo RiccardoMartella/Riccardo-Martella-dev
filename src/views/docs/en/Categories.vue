@@ -127,6 +127,8 @@
             <p>
               To assign the group, follow the video tutorial below that shows the complete process.
             </p>
+            <strong>GroupPieces</strong> folder within the path
+            <code>Assets > AssemblyStation > ScriptableObjects > GroupPieces</code>.
           </div>
           
           <div class="content-media">
@@ -152,9 +154,6 @@
 
         <div class="content-block vertical mt-4">
           <div class="content-text">
-            <p>
-              For the pieces that have a Group, the same rule always applies, the first in the list is taken. So the resources will need to be changed there.
-            </p>
             <p>
               <strong class="text-danger">To select the first item on the list, simply check the checkbox next to the name. It will be assigned as the first, and all resources, names, images, and camera zoom will be linked to it. Therefore, it is necessary to assign all these elements to that piece.</strong>            </p>
           </div>

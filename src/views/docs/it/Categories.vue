@@ -127,6 +127,8 @@
             <p>
               Per assegnare il gruppo, segui il video tutorial qui sotto che mostra il processo completo.
             </p>
+              <strong>GroupPieces</strong> percorso
+              <code>Assets > AssemblyStation > ScriptableObjects > GroupPieces</code>.
           </div>
           
           <div class="content-media">
@@ -152,9 +154,6 @@
 
         <div class="content-block vertical mt-4">
           <div class="content-text">
-            <p>
-              Per i pezzi che hanno un Gruppo, vale sempre la stessa regola: viene preso il primo della lista. Quindi le risorse dovranno essere cambiate lì.
-            </p>
             <p>
               <strong class="text-danger">Per selezionare il primo della lista, è sufficiente spuntare la checkbox accanto al nome. Questo verrà assegnato come primo e tutte le risorse, il nome, le immagini e lo zoom della camera saranno associati ad esso. È quindi necessario assegnare tutti questi elementi a quel pezzo.</strong>            </p>
           </div>
