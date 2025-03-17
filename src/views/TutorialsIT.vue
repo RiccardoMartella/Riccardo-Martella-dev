@@ -98,9 +98,10 @@
             <!-- Tutorial 5 -->
             <div class="tutorial-card card shadow-sm mb-5">
               <div class="card-body p-4">
-                <h3 class="tutorial-title">Gruppi di Componenti</h3>
+                <h3 class="tutorial-title">Gruppi</h3>
                 <p class="tutorial-description">
                   In questo video gestiremo i gruppi per ogni pezzo, consentendo una migliore organizzazione e strutture più complesse.
+                   È possibile insrirli in 2 modi: Singolarmente per ogni pezzo o tramite il sistema di gestione gruppi.
                 </p>
                 <div class="video-container">
                   <iframe 
@@ -112,6 +113,20 @@
                     frameborder="0">
                   </iframe>
                   <p class="video-caption">Tutorial: Gestione dei gruppi di componenti</p>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="tutorial-title">Managment Groups</h3>
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1KmnG_nRXCwnL5QT3hsNzS9s1uX6CbqJW/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Managment Groups</p>
                 </div>
               </div>
             </div>
@@ -135,6 +150,7 @@
                   <p class="video-caption">Tutorial: Gestione delle risorse per i componenti</p>
                 </div>
               </div>
+             
             </div>
           </div>
           

@@ -98,9 +98,10 @@
             <!-- Tutorial 5 -->
             <div class="tutorial-card card shadow-sm mb-5">
               <div class="card-body p-4">
-                <h3 class="tutorial-title">Component Groups</h3>
+                <h3 class="tutorial-title">Groups</h3>
                 <p class="tutorial-description">
                   Learn how to manage and create groups for components, allowing for better organization and more complex structures.
+                  You can enter them in 2 ways: Individually for each piece or via the group management system.
                 </p>
                 <div class="video-container">
                   <iframe 
@@ -112,6 +113,20 @@
                     frameborder="0">
                   </iframe>
                   <p class="video-caption">Tutorial: Managing Component Groups</p>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="tutorial-title">Managment Groups</h3>
+                <div class="video-container">
+                  <iframe 
+                    src="https://drive.google.com/file/d/1KmnG_nRXCwnL5QT3hsNzS9s1uX6CbqJW/preview" 
+                    class="tutorial-video"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media"
+                    loading="lazy"
+                    frameborder="0">
+                  </iframe>
+                  <p class="video-caption">Tutorial: Managment Groups</p>
                 </div>
               </div>
             </div>

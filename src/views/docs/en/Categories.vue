@@ -131,7 +131,7 @@
           
           <div class="content-media">
             <iframe 
-              src="https://drive.google.com/file/d/1ZXdrXtiARapP7-mlNywxegY36iOnCVMg/preview" 
+              src="https://drive.google.com/file/d/1KmnG_nRXCwnL5QT3hsNzS9s1uX6CbqJW/preview" 
               class="demo-video" 
               allowfullscreen
               frameborder="0">
@@ -156,14 +156,13 @@
               For the pieces that have a Group, the same rule always applies, the first in the list is taken. So the resources will need to be changed there.
             </p>
             <p>
-              <strong class="text-danger">This function is still under development to facilitate the insertion of the image in the Groups</strong>
-            </p>
+              <strong class="text-danger">To select the first item on the list, simply check the checkbox next to the name. It will be assigned as the first, and all resources, names, images, and camera zoom will be linked to it. Therefore, it is necessary to assign all these elements to that piece.</strong>            </p>
           </div>
           
           <div class="content-media">
             <ImageZoomable 
-              src="/images/piceGroupFix.png" 
-              alt="Piece Group Fix"
+            src="/images/firstgroups.png" 
+            alt="Piece Group Fix"
               caption="Resource configuration in the first piece of the group" 
             />
           </div>

@@ -131,7 +131,7 @@
           
           <div class="content-media">
             <iframe 
-              src="https://drive.google.com/file/d/1ZXdrXtiARapP7-mlNywxegY36iOnCVMg/preview" 
+              src="https://drive.google.com/file/d/1KmnG_nRXCwnL5QT3hsNzS9s1uX6CbqJW/preview" 
               class="demo-video" 
               allowfullscreen
               frameborder="0">
@@ -156,17 +156,16 @@
               Per i pezzi che hanno un Gruppo, vale sempre la stessa regola: viene preso il primo della lista. Quindi le risorse dovranno essere cambiate lì.
             </p>
             <p>
-              <strong class="text-danger">Questa funzione è ancora in fase di sviluppo per facilitare l'inserimento dell'immagine nei Gruppi</strong>
-            </p>
+              <strong class="text-danger">Per selezionare il primo della lista, è sufficiente spuntare la checkbox accanto al nome. Questo verrà assegnato come primo e tutte le risorse, il nome, le immagini e lo zoom della camera saranno associati ad esso. È quindi necessario assegnare tutti questi elementi a quel pezzo.</strong>            </p>
           </div>
-          
           <div class="content-media">
             <ImageZoomable 
-              src="/images/piceGroupFix.png" 
-              alt="Correzione Gruppo Pezzi"
-              caption="Configurazione delle risorse nel primo pezzo del gruppo" 
+              src="/images/firstgroups.png" 
+              alt="Piece Group Fix"
+              caption="Resource configuration in the first piece of the group" 
             />
           </div>
+          
         </div>
       </div>
     </ContentSection>
