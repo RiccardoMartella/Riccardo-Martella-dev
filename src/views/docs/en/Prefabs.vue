@@ -8,6 +8,27 @@
       </p>
       
       <div class="doc-section">
+        <h2 class="doc-section-title">PREFAB ROTATION</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              It's important to consider the rotation with which the prefab will be instantiated in the Assembly Station. This rotation determines the initial orientation of the model when it's displayed.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/prefabRotation.png" 
+              alt="Prefab Rotation"
+              class="w-50"
+              caption="Managing the prefab rotation during instantiation"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <div class="doc-section">
         <h2 class="doc-section-title">ASSEMBLY POINT</h2>
         
         <div class="content-block">

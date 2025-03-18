@@ -8,6 +8,27 @@
       </p>
       
       <div class="doc-section">
+        <h2 class="doc-section-title">ROTAZIONE DEL PREFAB</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              È importante considerare la rotazione con cui il prefab verrà instanziato nell'Assembly Station. Questa rotazione determina l'orientamento iniziale del modello quando viene visualizzato.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/prefabRotation.png" 
+              alt="Rotazione del Prefab"
+              class="w-50"
+              caption="Gestione della rotazione del prefab durante l'instanziazione"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
         <h2 class="doc-section-title">ASSEMBLY POINT</h2>
         
         <div class="content-block">
