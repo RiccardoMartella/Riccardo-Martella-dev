@@ -30,10 +30,6 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              This can happen because the piece might have the same name as another piece already in the game.
-              To solve the problem, simply rename it and assign it the corresponding Scriptable Object.
-            </p>
-            <p>
               The video below demonstrates how to fix this issue:
             </p>
           </div>

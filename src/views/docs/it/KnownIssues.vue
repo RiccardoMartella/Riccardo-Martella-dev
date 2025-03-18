@@ -29,10 +29,6 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              Questo può accadere perché il pezzo potrebbe avere lo stesso nome di un altro pezzo già presente nel gioco.
-              Per risolvere il problema, basta rinominarlo e assegnargli il corrispondente Scriptable Object.
-            </p>
-            <p>
               Il video qui sotto dimostra come risolvere questo problema:
             </p>
           </div>
