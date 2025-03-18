@@ -55,7 +55,7 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              Quel punto si riferisce al pivot genitore, che contiene tutti i "pezzi" che compongono il gameobject. Posizionare correttamente questo perno è fondamentale per il corretto posizionamento del modello.
+              Quel punto si riferisce al pivot genitore, che contiene tutti gli Elementi che compongono il gameobject. Posizionare correttamente questo perno è fondamentale per il corretto posizionamento del modello.
             </p>
           </div>
           
