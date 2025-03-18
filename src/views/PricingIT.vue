@@ -46,7 +46,7 @@
               </div>
               
               <div class="text-center mt-4">
-                <a href="https://assetstore.unity.com/packages/slug/your-asset-id" class="btn btn-primary btn-lg px-5 py-3" target="_blank">
+                <a href="https://assetstore.unity.com/packages/slug/313569" class="btn btn-primary btn-lg px-5 py-3" target="_blank">
                   <i class="bi bi-cart-fill me-2"></i>
                   Acquista su Unity Asset Store
                 </a>

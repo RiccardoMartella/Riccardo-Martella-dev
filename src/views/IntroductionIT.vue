@@ -25,7 +25,7 @@
                 Assembly Station è lo strumento definitivo per creare istruzioni di assemblaggio interattive in Unity. Progettato per semplificare processi complessi con feedback visivo intuitivo.
               </p>
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
-                <RouterLink to="/it/docs/installation" class="btn btn-primary btn-glow btn-lg shadow px-4">Ottieni Assembly Station</RouterLink>
+                <a class="btn btn-primary btn-glow btn-lg shadow px-4" href="https://assetstore.unity.com/packages/slug/313569">Ottieni Assembly Station</a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
                   <div class="badge-item pulse" title="Creato per Unity">
                     <i class="bi bi-unity fs-4"></i>

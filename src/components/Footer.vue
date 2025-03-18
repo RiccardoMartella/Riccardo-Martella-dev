@@ -101,7 +101,7 @@
         <a href="https://discord.gg/9wJSxtUX2W" class="social-icon-footer mx-2">
           <i class="bi bi-discord"></i>
         </a>
-        <a href="#" class="social-icon-footer mx-2">
+        <a href="https://assetstore.unity.com/packages/slug/313569" class="social-icon-footer mx-2">
           <i class="bi bi-unity"></i>
         </a>
         <a

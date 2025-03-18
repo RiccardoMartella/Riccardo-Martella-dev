@@ -106,7 +106,7 @@
               <a href="https://discord.gg/9wJSxtUX2W" class="social-icon">
                 <i class="bi bi-discord fs-3 text-accent"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="https://assetstore.unity.com/packages/slug/313569" class="social-icon">
                 <i class="bi bi-unity fs-3 text-accent"></i>
               </a>
               <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/" class="social-icon">
