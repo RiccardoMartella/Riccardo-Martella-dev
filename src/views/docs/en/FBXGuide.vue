@@ -98,7 +98,7 @@
             <ImageZoomable 
               src="/images/path.jpg" 
               alt="Configurazione percorso materiali"
-              caption="Configurazione opzioni percorso materiali"
+              caption="Configuration of material route options"
               class="standard-image"
             />
           </div>
