@@ -116,24 +116,16 @@
           </div>
           
           <div class="content-media">
-            <iframe 
-              src="https://drive.google.com/file/d/1RrpNNrosF99Vwd0OD2RE7OV_AZZOb5Ul/preview"
-              class="demo-video"
-              allowfullscreen
-              allow="autoplay; encrypted-media"
-              loading="lazy"
-              frameborder="0">
-            </iframe>
+            <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/vhe17p8hzcav8tmyube37/newCategory.mp4?rlkey=3ih1j72bf7apnzbm3n2b836hw&st=pomtlfuj&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
             <p class="caption">Tutorial: Adding a button to an existing category</p>
             
-            <iframe 
-              src="https://drive.google.com/file/d/1MAZ0JmpxFm6X3AUminXSvHZo60RMkF4e/preview"
-              class="demo-video mt-4"
-              allowfullscreen
-              allow="autoplay; encrypted-media"
-              loading="lazy"
-              frameborder="0">
-            </iframe>
+            <video controls class="demo-video w-110">
+              <source src="https://www.dropbox.com/scl/fi/bmywyq7xkxwy40i8wrobt/CategoryPrefab.mp4?rlkey=di9ajmf2rf9m7lw4uq2ilr0ib&st=7hxi07vj&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
             <p class="caption">Tutorial: Complete procedure for adding new buttons</p>
           </div>
         </div>
@@ -156,14 +148,10 @@
           </div>
           
           <div class="content-media">
-            <iframe 
-              src="https://drive.google.com/file/d/1pI9TWQXDH4r9bJ-rpScuYVpb-PovzYg9/preview"
-              class="demo-video"
-              allowfullscreen
-              allow="autoplay; encrypted-media"
-              loading="lazy"
-              frameborder="0">
-            </iframe>
+            <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/x895d3089wnmx4umtdppe/newCAtegory2.mp4?rlkey=n00a15isys34wp4y4fywwxavt&st=j4sv7o79&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
             <p class="caption">Tutorial: Procedure for adding a new category</p>
           </div>
         </div>

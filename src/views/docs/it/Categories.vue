@@ -132,12 +132,10 @@
           </div>
           
           <div class="content-media">
-            <iframe 
-              src="https://drive.google.com/file/d/1KmnG_nRXCwnL5QT3hsNzS9s1uX6CbqJW/preview" 
-              class="demo-video" 
-              allowfullscreen
-              frameborder="0">
-            </iframe>
+            <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/pehlalx0cxts1dfnd3f81/newsystemGroup.mp4?rlkey=xxnl6gztdhdtujv26fh44mnwn&st=l4c2yb6q&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
             <p class="caption">Video tutorial per l'assegnazione dei gruppi</p>
           </div>
         </div>

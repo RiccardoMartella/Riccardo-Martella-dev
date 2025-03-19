@@ -26,14 +26,10 @@
               </p>
               
               <div class="video-container">
-                <iframe 
-                  src="https://drive.google.com/file/d/1YF29J93wM3DmPy-914aPn-398EcA3ARS/preview" 
-                  class="feature-video"
-                  allowfullscreen
-                  allow="autoplay; encrypted-media"
-                  loading="lazy"
-                  frameborder="0">
-                </iframe>
+                <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/qyscpehd1bj31jx1wnxmq/Beta.mp4?rlkey=3f4d8r8bcackc2li12zkbhpe1&st=56dphla7&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
               </div>
               
               <div class="feature-details mt-4">
@@ -69,14 +65,10 @@
              
               
               <div class="video-container">
-                <iframe 
-                  src="https://drive.google.com/file/d/1haI-m_cCx8AtOvMH-DARPRD6jkPmz588/preview" 
-                  class="feature-video"
-                  allowfullscreen
-                  allow="autoplay; encrypted-media"
-                  loading="lazy"
-                  frameborder="0">
-                </iframe>
+                <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/oae5ms1tay2rhh2fjcxga/BetaSettings.mp4?rlkey=6b2c2vrhjvcwys4x7v6hv6d14&st=e3ashdn6&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
               </div>
             </div>
           </div>

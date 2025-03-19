@@ -39,13 +39,10 @@
           </div>
 
           <div class="content-media">
-            <iframe
-              src="https://drive.google.com/file/d/1TlwnzGk7BlYGlXtUeG48Wq4BHL0gjOV4/preview"
-              class="demo-video w-100"
-              allowfullscreen
-              frameborder="0"
-            >
-            </iframe>
+            <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/d05zgntphtqp1g9zf9e43/bug.mp4?rlkey=2d0wm9880zgysrqywwjx9nru0&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
             <p class="caption">Tutorial: How to fix naming conflicts</p>
           </div>
         </div>
