@@ -23,6 +23,11 @@
               selezionare la cartella <u>prefab clone</u>, e una descrizione, nome e immagine verranno automaticamente
               assegnati a ogni figlio e un titolo al genitore.
             </p>
+            
+            <div class="alert-box alert-warning">
+              <h4 class="alert-box-title"><i class="bi bi-exclamation-triangle-fill me-2"></i>Attenzione</h4>
+              <p>Si consiglia di oscurare tutti gli oggetti in scena prima di fare questa operazione, altrimenti gli <a href="#img">screenshot</a> non verranno elaborati nella maniera corretta. Altri oggetti in scena potrebbero apparire negli screenshot automatici e compromettere la qualità delle immagini generate.</p>
+            </div>
           </div>
           
           <div class="content-media">
@@ -214,7 +219,7 @@
         </div>
       </div>
 
-      <h3 class="text-center mt-5 mb-5">IMMAGINI</h3>
+      <h3 class="text-center mt-5 mb-5"  id="img">IMMAGINI</h3>
 
       <div class="doc-section">
         <h2 class="doc-section-title">GESTIONE DELLE IMMAGINI</h2>

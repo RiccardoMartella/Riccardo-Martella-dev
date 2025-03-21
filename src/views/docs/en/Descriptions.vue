@@ -23,6 +23,11 @@
               select the <u>prefab clone</u> folder, and a description, name, and image will be automatically
               assigned to each child and a title to the parent.
             </p>
+            
+            <div class="alert-box alert-warning">
+              <h4 class="alert-box-title"><i class="bi bi-exclamation-triangle-fill me-2"></i>Warning</h4>
+              <p>It is recommended to hide all objects in the scene before performing this operation, otherwise the <a href="#img">screenshot</a> will not be processed correctly. Other objects in the scene might appear in the automatic screenshots and compromise the quality of the generated images.</p>
+            </div>
           </div>
           
           <div class="content-media">
@@ -214,7 +219,7 @@
         </div>
       </div>
 
-      <h3 class="text-center mt-5 mb-5">IMAGES</h3>
+      <h3 class="text-center mt-5 mb-5" id="img">IMAGES</h3>
 
       <div class="doc-section">
         <h2 class="doc-section-title">IMAGE MANAGEMENT</h2>
