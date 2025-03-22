@@ -2,502 +2,407 @@
   <div class="doc-page">
     <ContentSection>
       <h1 class="doc-title">11. GENERAL SETTINGS</h1>
-      
-      <p class="text-lead">
-        This page describes all the different settings available in Assembly Station.
-      </p>
-      
       <div class="doc-section">
-        <h2 class="doc-section-title">MAIN COMPONENTS REFERENCE</h2>
+        <h2 class="fs-5">MAIN COMPONENTS REFERENCE</h2>
         
         <div class="content-block vertical">
           <div class="api-documentation">
             <div class="api-class">
-              <h3>ViewDetails.cs</h3>
-              <p>Manages the user interface and display details for prefabs and their components.</p>
               
+              <h4 class="mt-1">ViewDetails Properties</h4>
               <table class="api-table">
                 <thead>
                   <tr>
-                    <th>Field</th>
+                    <th>Property</th>
                     <th>Type</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>prefabButtonList</td>
-                    <td>PrefabButtonList</td>
-                    <td>Contains the list of button data associated with prefabs. Stores information such as colors and confirmation status for each button.</td>
+                    <td colspan="3" class="section-header">Build Button Settings</td>
                   </tr>
                   <tr>
-                    <td>pieceButtons</td>
-                    <td>Dictionary&lt;GameObject, Button&gt;</td>
-                    <td>Dictionary that associates each piece with its button in the user interface. Allows quick access to a specific piece's button.</td>
+                    <td>spriteButton</td>
+                    <td>Sprite</td>
+                    <td>The sprite used for the build button.</td>
                   </tr>
                   <tr>
-                    <td>prefabManager</td>
-                    <td>PrefabManager</td>
-                    <td>Manager that controls the creation, loading, and saving of prefabs. Coordinates the global state of prefabs in the system.</td>
+                    <td>unbuildButtonSprite</td>
+                    <td>Sprite</td>
+                    <td>Sprite to show when a piece can be unbuilt.</td>
                   </tr>
-                  <tr>
-                    <td>builtPieces</td>
-                    <td>HashSet&lt;GameObject&gt;</td>
-                    <td>Set of pieces already built by the user. Used to quickly check if a piece has been assembled.</td>
-                  </tr>
-                  <tr>
-                    <td>playerResources</td>
-                    <td>PlayerResources</td>
-                    <td>Manages player resources (iron, plastic, rubber) used to build pieces. Tracks quantities and controls add/subtract operations.</td>
-                  </tr>
-                  <tr>
-                    <td>buildButton</td>
-                    <td>GameObject</td>
-                    <td>Reference to the main button for building a component. Allows starting the assembly process.</td>
-                  </tr>
-                  <tr>
-                    <td>effectsContainer</td>
-                    <td>Transform</td>
-                    <td>Container for visual effects during construction. Particle effects are created as children of this transform.</td>
-                  </tr>
-                  <tr>
-                    <td>panelResources</td>
-                    <td>GameObject</td>
-                    <td>UI panel showing resources required for a piece. Contains resource texts and images.</td>
-                  </tr>
-                  <tr>
-                    <td>PanelTextresources</td>
-                    <td>GameObject</td>
-                    <td>Panel showing resource-related messages (e.g., "Insufficient resources").</td>
-                  </tr>
-                  <tr>
-                    <td>containerPercentage</td>
-                    <td>GameObject</td>
-                    <td>UI container for displaying the percentage of assembly completion.</td>
-                  </tr>
-                  <tr>
-                    <td>saveProgressButton</td>
-                    <td>GameObject</td>
-                    <td>Button for saving assembly progress. Allows preserving the construction state between sessions.</td>
-                  </tr>
-                  <tr>
-                    <td>effectsManager</td>
-                    <td>EffectsManager</td>
-                    <td>Manager for visual effects shown during assembly (particles, lights, etc.). Coordinates effects for individual pieces and groups.</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              <h4 class="mt-4">UI Settings</h4>
-              <table class="api-table">
-                <thead>
-                  <tr>
-                    <th>Field</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
                   <tr>
                     <td>cellSizeH</td>
                     <td>float</td>
-                    <td>Width of the UI cell for piece buttons. Controls the horizontal size of buttons in the grid.</td>
+                    <td>Horizontal size of the cells in the UI grid.</td>
                   </tr>
                   <tr>
                     <td>cellSizeY</td>
                     <td>float</td>
-                    <td>Height of the UI cell for piece buttons. Controls the vertical size of buttons in the grid.</td>
+                    <td>Vertical size of the cells in the UI grid.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Build Cost Settings</td>
                   </tr>
                   <tr>
                     <td>resourceIcon</td>
                     <td>Sprite</td>
-                    <td>Generic icon used to represent resources in the interface.</td>
+                    <td>The sprite used as an icon for resources.</td>
                   </tr>
                   <tr>
-                    <td>resourceContainerWidth</td>
-                    <td>float</td>
-                    <td>Width of the container showing required resources. Defines the horizontal space available for resource information.</td>
+                    <td colspan="3" class="section-header">Prefab Placement</td>
                   </tr>
                   <tr>
                     <td>resourceContainerHeight</td>
                     <td>float</td>
-                    <td>Height of the container showing required resources. Defines the vertical space for each resource.</td>
+                    <td>Height of the resource container in the UI.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceImageWidth</td>
+                    <td>float</td>
+                    <td>Width of the resource image in the UI.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceImageHeight</td>
+                    <td>float</td>
+                    <td>Height of the resource image in the UI.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceImageAnchorMin</td>
+                    <td>Vector2</td>
+                    <td>Minimum anchor point for the resource image.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceImageAnchorMax</td>
+                    <td>Vector2</td>
+                    <td>Maximum anchor point for the resource image.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceImagePivot</td>
+                    <td>Vector2</td>
+                    <td>Pivot point for the resource image.</td>
                   </tr>
                   <tr>
                     <td>resourceTextFontSize</td>
                     <td>int</td>
-                    <td>Font size for resource text. Controls the readability of resource information.</td>
+                    <td>Font size of the resource text.</td>
                   </tr>
                   <tr>
                     <td>resourceVerticalAlign</td>
                     <td>float</td>
-                    <td>Vertical spacing between resources in the list. Controls the visual density of resource information.</td>
+                    <td>Vertical alignment offset for the resource text.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceTextSize</td>
+                    <td>Vector2</td>
+                    <td>Size of the resource text box.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceTextColor</td>
+                    <td>Color</td>
+                    <td>Color of the resource text.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceTextAlignment</td>
+                    <td>TextAnchor</td>
+                    <td>Alignment of the resource text within its box.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceTextAutoSizing</td>
+                    <td>bool</td>
+                    <td>Whether the resource text automatically adjusts its size.</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            
-            <div class="api-class">
-              <h3>ConstructionUI.cs</h3>
-              <p>Manages the main construction and assembly interface.</p>
               
+              <h4 class="mt-4">ConstructionUI Properties</h4>
               <table class="api-table">
                 <thead>
                   <tr>
-                    <th>Field</th>
+                    <th>Property</th>
                     <th>Type</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Instance</td>
-                    <td>ConstructionUI</td>
-                    <td>Singleton instance of the ConstructionUI class. Allows global access to its functionalities.</td>
-                  </tr>
-                  <tr>
-                    <td>currentPrefab</td>
-                    <td>GameObject</td>
-                    <td>Prefab currently selected for assembly. Object the user is working on.</td>
-                  </tr>
-                  <tr>
-                    <td>tagObject</td>
-                    <td>List&lt;string&gt;</td>
-                    <td>List of available tags for categorizing objects. Used to organize pieces into categories.</td>
-                  </tr>
-                  <tr>
-                    <td>piecesByTag</td>
-                    <td>Dictionary&lt;string, List&lt;GameObject&gt;&gt;</td>
-                    <td>Dictionary organizing pieces by tag. Facilitates access to pieces by category.</td>
-                  </tr>
-                  <tr>
-                    <td>originalMaterials</td>
-                    <td>Dictionary&lt;GameObject, Material[]&gt;</td>
-                    <td>Stores the original materials of each piece. Used to restore materials after skeleton mode.</td>
-                  </tr>
-                  <tr>
-                    <td>confirmedPieces</td>
-                    <td>HashSet&lt;GameObject&gt;</td>
-                    <td>Set of pieces confirmed in the assembly. Pieces that have been correctly positioned.</td>
+                    <td colspan="3" class="section-header">Materials</td>
                   </tr>
                   <tr>
                     <td>skeletonColor</td>
                     <td>Material</td>
-                    <td>Material used to display pieces in skeleton mode. Defines the appearance of pieces not yet assembled.</td>
+                    <td>The material used to color the skeleton of the model.</td>
                   </tr>
                   <tr>
                     <td>skeletonTransparentColor</td>
                     <td>Material</td>
-                    <td>Material for the skeleton with transparency. Allows seeing the internal structure while keeping the outlines visible.</td>
+                    <td>The material used to make the skeleton of the model transparent.</td>
                   </tr>
                   <tr>
-                    <td>switchMaterial</td>
-                    <td>ButtonSwitch</td>
-                    <td>Controller for switching between normal and transparent materials. Manages the visualization change.</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              <h4 class="mt-4">Grid UI Settings</h4>
-              <table class="api-table">
-                <thead>
-                  <tr>
-                    <th>Field</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>gridColumn</td>
-                    <td>int</td>
-                    <td>Number of columns in the pieces grid. Determines the layout of the available pieces display.</td>
+                    <td colspan="3" class="section-header">Popup Build Settings</td>
                   </tr>
                   <tr>
-                    <td>sizeCellX</td>
-                    <td>int</td>
-                    <td>Cell width in the grid. Controls the horizontal size of piece buttons.</td>
-                  </tr>
-                  <tr>
-                    <td>sizeCellY</td>
-                    <td>int</td>
-                    <td>Cell height in the grid. Controls the vertical size of piece buttons.</td>
-                  </tr>
-                  <tr>
-                    <td>spacingX</td>
-                    <td>int</td>
-                    <td>Horizontal spacing between cells. Controls the distance between piece buttons horizontally.</td>
-                  </tr>
-                  <tr>
-                    <td>spacingY</td>
-                    <td>int</td>
-                    <td>Vertical spacing between cells. Controls the distance between piece buttons vertically.</td>
-                  </tr>
-                  <tr>
-                    <td>paddingLeft</td>
-                    <td>int</td>
-                    <td>Left padding of the grid. Space between the left edge of the container and the first column.</td>
-                  </tr>
-                  <tr>
-                    <td>paddingRight</td>
-                    <td>int</td>
-                    <td>Right padding of the grid. Space between the last column and the right edge of the container.</td>
-                  </tr>
-                  <tr>
-                    <td>paddingTop</td>
-                    <td>int</td>
-                    <td>Top padding of the grid. Space between the top edge of the container and the first row.</td>
-                  </tr>
-                  <tr>
-                    <td>paddingBottom</td>
-                    <td>int</td>
-                    <td>Bottom padding of the grid. Space between the last row and the bottom edge of the container.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div class="api-class">
-              <h3>FreeCamera.cs</h3>
-              <p>Manages the camera in free mode, allowing the user to move freely in the scene.</p>
-              
-              <table class="api-table">
-                <thead>
-                  <tr>
-                    <th>Field</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>_freeCameraOn</td>
-                    <td>bool</td>
-                    <td>Activation state of the free camera. When true, the camera is in free mode and can be moved independently of objects in the scene.</td>
-                  </tr>
-                  <tr>
-                    <td>_mainCameraAssembly</td>
+                    <td>popupPrefab</td>
                     <td>GameObject</td>
-                    <td>Reference to the main assembly camera object. When the free camera is activated, this is disabled.</td>
+                    <td>The prefab used for creating the popup UI.</td>
                   </tr>
                   <tr>
-                    <td>_boundaryCollider</td>
-                    <td>BoxCollider</td>
-                    <td>Collider that defines the movement limits of the free camera. Prevents the user from moving too far from the assembly area.</td>
+                    <td>popupButtonSrite</td>
+                    <td>Sprite</td>
+                    <td>The sprite used for the build button in the popup.</td>
                   </tr>
                   <tr>
-                    <td>_moveSpeed</td>
+                    <td>popupUnbuildButtonSprite</td>
+                    <td>Sprite</td>
+                    <td>The sprite used for the unbuild button in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>popupSpritePanel</td>
+                    <td>Sprite</td>
+                    <td>The sprite used for the popup panel background.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Popup Resources</td>
+                  </tr>
+                  <tr>
+                    <td>popupSpriteIron</td>
+                    <td>Sprite</td>
+                    <td>The sprite used to represent iron resources in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>popupSpritePlastic</td>
+                    <td>Sprite</td>
+                    <td>The sprite used to represent plastic resources in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>popupSpriteRubber</td>
+                    <td>Sprite</td>
+                    <td>The sprite used to represent rubber resources in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceIconSize</td>
+                    <td>Vector2</td>
+                    <td>The size of the resource icons displayed in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceSpacing</td>
                     <td>float</td>
-                    <td>Camera movement speed in units per second. Controls how quickly the user can move in space.</td>
+                    <td>The spacing between resource icons in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceTextColor</td>
+                    <td>Color</td>
+                    <td>The color of the resource text in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td>resourceTextFontSize</td>
+                    <td>int</td>
+                    <td>The font size of the resource text in the popup.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Popup Layout</td>
+                  </tr>
+                  <tr>
+                    <td>popupSize</td>
+                    <td>Vector2</td>
+                    <td>The size of the popup panel.</td>
+                  </tr>
+                  <tr>
+                    <td>popupOffset</td>
+                    <td>Vector2</td>
+                    <td>The offset of the popup panel relative to the button.</td>
+                  </tr>
+                  <tr>
+                    <td>popupPadding</td>
+                    <td>float[]</td>
+                    <td>The padding values (left, right, top, bottom) for the popup panel.</td>
+                  </tr>
+                  <tr>
+                    <td>spacingBetweenElements</td>
+                    <td>float</td>
+                    <td>The spacing between elements inside the popup panel.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h4 class="mt-4">FreeCamera Properties</h4>
+              <table class="api-table">
+                <thead>
+                  <tr>
+                    <th>Property</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3" class="section-header">Camera Movement Settings</td>
                   </tr>
                   <tr>
                     <td>_mouseSensitivity</td>
                     <td>float</td>
-                    <td>Mouse sensitivity for camera rotation control. Higher values make rotation faster.</td>
+                    <td>Controls the sensitivity of the mouse for camera rotation.</td>
+                  </tr>
+                  <tr>
+                    <td>_movementSpeed</td>
+                    <td>float</td>
+                    <td>Determines the speed at which the camera moves in the scene.</td>
+                  </tr>
+                  <tr>
+                    <td>_boundaryCollider</td>
+                    <td>Collider</td>
+                    <td>Defines the boundaries within which the camera can move.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Camera Rotation Settings</td>
                   </tr>
                   <tr>
                     <td>_rotationX</td>
                     <td>float</td>
-                    <td>Current rotation on the X axis (pitch). Limited to prevent complete rotation.</td>
+                    <td>Tracks the camera's vertical rotation (pitch).</td>
                   </tr>
                   <tr>
                     <td>_rotationY</td>
                     <td>float</td>
-                    <td>Current rotation on the Y axis (yaw). Controls the horizontal rotation of the camera.</td>
-                  </tr>
-                  <tr>
-                    <td>_isInitialized</td>
-                    <td>bool</td>
-                    <td>Flag indicating if the free camera has been initialized. Prevents multiple initializations.</td>
-                  </tr>
-                  <tr>
-                    <td>_cachedBounds</td>
-                    <td>Bounds</td>
-                    <td>Cache of the boundary collider limits. Stored to optimize movement limit checks.</td>
+                    <td>Tracks the camera's horizontal rotation (yaw).</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            
-            <div class="api-class">
-              <h3>OrbitCamera.cs</h3>
-              <p>Manages the orbital camera that rotates around a target object.</p>
               
+              <h4 class="mt-4">OrbitCamera Properties</h4>
               <table class="api-table">
                 <thead>
                   <tr>
-                    <th>Field</th>
+                    <th>Property</th>
                     <th>Type</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>_target</td>
-                    <td>Transform</td>
-                    <td>Current target around which the camera orbits. Center of the camera's orbital movement.</td>
-                  </tr>
-                  <tr>
-                    <td>_canvasAssembly</td>
-                    <td>Canvas</td>
-                    <td>Main assembly interface canvas. Manages UI display during assembly.</td>
-                  </tr>
-                  <tr>
-                    <td>_canvasFreeAssembly</td>
-                    <td>GameObject</td>
-                    <td>Canvas specific to free camera mode. Contains UI controls specific to this mode.</td>
-                  </tr>
-                  <tr>
-                    <td>_mainCamera</td>
-                    <td>Camera</td>
-                    <td>Main camera component of the system. Responsible for rendering the main view.</td>
-                  </tr>
-                  <tr>
-                    <td>_zoomMultiplier</td>
-                    <td>float</td>
-                    <td>Multiplier that controls zoom speed. Higher values make zooming faster.</td>
-                  </tr>
-                  <tr>
-                    <td>_zoomMin</td>
-                    <td>float</td>
-                    <td>Minimum zoom distance from the target. Prevents zooming in too close.</td>
-                  </tr>
-                  <tr>
-                    <td>_zoomMax</td>
-                    <td>float</td>
-                    <td>Maximum zoom distance from the target. Limits how far you can zoom out.</td>
-                  </tr>
-                  <tr>
-                    <td>_startDistance</td>
-                    <td>float</td>
-                    <td>Initial distance of the camera from the target at startup. Defines the default zoom level.</td>
+                    <td colspan="3" class="section-header">Camera Settings</td>
                   </tr>
                   <tr>
                     <td>_rotationSpeed</td>
                     <td>float</td>
-                    <td>Camera rotation speed around the target. Controls the responsiveness of rotation.</td>
+                    <td>Controls the speed of the camera's rotation around the target.</td>
                   </tr>
                   <tr>
-                    <td>_minYAngle</td>
+                    <td>_zoomSpeed</td>
                     <td>float</td>
-                    <td>Minimum Y angle for rotation. Prevents looking too far down relative to the target.</td>
+                    <td>Determines the speed at which the camera zooms in and out.</td>
                   </tr>
                   <tr>
-                    <td>_maxYAngle</td>
+                    <td>_minZoomDistance</td>
                     <td>float</td>
-                    <td>Maximum Y angle for rotation. Prevents looking too far up relative to the target.</td>
+                    <td>The minimum distance the camera can zoom in towards the target.</td>
                   </tr>
                   <tr>
-                    <td>_smoothSpeed</td>
+                    <td>_maxZoomDistance</td>
                     <td>float</td>
-                    <td>Smoothing speed for camera movements. Higher = smoother but less immediate movements.</td>
+                    <td>The maximum distance the camera can zoom out from the target.</td>
+                  </tr>
+                  <tr>
+                    <td>_target</td>
+                    <td>Transform</td>
+                    <td>The target object around which the camera orbits.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Performance Settings</td>
                   </tr>
                   <tr>
                     <td>_usePerformanceMode</td>
                     <td>bool</td>
-                    <td>When activated, optimizes certain calculations to improve performance, reducing precision.</td>
+                    <td>Toggles performance mode to optimize camera behavior.</td>
                   </tr>
                   <tr>
-                    <td>_targetCenterUpdateFrequency</td>
+                    <td colspan="3" class="section-header">Input Settings</td>
+                  </tr>
+                  <tr>
+                    <td>_mouseSensitivity</td>
                     <td>float</td>
-                    <td>Frequency (in seconds) with which the target center is updated during orbit.</td>
+                    <td>Adjusts the sensitivity of mouse input for camera control.</td>
                   </tr>
                   <tr>
-                    <td>_useFixedUpdate</td>
+                    <td>_invertYAxis</td>
                     <td>bool</td>
-                    <td>Whether to use FixedUpdate for updates at fixed intervals, useful for smoother movements.</td>
+                    <td>Determines whether the Y-axis input is inverted for camera movement.</td>
+                  </tr>
+                  <tr>
+                    <td>_invertXAxis</td>
+                    <td>bool</td>
+                    <td>Determines whether the X-axis input is inverted for camera movement.</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            
-            <div class="api-class">
-              <h3>PositioningCamera.cs</h3>
-              <p>Manages camera positioning in relation to scene objects.</p>
               
+              <h4 class="mt-4">PositioningCamera Properties</h4>
               <table class="api-table">
                 <thead>
                   <tr>
-                    <th>Field</th>
+                    <th>Property</th>
                     <th>Type</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>_cameraComponent</td>
-                    <td>Camera</td>
-                    <td>Camera component used for visualization. Manages the rendering of the positioning view.</td>
+                    <td colspan="3" class="section-header">Camera Settings</td>
                   </tr>
                   <tr>
-                    <td>_zoomMin</td>
+                    <td>_cameraSpeed</td>
                     <td>float</td>
-                    <td>Minimum allowed zoom level. Limits how close the camera can get to the object.</td>
+                    <td>Controls the speed of the camera's movement during positioning.</td>
                   </tr>
                   <tr>
-                    <td>_zoomMax</td>
+                    <td>_rotationSpeed</td>
                     <td>float</td>
-                    <td>Maximum allowed zoom level. Limits how far the camera can move away from the object.</td>
+                    <td>Determines the speed of the camera's rotation around the target.</td>
                   </tr>
                   <tr>
-                    <td>_distance</td>
+                    <td>_zoomSpeed</td>
                     <td>float</td>
-                    <td>Current distance from the target. Determines how far the camera is from the observed object.</td>
+                    <td>Adjusts the speed at which the camera zooms in and out.</td>
                   </tr>
                   <tr>
-                    <td>_mouseSensitivity</td>
+                    <td>_minZoomDistance</td>
                     <td>float</td>
-                    <td>Mouse sensitivity for camera rotation. Higher values make rotation more responsive.</td>
+                    <td>The minimum distance the camera can zoom in towards the target.</td>
                   </tr>
                   <tr>
-                    <td>_minYAngle</td>
+                    <td>_maxZoomDistance</td>
                     <td>float</td>
-                    <td>Minimum Y angle allowed for rotation. Prevents looking too far down.</td>
+                    <td>The maximum distance the camera can zoom out from the target.</td>
                   </tr>
                   <tr>
-                    <td>_maxYAngle</td>
-                    <td>float</td>
-                    <td>Maximum Y angle allowed for rotation. Prevents looking too far up.</td>
-                  </tr>
-                  <tr>
-                    <td>_smoothSpeed</td>
-                    <td>float</td>
-                    <td>Smoothing speed for camera movements. Higher values make movements smoother but less immediate.</td>
-                  </tr>
-                  <tr>
-                    <td>_usePerformanceMode</td>
-                    <td>bool</td>
-                    <td>When activated, reduces the update frequency of certain calculations to improve performance.</td>
-                  </tr>
-                  <tr>
-                    <td>_targetCenterUpdateFrequency</td>
-                    <td>float</td>
-                    <td>Target center update frequency in seconds. In performance mode, limits intensive updates.</td>
-                  </tr>
-                  <tr>
-                    <td>_useFixedUpdate</td>
-                    <td>bool</td>
-                    <td>If true, uses FixedUpdate instead of Update for camera movements, ensuring fixed-frequency updates.</td>
-                  </tr>
-                  <tr>
-                    <td>_enableDebugLogs</td>
-                    <td>bool</td>
-                    <td>Enables/disables debug logs. Useful for troubleshooting during development.</td>
+                    <td colspan="3" class="section-header">Target Settings</td>
                   </tr>
                   <tr>
                     <td>_target</td>
                     <td>Transform</td>
-                    <td>The transform of the object the camera is observing. Center of orbit for the camera.</td>
+                    <td>The target object that the camera focuses on during positioning.</td>
                   </tr>
                   <tr>
-                    <td>_currentX</td>
-                    <td>float</td>
-                    <td>Current rotation on the X axis. Controls the horizontal angle of the camera.</td>
+                    <td>_offset</td>
+                    <td>Vector3</td>
+                    <td>The offset position of the camera relative to the target.</td>
                   </tr>
                   <tr>
-                    <td>_currentY</td>
-                    <td>float</td>
-                    <td>Current rotation on the Y axis. Controls the vertical angle of the camera (view height).</td>
+                    <td colspan="3" class="section-header">Debug Settings</td>
+                  </tr>
+                  <tr>
+                    <td>_enableDebugLogs</td>
+                    <td>bool</td>
+                    <td>Enables or disables debug logs for camera positioning actions.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Placement System</td>
+                  </tr>
+                  <tr>
+                    <td>_prefabPlacementSystem</td>
+                    <td>PrefabPlacementSystem</td>
+                    <td>Manages the placement of prefabs during camera positioning.</td>
                   </tr>
                 </tbody>
               </table>
@@ -769,10 +674,12 @@ kbd {
 }
 
 .api-table th {
-  background-color: #f0f0f0;
-  padding: 10px;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 12px 10px;
   text-align: left;
   border: 1px solid #ddd;
+  font-weight: 600;
+  color: #495057;
 }
 
 .api-table td {
@@ -793,5 +700,68 @@ kbd {
   .api-table th, .api-table td {
     padding: 6px;
   }
+}
+
+.api-class h4 {
+  background: linear-gradient(90deg, #f0f8ff 0%, #ffffff 100%);
+  padding: 12px 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #0055a4;
+  border-left: 5px solid #00A3FF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.api-class h4::before {
+  content: '⚙️';
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.section-header {
+  background: linear-gradient(90deg, #e6f3ff 0%, #f3f8ff 100%);
+  font-weight: bold;
+  color: #0055a4;
+  text-align: left;
+  padding: 10px 12px;
+  border-top: 1px solid #b8daff;
+  border-bottom: 1px solid #b8daff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.doc-section-title {
+  background: linear-gradient(90deg, #f5f9ff 0%, #ffffff 100%);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border-left: 6px solid #00A3FF;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.api-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.api-table tr td:first-child {
+  font-weight: 500;
+  color: #333;
+  border-right: 1px solid #e6e6e6;
+}
+
+.api-table tr td:nth-child(2) {
+  color: #0055a4;
+  font-family: monospace;
+  font-size: 0.85em;
+  background-color: #f9fbff;
 }
 </style>

@@ -105,7 +105,7 @@
               <RouterLink to="/contacts#contEn" class="btn btn-outline-primary">
                 <i class="bi bi-envelope me-2"></i>Contact Me
               </RouterLink>
-              <RouterLink to="/docs/en/get-started" class="btn btn-outline-primary">
+              <RouterLink to="docs/installation" class="btn btn-outline-primary">
                 <i class="bi bi-book me-2"></i>Read Documentation
               </RouterLink>
             </div>
