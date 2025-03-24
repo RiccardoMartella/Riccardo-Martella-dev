@@ -547,7 +547,7 @@ export default {
 }
 
 .featured-visual {
-  height: 360px;
+  height: 359px;
   position: relative;
   margin-bottom: 80px;
 }
