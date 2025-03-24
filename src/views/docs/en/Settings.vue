@@ -406,6 +406,197 @@
                   </tr>
                 </tbody>
               </table>
+              
+              <h4 class="mt-4">PlacementSystem Properties</h4>
+              <table class="api-table">
+                <thead>
+                  <tr>
+                    <th>Property</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3" class="section-header">References</td>
+                  </tr>
+                  <tr>
+                    <td>_mainCamera</td>
+                    <td>Camera</td>
+                    <td>The main camera used for positioning and visualization. If not specified, Camera.main is used.</td>
+                  </tr>
+                  <tr>
+                    <td>_placementSurfaces</td>
+                    <td>LayerMask</td>
+                    <td>The layers on which objects can be placed.</td>
+                  </tr>
+                  <tr>
+                    <td>_constructionUI</td>
+                    <td>ConstructionUI</td>
+                    <td>Reference to the construction UI for interaction.</td>
+                  </tr>
+                  <tr>
+                    <td>_viewDetails</td>
+                    <td>ViewDetails</td>
+                    <td>Reference to the component that manages display details.</td>
+                  </tr>
+                  <tr>
+                    <td>_audioSource</td>
+                    <td>AudioSource</td>
+                    <td>Audio source for sound effects during placement.</td>
+                  </tr>
+                  <tr>
+                    <td>_positioningCamera</td>
+                    <td>PositioningCamera</td>
+                    <td>Camera specialized for object positioning.</td>
+                  </tr>
+                  <tr>
+                    <td>_placementUI</td>
+                    <td>GameObject</td>
+                    <td>User interface shown during placement.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Camera Settings</td>
+                  </tr>
+                  <tr>
+                    <td>_enableCameraFollow</td>
+                    <td>bool</td>
+                    <td>If enabled, the camera will follow the object during placement.</td>
+                  </tr>
+                  <tr>
+                    <td>_cameraOffset</td>
+                    <td>Vector3</td>
+                    <td>Camera offset relative to the object during placement.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Movement Controls</td>
+                  </tr>
+                  <tr>
+                    <td>_allowHeightAdjustment</td>
+                    <td>bool</td>
+                    <td>Allows height adjustment during placement.</td>
+                  </tr>
+                  <tr>
+                    <td>_allowFineMovement</td>
+                    <td>bool</td>
+                    <td>Allows precise movement with WASD during placement.</td>
+                  </tr>
+                  <tr>
+                    <td>_raiseObjectKey</td>
+                    <td>KeyCode</td>
+                    <td>Key to raise the object during placement.</td>
+                  </tr>
+                  <tr>
+                    <td>_lowerObjectKey</td>
+                    <td>KeyCode</td>
+                    <td>Key to lower the object during placement.</td>
+                  </tr>
+                  <tr>
+                    <td>_rotationSpeed</td>
+                    <td>float</td>
+                    <td>Object rotation speed (in degrees per second).</td>
+                  </tr>
+                  <tr>
+                    <td>_heightAdjustmentSpeed</td>
+                    <td>float</td>
+                    <td>Object height adjustment speed.</td>
+                  </tr>
+                  <tr>
+                    <td>_movmentSpeed</td>
+                    <td>float</td>
+                    <td>Object lateral movement speed.</td>
+                  </tr>
+                  <tr>
+                    <td>_maxHeightAdjustment</td>
+                    <td>float</td>
+                    <td>Maximum height adjustment limit up and down.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Visual Feedback</td>
+                  </tr>
+                  <tr>
+                    <td>_validPlacementMaterial</td>
+                    <td>Material</td>
+                    <td>Material applied to the prefab when placement is valid.</td>
+                  </tr>
+                  <tr>
+                    <td>_invalidPlacementMaterial</td>
+                    <td>Material</td>
+                    <td>Material applied to the prefab when placement is invalid.</td>
+                  </tr>
+                  <tr>
+                    <td>_previewAlpha</td>
+                    <td>float</td>
+                    <td>Transparency level of the prefab during preview (0-1).</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Audio</td>
+                  </tr>
+                  <tr>
+                    <td>_placementValidSound</td>
+                    <td>AudioClip</td>
+                    <td>Sound played when placement becomes valid.</td>
+                  </tr>
+                  <tr>
+                    <td>_placementInvalidSound</td>
+                    <td>AudioClip</td>
+                    <td>Sound played when placement becomes invalid.</td>
+                  </tr>
+                  <tr>
+                    <td>_rotateSound</td>
+                    <td>AudioClip</td>
+                    <td>Sound played when rotating the object.</td>
+                  </tr>
+                  <tr>
+                    <td>_confirmPlacementSound</td>
+                    <td>AudioClip</td>
+                    <td>Sound played when confirming placement.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="section-header">Placement Area Settings</td>
+                  </tr>
+                  <tr>
+                    <td>_usePlacementBoundary</td>
+                    <td>bool</td>
+                    <td>If enabled, limits placement within a defined area.</td>
+                  </tr>
+                  <tr>
+                    <td>_useVisualBoundary</td>
+                    <td>bool</td>
+                    <td>If enabled, displays the placement area limits in the editor.</td>
+                  </tr>
+                  <tr>
+                    <td>_boundaryCenter</td>
+                    <td>Vector3</td>
+                    <td>Center of the placement area.</td>
+                  </tr>
+                  <tr>
+                    <td>_boxSize</td>
+                    <td>Vector3</td>
+                    <td>Dimensions of the cube that defines the placement area (width, height, depth).</td>
+                  </tr>
+                  <tr>
+                    <td>_boundaryColor</td>
+                    <td>Color</td>
+                    <td>Color of the placement area displayed in the editor.</td>
+                  </tr>
+                  <tr>
+                    <td>_useHeightLimit</td>
+                    <td>bool</td>
+                    <td>If enabled, uses custom height limits instead of cube limits.</td>
+                  </tr>
+                  <tr>
+                    <td>_minHeightLimit</td>
+                    <td>float</td>
+                    <td>Minimum height allowed for placement when _useHeightLimit is active.</td>
+                  </tr>
+                  <tr>
+                    <td>_maxHeightLimit</td>
+                    <td>float</td>
+                    <td>Maximum height allowed for placement when _useHeightLimit is active.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -569,6 +760,7 @@
               <li>Visual feedback colors (valid/invalid)</li>
               <li>Keys for rotating the prefab</li>
               <li>Movement speed and sensitivity</li>
+               <li>Positioning settings</li>
             </ul>
             <p>
               Properly customizing these settings is essential to ensure a smooth and intuitive placement experience. 
@@ -582,6 +774,14 @@
               alt="Placement System Settings"
               caption="Prefab placement system configuration" 
             />
+            
+            <div class="video-container mt-4">
+              <video controls class="demo-video w-100">
+                <source src="https://www.dropbox.com/scl/fi/fvedqud4zmlwnfyk6mtvo/Placement-Boundary.mp4?rlkey=emon73phj1znrjt1thql7qm5s&st=q1ewfxxy&dl=1" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <p class="caption">Tutorial: Placement boundary configuration</p>
+            </div>
           </div>
         </div>
       </div>
