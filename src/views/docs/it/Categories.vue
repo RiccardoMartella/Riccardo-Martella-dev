@@ -165,6 +165,32 @@
           
         </div>
       </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">IMPORTANTE: DENOMINAZIONE E ORGANIZZAZIONE DEI GRUPPI</h2>
+        
+        <div class="alert-box alert-warning">
+          <p class="text-center">
+            <strong>Presta particolare attenzione all'organizzazione dei gruppi!</strong> Non aggiungere pezzi di prefab diversi allo stesso gruppo.
+            Invece, crea gruppi separati per ogni prefab.
+          </p>
+        </div>
+
+        <div class="content-block vertical mt-4">
+          <div class="content-text">
+            <p>
+              <strong class="text-danger">Esempio di organizzazione corretta:</strong>
+            </p>
+            <ul>
+              <li><strong>Prefab 1 (Colonial Ship)</strong> → Gruppo "Cannoni Colonial"</li>
+              <li><strong>Prefab 2 (Aurora Ship)</strong> → Gruppo "Cannoni Aurora"</li>
+            </ul>
+            <p>
+              Se mescoli pezzi di prefab diversi nello stesso gruppo, il sistema non funzionerà correttamente. Crea sempre gruppi distinti per ogni prefab, anche se i pezzi hanno funzioni o attributi simili.
+            </p>
+          </div>
+        </div>
+      </div>
     </ContentSection>
   </div>
 </template>
