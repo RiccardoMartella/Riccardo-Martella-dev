@@ -78,7 +78,7 @@
           <div class="key-points mt-3">
             <div class="key-point">
               <h5>Initial categories</h5>
-              <p>Initially, the categories will be 3: Vehicles, Armory, Tools</p>
+              <p>Initially, the categories will be 2: Ships, Machines</p>
             </div>
             
             <div class="key-point">

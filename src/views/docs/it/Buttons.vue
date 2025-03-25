@@ -78,7 +78,7 @@
           <div class="key-points mt-3">
             <div class="key-point">
               <h5>Categorie iniziali</h5>
-              <p>Inizialmente, le categorie saranno 3: Veicoli, Armeria, Strumenti</p>
+              <p>Inizialmente, le categorie saranno 2: Navi, Macchine</p>
             </div>
             
             <div class="key-point">
