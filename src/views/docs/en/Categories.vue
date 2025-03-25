@@ -174,6 +174,10 @@
             <strong>Pay close attention to group organization!</strong> Do not add pieces from different prefabs to the same group. 
             Instead, create separate groups for each prefab.
           </p>
+          <p class="text-center mt-2">
+            <strong>Additionally:</strong> All pieces assigned to the same group should have the same tag. 
+            Mixing different tags within the same group can cause issues.
+          </p>
         </div>
 
         <div class="content-block vertical mt-4">

@@ -40,6 +40,7 @@
               <ul class="step-list">
                 <li>A JSON file that contains the model with a unique ID.</li>
                 <li>A file for saving each individual assembled piece.</li>
+                <li>If, after saving and returning to Editor mode, the JSON files do not appear, open the scripting editor, make a small change (such as adding a space or a tab), then return to Editor. The files will be generated.</li>
               </ul>
             </p>
             <p>
