@@ -324,16 +324,6 @@
                     <td>float</td>
                     <td>Adjusts the sensitivity of mouse input for camera control.</td>
                   </tr>
-                  <tr>
-                    <td>_invertYAxis</td>
-                    <td>bool</td>
-                    <td>Determines whether the Y-axis input is inverted for camera movement.</td>
-                  </tr>
-                  <tr>
-                    <td>_invertXAxis</td>
-                    <td>bool</td>
-                    <td>Determines whether the X-axis input is inverted for camera movement.</td>
-                  </tr>
                 </tbody>
               </table>
               

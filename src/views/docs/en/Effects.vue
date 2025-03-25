@@ -79,6 +79,30 @@
           </div>
         </div>
       </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">PLACEMENT SYSTEM EFFECTS</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              The system also includes sound effects for the final prefab placement. When a user completes the assembly process and places the final model in the environment, a dedicated sound effect plays to provide satisfying feedback.
+            </p>
+            <p>
+              These placement effects help create a more immersive experience and provide audio confirmation that the placement action has been completed successfully.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/placementEffects.png" 
+              alt="Placement System Effects"
+              caption="Sound effects configuration for the final prefab placement"
+              class="standard-image"
+            />
+          </div>
+        </div>
+      </div>
     </ContentSection>
   </div>
 </template>

@@ -215,6 +215,11 @@
               Once in game, the camera that rotates around the placed prefab will have as a reference point the Orbit Camera Point that will always be added automatically with Add Name and Descriptions To Prefab.
             </p>
             <hr>
+            <div class="alert-box alert-warning">
+              <p>
+                <strong>IMPORTANT:</strong> Before modifying the OrbitCameraPoint, you must go to <strong>documentation point 4</strong> and execute the "Add Name and Descriptions To Prefab" step. This will ensure the Orbit Camera Point is properly added to your prefab.
+              </p>
+            </div>
             <p>
               In Editor mode, you can move the pivot point of ObitalCameraPoint to make the camera lower or higher as needed.
             </p>

@@ -77,6 +77,29 @@
           </div>
         </div>
       </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">EFFETTI DEL SISTEMA DI POSIZIONAMENTO</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Il sistema include anche effetti sonori per il posizionamento finale del prefab. Quando un utente completa il processo di assemblaggio e posiziona il modello finale nell'ambiente, viene riprodotto un effetto sonoro dedicato per fornire un feedback soddisfacente.
+            </p>
+            <p>
+              Questi effetti di posizionamento aiutano a creare un'esperienza più immersiva e forniscono una conferma audio che l'azione di posizionamento è stata completata con successo.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/placementEffects.png" 
+              alt="Effetti del Sistema di Posizionamento"
+              caption="Configurazione degli effetti sonori per il posizionamento finale del prefab"
+            />
+          </div>
+        </div>
+      </div>
     </ContentSection>
   </div>
 </template>
