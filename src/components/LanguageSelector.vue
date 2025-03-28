@@ -65,6 +65,8 @@ export default {
         this.$router.push(lang === "en" ? "/pricing" : "/it/pricing");
       } else if (currentPath === "/privacy" || currentPath === "/it/privacy") {
         this.$router.push(lang === "en" ? "/privacy" : "/it/privacy");
+      } else if (currentPath === "/licenses" || currentPath === "/it/licenses") {
+        this.$router.push(lang === "en" ? "/licenses" : "/it/licenses");
       } else if (
         currentPath.includes("/docs/") ||
         currentPath.includes("/it/docs/")
@@ -81,6 +83,8 @@ export default {
         this.$router.push(lang === "en" ? "/beta" : "/it/beta");
       }else if (currentPath === "/settings" || currentPath === "/it/settings") {
         this.$router.push(lang === "en" ? "/settings" : "/it/settings");
+      }else if (currentPath === "/cookie-policy" || currentPath === "/it/cookie-policy") {
+        this.$router.push(lang === "en" ? "/cookie-policy" : "/it/cookie-policy");
       } else {
         this.$router.push(lang === "en" ? "/" : "/it");
       }

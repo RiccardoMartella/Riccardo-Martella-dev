@@ -8,6 +8,8 @@ import CookiePolicy from '@/views/CookiePolicy.vue'
 import CookiePolicyIT from '@/views/CookiePolicyIT.vue'
 import Versions from '@/views/Versions.vue'
 import VersionsIT from '@/views/VersionsIT.vue'
+import Licenses from '@/views/Licenses.vue'
+import LicensesIT from '@/views/LicensesIT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -228,6 +230,18 @@ const router = createRouter({
       path: '/it/versions',
       name: 'versions-it',
       component: VersionsIT
+    },
+    
+    // Licenses routes
+    {
+      path: '/licenses',
+      name: 'licenses',
+      component: Licenses
+    },
+    {
+      path: '/it/licenses',
+      name: 'licenses-it',
+      component: LicensesIT
     },
     
     // Beta routes
