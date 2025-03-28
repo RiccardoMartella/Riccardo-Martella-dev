@@ -772,6 +772,28 @@
               </video>
               <p class="caption">Tutorial: Configurazione dei limiti di posizionamento</p>
             </div>
+            
+            <div class="mt-4">
+              <div class="image-row">
+                <div class="image-column">
+                  <ImageZoomable 
+                    src="/images/PlacementSystemRed.png" 
+                    alt="Area di Posizionamento Personalizzata - Red Zone"
+                    caption="Visualizzazione dell'area di posizionamento personalizzata" 
+                  />
+                </div>
+                <div class="image-column">
+                  <ImageZoomable 
+                    src="/images/redZone.png" 
+                    alt="Configurazione Red Zone"
+                    caption="Configurazione Red Zone" 
+                  />
+                </div>
+              </div>
+              <p class="mt-3">
+                <strong>Aree di Posizionamento Personalizzate:</strong> Puoi anche definire confini specifici all'interno dell'area di posizionamento modificando le impostazioni della Zona di Esclusione (Exclusion Zone). Questo ti permette di creare regioni designate dove gli oggetti possono o non possono essere posizionati, fornendo un controllo preciso sul layout dell'ambiente e creando limiti specifici all'interno dell'area di posizionamento.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -960,5 +982,29 @@ kbd {
   font-family: monospace;
   font-size: 0.85em;
   background-color: #f9fbff;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.image-column {
+  flex: 1;
+  min-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+  }
+  
+  .image-column {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
 }
 </style>

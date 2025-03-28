@@ -772,6 +772,28 @@
               </video>
               <p class="caption">Tutorial: Placement boundary configuration</p>
             </div>
+            
+            <div class="mt-4">
+              <div class="image-row">
+                <div class="image-column">
+                  <ImageZoomable 
+                    src="/images/PlacementSystemRed.png" 
+                    alt="Custom Placement Area - Red Zone"
+                    caption="Custom placement area visualization" 
+                  />
+                </div>
+                <div class="image-column">
+                  <ImageZoomable 
+                    src="/images/redZone.png" 
+                    alt="Red Zone Configuration"
+                    caption="Red Zone configuration" 
+                  />
+                </div>
+              </div>
+              <p class="mt-3">
+                <strong>Custom Placement Areas:</strong> You can also define specific boundaries within the placement area by modifying the Exclusion Zone settings. This allows you to create designated regions where objects can or cannot be placed, giving you precise control over your environment layout and creating specific boundaries inside the placement area.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -953,5 +975,29 @@ kbd {
   font-family: monospace;
   font-size: 0.85em;
   background-color: #f9fbff;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.image-column {
+  flex: 1;
+  min-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+  }
+  
+  .image-column {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
 }
 </style>
