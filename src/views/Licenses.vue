@@ -37,10 +37,11 @@
           <div class="license-section mb-5">
             <h2 class="section-title">Icons and Images</h2>
             <div class="license-item">
-              <p>This asset includes "Steel icons, Plastic Icons, Rubber Icons" created by Smashicons from Flaticon under Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
+              <p>This asset includes "Steel icons, Plastic Icons, Rubber Icons, Coin Icons" created by Smashicons from Flaticon under Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
               See <a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a> for details.<br>
               See <a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a> for details.<br>
-              See <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> for details.</p>
+              See <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> for details.<br>
+              See <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> for details.</p>
             </div>
             
             <div class="license-item">
@@ -61,11 +62,6 @@
             <div class="license-item">
               <p>All other image-based elements not explicitly mentioned in this file were created by me using Canva Pro, utilizing basic shapes that were combined and modified to comply with commercial file inclusion, as outlined in the Canva Content License Agreement.<br>
               See <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> for details.</p>
-            </div>
-            
-            <div class="license-item">
-              <p>This asset includes coin icons from Flaticon.<br>
-              See <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> for details.</p>
             </div>
           </div>
           
