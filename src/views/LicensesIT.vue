@@ -47,6 +47,26 @@
               <p>Questo asset include un'immagine generata da Craiyon "Smoke", che è un generatore di immagini AI gratuito.<br>
               Vedi <a href="https://www.craiyon.com" target="_blank">https://www.craiyon.com</a> per dettagli.</p>
             </div>
+            
+            <div class="license-item">
+              <p>Questo asset include un'illustrazione di pulsante 3D di Piyaphat, utilizzata in base all'accordo di licenza dei contenuti di Canva.<br>
+              Vedi <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> per dettagli.</p>
+            </div>
+            
+            <div class="license-item">
+              <p>Questo asset include elementi UI creati utilizzando Canva Pro in base all'accordo di licenza dei contenuti di Canva.<br>
+              Vedi <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> per dettagli.</p>
+            </div>
+            
+            <div class="license-item">
+              <p>Tutti gli altri elementi basati su immagini non esplicitamente menzionati in questo file sono stati creati da me utilizzando Canva Pro, utilizzando forme di base che sono state combinate e modificate per conformarsi all'inclusione commerciale di file, come delineato nell'accordo di licenza dei contenuti di Canva.<br>
+              Vedi <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> per dettagli.</p>
+            </div>
+            
+            <div class="license-item">
+              <p>Questo asset include icone di monete da Flaticon.<br>
+              Vedi <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> per dettagli.</p>
+            </div>
           </div>
           
           <div class="license-section mb-5">
