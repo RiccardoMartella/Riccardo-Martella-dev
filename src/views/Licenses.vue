@@ -35,6 +35,18 @@
           </div>
           
           <div class="license-section mb-5">
+            <h2 class="section-title">Fiverr</h2>
+            <div class="license-item">
+              <p>All other assets not mentioned here were created through Fiverr services and are subject to Fiverr's Terms of Service.<br>
+              See <a href="https://www.fiverr.com/terms_of_service" target="_blank">https://help.fiverr.com/hc/it/articles/360011569298-Dettagli-della-licenza-per-uso-commerciale</a> for details.</p>
+            </div>
+            
+            <div class="license-item">
+              <p>I, PIXEL DYNAMICS STUDIO LTD ( UK Company No: 15750313 ), confirm that the images created for Riccardo Martella are to be considered his property. Riccardo Martella has full rights to use, modify, distribute and sell these images for commercial purposes, including selling on platforms such as Unity Asset Store, without any restrictions.</p>
+            </div>
+          </div>
+          
+          <div class="license-section mb-5">
             <h2 class="section-title">Icons and Images</h2>
             <div class="license-item">
               <p>This asset includes "Steel icons, Plastic Icons, Rubber Icons, Coin Icons" created by Smashicons from Flaticon under Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
@@ -49,20 +61,6 @@
               See <a href="https://www.craiyon.com" target="_blank">https://www.craiyon.com</a> for details.</p>
             </div>
             
-            <div class="license-item">
-              <p>This asset includes a 3D button illustration by Piyaphat, used under the Canva Content License Agreement.<br>
-              See <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> for details.</p>
-            </div>
-            
-            <div class="license-item">
-              <p>This asset includes UI elements created using Canva Pro under the Canva Content License Agreement.<br>
-              See <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> for details.</p>
-            </div>
-            
-            <div class="license-item">
-              <p>All other image-based elements not explicitly mentioned in this file were created by me using Canva Pro, utilizing basic shapes that were combined and modified to comply with commercial file inclusion, as outlined in the Canva Content License Agreement.<br>
-              See <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> for details.</p>
-            </div>
           </div>
           
           <div class="license-section mb-5">

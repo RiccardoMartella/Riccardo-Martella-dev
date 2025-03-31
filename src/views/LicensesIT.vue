@@ -35,6 +35,19 @@
           </div>
           
           <div class="license-section mb-5">
+            <h2 class="section-title">Fiverr</h2>
+            <div class="license-item">
+              <p>Tutti gli altri asset non citati qui sono stati creati tramite i servizi di Fiverr e sono soggetti ai Termini di Servizio di Fiverr.<br>
+              Vedi <a href="https://www.fiverr.com/terms_of_service" target="_blank">https://help.fiverr.com/hc/it/articles/360011569298-Dettagli-della-licenza-per-uso-commerciale</a> per dettagli.</p>
+            </div>
+            
+            <div class="license-item">
+              <p>PIXEL DYNAMICS STUDIO LTD ( UK Company No: 15750313 ), conferma che le immagini create per Riccardo Martella sono da considerarsi sua proprietà. Riccardo Martella ha pieni diritti di utilizzo, modifica, distribuzione e vendita di queste immagini per scopi commerciali, inclusa la vendita su piattaforme come Unity Asset Store, senza alcuna restrizione.</p>
+            </div>
+
+          </div>
+          
+          <div class="license-section mb-5">
             <h2 class="section-title">Icone e Immagini</h2>
             <div class="license-item">
               <p>Questo asset include "Steel icons, Plastic Icons, Rubber Icons, Coin Icons" creati da Smashicons da Flaticon sotto Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
@@ -47,21 +60,6 @@
             <div class="license-item">
               <p>Questo asset include un'immagine generata da Craiyon "Smoke", che è un generatore di immagini AI gratuito.<br>
               Vedi <a href="https://www.craiyon.com" target="_blank">https://www.craiyon.com</a> per dettagli.</p>
-            </div>
-            
-            <div class="license-item">
-              <p>Questo asset include un'illustrazione di pulsante 3D di Piyaphat, utilizzata in base all'accordo di licenza dei contenuti di Canva.<br>
-              Vedi <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> per dettagli.</p>
-            </div>
-            
-            <div class="license-item">
-              <p>Questo asset include elementi UI creati utilizzando Canva Pro in base all'accordo di licenza dei contenuti di Canva.<br>
-              Vedi <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> per dettagli.</p>
-            </div>
-            
-            <div class="license-item">
-              <p>Tutti gli altri elementi basati su immagini non esplicitamente menzionati in questo file sono stati creati da me utilizzando Canva Pro, utilizzando forme di base che sono state combinate e modificate per conformarsi all'inclusione commerciale di file, come delineato nell'accordo di licenza dei contenuti di Canva.<br>
-              Vedi <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">https://www.canva.com/policies/content-license-agreement/</a> per dettagli.</p>
             </div>
           </div>
           
