@@ -42,7 +42,7 @@
             </div>
             
             <div class="license-item">
-              <p>I, PIXEL DYNAMICS STUDIO LTD ( UK Company No: 15750313 ), confirm that the images created for Riccardo Martella are to be considered his property. Riccardo Martella has full rights to use, modify, distribute and sell these images for commercial purposes, including selling on platforms such as Unity Asset Store, without any restrictions.</p>
+              <p><a href="https://it.fiverr.com/pxl_dynamics">PIXEL DYNAMICS STUDIO LTD</a> ( UK Company No: 15750313 ), confirm that the images created for Riccardo Martella are to be considered his property. Riccardo Martella has full rights to use, modify, distribute and sell these images for commercial purposes, including selling on platforms such as Unity Asset Store, without any restrictions.</p>
             </div>
           </div>
           
