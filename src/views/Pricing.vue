@@ -14,9 +14,9 @@
               <h2 class="pricing-title">Assembly Station</h2>
               <div class="price-container">
                 <span class="currency">€</span>
-                <span class="price-original"><s>28</s></span>
+                <span class="price-original"><s>25</s></span>
                 <span class="currency">€</span>
-                <span class="price">25</span>
+                <span class="price">23</span>
                 <span class="period">/one-time</span>
               </div>
               <div class="discount-badge">
