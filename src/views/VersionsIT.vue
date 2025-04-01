@@ -23,31 +23,11 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.2.0</strong></td>
-                  <td>15 Ottobre 2023</td>
+                  <td><strong>1.0.0</strong></td>
+                  <td>8 Dicembre 2023</td>
                   <td><span class="badge bg-primary">Ultima</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
-                      <i class="bi bi-info-circle"></i> Dettagli
-                    </button>
-                  </td>
-                </tr>
-                <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.1.0</strong></td>
-                  <td>3 Agosto 2023</td>
-                  <td><span class="badge bg-secondary">Stabile</span></td>
-                  <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
-                      <i class="bi bi-info-circle"></i> Dettagli
-                    </button>
-                  </td>
-                </tr>
-                <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.0.0</strong></td>
-                  <td>17 Maggio 2023</td>
-                  <td><span class="badge bg-secondary">Iniziale</span></td>
-                  <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
                       <i class="bi bi-info-circle"></i> Dettagli
                     </button>
                   </td>
@@ -88,24 +68,6 @@
                 </li>
               </ul>
               
-              <div v-if="selectedVersion.improvements && selectedVersion.improvements.length > 0">
-                <h4>Miglioramenti</h4>
-                <ul class="changelog-list">
-                  <li v-for="(item, index) in selectedVersion.improvements" :key="index">
-                    {{ item }}
-                  </li>
-                </ul>
-              </div>
-              
-              <div v-if="selectedVersion.bugfixes && selectedVersion.bugfixes.length > 0">
-                <h4>Correzioni Bug</h4>
-                <ul class="changelog-list">
-                  <li v-for="(item, index) in selectedVersion.bugfixes" :key="index">
-                    {{ item }}
-                  </li>
-                </ul>
-              </div>
-              
               <div class="version-requirements mt-4">
                 <h4>Requisiti</h4>
                 <p><strong>Versione Unity:</strong> {{ selectedVersion.requirements.unity }}</p>
@@ -136,74 +98,15 @@ export default {
       selectedVersion: null,
       versions: [
         {
-          version: "Versione 1.2.0",
-          date: "15 Ottobre 2023",
+          version: "Versione 1.0.0",
+          date: "8 Dicembre 2023",
           isLatest: true,
           changes: [
-            "Aggiunto supporto per sequenze di assemblaggio multiple",
-            "Migliorata la performance per progetti di assemblaggio di grandi dimensioni",
-            "Migliorata la reattività dell'interfaccia utente",
-            "Corretti 5 bug minori segnalati dalla community"
-          ],
-          improvements: [
-            "Tempi di caricamento ridotti del 50% per assemblaggi complessi",
-            "Nuovo sistema di animazione per transizioni più fluide",
-            "Migliore gestione della memoria e garbage collection",
-            "Migliore compatibilità con piattaforme mobili"
-          ],
-          bugfixes: [
-            "Risolto problema con la rotazione dei componenti in determinati scenari",
-            "Corretta l'assegnazione dei materiali durante la duplicazione dei prefab",
-            "Risolti problemi di ridimensionamento dell'interfaccia sui monitor ultrawide",
-            "Corretta una perdita di memoria nella riproduzione delle sequenze di assemblaggio",
-            "Risolta la compatibilità con Unity 2022.2"
+            "Rilascio iniziale di Assembly Station"
           ],
           requirements: {
             unity: "2020.3 LTS o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
-          },
-          downloadUrl: "https://assetstore.unity.com/"
-        },
-        {
-          version: "Versione 1.1.0",
-          date: "3 Agosto 2023",
-          isLatest: false,
-          changes: [
-            "Aggiunto sistema di gestione delle risorse",
-            "Nuovi effetti di animazione per l'assemblaggio dei componenti",
-            "Migliorata la documentazione e gli esempi",
-            "Correzioni di bug e miglioramenti delle prestazioni"
-          ],
-          improvements: [
-            "Aggiunto nuovo ispettore dei componenti",
-            "Ottimizzato il rendering per dispositivi mobili",
-            "Espansa l'API per integrazioni personalizzate"
-          ],
-          bugfixes: [
-            "Risolti problemi di rilevamento delle collisioni",
-            "Risolti problemi di compatibilità degli shader dei materiali",
-            "Corretta l'istanziazione dei prefab in runtime"
-          ],
-          requirements: {
-            unity: "2020.3 LTS o successiva",
-            platforms: "Windows, macOS, Linux, iOS, Android"
-          },
-          downloadUrl: "https://assetstore.unity.com/"
-        },
-        {
-          version: "Versione 1.0.0",
-          date: "17 Maggio 2023",
-          isLatest: false,
-          changes: [
-            "Funzionalità core del sistema di assemblaggio",
-            "UI di base per la selezione dei componenti",
-            "Sistema di categorizzazione dei componenti",
-            "Istruzioni di assemblaggio semplici",
-            "Compatibilità con Unity 2020.3+"
-          ],
-          requirements: {
-            unity: "2020.3 LTS o successiva",
-            platforms: "Windows, macOS, Linux"
           },
           downloadUrl: "https://assetstore.unity.com/"
         }

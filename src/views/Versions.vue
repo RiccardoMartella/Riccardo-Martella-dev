@@ -22,31 +22,11 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.2.0</strong></td>
-                  <td>October 15, 2023</td>
+                  <td><strong>1.0.0</strong></td>
+                  <td>December 8, 2023</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
-                      <i class="bi bi-info-circle"></i> Details
-                    </button>
-                  </td>
-                </tr>
-                <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.1.0</strong></td>
-                  <td>August 3, 2023</td>
-                  <td><span class="badge bg-secondary">Stable</span></td>
-                  <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
-                      <i class="bi bi-info-circle"></i> Details
-                    </button>
-                  </td>
-                </tr>
-                <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.0.0</strong></td>
-                  <td>May 17, 2023</td>
-                  <td><span class="badge bg-secondary">Initial</span></td>
-                  <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
                       <i class="bi bi-info-circle"></i> Details
                     </button>
                   </td>
@@ -87,24 +67,6 @@
                 </li>
               </ul>
               
-              <div v-if="selectedVersion.improvements && selectedVersion.improvements.length > 0">
-                <h4>Improvements</h4>
-                <ul class="changelog-list">
-                  <li v-for="(item, index) in selectedVersion.improvements" :key="index">
-                    {{ item }}
-                  </li>
-                </ul>
-              </div>
-              
-              <div v-if="selectedVersion.bugfixes && selectedVersion.bugfixes.length > 0">
-                <h4>Bug Fixes</h4>
-                <ul class="changelog-list">
-                  <li v-for="(item, index) in selectedVersion.bugfixes" :key="index">
-                    {{ item }}
-                  </li>
-                </ul>
-              </div>
-              
               <div class="version-requirements mt-4">
                 <h4>Requirements</h4>
                 <p><strong>Unity Version:</strong> {{ selectedVersion.requirements.unity }}</p>
@@ -132,74 +94,15 @@ export default {
       selectedVersion: null,
       versions: [
         {
-          version: "Version 1.2.0",
-          date: "October 15, 2023",
+          version: "Version 1.0.0",
+          date: "December 8, 2023",
           isLatest: true,
           changes: [
-            "Added support for multiple assembly sequences",
-            "Improved performance for large assembly projects",
-            "Enhanced UI responsiveness",
-            "Fixed 5 minor bugs reported by the community"
-          ],
-          improvements: [
-            "50% faster loading times for complex assemblies",
-            "New animation system for smoother transitions",
-            "Better memory management and garbage collection",
-            "Enhanced compatibility with mobile platforms"
-          ],
-          bugfixes: [
-            "Fixed issue with component rotation in certain scenarios",
-            "Corrected material assignment on prefab duplication",
-            "Resolved UI scaling problems on ultrawide monitors",
-            "Fixed memory leak in assembly sequence playback",
-            "Addressed compatibility issue with Unity 2022.2"
+            "Initial release of Assembly Station"
           ],
           requirements: {
             unity: "2020.3 LTS or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
-          },
-          downloadUrl: "https://assetstore.unity.com/"
-        },
-        {
-          version: "Version 1.1.0",
-          date: "August 3, 2023",
-          isLatest: false,
-          changes: [
-            "Added resource management system",
-            "New animation effects for component assembly",
-            "Improved documentation and examples",
-            "Bug fixes and performance improvements"
-          ],
-          improvements: [
-            "Added new component inspector",
-            "Optimized rendering for mobile devices",
-            "Expanded API for custom integration"
-          ],
-          bugfixes: [
-            "Fixed collision detection issues",
-            "Resolved material shader compatibility problems",
-            "Fixed prefab instantiation in runtime"
-          ],
-          requirements: {
-            unity: "2020.3 LTS or newer",
-            platforms: "Windows, macOS, Linux, iOS, Android"
-          },
-          downloadUrl: "https://assetstore.unity.com/"
-        },
-        {
-          version: "Version 1.0.0",
-          date: "May 17, 2023",
-          isLatest: false,
-          changes: [
-            "Core assembly system functionality",
-            "Basic UI for component selection",
-            "Component categorization system",
-            "Simple assembly instructions",
-            "Unity 2020.3+ compatibility"
-          ],
-          requirements: {
-            unity: "2020.3 LTS or newer",
-            platforms: "Windows, macOS, Linux"
           },
           downloadUrl: "https://assetstore.unity.com/"
         }
