@@ -23,7 +23,7 @@
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
                   <td><strong>1.0.0</strong></td>
-                  <td>December 8, 2023</td>
+                  <td>April 1, 2025</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
