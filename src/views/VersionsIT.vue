@@ -99,13 +99,13 @@ export default {
       versions: [
         {
           version: "Versione 1.0.0",
-          date: "8 Dicembre 2023",
+          date: "April 1, 2025",
           isLatest: true,
           changes: [
             "Rilascio iniziale di Assembly Station"
           ],
           requirements: {
-            unity: "2020.3 LTS o successiva",
+            unity: "6000.0.38f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/"
