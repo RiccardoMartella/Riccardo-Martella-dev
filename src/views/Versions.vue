@@ -39,7 +39,7 @@
             <RouterLink to="/" class="btn btn-outline-secondary me-3">
               <i class="bi bi-arrow-left me-2"></i>Return to Home
             </RouterLink>
-            <a href="https://assetstore.unity.com/" target="_blank" class="btn btn-primary">
+            <a href="https://assetstore.unity.com/packages/slug/313569" target="_blank" class="btn btn-primary">
               <i class="bi bi-cart-fill me-2"></i>Purchase
             </a>
           </div>
