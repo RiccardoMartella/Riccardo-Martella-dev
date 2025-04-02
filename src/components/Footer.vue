@@ -73,17 +73,17 @@
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="privacyPath" class="footer-link">{{
+                <RouterLink :to="privacyPath + '#top'" class="footer-link">{{
                   isItalian ? "Politica sulla Privacy" : "Privacy Policy"
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="cookiePolicyPath" class="footer-link">{{
+                <RouterLink :to="cookiePolicyPath + '#top'" class="footer-link">{{
                   isItalian ? "Politica sui Cookie" : "Cookie Policy"
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="licensesPath" class="footer-link">{{
+                <RouterLink :to="licensesPath + '#top'" class="footer-link">{{
                   isItalian ? "Licenze" : "Licenses"
                 }}</RouterLink>
               </li>
@@ -281,5 +281,21 @@ h5 {
   padding: 10px;
   border-radius: 20px;
   background-color: #ffffffad;
+}
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  .footer-logo {
+    height: 60px;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  .social-icon-footer {
+    width: 35px;
+    height: 35px;
+  }
 }
 </style>

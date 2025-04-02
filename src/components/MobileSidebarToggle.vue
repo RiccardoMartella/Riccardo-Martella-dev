@@ -124,6 +124,9 @@ export default {
   padding: 1rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-sidebar.open {
@@ -141,8 +144,10 @@ export default {
 
 .mobile-sidebar-list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 80px 0; /* Add bottom padding to ensure all items are visible */
   margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
 }
 
 .mobile-sidebar-list li {
@@ -208,6 +213,8 @@ export default {
   color: #333;
   border-radius: 4px;
   transition: all 0.3s ease;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .beta-mobile-badge {

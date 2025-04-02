@@ -1,5 +1,5 @@
 <template>
-  <div class="licenses-page">
+  <div class="licenses-page" id="top">
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -250,5 +250,53 @@ export default {
 
 .license-text li {
   margin-bottom: 0.75rem;
+}
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.5rem;
+    padding-bottom: 0.4rem;
+  }
+  
+  .license-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .license-text {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .license-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .license-text h4 {
+    font-size: 1rem;
+  }
+  
+  .license-text ol {
+    padding-left: 1rem;
+  }
+  
+  .license-text li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
 }
 </style>

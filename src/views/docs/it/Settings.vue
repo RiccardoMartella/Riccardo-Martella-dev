@@ -727,7 +727,7 @@
           
           <div class="content-media">
             <ImageZoomable 
-              src="/images/viewdetails2.jpg" 
+              src="/images/viewdetails2.png" 
               alt="Impostazioni Effetti Visivi e Sonori"
               caption="Configurazione effetti visivi e sonori" 
             />
