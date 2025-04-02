@@ -105,7 +105,7 @@ export default {
             unity: "6000.0.38f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/"
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
         }
       ]
     }

@@ -109,7 +109,7 @@ export default {
             unity: "6000.0.38f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/"
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
         }
       ]
     }
@@ -118,9 +118,7 @@ export default {
     const modalEl = document.getElementById('versionDetailsModal');
     this.versionModal = new Modal(modalEl);
     
-    // Handle focus management for accessibility
     modalEl.addEventListener('hidden.bs.modal', () => {
-      // Return focus to the last focused element when modal closes
       if (this.lastFocusedElement) {
         this.lastFocusedElement.focus();
       }
@@ -128,12 +126,10 @@ export default {
   },
   methods: {
     showDetails(index) {
-      // Store the currently focused element
       this.lastFocusedElement = document.activeElement;
       this.selectedVersion = this.versions[index];
       this.versionModal.show();
-      
-      // Set focus to close button after modal is shown
+
       this.$nextTick(() => {
         if (this.$refs.closeModalButton) {
           this.$refs.closeModalButton.focus();
