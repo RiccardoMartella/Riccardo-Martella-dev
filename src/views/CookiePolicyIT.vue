@@ -1,5 +1,5 @@
 <template>
-  <div class="cookie-policy-page">
+  <div class="cookie-policy-page" id="top">
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
