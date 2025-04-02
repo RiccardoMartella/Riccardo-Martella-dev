@@ -255,7 +255,16 @@ const router = createRouter({
       name: 'beta-it',
       component: () => import('@/views/BetaIT.vue')
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    } 
+    return { top: 0, behavior: 'smooth' }
+  }
 })
 
 export default router

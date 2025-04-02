@@ -1,0 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.page-content {
+  padding-top: 20px;
+}
+
+html {
+  scroll-padding-top: 80px;
+}

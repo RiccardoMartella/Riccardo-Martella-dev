@@ -56,7 +56,7 @@
               {{ selectedVersion?.version }} - {{ selectedVersion?.date }}
               <span v-if="selectedVersion?.isLatest" class="badge bg-primary ms-2">Latest</span>
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ref="closeModalButton"></button>
           </div>
           <div class="modal-body">
             <div v-if="selectedVersion">
@@ -92,6 +92,7 @@ export default {
     return {
       versionModal: null,
       selectedVersion: null,
+      lastFocusedElement: null,
       versions: [
         {
           version: "Version 1.0.0",
@@ -110,12 +111,30 @@ export default {
     }
   },
   mounted() {
-    this.versionModal = new Modal(document.getElementById('versionDetailsModal'));
+    const modalEl = document.getElementById('versionDetailsModal');
+    this.versionModal = new Modal(modalEl);
+    
+    // Handle focus management for accessibility
+    modalEl.addEventListener('hidden.bs.modal', () => {
+      // Return focus to the last focused element when modal closes
+      if (this.lastFocusedElement) {
+        this.lastFocusedElement.focus();
+      }
+    });
   },
   methods: {
     showDetails(index) {
+      // Store the currently focused element
+      this.lastFocusedElement = document.activeElement;
       this.selectedVersion = this.versions[index];
       this.versionModal.show();
+      
+      // Set focus to close button after modal is shown
+      this.$nextTick(() => {
+        if (this.$refs.closeModalButton) {
+          this.$refs.closeModalButton.focus();
+        }
+      });
     }
   }
 }

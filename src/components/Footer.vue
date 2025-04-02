@@ -73,17 +73,17 @@
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="privacyPath + '#top'" class="footer-link">{{
+                <RouterLink :to="privacyPath" class="footer-link" @click="scrollToTop">{{
                   isItalian ? "Politica sulla Privacy" : "Privacy Policy"
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="cookiePolicyPath + '#top'" class="footer-link">{{
+                <RouterLink :to="cookiePolicyPath" class="footer-link" @click="scrollToTop">{{
                   isItalian ? "Politica sui Cookie" : "Cookie Policy"
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="licensesPath + '#top'" class="footer-link">{{
+                <RouterLink :to="licensesPath" class="footer-link" @click="scrollToTop">{{
                   isItalian ? "Licenze" : "Licenses"
                 }}</RouterLink>
               </li>
@@ -135,6 +135,14 @@
 <script>
 export default {
   name: "AppFooter",
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  },
   computed: {
     isItalian() {
       return this.$route.path.includes("/it");
@@ -183,8 +191,8 @@ export default {
     },
     betaPath() {
       return this.isItalian ? "/it/beta" : "/beta";
-    },
-  },
+    }
+  }
 };
 </script>
 
