@@ -1007,4 +1007,81 @@ kbd {
     margin-bottom: 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .api-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.75rem;
+  }
+  
+  .api-table th, .api-table td {
+    padding: 8px 6px;
+  }
+  
+  .api-table tr td:first-child {
+    min-width: 120px;
+  }
+  
+  .api-class h4 {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  
+  .doc-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-header {
+    font-size: 0.75rem;
+  }
+  
+  .doc-section-title {
+    font-size: 1.3rem;
+    padding: 12px;
+  }
+  
+  .content-text ul li {
+    margin-bottom: 12px;
+  }
+  
+  kbd {
+    padding: 4px 6px;
+    margin: 0 2px;
+  }
+  
+  .info-box {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+  
+  .image-group > div {
+    min-width: 100%;
+  }
+  
+  .video-container {
+    margin-top: 15px;
+  }
+  
+  .caption {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .api-table th, .api-table td {
+    padding: 10px 6px;
+  }
+  
+  .info-box h5 {
+    font-size: 1rem;
+  }
+  
+  .info-box h6 {
+    font-size: 0.9rem;
+  }
+}
 </style>
