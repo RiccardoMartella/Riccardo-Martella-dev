@@ -44,6 +44,13 @@
               }}</RouterLink>
             </li>
             <li class="nav-item">
+              <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
+                isItalian ? "Chiavi Gratuite" : "Free Keys"
+              }}
+              <span class="free-pill ms-1">FREE</span>
+              </RouterLink>
+            </li>
+            <li class="nav-item">
               <RouterLink :to="betaPath" class="nav-link">
                 <span class="beta-pill">BETA</span>
               </RouterLink>
@@ -107,6 +114,9 @@ export default {
     },
     betaPath() {
       return this.isItalian ? "/it/beta" : "/beta";
+    },
+    discordGiveawayPath() {
+      return this.isItalian ? "/it/discord-giveaway" : "/discord-giveaway";
     }
   },
   mounted() {
@@ -172,14 +182,36 @@ export default {
   animation: pulse-glow 2s infinite alternate;
 }
 
+.free-pill {
+  background-color: #22c55e;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse-green 2s infinite alternate;
+}
+
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(0, 163, 255, 0.4); }
   50% { box-shadow: 0 0 0 8px rgba(0, 163, 255, 0); }
 }
 
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+}
+
 .beta-nav-link {
   padding-top: 0.65rem;
   padding-bottom: 0.35rem;
+}
+
+.giveaway-nav-link {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand:hover {

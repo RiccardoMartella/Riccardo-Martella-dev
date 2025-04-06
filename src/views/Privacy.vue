@@ -13,14 +13,7 @@
           <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="privacy-content">
-                <a 
-                  href="https://www.iubenda.com/privacy-policy/82562185" 
-                  class="iubenda-white iubenda-embed" 
-                  title="Privacy Policy"
-                  target="_blank"
-                >
-                  Privacy Policy
-                </a>
+                <a href="https://www.iubenda.com/privacy-policy/82562185" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
               </div>
               
               <div class="mt-4">
@@ -52,14 +45,22 @@
 export default {
   name: 'Privacy',
   mounted() {
-    
-    if (!document.getElementById('iubenda-script')) {
-      const script = document.createElement('script');
-      script.id = 'iubenda-script';
-      script.src = 'https://cdn.iubenda.com/iubenda.js';
-      script.async = true;
-      document.head.appendChild(script);
-    }
+    // Load iubenda script
+    (function (w,d) {
+      var loader = function () {
+        var s = d.createElement("script"), 
+        tag = d.getElementsByTagName("script")[0]; 
+        s.src="https://cdn.iubenda.com/iubenda.js"; 
+        tag.parentNode.insertBefore(s,tag);
+      }; 
+      if(w.addEventListener){
+        w.addEventListener("load", loader, false);
+      } else if(w.attachEvent){
+        w.attachEvent("onload", loader);
+      } else {
+        w.onload = loader;
+      }
+    })(window, document);
   }
 }
 </script>

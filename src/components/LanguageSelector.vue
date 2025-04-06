@@ -75,16 +75,18 @@ export default {
         this.$router.push(
           lang === "en" ? `/docs/${docPath}` : `/it/docs/${docPath}`
         );
-      }else if (currentPath === "/tutorials" || currentPath === "/it/tutorials") {
+      } else if (currentPath === "/tutorials" || currentPath === "/it/tutorials") {
         this.$router.push(lang === "en" ? "/tutorials" : "/it/tutorials");
-      }else if (currentPath === "/versions" || currentPath === "/it/versions") {
+      } else if (currentPath === "/versions" || currentPath === "/it/versions") {
         this.$router.push(lang === "en" ? "/versions" : "/it/versions");
-      }else if (currentPath === "/beta" || currentPath === "/it/beta") {
+      } else if (currentPath === "/beta" || currentPath === "/it/beta") {
         this.$router.push(lang === "en" ? "/beta" : "/it/beta");
-      }else if (currentPath === "/settings" || currentPath === "/it/settings") {
+      } else if (currentPath === "/settings" || currentPath === "/it/settings") {
         this.$router.push(lang === "en" ? "/settings" : "/it/settings");
-      }else if (currentPath === "/cookie-policy" || currentPath === "/it/cookie-policy") {
+      } else if (currentPath === "/cookie-policy" || currentPath === "/it/cookie-policy") {
         this.$router.push(lang === "en" ? "/cookie-policy" : "/it/cookie-policy");
+      } else if (currentPath === "/discord-giveaway" || currentPath === "/it/discord-giveaway") {
+        this.$router.push(lang === "en" ? "/discord-giveaway" : "/it/discord-giveaway");
       } else {
         this.$router.push(lang === "en" ? "/" : "/it");
       }

@@ -10,6 +10,8 @@ import Versions from '@/views/Versions.vue'
 import VersionsIT from '@/views/VersionsIT.vue'
 import Licenses from '@/views/Licenses.vue'
 import LicensesIT from '@/views/LicensesIT.vue'
+import DiscordGiveaway from '@/views/DiscordGiveaway.vue'
+import DiscordGiveawayIT from '@/views/DiscordGiveawayIT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -207,8 +209,7 @@ const router = createRouter({
         }
       ]
     },
-    
-    // Cookie Policy routes
+
     {
       path: '/cookie-policy',
       name: 'CookiePolicy',
@@ -219,8 +220,7 @@ const router = createRouter({
       name: 'CookiePolicyIT',
       component: CookiePolicyIT
     },
-    
-    // Versions routes
+
     {
       path: '/versions',
       name: 'versions',
@@ -231,8 +231,7 @@ const router = createRouter({
       name: 'versions-it',
       component: VersionsIT
     },
-    
-    // Licenses routes
+
     {
       path: '/licenses',
       name: 'licenses',
@@ -243,8 +242,7 @@ const router = createRouter({
       name: 'licenses-it',
       component: LicensesIT
     },
-    
-    // Beta routes
+
     {
       path: '/beta',
       name: 'beta',
@@ -254,6 +252,17 @@ const router = createRouter({
       path: '/it/beta',
       name: 'beta-it',
       component: () => import('@/views/BetaIT.vue')
+    },
+
+    {
+      path: '/discord-giveaway',
+      name: 'discord-giveaway',
+      component: DiscordGiveaway
+    },
+    {
+      path: '/it/discord-giveaway',
+      name: 'discord-giveaway-it',
+      component: DiscordGiveawayIT
     }
   ],
   scrollBehavior(to, from, savedPosition) {

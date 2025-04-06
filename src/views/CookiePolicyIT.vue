@@ -13,7 +13,7 @@
           <div class="card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="iubenda-container">
-                <a href="https://www.iubenda.com/privacy-policy/82562185/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy">Politica dei Cookie</a>
+                <a href="https://www.iubenda.com/privacy-policy/82562185/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a>
               </div>
               
               <div class="mt-4">
@@ -47,25 +47,21 @@ export default {
   name: 'CookiePolicyIT',
   mounted() {
     // Load iubenda script
-    const script = document.createElement('script');
-    script.innerHTML = `
-      (function (w,d) {
-        var loader = function () {
-          var s = d.createElement("script"), 
-          tag = d.getElementsByTagName("script")[0]; 
-          s.src="https://cdn.iubenda.com/iubenda.js"; 
-          tag.parentNode.insertBefore(s,tag);
-        }; 
-        if(w.addEventListener){
-          w.addEventListener("load", loader, false);
-        } else if(w.attachEvent){
-          w.attachEvent("onload", loader);
-        } else {
-          w.onload = loader;
-        }
-      })(window, document);
-    `;
-    document.body.appendChild(script);
+    (function (w,d) {
+      var loader = function () {
+        var s = d.createElement("script"), 
+        tag = d.getElementsByTagName("script")[0]; 
+        s.src="https://cdn.iubenda.com/iubenda.js"; 
+        tag.parentNode.insertBefore(s,tag);
+      }; 
+      if(w.addEventListener){
+        w.addEventListener("load", loader, false);
+      } else if(w.attachEvent){
+        w.attachEvent("onload", loader);
+      } else {
+        w.onload = loader;
+      }
+    })(window, document);
   }
 }
 </script>
@@ -86,7 +82,6 @@ export default {
   margin-bottom: 20px;
 }
 
-/* Override iubenda styles if needed */
 :deep(.iubenda-white) {
   font-size: 1.1rem !important;
   padding: 10px 20px !important;
