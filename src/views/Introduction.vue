@@ -29,11 +29,7 @@
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
                   <div class="badge-item pulse" title="Made for Unity">
                     <i class="bi bi-unity fs-4"></i>
-                  </div>
-                  <div class="badge-item pulse-delay" title="Cross-Platform">
                     <i class="bi bi-windows fs-4"></i>
-                    <i class="bi bi-apple fs-4"></i>
-                    <i class="bi bi-ubuntu fs-4"></i>
                   </div>
                 </div>
               </div>

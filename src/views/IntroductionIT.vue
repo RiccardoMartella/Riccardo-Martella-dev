@@ -27,13 +27,9 @@
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
                 <a class="btn btn-primary btn-glow btn-lg shadow px-4" href="https://assetstore.unity.com/packages/slug/313569">Ottieni Assembly Station</a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
-                  <div class="badge-item pulse" title="Creato per Unity">
+                  <div class="badge-item pulse" title="Made for Unity">
                     <i class="bi bi-unity fs-4"></i>
-                  </div>
-                  <div class="badge-item pulse-delay" title="Multi-piattaforma">
                     <i class="bi bi-windows fs-4"></i>
-                    <i class="bi bi-apple fs-4"></i>
-                    <i class="bi bi-ubuntu fs-4"></i>
                   </div>
                 </div>
               </div>
