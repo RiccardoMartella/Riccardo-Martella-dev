@@ -85,6 +85,9 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a :href="selectedVersion?.downloadUrl" target="_blank" class="btn btn-primary">
+              <i class="bi bi-download me-2"></i>Download from Asset Store
+            </a>
           </div>
         </div>
       </div>
