@@ -6,7 +6,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold text-accent mb-4">Chiavi Gratuite per Unity Asset</h1>
             <p class="lead">
-              Unisciti al nostro server Discord e ricevi una chiave gratuita per il nostro asset Unity!
+              Unisciti al nostro server Discord e ricevi una chiave gratuita per Assembly Station!
             </p>
           </div>
 
@@ -16,7 +16,7 @@
             </div>
             <div class="card-body p-4">
               <div class="text-center mb-4">
-                <img src="/images/discord-logo.png" alt="Logo Discord" class="discord-logo mb-4" />
+                <i class="bi bi-discord"></i>
                 <h3 class="h3 mb-3">Come Ottenere la Tua Chiave Gratuita</h3>
               </div>
 
@@ -26,7 +26,7 @@
                   <div class="step-content">
                     <h4 class="h5">Unisciti al Nostro Server Discord</h4>
                     <p>Clicca sul pulsante qui sotto per unirti al nostro server Discord.</p>
-                    <a href="https://discord.gg/your-invite-link" target="_blank" rel="noopener noreferrer" class="btn btn-discord mb-3">
+                    <a href="https://discord.gg/9wJSxtUX2W" target="_blank" rel="noopener noreferrer" class="btn btn-discord mb-3">
                       <i class="bi bi-discord me-2"></i> Unisciti al Server Discord
                     </a>
                   </div>
@@ -58,25 +58,33 @@
                 Solo 5 chiavi gratuite rimanenti! Ottieni la tua prima che finiscano.
               </div>
               
-              <div class="text-center mt-4">
-                <h4 class="h4 mb-3">Informazioni sull'Asset</h4>
-                <p>Assembly Station è un potente strumento Unity che aiuta gli sviluppatori a creare meccaniche di montaggio e smontaggio per i loro giochi con facilità. Perfetto per giochi di simulazione, applicazioni educative e molto altro.</p>
-                <div class="asset-features mt-4">
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
-                    <span>Facile integrazione</span>
+              <div class="asset-features-section mt-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4 class="text-center mb-3">Caratteristiche dell'Asset</h4>
+                    <div class="feature-list">
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Facile integrazione</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Documentazione dettagliata</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Aggiornamenti regolari</span>
+                      </div>
+                      <div class="feature-item">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Supporto tecnico</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
-                    <span>Documentazione dettagliata</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
-                    <span>Aggiornamenti regolari</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
-                    <span>Supporto tecnico</span>
+                  <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="asset-preview text-center">
+                      <img src="/images/asset-preview.png" alt="Anteprima dell'Asset" class="img-fluid rounded shadow-sm mb-2" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -175,21 +183,35 @@ export default {
   color: white;
 }
 
-.asset-features {
+.asset-features-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.feature-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: #f8f9fa;
+  gap: 10px;
   padding: 8px 15px;
-  border-radius: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+}
+
+.asset-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -201,6 +223,10 @@ export default {
   
   .step-number {
     margin-bottom: 10px;
+  }
+  
+  .asset-features-section .col-md-6:first-child {
+    margin-bottom: 30px;
   }
 }
 </style>

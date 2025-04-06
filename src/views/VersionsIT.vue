@@ -23,11 +23,21 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.0.0</strong></td>
-                  <td>April 1, 2025</td>
+                  <td><strong>1.0.1</strong></td>
+                  <td>3 Aprile, 2025</td>
                   <td><span class="badge bg-primary">Ultima</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
+                      <i class="bi bi-info-circle"></i> Dettagli
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(1)" class="version-row">
+                  <td><strong>1.0.0</strong></td>
+                  <td>1 Aprile, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
                       <i class="bi bi-info-circle"></i> Dettagli
                     </button>
                   </td>
@@ -47,8 +57,7 @@
         </div>
       </div>
     </div>
-    
-    <!-- Version Details Modal -->
+ 
     <div class="modal fade" id="versionDetailsModal" tabindex="-1" aria-labelledby="versionDetailsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -71,7 +80,6 @@
               <div class="version-requirements mt-4">
                 <h4>Requisiti</h4>
                 <p><strong>Versione Unity:</strong> {{ selectedVersion.requirements.unity }}</p>
-                <p><strong>Piattaforme:</strong> {{ selectedVersion.requirements.platforms }}</p>
               </div>
             </div>
           </div>
@@ -99,9 +107,23 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
-          version: "Versione 1.0.0",
-          date: "April 1, 2025",
+          version: "Versione 1.0.1",
+          date: "3 Aprile, 2025",
           isLatest: true,
+          changes: [
+            "Risolto: bug degli effetti visivi",
+            "Correzioni di bug e miglioramenti delle prestazioni"
+          ],
+          requirements: {
+            unity: "6000.0.38f1 o successiva",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
+          version: "Versione 1.0.0",
+          date: "1 Aprile, 2025",
+          isLatest: false,
           changes: [
             "Rilascio iniziale di Assembly Station"
           ],

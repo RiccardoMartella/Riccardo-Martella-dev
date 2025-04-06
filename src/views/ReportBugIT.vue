@@ -57,43 +57,37 @@
               <div class="row mt-4 equal-height-row">
                 <div class="col-md-4 mb-3 mb-md-0">
                   <div class="bug-report-method h-100">
-                    <div class="d-flex align-items-center">
-                      <div class="bug-report-icon">
-                        <i class="bi bi-github"></i>
-                      </div>
-                      <div>
-                        <h5>GitHub Issues</h5>
-                        <p class="mb-1">Crea una issue sul mio repository GitHub (consigliato)</p>
-                        <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary" target="_blank">Apri GitHub</a>
-                      </div>
+                    <div class="bug-report-icon">
+                      <i class="bi bi-github"></i>
+                    </div>
+                    <h5>GitHub Issues</h5>
+                    <p class="mb-3">Crea una issue sul mio repository GitHub (consigliato)</p>
+                    <div class="mt-auto">
+                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary w-100" target="_blank">Apri GitHub</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-3 mb-md-0">
                   <div class="bug-report-method h-100">
-                    <div class="d-flex align-items-center">
-                      <div class="bug-report-icon">
-                        <i class="bi bi-discord"></i>
-                      </div>
-                      <div>
-                        <h5>Discord</h5>
-                        <p class="mb-1">Unisciti alla nostra community per supporto</p>
-                        <a href="https://discord.gg/9wJSxtUX2W" class="btn btn-primary" target="_blank">Unisciti a Discord</a>
-                      </div>
+                    <div class="bug-report-icon">
+                      <i class="bi bi-discord"></i>
+                    </div>
+                    <h5>Discord</h5>
+                    <p class="mb-3">Unisciti alla nostra community per supporto</p>
+                    <div class="mt-auto">
+                      <a href="https://discord.gg/9wJSxtUX2W" class="btn btn-primary w-100" target="_blank">Unisciti a Discord</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="bug-report-method h-100">
-                    <div class="d-flex align-items-center">
-                      <div class="bug-report-icon">
-                        <i class="bi bi-envelope"></i>
-                      </div>
-                      <div>
-                        <h5>Email</h5>
-                        <p class="mb-1">Inviami una email con i dettagli</p>
-                        <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary">Email Me</a>
-                      </div>
+                    <div class="bug-report-icon">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <h5>Email</h5>
+                    <p class="mb-3">Inviami una email con i dettagli</p>
+                    <div class="mt-auto">
+                      <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary w-100">Email Me</a>
                     </div>
                   </div>
                 </div>

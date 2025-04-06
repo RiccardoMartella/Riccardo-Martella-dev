@@ -45,7 +45,7 @@
             </li>
             <li class="nav-item">
               <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
-                isItalian ? "Chiavi Gratuite" : "Free Keys"
+                isItalian ? "Keys" : "Keys"
               }}
               <span class="free-pill ms-1">FREE</span>
               </RouterLink>
