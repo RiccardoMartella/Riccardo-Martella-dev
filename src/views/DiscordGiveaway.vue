@@ -15,6 +15,11 @@
               <h2 class="h4 mb-0">Limited Time Offer</h2>
             </div>
             <div class="card-body p-4">
+              <div class="alert alert-warning mb-4">
+                <strong><i class="bi bi-exclamation-triangle me-2"></i> Limited availability:</strong> 
+                Only 2 free keys remaining! Get yours before they're all gone.
+              </div>
+              
               <div class="text-center mb-4">
                 <i class="bi bi-discord"></i>
                 <h3 class="h3 mb-3">How to Get Your Free Key</h3>
@@ -51,11 +56,6 @@
                     <p>The admin will respond with your unique product key that you can use to download and activate the asset.</p>
                   </div>
                 </div>
-              </div>
-
-              <div class="alert alert-warning mt-4">
-                <strong><i class="bi bi-exclamation-triangle me-2"></i> Limited availability:</strong> 
-                Only 5 free keys remaining! Get yours before they're all gone.
               </div>
               
               <div class="asset-features-section mt-4">
