@@ -54,7 +54,7 @@
                     <i class="bi bi-collection"></i>
                   </div>
                   <h3 class="h5">Component Assembly</h3>
-                  <p>Easily combine and arrange parts to create complex assemblies with intuitive drag-and-drop functionality.</p>
+                  <p>Easily combine and arrange parts to create complex assemblies with intuitive functionality.</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -62,8 +62,8 @@
                   <div class="feature-icon">
                     <i class="bi bi-palette"></i>
                   </div>
-                  <h3 class="h5">Custom Materials</h3>
-                  <p>Apply and customize materials to your components with a comprehensive library of textures and settings.</p>
+                  <h3 class="h5">Resource System</h3>
+                  <p>Comprehensive system for managing and organizing your assembly resources efficiently.</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -71,63 +71,113 @@
                   <div class="feature-icon">
                     <i class="bi bi-arrows-move"></i>
                   </div>
-                  <h3 class="h5">Animation System</h3>
-                  <p>Create smooth animations for your assemblies with our powerful yet easy-to-use animation tools.</p>
+                  <h3 class="h5">Model Positioning System</h3>
+                  <p>Position and align your models precisely with our positioning tools.</p>
                 </div>
               </div>
             </div>
           </div>
 
+   <!-- Sezione con logo Assembly e separatore -->
+   <div class="assembly-logo-section py-5 mb-1 text-center">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <div class="divider-line"></div>
+              <div class="logo-container mx-4">
+                <img src="/images/logo.png" alt="Assembly Station Logo" class="assembly-logo" onerror="this.onerror=null; this.src='/images/assembly-icon.png'">
+              </div>
+              <div class="divider-line"></div>
+            </div>
+            <h3 class="text-accent">Cosa Dicono gli Utenti</h3>
+          </div>
+
+          <!-- Carosello di recensioni aggiornato per mostrare 2 alla volta -->
           <div class="testimonials-section mb-5">
-            <h2 class="text-center mb-4">What Users Are Saying</h2>
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <div class="testimonial-card">
-                  <div class="testimonial-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="testimonial-card h-100">
+                        <div class="testimonial-rating">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Super easy to integrate and perfect for handling modular interactions exactly what I was looking for."</p>
+                        <div class="testimonial-author">
+                          <div class="author-name">unity_D6D2A98ECA85AFBEA9CF</div>
+                          <div class="author-title">5 days ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="testimonial-card h-100">
+                        <div class="testimonial-rating">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Very useful tool, the documentation seems complete and well structured. Just follow it step by step..."</p>
+                        <div class="testimonial-author">
+                          <div class="author-name">chiaramazzone67</div>
+                          <div class="author-title">9 days ago</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p class="testimonial-text">"Assembly Station has completely transformed how I build and showcase interactive 3D models in my Unity projects. Worth every penny!"</p>
-                  <div class="testimonial-author">
-                    <div class="author-name">Michael R.</div>
-                    <div class="author-title">Game Developer</div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="testimonial-card h-100">
+                        <div class="testimonial-rating">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"A great plugin! The installation and integration went very smoothly. The author's documentation is clear and logical, perfect for simulation construction projects."</p>
+                        <div class="testimonial-author">
+                          <div class="author-name">moonNightElf</div>
+                          <div class="author-title">5 days ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="testimonial-card h-100">
+                        <div class="testimonial-rating">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">"Looks good."</p>
+                        <div class="testimonial-author">
+                          <div class="author-name">Axel_Vorte3x</div>
+                          <div class="author-title">a day ago</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="testimonial-card">
-                  <div class="testimonial-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                  <p class="testimonial-text">"The intuitive interface made it easy to create complex assembly instructions for our product manual. Customer support is excellent!"</p>
-                  <div class="testimonial-author">
-                    <div class="author-name">Sarah J.</div>
-                    <div class="author-title">Product Designer</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="testimonial-card">
-                  <div class="testimonial-rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <p class="testimonial-text">"As an educational tool, Assembly Station has been invaluable for creating interactive learning experiences for our engineering students."</p>
-                  <div class="testimonial-author">
-                    <div class="author-name">Prof. David L.</div>
-                    <div class="author-title">University Educator</div>
-                  </div>
-                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="carousel-indicators position-relative mt-3">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
               </div>
             </div>
           </div>
@@ -169,6 +219,17 @@ export default {
         this.isLoading = false;
       }, 1500);
     }
+  },
+  mounted() {
+    // Inizializza il carousel dopo il montaggio del componente
+    setTimeout(() => {
+      if (typeof bootstrap !== 'undefined') {
+        new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+          interval: 5000,
+          touch: true
+        });
+      }
+    }, 500);
   }
 }
 </script>
@@ -298,5 +359,114 @@ export default {
   width: 1rem;
   height: 1rem;
   border-width: 0.15em;
+}
+
+/* Stili per la sezione benefit con icone animate */
+.interactive-benefits {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px 0;
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #E6F7FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #00A3FF;
+}
+
+.animated-icon {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Stili per il carousel delle recensioni */
+.carousel-item {
+  padding: 20px 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  filter: invert(100%);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #00A3FF;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.testimonial-card {
+  padding: 30px;
+  text-align: center;
+}
+
+/* I testimonial esistenti sono già stilizzati */
+
+/* Stili per la sezione logo Assembly */
+.assembly-logo-section {
+  overflow: hidden;
+}
+
+.divider-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  max-width: 200px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assembly-logo {
+  width: 120px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Modifica del carousel per 2 recensioni alla volta */
+.carousel-item .row {
+  margin: 0 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  filter: invert(60%);
 }
 </style>
