@@ -44,6 +44,11 @@
               }}</RouterLink>
             </li>
             <li class="nav-item">
+              <RouterLink :to="demoPath" class="nav-link">{{
+                isItalian ? "Demo" : "Demo"
+              }}</RouterLink>
+            </li>
+            <li class="nav-item">
               <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
                 isItalian ? "Keys" : "Keys"
               }}
@@ -117,6 +122,9 @@ export default {
     },
     discordGiveawayPath() {
       return this.isItalian ? "/it/discord-giveaway" : "/discord-giveaway";
+    },
+    demoPath() {
+      return this.isItalian ? "/it/demo" : "/demo";
     }
   },
   mounted() {

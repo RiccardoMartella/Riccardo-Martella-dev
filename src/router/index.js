@@ -12,6 +12,8 @@ import Licenses from '@/views/Licenses.vue'
 import LicensesIT from '@/views/LicensesIT.vue'
 import DiscordGiveaway from '@/views/DiscordGiveaway.vue'
 import DiscordGiveawayIT from '@/views/DiscordGiveawayIT.vue'
+import Demo from '@/views/Demo.vue'
+import DemoIT from '@/views/DemoIT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -263,6 +265,16 @@ const router = createRouter({
       path: '/it/discord-giveaway',
       name: 'discord-giveaway-it',
       component: DiscordGiveawayIT
+    },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: Demo
+    },
+    {
+      path: '/it/demo',
+      name: 'demo-it',
+      component: DemoIT
     }
   ],
   scrollBehavior(to, from, savedPosition) {

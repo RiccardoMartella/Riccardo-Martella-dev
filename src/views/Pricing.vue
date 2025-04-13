@@ -14,13 +14,11 @@
               <h2 class="pricing-title">Assembly Station</h2>
               <div class="price-container">
                 <span class="currency">€</span>
-                <span class="price-original"><s>25</s></span>
-                <span class="currency">€</span>
-                <span class="price">23</span>
+                <span class="price">25</span>
                 <span class="period">/one-time</span>
               </div>
-              <div class="discount-badge">
-                <span>Launch offer: 10% discount for the first week!</span>
+              <div class="vat-note">
+                <span>VAT excluded</span>
               </div>
             </div>
             <div class="card-body p-4">
@@ -186,32 +184,22 @@ export default {
 }
 
 .price {
-  font-size: 4.5rem;
+  font-size: 6.5rem;
   font-weight: 700;
-}
-
-.price-original {
-  font-size: 2.5rem;
-  font-weight: 500;
-  text-decoration: line-through;
-  color: rgba(255, 255, 255, 0.7);
-  margin-right: 10px;
-}
-
-.discount-badge {
-  background-color: #FFD700;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 0.9rem;
 }
 
 .period {
   font-size: 1rem;
   opacity: 0.8;
+}
+
+.vat-note {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 0.9rem;
 }
 
 .feature-list {

@@ -87,6 +87,8 @@ export default {
         this.$router.push(lang === "en" ? "/cookie-policy" : "/it/cookie-policy");
       } else if (currentPath === "/discord-giveaway" || currentPath === "/it/discord-giveaway") {
         this.$router.push(lang === "en" ? "/discord-giveaway" : "/it/discord-giveaway");
+      } else if (currentPath === "/demo" || currentPath === "/it/demo") {
+        this.$router.push(lang === "en" ? "/demo" : "/it/demo");
       } else {
         this.$router.push(lang === "en" ? "/" : "/it");
       }
