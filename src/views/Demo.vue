@@ -24,7 +24,7 @@
                       <div v-else class="spinner-border spinner-border-sm me-2" role="status">
                         <span class="visually-hidden">Loading...</span>
                       </div>
-                      <span v-if="isLoading">Loading...</span>
+                      <span v-if="isLoading">Loading....</span>
                     </button>
                   </div>
                 </div>
