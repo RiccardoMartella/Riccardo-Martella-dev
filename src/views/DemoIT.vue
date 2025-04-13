@@ -156,7 +156,7 @@ export default {
     return {
       demoLaunched: false,
       isLoading: false,
-        demoUrl: 'https://assembly-statio.com/Build-Assembly/index.html'
+        demoUrl: '/Build-Assembly/index.html',
     };
   },
   methods: {
