@@ -79,7 +79,7 @@
           </div>
 
    <!-- Sezione con logo Assembly e separatore -->
-   <div class="assembly-logo-section py-5 mb-1 text-center">
+   <div class="assembly-logo-section py-5 text-center">
             <div class="d-flex align-items-center justify-content-center mb-4">
               <div class="divider-line"></div>
               <div class="logo-container mx-4">
@@ -87,7 +87,7 @@
               </div>
               <div class="divider-line"></div>
             </div>
-            <h3 class="text-accent">Cosa Dicono gli Utenti</h3>
+            <h3 class="text-accent">What Users Say</h3>
           </div>
 
           <!-- Carosello di recensioni aggiornato per mostrare 2 alla volta -->
