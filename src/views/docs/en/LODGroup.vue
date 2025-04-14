@@ -107,11 +107,40 @@
               </li>
             </ol>
 
+            <div class="alert alert-warning mt-4">
+              <i class="bi bi-exclamation-triangle-fill me-2"></i>
+              <div>
+                <strong>Note on LOD groups:</strong> If you want to group multiple LOD models under a single button in the user interface, refer to the instructions in section <router-link to="/docs/categories" class="alert-link">6. Tags/Categories/Groups</router-link> of the documentation. Pay special attention not to confuse LOD group names with categorization tags, as they serve different functions. LOD groups manage detail levels, while tags in section 6 control how components are grouped in the user interface.
+              </div>
+            </div>
+
             <div class="alert alert-info">
               <i class="bi bi-info-circle-fill me-2"></i>
               <strong>Note:</strong> Assembly Station will automatically use the
               appropriate detail levels based on the camera's distance from the
               object. No additional LOD Group-specific configuration is needed.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">LOD GROUP IN ACTION</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              See how LOD Groups work in Assembly Station with this demonstration video. Notice how the system smoothly transitions between different detail levels based on camera distance, maintaining visual quality while optimizing performance.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <div class="video-container">
+              <video controls class="w-100 rounded">
+                <source src="https://www.dropbox.com/scl/fi/q7560hzsh2326ntwyfk1g/LODtest.mp4?rlkey=ziooqb272jcjtgpw7n1bgnxvw&st=m1jneh1f&dl=1" type="video/mp4">
+                Your browser does not support the HTML5 video tag.
+              </video>
+              <p class="caption">LOD Group demonstration - smooth transitions between different detail levels</p>
             </div>
           </div>
         </div>

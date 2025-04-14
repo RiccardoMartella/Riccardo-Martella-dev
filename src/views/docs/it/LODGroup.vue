@@ -115,6 +115,23 @@
               </li>
             </ol>
 
+            <div class="alert alert-warning mt-4">
+              <i class="bi bi-exclamation-triangle-fill me-2"></i>
+              <div>
+                <strong>Attenzione per gruppi di LOD:</strong> Se desideri
+                raggruppare più modelli LOD in un unico pulsante nell'interfaccia
+                utente, consulta le istruzioni nella sezione
+                <router-link to="/it/docs/categories" class="alert-link"
+                  >6. Tag/Categorie/Gruppi</router-link
+                >
+                della documentazione. Presta particolare attenzione a non
+                confondere i nomi dei gruppi LOD con i tag di categorizzazione,
+                poiché hanno funzioni diverse. I gruppi LOD gestiscono i livelli
+                di dettaglio, mentre i tag del punto 6 controllano come i
+                componenti vengono raggruppati nell'interfaccia utente.
+              </div>
+            </div>
+
             <div class="alert alert-info">
               <i class="bi bi-info-circle-fill me-2"></i>
               <strong>Nota:</strong> Assembly Station utilizzerà automaticamente
@@ -181,6 +198,28 @@
         </div>
       </div>
 
+      <div class="doc-section">
+        <h2 class="doc-section-title">LOD GROUP IN AZIONE</h2>
+        
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              Guarda come funzionano i LOD Group in Assembly Station con questo video dimostrativo. Nota come il sistema passa fluidamente tra i diversi livelli di dettaglio in base alla distanza della telecamera, mantenendo la qualità visiva e ottimizzando le prestazioni.
+            </p>
+          </div>
+          
+          <div class="content-media">
+            <div class="video-container">
+              <video controls class="w-100 rounded">
+                <source src="https://www.dropbox.com/scl/fi/q7560hzsh2326ntwyfk1g/LODtest.mp4?rlkey=ziooqb272jcjtgpw7n1bgnxvw&st=m1jneh1f&dl=1" type="video/mp4">
+                Il tuo browser non supporta il tag video HTML5.
+              </video>
+              <p class="caption">Dimostrazione LOD Group - transizioni fluide tra diversi livelli di dettaglio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="doc-section">
         <h2 class="doc-section-title">BEST PRACTICES</h2>
 

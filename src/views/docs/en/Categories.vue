@@ -195,6 +195,40 @@
           </div>
         </div>
       </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">LOD GROUPS AND TAGS</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              When working with LOD (Level of Detail) Groups, the same grouping and tagging principles apply. For consistency and proper functionality, follow these guidelines:
+            </p>
+            <ul>
+              <li><strong>Apply the same tag to all LOD levels</strong> of the same model to maintain consistency</li>
+              <li>When adding pieces to a group, make sure to include all relevant LOD levels with the same tag</li>
+              <li>Each LOD level should be properly tagged to ensure that the UI system can correctly identify and group them</li>
+              <li><strong>Remember:</strong> Even though only the first piece with the Descriptor Component will be considered for display in the UI, applying the same tag to all LOD levels is essential for visual coherence and proper system functionality</li>
+              <li>For more information on LOD Groups, refer to <RouterLink to="/docs/lod-group" class="alert-link">Section 11: LOD Group</RouterLink></li>
+            </ul>
+            
+            <div class="alert alert-info mt-3">
+              <i class="bi bi-info-circle-fill me-2"></i>
+              <div>
+                <strong>Important note:</strong> When grouping LOD levels, apply the same tag to all levels (LOD0, LOD1, LOD2, etc.) of the model you want to group together. Even though the system will only use the Descriptor Component from the first piece for displaying information, maintaining consistent tagging across all LOD levels ensures proper grouping behavior and visual coherence in the interface.
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/tagLOD.png" 
+              alt="LOD Group Tagging"
+              caption="Applying the same tag to all LOD levels for consistency" 
+            />
+          </div>
+        </div>
+      </div>
     </ContentSection>
   </div>
 </template>

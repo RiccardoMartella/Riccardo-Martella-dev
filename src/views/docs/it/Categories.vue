@@ -195,6 +195,40 @@
           </div>
         </div>
       </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">GRUPPI LOD E TAG</h2>
+        
+        <div class="content-block">
+          <div class="content-text">
+            <p>
+              Quando lavori con i Gruppi LOD (Level of Detail), si applicano gli stessi principi di raggruppamento e tagging. Per coerenza e funzionalità corretta, segui queste linee guida:
+            </p>
+            <ul>
+              <li><strong>Applica lo stesso tag a tutti i livelli LOD</strong> dello stesso modello per mantenere la coerenza</li>
+              <li>Quando aggiungi pezzi a un gruppo, assicurati di includere tutti i livelli LOD pertinenti con lo stesso tag</li>
+              <li>Ogni livello LOD dovrebbe essere correttamente taggato per garantire che il sistema UI possa identificarli e raggrupparli correttamente</li>
+              <li><strong>Ricorda:</strong> Anche se solo il primo pezzo con il Descriptor Component verrà considerato per la visualizzazione nell'interfaccia, applicare lo stesso tag a tutti i livelli LOD è essenziale per la coerenza visiva e il corretto funzionamento del sistema</li>
+              <li>Per maggiori informazioni sui Gruppi LOD, consulta la <RouterLink to="/it/docs/lod-group" class="alert-link">Sezione 11: LOD Group</RouterLink></li>
+            </ul>
+            
+            <div class="alert alert-info mt-3">
+              <i class="bi bi-info-circle-fill me-2"></i>
+              <div>
+                <strong>Nota importante:</strong> Quando raggruppi i livelli LOD, applica lo stesso tag a tutti i livelli (LOD0, LOD1, LOD2, ecc.) del modello che vuoi raggruppare insieme. Anche se il sistema utilizzerà solo il Descriptor Component dal primo pezzo per visualizzare le informazioni, mantenere un tagging coerente su tutti i livelli LOD garantisce un comportamento di raggruppamento corretto e una coerenza visiva nell'interfaccia.
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-media">
+            <ImageZoomable 
+              src="/images/tagLOD.png" 
+              alt="Tagging dei Gruppi LOD"
+              caption="Applicazione dello stesso tag a tutti i livelli LOD per la coerenza" 
+            />
+          </div>
+        </div>
+      </div>
     </ContentSection>
   </div>
 </template>
