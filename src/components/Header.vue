@@ -276,7 +276,7 @@ export default {
   .navbar-nav .nav-item:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -2px;
+    right: -8px;
     top: 50%;
     height: 60%;
     transform: translateY(-50%);

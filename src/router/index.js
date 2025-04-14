@@ -141,6 +141,11 @@ const router = createRouter({
           path: 'settings',
           name: 'settings',
           component: () => import('@/views/docs/en/Settings.vue')
+        },
+        {
+          path: 'lod-group',
+          name: 'docsLODGroup',
+          component: () => import('@/views/docs/en/LODGroup.vue')
         }
       ]
     },
@@ -208,6 +213,11 @@ const router = createRouter({
           path: 'settings',
           name: 'settingsIT',
           component: () => import('@/views/docs/it/Settings.vue')
+        },
+        {
+          path: 'lod-group',
+          name: 'docsLODGroupIT',
+          component: () => import('@/views/docs/it/LODGroup.vue')
         }
       ]
     },

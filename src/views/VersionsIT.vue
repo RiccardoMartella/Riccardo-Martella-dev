@@ -23,8 +23,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>3 Aprile, 2025</td>
+                  <td><strong>1.1.1</strong></td>
+                  <td>14 Aprile, 2025</td>
                   <td><span class="badge bg-primary">Ultima</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -33,11 +33,21 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>3 Aprile, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
+                      <i class="bi bi-info-circle"></i> Dettagli
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(2)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>1 Aprile, 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
                       <i class="bi bi-info-circle"></i> Dettagli
                     </button>
                   </td>
@@ -107,9 +117,25 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Versione 1.1.1",
+          date: "14 Aprile, 2025",
+          isLatest: true,
+          changes: [
+            "Supporto completo per modelli con LOD (Level of Detail)",
+            "Capacità di caricare modelli più complessi e dettagliati",
+            "Controllo della camera migliorato: ogni pezzo può ora avere una distanza di zoom e un angolo personalizzati quando viene messo a fuoco",
+            "Risolto un problema in cui il pulsante associato a un pezzo non si comportava correttamente dopo la conferma"
+          ],
+          requirements: {
+            unity: "6000.0.38f1 o successiva",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
           version: "Versione 1.0.1",
           date: "3 Aprile, 2025",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "Risolto: bug degli effetti visivi",
             "Correzioni di bug e miglioramenti delle prestazioni"

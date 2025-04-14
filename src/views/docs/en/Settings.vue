@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">11. GENERAL SETTINGS</h1>
+      <h1 class="doc-title">12. GENERAL SETTINGS</h1>
       <div class="doc-section">
         <h2 class="fs-5">MAIN COMPONENTS REFERENCE</h2>
         
@@ -670,10 +670,19 @@
               <li>Use Performance Mode</li>
             </ul>
             
+            <p class="mt-3">
+              For each DescriptionComponent associated with a piece, you can modify:
+            </p>
+            <ul>
+              <li>Specific camera rotation when the piece is selected</li>
+              <li>Camera distance from the selected piece (automatic zoom)</li>
+              <li>Camera angle relative to the piece for optimal viewing</li>
+            </ul>
+            
             <div class="info-box mt-3">
               <h5>Performance Mode</h5>
               <ul>
-                <li><strong>Resource usage improvement:</strong> Using a more "raw" mode to determine camera position (such as using only the target position instead of considering a renderer's bounds) reduces complex calculations, freeing up resources for other tasks.</li>
+                <li><strong>Resource usage improvement:</strong> Using a more "raw" mode to determine camera position (such as using only the target position instead of considering a renderer's bounds), reduces complex calculations, freeing up resources for other tasks.</li>
                 <li><strong>Application context:</strong> Performance mode is useful in situations where the user is in a resource-intensive scene (for example, when there are many objects to load, such as in a scene with many prefabs) and a lower computational load is desired.</li>
               </ul>
               
@@ -691,6 +700,26 @@
               alt="Orbit Camera Settings"
               caption="Orbit camera configuration" 
             />
+            
+            <div class="image-video-container d-flex flex-wrap mt-4">
+              <div class="image-side pe-md-2 mb-4 mb-md-0">
+                <ImageZoomable 
+                  src="/images/pieces.jpg" 
+                  alt="Camera Configuration for Specific Pieces"
+                  caption="Camera configuration for individual pieces" 
+                />
+              </div>
+              
+              <div class="video-side ps-md-2">
+                <div class="video-container">
+                  <video controls class="w-100 rounded">
+                    <source src="https://www.dropbox.com/scl/fi/y0ozchm9szo9x09piaaxs/zoomPIeces.mp4?rlkey=neojafztkhr7nv2lzhtqjwhk8&st=q6oaznv7&dl=1" type="video/mp4">
+                    Your browser does not support the HTML5 video tag.
+                  </video>
+                  <p class="caption">Demo video: automatic zoom on selected pieces</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1076,6 +1105,29 @@ kbd {
   
   .info-box h6 {
     font-size: 0.9rem;
+  }
+}
+
+.image-video-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-side, 
+.video-side {
+  flex: 1;
+  min-width: 48%;
+}
+
+@media (max-width: 768px) {
+  .image-video-container {
+    flex-direction: column;
+  }
+  
+  .image-side, 
+  .video-side {
+    width: 100%;
   }
 }
 </style>

@@ -161,8 +161,8 @@
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/images/pieces.png" 
-                alt="Pieces"
+              src="/images/pieces.jpg" 
+              alt="Pieces"
                 caption="Elenco dei pezzi"
                 class="standard-image"
               />
