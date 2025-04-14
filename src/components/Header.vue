@@ -27,35 +27,35 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="navbarNav">
-          <ul class="navbar-nav me-auto ms-5">
-            <li class="nav-item">
+          <ul class="navbar-nav me-auto ms-lg-5">
+            <li class="nav-item mx-lg-2">
               <RouterLink :to="introPath" class="nav-link">{{
                 isItalian ? "Introduzione" : "Introduction"
               }}</RouterLink>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-lg-2">
               <RouterLink :to="docPath" class="nav-link">{{
                 isItalian ? "Documentazione" : "Documentation"
               }}</RouterLink>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-lg-2">
               <RouterLink :to="pricePath" class="nav-link">{{
                 isItalian ? "Prezzi" : "Pricing"
               }}</RouterLink>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-lg-2">
               <RouterLink :to="demoPath" class="nav-link">{{
                 isItalian ? "Demo" : "Demo"
               }}</RouterLink>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-lg-2">
               <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
                 isItalian ? "Keys" : "Keys"
               }}
               <span class="free-pill ms-1">FREE</span>
               </RouterLink>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-lg-2">
               <RouterLink :to="betaPath" class="nav-link">
                 <span class="beta-pill">BETA</span>
               </RouterLink>
@@ -63,17 +63,17 @@
           </ul>
 
           <ul class="navbar-nav align-items-center">
-            <li class="nav-item">
-              <RouterLink :to="bugPath" class="nav-link me-3">{{
+            <li class="nav-item mx-lg-2">
+              <RouterLink :to="bugPath" class="nav-link">{{
                 isItalian ? "Segnala Bug" : "Report Bug"
               }}</RouterLink>
             </li>
-            <li class="nav-item">
-              <RouterLink :to="contactPath" class="nav-link me-3">{{
+            <li class="nav-item mx-lg-2">
+              <RouterLink :to="contactPath" class="nav-link">{{
                 isItalian ? "Contatti" : "Contacts"
               }}</RouterLink>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-lg-2">
               <LanguageSelector />
             </li>
           </ul>
@@ -231,7 +231,8 @@ export default {
   position: relative;
   transition: color 0.3s;
   color: #333333;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -260,6 +261,27 @@ export default {
 
 .scrolled .header-logo {
   height: 28px;
+}
+
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    position: relative;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .navbar-nav .nav-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    height: 60%;
+    transform: translateY(-50%);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (max-width: 991.98px) {

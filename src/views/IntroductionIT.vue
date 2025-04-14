@@ -62,8 +62,8 @@
                 </div>
               </div>
               <div class="credits-section">
-    <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472">3D model</a></p>
-</div>
+                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472">3D model</a></p>
+              </div>
 
               <div class="particle-system">
                 <div class="particle wandering-particle p1"></div>
@@ -86,81 +86,79 @@
       </div>
     </div>
 
-    <div class="container py-5">
+    <div class="container py-2">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="text-center mb-5">
-            <p class="lead">
-              Benvenuto nella documentazione ufficiale di Assembly Station, uno strumento completo per Unity che semplifica i meccanismi di assemblaggio e produzione nei tuoi giochi.
+        <div class="col-lg-10">
+ 
+          <div class="welcome-section text-center mb-5">
+            <div class="welcome-icon mb-4">
+              <i class="bi bi-book-half text-accent"></i>
+            </div>
+            <h2 class="display-6 fw-bold mb-4">Documentazione Assembly Station</h2>
+            <p class="lead mx-auto" style="max-width: 800px;">
+              La tua risorsa completa per padroneggiare Assembly Station, un potente strumento per creare istruzioni di montaggio interattive in Unity.
             </p>
           </div>
-
-          <div class="card shadow-sm mb-5">
-            <div class="card-body p-4">
-              <div class="d-flex align-items-center mb-4">
-                <h2>Informazioni su Assembly Station</h2>
+          
+          <div class="about-card mb-5">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-5">
+                <div class="about-card-image w-50 center mx-auto mb-4">
+                  <img src="/images/logo.png" alt="Assembly Station Workflow" class="img-fluid rounded-start object-cover" onerror="this.src='/images/logo.png'; this.style.padding='2rem';">
+                </div>
               </div>
-              <p>Assembly Station è un sistema di assemblaggio progettato per ottimizzare i processi di produzione nei progetti Unity. Che tu stia costruendo macchinari complessi, creando oggetti unici o migliorando i flussi di lavoro, Assembly Station offre strumenti intuitivi per assemblare componenti in modo efficiente e preciso.</p>
-              <p>Questo sito di documentazione fornisce guide complete e risorse per aiutarti a iniziare con Assembly Station e a sfruttare al meglio le sue funzionalità.</p>
+              <div class="col-md-7">
+                <div class="p-4 p-lg-5">
+                  <h3 class="mb-4">Informazioni su Assembly Station</h3>
+                  <p>Assembly Station è un sistema di assemblaggio progettato per ottimizzare i processi di produzione nei progetti Unity. Che tu stia costruendo macchinari complessi, creando oggetti unici o migliorando i flussi di lavoro, Assembly Station offre strumenti intuitivi per assemblare componenti in modo efficiente e preciso.</p>
+                  <p>Questo sito di documentazione fornisce guide complete e risorse per aiutarti a iniziare con Assembly Station e a sfruttare al meglio le sue funzionalità.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sezione delle risorse con nuove icone e disposizione -->
+          <h3 class="text-center mb-4">Risorse per Iniziare</h3>
+          <div class="resources-grid mb-5">
+            <div class="resource-card">
+              <div class="resource-icon">
+                <i class="bi bi-journal-code"></i>
+              </div>
+              <h4>Documentazione</h4>
+              <p>Guide dettagliate e tutorial per i tuoi progetti Unity</p>
+              <RouterLink to="/it/docs/installation" class="btn btn-primary">Leggi Docs</RouterLink>
+            </div>
+            
+            <div class="resource-card">
+              <div class="resource-icon">
+                <i class="bi bi-play-btn"></i>
+              </div>
+              <h4>Video Tutorial</h4>
+              <p>Video passo-passo per padroneggiare funzionalità avanzate</p>
+              <RouterLink to="/it/tutorials" class="btn btn-outline-primary">Guarda Ora</RouterLink>
+            </div>
+            
+            <div class="resource-card">
+              <div class="resource-icon">
+                <i class="bi bi-git"></i>
+              </div>
+              <h4>Cronologia Versioni</h4>
+              <p>Traccia i cambiamenti e i miglioramenti nel tempo</p>
+              <RouterLink to="/it/versions" class="btn btn-outline-primary">Vedi Rilasci</RouterLink>
             </div>
           </div>
 
-          <div class="row g-4 mb-5">
-  <div class="col-md-4">
-    <div class="card h-100 shadow-sm hover-card">
-      <div class="card-body p-4 d-flex flex-column">
-        <div>
-          <div class="d-flex align-items-center mb-3">
-            <i class="bi bi-book fs-2 text-accent me-2"></i>
-            <h3 class="h5 mb-0">Documentazione</h3>
-          </div>
-          <p>Guide dettagliate e tutorial su come utilizzare Assembly Station nei tuoi progetti Unity.</p>
-        </div>
-        <div class="mt-auto">
-          <RouterLink to="/it/docs/installation" class="btn btn-primary mt-3">Vai alla Documentazione</RouterLink>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 shadow-sm hover-card">
-      <div class="card-body p-4 d-flex flex-column">
-        <div>
-          <div class="d-flex align-items-center mb-3">
-            <i class="bi bi-play-circle fs-2 text-accent me-2"></i>
-            <h3 class="h5 mb-0">Video Tutorial</h3>
-          </div>
-          <p>Tutorial video passo-passo per aiutarti a iniziare rapidamente e padroneggiare le funzionalità avanzate.</p>
-        </div>
-        <div class="mt-auto">
-          <RouterLink to="/it/tutorials" class="btn btn-outline-primary mt-3">Guarda i Tutorial</RouterLink>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 shadow-sm hover-card">
-      <div class="card-body p-4 d-flex flex-column">
-        <div>
-          <div class="d-flex align-items-center mb-3">
-            <i class="bi bi-clock-history fs-2 text-accent me-2"></i>
-            <h3 class="h5 mb-0">Cronologia Versioni</h3>
-          </div>
-          <p>Controlla tutte le versioni rilasciate e scaricale direttamente dall'Unity Asset Store.</p>
-        </div>
-        <div class="mt-auto">
-          <RouterLink to="/it/versions" class="btn btn-outline-primary mt-3">Visualizza Rilasci</RouterLink>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          <div class="text-center">
-            <h3 class="mb-4">Inizia Subito</h3>
-            <RouterLink to="/it/docs/installation" class="btn btn-lg btn-primary px-4 py-2">
-              Inizia a Usare Assembly Station
-            </RouterLink>
+          <div class="cta-box text-center p-5 rounded">
+            <h3 class="mb-3">Pronto a Iniziare a Costruire?</h3>
+            <p class="mb-4">Ottieni la tua copia di Assembly Station e inizia a creare assemblaggi interattivi oggi</p>
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+              <a href="https://assetstore.unity.com/packages/slug/313569" target="_blank" class="btn btn-lg btn-primary">
+                <i class="bi bi-cart-fill me-2"></i>Acquista su Asset Store
+              </a>
+              <RouterLink to="/it/demo" class="btn btn-lg btn-outline-primary">
+                <i class="bi bi-joystick me-2"></i>Prova la Demo Interattiva
+              </RouterLink>
+            </div>
           </div>
         </div>
       </div>
@@ -711,5 +709,102 @@ iframe.featured-video {
   height: 100%;
   object-fit: cover;
   border: none;
+}
+
+.welcome-section {
+  padding: 3rem 0;
+}
+
+.welcome-icon {
+  font-size: 4rem;
+  color: #00A3FF;
+}
+
+.about-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background-color: #F8F9FA;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-card-image {
+  overflow: hidden;
+  background-color: #f8f9fa;
+  min-height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+  
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resource-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resource-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e6f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: #00A3FF;
+}
+
+.resource-card h4 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.resource-card p {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #e6f4ff 0%, #f0f8ff 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-card-image {
+    height: 250px;
+  }
 }
 </style>

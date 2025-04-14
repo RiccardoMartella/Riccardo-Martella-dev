@@ -10,38 +10,33 @@
             </p>
           </div>
 
-          <!-- WebGL Demo in posizione principale -->
-          <div class="card shadow-sm mb-5">
-            <div class="card-body p-0">
-              <div class="webgl-container primary-demo">
-                <div v-if="!demoLaunched" class="webgl-placeholder">
-                  <div class="placeholder-content">
-                    <i class="bi bi-joystick fs-1 mb-3"></i>
-                    <h3 class="h4">Demo WebGL</h3>
-                    <p class="mb-4">Prova Assembly Station direttamente nel tuo browser</p>
-                    <button @click="launchDemo" class="btn btn-primary btn-lg">
-                      <span v-if="!isLoading">Avvia Demo</span>
-                      <div v-else class="spinner-border spinner-border-sm me-2" role="status">
-                        <span class="visually-hidden">Caricamento...</span>
-                      </div>
-                      <span v-if="isLoading">Caricamento....</span>
-                    </button>
+          <div class="demo-container mb-5">
+            <div v-if="!demoLaunched" class="demo-placeholder">
+              <div class="placeholder-content">
+                <i class="bi bi-joystick fs-1 mb-3"></i>
+                <h3 class="h4">Demo WebGL</h3>
+                <p class="mb-4">Prova Assembly Station direttamente nel tuo browser</p>
+                <button @click="launchDemo" class="btn btn-primary btn-lg">
+                  <span v-if="!isLoading">Avvia Demo</span>
+                  <div v-else class="spinner-border spinner-border-sm me-2" role="status">
+                    <span class="visually-hidden">Caricamento...</span>
                   </div>
-                </div>
-                <div v-else class="webgl-demo-container">
-                  <iframe 
-                    ref="demoFrame"
-                    class="webgl-demo" 
-                    :src="demoUrl" 
-                    title="Assembly Station WebGL Demo" 
-                    allowfullscreen
-                    allow="fullscreen">
-                  </iframe>
-                </div>
+                  <span v-if="isLoading">Caricamento....</span>
+                </button>
               </div>
-              <div class="text-center py-2">
-                <small class="text-muted">Nota: La demo WebGL richiede un browser moderno con supporto WebGL</small>
-              </div>
+            </div>
+            <div v-else class="demo-frame-container">
+              <iframe 
+                ref="demoFrame"
+                class="demo-frame" 
+                :src="demoUrl" 
+                title="Assembly Station WebGL Demo" 
+                allowfullscreen
+                allow="fullscreen">
+              </iframe>
+            </div>
+            <div class="text-center py-2">
+              <small class="text-muted">Nota: La demo WebGL richiede un browser moderno con supporto WebGL</small>
             </div>
           </div>
 
@@ -78,7 +73,6 @@
             </div>
           </div>
 
-          <!-- Sezione con logo Assembly e separatore -->
           <div class="assembly-logo-section py-5 text-center">
             <div class="d-flex align-items-center justify-content-center mb-4">
               <div class="divider-line"></div>
@@ -90,7 +84,6 @@
             <h3 class="text-accent">Cosa Dicono gli Utenti</h3>
           </div>
 
-          <!-- Carosello di recensioni aggiornato per mostrare 2 alla volta -->
           <div class="testimonials-section mb-5">
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
@@ -212,8 +205,7 @@ export default {
   methods: {
     launchDemo() {
       this.isLoading = true;
-      
-      // Simulazione caricamento demo
+
       setTimeout(() => {
         this.demoLaunched = true;
         this.isLoading = false;
@@ -221,7 +213,7 @@ export default {
     }
   },
   mounted() {
-    // Inizializza il carousel dopo il montaggio del componente
+
     setTimeout(() => {
       if (typeof bootstrap !== 'undefined') {
         new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
@@ -272,6 +264,42 @@ export default {
   color: #00A3FF;
 }
 
+.demo-container {
+  width: 100%;
+  position: relative;
+}
+
+.demo-placeholder {
+  background-color: #f5f5f5;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  border-radius: 8px;
+}
+
+.placeholder-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.demo-frame-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.25%;
+  border-radius: 8px;
+}
+
+.demo-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .webgl-container {
   border-radius: 8px;
   overflow: hidden;
@@ -280,36 +308,6 @@ export default {
 
 .primary-demo {
   margin-bottom: 0;
-}
-
-.webgl-placeholder {
-  background-color: #f5f5f5;
-  min-height: 500px; /* Placeholder più grande per la demo principale */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-}
-
-.placeholder-content {
-  text-align: center;
-  padding: 20px;
-}
-
-.webgl-demo-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
-}
-
-.webgl-demo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
 }
 
 .testimonial-card {
@@ -354,14 +352,12 @@ export default {
   border-radius: 10px;
 }
 
-/* Spinner personalizzato per il pulsante di caricamento */
 .spinner-border {
   width: 1rem;
   height: 1rem;
   border-width: 0.15em;
 }
 
-/* Stili per la sezione benefit con icone animate */
 .interactive-benefits {
   background-color: #f8f9fa;
   border-radius: 12px;
@@ -397,7 +393,6 @@ export default {
   }
 }
 
-/* Stili per la sezione logo Assembly */
 .assembly-logo-section {
   overflow: hidden;
 }
@@ -433,7 +428,6 @@ export default {
   }
 }
 
-/* Modifica del carousel per 2 recensioni alla volta */
 .carousel-item .row {
   margin: 0 20px;
 }
@@ -457,5 +451,4 @@ export default {
   text-align: center;
 }
 
-/* I testimonial esistenti sono già stilizzati */
 </style>
