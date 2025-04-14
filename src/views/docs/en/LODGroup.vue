@@ -152,10 +152,9 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              It's recommended to use a consistent naming convention for your
-              LOD levels to easily identify and manage them:
+              <strong class="text-danger">WARNING:</strong> The names of different LOD levels cannot be identical, otherwise the system will not function correctly. Use the following naming scheme to ensure optimal operation:
             </p>
-
+            
             <div class="code-example">
               <pre><code>GROUP BARREL
 ├── barrel_01_LOD0    // High detail version
@@ -167,8 +166,10 @@
     ├── barrel_02_LOD1    // Medium detail for second barrel
     └── barrel_02_LOD2    // Low detail for second barrel</code></pre>
             </div>
-
-            <p class="mt-3">This naming structure provides several benefits:</p>
+            
+            <p class="mt-3">
+              This naming structure provides several benefits:
+            </p>
 
             <ul>
               <li>

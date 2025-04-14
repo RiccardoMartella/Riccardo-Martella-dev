@@ -218,7 +218,7 @@
                 <strong>Nota importante:</strong> Quando raggruppi i livelli LOD, applica lo stesso tag a tutti i livelli (LOD0, LOD1, LOD2, ecc.) del modello che vuoi raggruppare insieme. Anche se il sistema utilizzerà solo il Descriptor Component dal primo pezzo per visualizzare le informazioni, mantenere un tagging coerente su tutti i livelli LOD garantisce un comportamento di raggruppamento corretto e una coerenza visiva nell'interfaccia.
               </div>
             </div>
-          </div>
+          </div>°
           
           <div class="content-media">
             <ImageZoomable 

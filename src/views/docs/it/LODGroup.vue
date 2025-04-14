@@ -151,9 +151,7 @@
         <div class="content-block">
           <div class="content-text">
             <p>
-              È consigliabile utilizzare una convenzione di denominazione
-              coerente per i livelli LOD per identificarli e gestirli
-              facilmente:
+              <strong class="text-danger">ATTENZIONE:</strong> I nomi dei diversi livelli LOD non possono essere uguali, altrimenti il sistema non funzionerà correttamente. Utilizza il seguente schema di denominazione per garantire un funzionamento ottimale:
             </p>
 
             <div class="code-example">
