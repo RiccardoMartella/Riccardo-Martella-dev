@@ -31,7 +31,6 @@
                 class="demo-frame" 
                 :src="demoUrl" 
                 title="Assembly Station WebGL Demo" 
-                allowfullscreen
                 allow="fullscreen">
               </iframe>
             </div>
