@@ -286,7 +286,7 @@ export default {
 .demo-frame-container {
   position: relative;
   width: 100%;
-  padding-top: 66.25%;
+  padding-top: 56.25%; /* Changed from 66.25% to 56.25% for 16:9 aspect ratio */
   border-radius: 8px;
 }
 
