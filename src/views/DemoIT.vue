@@ -198,7 +198,7 @@ export default {
     return {
       demoLaunched: false,
       isLoading: false,
-      demoUrl: '/Build-Assembly/index.html',
+      demoUrl: '/Build-Assembly2/index.html',
     };
   },
   methods: {
