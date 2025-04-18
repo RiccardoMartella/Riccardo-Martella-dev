@@ -1,11 +1,11 @@
-/Build-Assembly/*.js.br
+/Build-Assembly2/*.js.br
   Content-Encoding: br
   Content-Type: application/javascript
 
-/Build-Assembly/*.wasm.br
+/Build-Assembly2/*.wasm.br
   Content-Encoding: br
   Content-Type: application/wasm
 
-/Build-Assembly/*.data.br
+/Build-Assembly2/*.data.br
   Content-Encoding: br
   Content-Type: application/octet-stream
