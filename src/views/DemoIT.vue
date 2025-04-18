@@ -8,6 +8,10 @@
             <p class="lead">
               Scopri Assembly Station in azione con la nostra demo interattiva. Esplora le funzionalità prima dell'acquisto.
             </p>
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i>
+              <strong>Nota:</strong> Assembly Station è in continua evoluzione. La versione demo potrebbe non rappresentare completamente le ultime funzionalità e miglioramenti disponibili nella release attuale.
+            </div>
           </div>
 
           <div class="demo-container mb-5">
