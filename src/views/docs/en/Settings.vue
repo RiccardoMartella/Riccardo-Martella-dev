@@ -777,9 +777,10 @@
             <ul>
               <li>Audio effects for placement and rotation</li>
               <li>Visual feedback colors (valid/invalid)</li>
-              <li>Keys for rotating the prefab</li>
-              <li>Movement speed and sensitivity</li>
-               <li>Positioning settings</li>
+              <li>Movement speeds (with grid on/off)</li>
+              <li>Grid settings (cell size, vertical/horizontal speed, color, visualization size)</li>
+              <li>Height adjustment and boundary limits</li>
+              <li>Camera follow settings during positioning</li>
             </ul>
             <p>
               Properly customizing these settings is essential to ensure a smooth and intuitive placement experience. 
@@ -788,11 +789,22 @@
           </div>
           
           <div class="content-media">
-            <ImageZoomable 
-              src="/images/PlacementSystem.png" 
-              alt="Placement System Settings"
-              caption="Prefab placement system configuration" 
-            />
+            <div class="image-row">
+              <div class="image-column">
+                <ImageZoomable 
+                  src="/images/PlacementSystem.jpg" 
+                  alt="Placement System Settings"
+                  caption="Placement system configuration" 
+                />
+              </div>
+              <div class="image-column">
+                <ImageZoomable 
+                  src="/images/PlacementSystemGrid.jpg" 
+                  alt="Grid Placement System Settings"
+                  caption="Grid placement system settings" 
+                />
+              </div>
+            </div>
             
             <div class="video-container mt-4">
               <video controls class="demo-video w-100">

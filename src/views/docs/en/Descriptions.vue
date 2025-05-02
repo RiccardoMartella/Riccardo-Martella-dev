@@ -125,12 +125,15 @@
             <p>
               A window will open with all the scriptable objects created for each Prefab, here you can enter the name of the prefab and the description.
             </p>
+            <p>
+              You can also adjust the camera angle, distance, and rotation to customize how you want to see the selected prefab when it's focused. These settings will be used when the component is highlighted in the interactive view.
+            </p>
           </div>
           
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/images/titlePrefab.png" 
+                src="/images/titlePrefab.jpg" 
                 alt="Title Prefab"
                 caption="Prefab title configuration" 
                 class="standard-image"

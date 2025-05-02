@@ -776,10 +776,10 @@
             <ul>
               <li>Effetti audio per il posizionamento e la rotazione</li>
               <li>Colori di feedback visivo (valido/non valido)</li>
-              <li>Tasti per la rotazione del prefab</li>
-              <li>Velocità e sensibilità di movimento</li>
-              <li>Altezza di posizionamento e offset</li>
-              <li>Impostazioni di posizionamento</li>
+              <li>Velocità di movimento (con griglia attiva/disattivata)</li>
+              <li>Impostazioni della griglia (dimensione delle celle, velocità verticale/orizzontale, colore, dimensione della visualizzazione)</li>
+              <li>Regolazione dell'altezza e limiti dei confini</li>
+              <li>Impostazioni della camera durante il posizionamento</li>
             </ul>
             <p>
               Personalizzare correttamente queste impostazioni è fondamentale per garantire un'esperienza di posizionamento fluida e intuitiva. 
@@ -788,11 +788,22 @@
           </div>
           
           <div class="content-media">
-            <ImageZoomable 
-              src="/images/PlacementSystem.png" 
-              alt="Impostazioni Placement System"
-              caption="Configurazione del sistema di posizionamento prefab" 
-            />
+            <div class="image-row">
+              <div class="image-column">
+                <ImageZoomable 
+                  src="/images/PlacementSystem.jpg" 
+                  alt="Impostazioni Placement System"
+                  caption="Configurazione del sistema di posizionamento" 
+                />
+              </div>
+              <div class="image-column">
+                <ImageZoomable 
+                  src="/images/PlacementSystemGrid.jpg" 
+                  alt="Impostazioni Sistema di Posizionamento a Griglia"
+                  caption="Impostazioni sistema di posizionamento a griglia" 
+                />
+              </div>
+            </div>
             
             <div class="video-container mt-4">
               <video controls class="demo-video w-100">

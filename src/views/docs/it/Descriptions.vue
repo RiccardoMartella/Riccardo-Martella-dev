@@ -125,12 +125,15 @@
             <p>
               Si aprirà una finestra con tutti gli scriptable objects creati per ogni Prefab, qui puoi inserire il nome del prefab e la descrizione.
             </p>
+            <p>
+              È inoltre possibile regolare l'angolazione della camera, la distanza e la rotazione con cui si vuole vedere il prefab selezionato quando viene messo a fuoco. Queste impostazioni verranno utilizzate quando il componente viene evidenziato nella visualizzazione interattiva.
+            </p>
           </div>
           
           <div class="content-media">
             <div class="image-group">
               <ImageZoomable 
-                src="/images/titlePrefab.png" 
+                src="/images/titlePrefab.jpg" 
                 alt="Title Prefab"
                 caption="Titolo del prefab"
                 class="standard-image"
