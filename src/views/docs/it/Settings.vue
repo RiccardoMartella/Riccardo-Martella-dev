@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">12. IMPOSTAZIONI GENERALI</h1>
+      <h1 class="doc-title">11. IMPOSTAZIONI GENERALI</h1>
       <div class="doc-section">
         <h2 class="fs-5">RIFERIMENTO AI COMPONENTI PRINCIPALI</h2>
         
@@ -670,15 +670,6 @@
               <li>Use Performance Mode</li>
             </ul>
             
-            <p class="mt-3">
-              Per ogni DescriptionComponent associato a un pezzo, puoi modificare:
-            </p>
-            <ul>
-              <li>Rotazione specifica della camera quando il pezzo viene selezionato</li>
-              <li>Distanza della camera dal pezzo selezionato (zoom automatico)</li>
-              <li>Angolazione della camera rispetto al pezzo per una visualizzazione ottimale</li>
-            </ul>
-            
             <div class="info-box mt-3">
               <h5>Modalità Prestazioni</h5>
               <ul>
@@ -700,26 +691,6 @@
               alt="Impostazioni Camera Orbitale"
               caption="Configurazione camera orbitale" 
             />
-            
-            <div class="image-video-container d-flex flex-wrap mt-4">
-              <div class="image-side pe-md-2 mb-4 mb-md-0">
-                <ImageZoomable 
-                  src="/images/pieces.jpg" 
-                  alt="Configurazione Camera per Pezzi Specifici"
-                  caption="Configurazione camera per singoli pezzi" 
-                />
-              </div>
-              
-              <div class="video-side ps-md-2">
-                <div class="video-container">
-                  <video controls class="w-100 rounded">
-                    <source src="https://www.dropbox.com/scl/fi/y0ozchm9szo9x09piaaxs/zoomPIeces.mp4?rlkey=neojafztkhr7nv2lzhtqjwhk8&st=q6oaznv7&dl=1" type="video/mp4">
-                    Il tuo browser non supporta il tag video HTML5.
-                  </video>
-                  <p class="caption">Video dimostrativo: zoom automatico sui pezzi selezionati</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -776,10 +747,10 @@
             <ul>
               <li>Effetti audio per il posizionamento e la rotazione</li>
               <li>Colori di feedback visivo (valido/non valido)</li>
-              <li>Velocità di movimento (con griglia attiva/disattivata)</li>
-              <li>Impostazioni della griglia (dimensione delle celle, velocità verticale/orizzontale, colore, dimensione della visualizzazione)</li>
-              <li>Regolazione dell'altezza e limiti dei confini</li>
-              <li>Impostazioni della camera durante il posizionamento</li>
+              <li>Tasti per la rotazione del prefab</li>
+              <li>Velocità e sensibilità di movimento</li>
+              <li>Altezza di posizionamento e offset</li>
+              <li>Impostazioni di posizionamento</li>
             </ul>
             <p>
               Personalizzare correttamente queste impostazioni è fondamentale per garantire un'esperienza di posizionamento fluida e intuitiva. 
@@ -788,22 +759,11 @@
           </div>
           
           <div class="content-media">
-            <div class="image-row">
-              <div class="image-column">
-                <ImageZoomable 
-                  src="/images/PlacementSystem.jpg" 
-                  alt="Impostazioni Placement System"
-                  caption="Configurazione del sistema di posizionamento" 
-                />
-              </div>
-              <div class="image-column">
-                <ImageZoomable 
-                  src="/images/PlacementSystemGrid.jpg" 
-                  alt="Impostazioni Sistema di Posizionamento a Griglia"
-                  caption="Impostazioni sistema di posizionamento a griglia" 
-                />
-              </div>
-            </div>
+            <ImageZoomable 
+              src="/images/PlacementSystem.png" 
+              alt="Impostazioni Placement System"
+              caption="Configurazione del sistema di posizionamento prefab" 
+            />
             
             <div class="video-container mt-4">
               <video controls class="demo-video w-100">
@@ -1110,28 +1070,6 @@ kbd {
   }
 }
 
-.image-video-container {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.image-side, 
-.video-side {
-  flex: 1;
-  min-width: 48%;
-}
-
-@media (max-width: 768px) {
-  .image-video-container {
-    flex-direction: column;
-  }
-  
-  .image-side, 
-  .video-side {
-    width: 100%;
-  }
-}
 
 @media (max-width: 576px) {
   .api-table th, .api-table td {
