@@ -43,11 +43,11 @@
                 isItalian ? "Prezzi" : "Pricing"
               }}</RouterLink>
             </li>
-            <li class="nav-item mx-lg-2">
+            <!-- <li class="nav-item mx-lg-2">
               <RouterLink :to="demoPath" class="nav-link">{{
                 isItalian ? "Demo" : "Demo"
               }}</RouterLink>
-            </li>
+            </li> -->
             <li class="nav-item mx-lg-2">
               <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
                 isItalian ? "Keys" : "Keys"
