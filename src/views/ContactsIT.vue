@@ -63,6 +63,20 @@
                     <i class="bi bi-info-circle-fill me-2"></i>
                     <strong>Verifica su Discord:</strong> Una volta acquistato l'asset, inviami su Discord in privato il numero d'ordine e verrai verificato.
                   </div>
+                  
+                  <!-- Support Developer Card -->
+                  <div class="support-card mt-4">
+                    <div class="d-flex align-items-center mb-2">
+                      <i class="bi bi-heart-fill text-danger me-2"></i>
+                      <h5 class="mb-0">Sostieni il mio lavoro</h5>
+                    </div>
+                    <p class="small text-muted mb-2">
+                      Se trovi utile il mio lavoro, considera di sostenermi per aiutarmi a mantenere e sviluppare nuove funzionalità.
+                    </p>
+                    <a href="https://paypal.me/riccardomartella" target="_blank" class="btn btn-outline-primary btn-sm">
+                      <i class="bi bi-paypal me-1"></i> Dona via PayPal
+                    </a>
+                  </div>
                 </div>
                 
                 <div class="col-lg-6">
@@ -185,5 +199,16 @@ export default {
 .btn-primary:hover {
   background-color: #0082CC;
   border-color: #0082CC;
+}
+
+.support-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  border-left: 3px solid #00A3FF;
+}
+
+.text-danger {
+  color: #ff6b6b !important;
 }
 </style>
