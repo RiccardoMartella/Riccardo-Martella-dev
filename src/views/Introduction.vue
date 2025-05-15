@@ -156,9 +156,9 @@
               <a href="https://assetstore.unity.com/packages/slug/313569" target="_blank" class="btn btn-lg btn-primary">
                 <i class="bi bi-cart-fill me-2"></i>Purchase on Asset Store
               </a>
-              <RouterLink to="/demo" class="btn btn-lg btn-outline-primary">
+              <!-- <RouterLink to="/demo" class="btn btn-lg btn-outline-primary">
                 <i class="bi bi-joystick me-2"></i>Try Interactive Demo
-              </RouterLink>
+              </RouterLink> -->
             </div>
           </div>
         </div>
