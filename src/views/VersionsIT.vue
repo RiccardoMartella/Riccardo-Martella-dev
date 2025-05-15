@@ -23,8 +23,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.2.1</strong></td>
-                  <td>28 Aprile 2025</td>
+                  <td><strong>1.2.3</strong></td>
+                  <td>15 Maggio 2025</td>
                   <td><span class="badge bg-primary">Ultima</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -33,8 +33,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.1.1</strong></td>
-                  <td>14 Aprile 2025</td>
+                  <td><strong>1.2.2</strong></td>
+                  <td>8 Maggio 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
@@ -43,8 +43,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>3 Aprile 2025</td>
+                  <td><strong>1.2.1</strong></td>
+                  <td>28 Aprile 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
@@ -53,11 +53,31 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
+                  <td><strong>1.1.1</strong></td>
+                  <td>14 Aprile 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
+                      <i class="bi bi-info-circle"></i> Dettagli
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(4)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>3 Aprile 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
+                      <i class="bi bi-info-circle"></i> Dettagli
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(5)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>1 Aprile 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
                       <i class="bi bi-info-circle"></i> Dettagli
                     </button>
                   </td>
@@ -127,9 +147,36 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Versione 1.2.3",
+          date: "15 Maggio 2025",
+          isLatest: true,
+          changes: [
+            "Ora è possibile spostare in sicurezza il punto di assemblaggio senza doverlo riallineare manualmente ai confini o alla griglia"
+          ],
+          requirements: {
+            unity: "6000.0.38f1 o successiva",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
+          version: "Versione 1.2.2",
+          date: "8 Maggio 2025",
+          isLatest: false,
+          changes: [
+            "Piccoli miglioramenti al pannello delle categorie per una migliore usabilità",
+            "Comportamento di clic raffinato sui pulsanti dei pezzi per un'esperienza di interazione più fluida e coerente"
+          ],
+          requirements: {
+            unity: "6000.0.38f1 o successiva",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
           version: "Versione 1.2.1",
           date: "28 Aprile 2025",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "Aggiunta griglia di posizionamento degli oggetti per un posizionamento più facile e preciso",
             "Controllo della camera migliorato: ogni pezzo può ora avere una distanza e un angolo di zoom personalizzati quando viene messo a fuoco",

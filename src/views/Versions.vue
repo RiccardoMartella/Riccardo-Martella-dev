@@ -22,8 +22,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.2.1</strong></td>
-                  <td>April 28, 2025</td>
+                  <td><strong>1.2.3</strong></td>
+                  <td>May 15, 2025</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -32,8 +32,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.1.1</strong></td>
-                  <td>April 14, 2025</td>
+                  <td><strong>1.2.2</strong></td>
+                  <td>May 8, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
@@ -42,8 +42,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>April 3, 2025</td>
+                  <td><strong>1.2.1</strong></td>
+                  <td>April 28, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
@@ -52,11 +52,31 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
+                  <td><strong>1.1.1</strong></td>
+                  <td>April 14, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
+                      <i class="bi bi-info-circle"></i> Details
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(4)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>April 3, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
+                      <i class="bi bi-info-circle"></i> Details
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(5)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>April 1, 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
                       <i class="bi bi-info-circle"></i> Details
                     </button>
                   </td>
@@ -127,9 +147,36 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Version 1.2.3",
+          date: "May 15, 2025",
+          isLatest: true,
+          changes: [
+            "It is now possible to safely move the assembly point without manually realigning it to the boundaries or the grid"
+          ],
+          requirements: {
+            unity: "6000.0.38f1 or newer",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
+          version: "Version 1.2.2",
+          date: "May 8, 2025",
+          isLatest: false,
+          changes: [
+            "Small improvements to the category panel for better usability",
+            "Refined click behavior on piece buttons for a smoother and more consistent interaction experience"
+          ],
+          requirements: {
+            unity: "6000.0.38f1 or newer",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
           version: "Version 1.2.1",
           date: "April 28, 2025",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "Object placement grid added for easier and more precise positioning",
             "Improved camera control: each piece can now have a custom zoom distance and angle when focusing",
