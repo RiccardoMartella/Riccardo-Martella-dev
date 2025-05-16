@@ -43,7 +43,11 @@
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Unity 6000.0.23f1 LTS Compatibility</span>
+                    <span>Unity 2022.3.23f1 LTS or newer</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>Compatible with Unity 6</span>
                   </li>
                 </ul>
               </div>

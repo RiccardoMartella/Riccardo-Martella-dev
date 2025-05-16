@@ -154,7 +154,7 @@ export default {
             "Ora è possibile spostare in sicurezza il punto di assemblaggio senza doverlo riallineare manualmente ai confini o alla griglia"
           ],
           requirements: {
-            unity: "6000.0.38f1 o successiva",
+            unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -168,7 +168,7 @@ export default {
             "Comportamento di clic raffinato sui pulsanti dei pezzi per un'esperienza di interazione più fluida e coerente"
           ],
           requirements: {
-            unity: "6000.0.38f1 o successiva",
+            unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -184,7 +184,7 @@ export default {
             "Risolti problemi di comportamento dell'interfaccia utente relativi alla selezione e alla conferma dei pezzi"
           ],
           requirements: {
-            unity: "6000.0.38f1 o successiva",
+            unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -200,7 +200,7 @@ export default {
             "Risolto un problema in cui il pulsante associato a un pezzo non si comportava correttamente dopo la conferma"
           ],
           requirements: {
-            unity: "6000.0.38f1 o successiva",
+            unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -214,7 +214,7 @@ export default {
             "Correzioni di bug e miglioramenti delle prestazioni"
           ],
           requirements: {
-            unity: "6000.0.38f1 o successiva",
+            unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -227,7 +227,7 @@ export default {
             "Rilascio iniziale di Assembly Station"
           ],
           requirements: {
-            unity: "6000.0.38f1 o successiva",
+            unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"

@@ -154,7 +154,7 @@ export default {
             "It is now possible to safely move the assembly point without manually realigning it to the boundaries or the grid"
           ],
           requirements: {
-            unity: "6000.0.38f1 or newer",
+            unity: "2022.3.23f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -168,7 +168,7 @@ export default {
             "Refined click behavior on piece buttons for a smoother and more consistent interaction experience"
           ],
           requirements: {
-            unity: "6000.0.38f1 or newer",
+            unity: "2022.3.23f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -184,7 +184,7 @@ export default {
             "Fixed UI behavior issues related to piece selection and confirmation"
           ],
           requirements: {
-            unity: "6000.0.38f1 or newer",
+            unity: "2022.3.23f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -200,7 +200,7 @@ export default {
             "Fixed an issue where the button associated with a piece would not behave correctly after confirmation"
           ],
           requirements: {
-            unity: "6000.0.38f1 or newer",
+            unity: "2022.3.23f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -214,7 +214,7 @@ export default {
             "Bug fixes and performance improvements"
           ],
           requirements: {
-            unity: "6000.0.38f1 or newer",
+            unity: "2022.3.23f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
@@ -227,7 +227,7 @@ export default {
             "Initial release of Assembly Station"
           ],
           requirements: {
-            unity: "6000.0.38f1 or newer",
+            unity: "2022.3.23f1 or newer",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
           downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
