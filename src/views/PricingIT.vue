@@ -14,7 +14,7 @@
               <h2 class="pricing-title">Assembly Station</h2>
               <div class="price-container">
                 <span class="currency">€</span>
-                <span class="price">25</span>
+                <span class="price">17</span>
                 <span class="period">/una tantum</span>
               </div>
               <div class="vat-note">
