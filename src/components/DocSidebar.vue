@@ -14,7 +14,7 @@
         <router-link :to="baseRoute + item.path" class="sidebar-link" :class="{'beta-item': item.isBeta}">
           <span class="sidebar-number" v-if="!item.isBeta">{{ item.number }}</span>
           <span class="beta-badge" v-else>BETA</span>
-          <span class="sidebar-text">{{ item.title }}</span>
+          <span class="sidebar-text">{{ item.text }}</span>
         </router-link>
       </li>
     </ul>
@@ -36,33 +36,35 @@ export default {
     },
     menuItems() {
       const items = this.isItalian ? [
-        { number: "1", title: "Installazione", path: "docs/installation" },
-        { number: "2", title: "Guida FBX e Materiali", path: "docs/fbx-guide" },
-        { number: "3", title: "Posizionare i Prefab", path: "docs/prefabs" },
-        { number: "4", title: "Aggiungere Descrizioni e Immagini", path: "docs/descriptions" },
-        { number: "5", title: "Pulsanti e Categorie", path: "docs/buttons" },
-        { number: "6", title: "Tag/Categorie/Gruppi", path: "docs/categories" },
-        { number: "7", title: "Risorse", path: "docs/resources" },
-        { number: "8", title: "Effetti Sonori & Visivi", path: "docs/effects" },
-        { number: "9", title: "Salvataggi", path: "docs/saves" },
-        { number: "10", title: "Problemi Noti", path: "docs/known-issues" },
-        { number: "11", title: "LOD Group", path: "docs/lod-group" },
-        { number: "12", title: "Impostazioni Generali", path: "docs/settings" },
-        { title: "Funzionalità Beta", path: "beta", isBeta: true }
+        { number: "1", text: "Installazione", path: "docs/installation" },
+        { number: "2", text: "Guida FBX e Materiali", path: "docs/fbx-guide" },
+        { number: "3", text: "Posizionare i Prefab", path: "docs/prefabs" },
+        { number: "4", text: "Aggiungere Descrizioni e Immagini", path: "docs/descriptions" },
+        { number: "5", text: "Pulsanti e Categorie", path: "docs/buttons" },
+        { number: "6", text: "Tag/Categorie/Gruppi", path: "docs/categories" },
+        { number: "7", text: "Risorse", path: "docs/resources" },
+        { number: "8", text: "Effetti Sonori & Visivi", path: "docs/effects" },
+        { number: "9", text: "Salvataggi", path: "docs/saves" },
+        { number: "10", text: "Problemi Noti", path: "docs/known-issues" },
+        { number: "11", text: "LOD Group", path: "docs/lod-group" },
+        { number: "12", text: "Sistema di Blocco dei Pezzi", path: "docs/block-piece" },
+        { number: "13", text: "Impostazioni Generali", path: "docs/settings" },
+        { text: "Funzionalità Beta", path: "beta", isBeta: true }
       ] : [
-        { number: "1", title: "Get Start", path: "docs/installation" },
-        { number: "2", title: "FBX and Materials Guide", path: "docs/fbx-guide" },
-        { number: "3", title: "Place Prefabs", path: "docs/prefabs" },
-        { number: "4", title: "Add Descriptions and Images", path: "docs/descriptions" },
-        { number: "5", title: "Buttons and Categories", path: "docs/buttons" },
-        { number: "6", title: "Tags/Categories/Groups", path: "docs/categories" },
-        { number: "7", title: "Resources", path: "docs/resources" },
-        { number: "8", title: "Sound & Visual Effects", path: "docs/effects" },
-        { number: "9", title: "Saves", path: "docs/saves" },
-        { number: "10", title: "Known Issues", path: "docs/known-issues" },
-        { number: "11", title: "LOD Group", path: "docs/lod-group" },
-        { number: "12", title: "General Settings", path: "docs/settings" },
-        { title: "Beta Features", path: "beta", isBeta: true }
+        { number: "1", text: "Get Started", path: "docs/installation" },
+        { number: "2", text: "FBX and Materials Guide", path: "docs/fbx-guide" },
+        { number: "3", text: "Place Prefabs", path: "docs/prefabs" },
+        { number: "4", text: "Add Descriptions and Images", path: "docs/descriptions" },
+        { number: "5", text: "Buttons and Categories", path: "docs/buttons" },
+        { number: "6", text: "Tags/Categories/Groups", path: "docs/categories" },
+        { number: "7", text: "Resources", path: "docs/resources" },
+        { number: "8", text: "Sound & Visual Effects", path: "docs/effects" },
+        { number: "9", text: "Saves", path: "docs/saves" },
+        { number: "10", text: "Known Issues", path: "docs/known-issues" },
+        { number: "11", text: "LOD Group", path: "docs/lod-group" },
+        { number: "12", text: "Piece Locking System", path: "docs/block-piece" },
+        { number: "13", text: "General Settings", path: "docs/settings" },
+        { text: "Beta Features", path: "beta", isBeta: true }
       ];
       
       return items;

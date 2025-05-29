@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">11. IMPOSTAZIONI GENERALI</h1>
+      <h1 class="doc-title">13. IMPOSTAZIONI GENERALI</h1>
       <div class="doc-section">
         <h2 class="fs-5">RIFERIMENTO AI COMPONENTI PRINCIPALI</h2>
         

@@ -38,7 +38,8 @@
           <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Salvataggi</RouterLink></li>
           <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Problemi Noti</RouterLink></li>
           <li><RouterLink to="/it/docs/lod-group" class="sidebar-link" @click="hideMobileSidebar">11 - LOD Group</RouterLink></li>
-          <li><RouterLink to="/it/docs/settings" class="sidebar-link" @click="hideMobileSidebar">12 - Impostazioni</RouterLink></li>
+          <li><RouterLink to="/it/docs/block-piece" class="sidebar-link" @click="hideMobileSidebar">12 - Sistema di Blocco dei Pezzi</RouterLink></li>
+          <li><RouterLink to="/it/docs/settings" class="sidebar-link" @click="hideMobileSidebar">13 - Impostazioni Generali</RouterLink></li>
           <li><RouterLink to="/it/beta" class="beta-mobile-link" @click="hideMobileSidebar">
             <span class="beta-mobile-badge">BETA</span> Funzionalità Beta
           </RouterLink></li>
@@ -56,7 +57,8 @@
           <li><RouterLink to="/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Saves</RouterLink></li>
           <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Known Issues</RouterLink></li>
           <li><RouterLink to="/docs/lod-group" class="sidebar-link" @click="hideMobileSidebar">11 - LOD Group</RouterLink></li>
-          <li><RouterLink to="/docs/settings" class="sidebar-link" @click="hideMobileSidebar">12 - Settings</RouterLink></li>
+          <li><RouterLink to="/docs/block-piece" class="sidebar-link" @click="hideMobileSidebar">12 - Piece Locking System</RouterLink></li>
+          <li><RouterLink to="/docs/settings" class="sidebar-link" @click="hideMobileSidebar">13 - General Settings</RouterLink></li>
           <li><RouterLink to="/beta" class="beta-mobile-link" @click="hideMobileSidebar">
             <span class="beta-mobile-badge">BETA</span> Beta Features
           </RouterLink></li>

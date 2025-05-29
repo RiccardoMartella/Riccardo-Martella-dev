@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
     <ContentSection>
-      <h1 class="doc-title">12. GENERAL SETTINGS</h1>
+      <h1 class="doc-title">13. GENERAL SETTINGS</h1>
       <div class="doc-section">
         <h2 class="fs-5">MAIN COMPONENTS REFERENCE</h2>
         

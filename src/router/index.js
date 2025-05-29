@@ -146,6 +146,11 @@ const router = createRouter({
           path: 'lod-group',
           name: 'docsLODGroup',
           component: () => import('@/views/docs/en/LODGroup.vue')
+        },
+        {
+          path: 'block-piece',
+          name: 'docsBlockPiece',
+          component: () => import('@/views/docs/en/BlockPiece.vue')
         }
       ]
     },
@@ -218,6 +223,11 @@ const router = createRouter({
           path: 'lod-group',
           name: 'docsLODGroupIT',
           component: () => import('@/views/docs/it/LODGroup.vue')
+        },
+        {
+          path: 'block-piece',
+          name: 'docsBlockPieceIT',
+          component: () => import('@/views/docs/it/BlockPiece.vue')
         }
       ]
     },
