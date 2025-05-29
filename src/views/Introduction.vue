@@ -42,7 +42,7 @@
                 <div class="video-overlay"></div>
                 <div class="responsive-video-wrapper">
                   <iframe 
-                    src="https://www.youtube.com/embed/juwy6bU34io?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&playlist=juwy6bU34io&iv_load_policy=3&fs=0&vq=hd1080&hd=1" 
+                    src="https://www.youtube.com/embed/E-taSzIyUxM?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&playlist=E-taSzIyUxM&iv_load_policy=3&fs=0&vq=hd1080&hd=1" 
                     title="Assembly Station" 
                     frameborder="0" 
                     allow="autoplay;" 
