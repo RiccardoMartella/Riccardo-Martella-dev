@@ -49,11 +49,14 @@
           <div class="license-section mb-5">
             <h2 class="section-title">Icons and Images</h2>
             <div class="license-item">
-              <p>This asset includes "Steel icons, Plastic Icons, Rubber Icons, Coin Icons" created by Smashicons from Flaticon under Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
-              See <a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a> for details.<br>
-              See <a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a> for details.<br>
-              See <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> for details.<br>
-              See <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> for details.</p>
+              <p>
+                This asset includes "Steel icons, Plastic Icons, Rubber Icons, Coin Icons, Lock Padlock Symbol" created by Smashicons from Flaticon under Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
+                See <a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a> for details.<br>
+                See <a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a> for details.<br>
+                See <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> for details.<br>
+                See <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> for details.<br>
+                See <a href="https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface" target="_blank">https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface</a> for details.
+              </p>
             </div>
             
             <div class="license-item">

@@ -22,8 +22,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.2.3</strong></td>
-                  <td>May 15, 2025</td>
+                  <td><strong>1.3.3</strong></td>
+                  <td>June 29, 2025</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -32,8 +32,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.2.2</strong></td>
-                  <td>May 8, 2025</td>
+                  <td><strong>1.2.3</strong></td>
+                  <td>May 15, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
@@ -42,8 +42,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.2.1</strong></td>
-                  <td>April 28, 2025</td>
+                  <td><strong>1.2.2</strong></td>
+                  <td>May 8, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
@@ -52,8 +52,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
-                  <td><strong>1.1.1</strong></td>
-                  <td>April 14, 2025</td>
+                  <td><strong>1.2.1</strong></td>
+                  <td>April 28, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
@@ -62,8 +62,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(4)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>April 3, 2025</td>
+                  <td><strong>1.1.1</strong></td>
+                  <td>April 14, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
@@ -72,11 +72,21 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(5)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>April 3, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
+                      <i class="bi bi-info-circle"></i> Details
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(6)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>April 1, 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(6)">
                       <i class="bi bi-info-circle"></i> Details
                     </button>
                   </td>
@@ -147,9 +157,25 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Version 1.3.3",
+          date: "June 29 2025",
+          isLatest: true,
+          changes: [
+            "Update Highlights",
+            "You can now lock pieces during the building process! To unlock them, you'll need to build a required number first — introducing a new progression system that adds strategic depth and planning to construction.",
+            "Fixed an issue where the squares in the left panel (representing each piece) didn't wrap correctly.",
+            "Fixed a bug where long descriptions would not wrap properly, causing layout and UI issues."
+          ],
+          requirements: {
+            unity: "2022.3.23f1 or newer",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+        },
+        {
           version: "Version 1.2.3",
           date: "May 15, 2025",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "It is now possible to safely move the assembly point without manually realigning it to the boundaries or the grid"
           ],

@@ -51,11 +51,14 @@
           <div class="license-section mb-5">
             <h2 class="section-title">Icone e Immagini</h2>
             <div class="license-item">
-              <p>Questo asset include "Steel icons, Plastic Icons, Rubber Icons, Coin Icons" creati da Smashicons da Flaticon sotto Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
-              Vedi <a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a> per dettagli.<br>
-              Vedi <a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a> per dettagli.<br>
-              Vedi <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> per dettagli.<br>
-              Vedi <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> per dettagli.</p>
+              <p>
+                Questo asset include "Steel icons, Plastic Icons, Rubber Icons, Coin Icons, Lock Padlock Symbol" creati da Smashicons da Flaticon sotto Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
+                Vedi <a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a> per dettagli.<br>
+                Vedi <a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a> per dettagli.<br>
+                Vedi <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> per dettagli.<br>
+                Vedi <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> per dettagli.<br>
+                Vedi <a href="https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface" target="_blank">https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface</a> per dettagli.
+              </p>
             </div>
             
             <div class="license-item">
