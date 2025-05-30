@@ -111,6 +111,15 @@
             </div>
           </div>
 
+          <div class="contact-links my-4">
+            <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" class="btn btn-primary btn-lg me-3 mb-3">
+              <i class="bi bi-cart-fill me-2"></i>Ottieni Assembly Station
+            </a>
+            <a href="https://discord.gg/9wJSxtUX2W" target="_blank" class="btn btn-outline-primary btn-lg mb-3">
+              <i class="bi bi-discord me-2"></i>Entra su Discord
+            </a>
+          </div>
+
           <div class="text-center mt-5">
             <h5>Seguimi sui social media</h5>
             <div class="d-flex justify-content-center gap-4 mt-3">
