@@ -100,7 +100,7 @@
             <RouterLink to="/it" class="btn btn-outline-secondary me-3">
               <i class="bi bi-arrow-left me-2"></i>Torna alla Home
             </RouterLink>
-            <a href="https://assetstore.unity.com/packages/slug/313569" target="_blank" class="btn btn-primary">
+            <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" target="_blank" class="btn btn-primary">
               <i class="bi bi-cart-fill me-2"></i>Acquista
             </a>
           </div>
@@ -170,7 +170,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         },
         {
           version: "Versione 1.2.3",
@@ -183,7 +183,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         },
         {
           version: "Versione 1.2.2",
@@ -197,7 +197,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         },
         {
           version: "Versione 1.2.1",
@@ -213,7 +213,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         },
         {
           version: "Versione 1.1.1",
@@ -229,7 +229,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         },
         {
           version: "Versione 1.0.1",
@@ -243,7 +243,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         },
         {
           version: "Versione 1.0.0",
@@ -256,7 +256,7 @@ export default {
             unity: "2022.3.23f1 o successiva",
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://assetstore.unity.com/packages/slug/313569"
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
         }
       ]
     }

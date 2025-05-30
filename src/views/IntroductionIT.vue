@@ -25,7 +25,7 @@
                 Assembly Station è lo strumento definitivo per creare istruzioni di assemblaggio interattive in Unity. Progettato per semplificare processi complessi con feedback visivo intuitivo.
               </p>
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
-                <a class="btn btn-primary btn-glow btn-lg shadow px-4" href="https://assetstore.unity.com/packages/slug/313569">Ottieni Assembly Station</a>
+                <a class="btn btn-primary btn-glow btn-lg shadow px-4" href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569">Ottieni Assembly Station</a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
                   <div class="badge-item pulse" title="Made for Unity">
                     <i class="bi bi-unity fs-4"></i>
@@ -152,7 +152,7 @@
             <h3 class="mb-3">Pronto a Iniziare a Costruire?</h3>
             <p class="mb-4">Ottieni la tua copia di Assembly Station e inizia a creare assemblaggi interattivi oggi</p>
             <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-              <a href="https://assetstore.unity.com/packages/slug/313569" target="_blank" class="btn btn-lg btn-primary">
+              <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" target="_blank" class="btn btn-lg btn-primary">
                 <i class="bi bi-cart-fill me-2"></i>Acquista su Asset Store
               </a>
               <!-- <RouterLink to="/it/demo" class="btn btn-lg btn-outline-primary">
