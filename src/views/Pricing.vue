@@ -14,7 +14,7 @@
               <h2 class="pricing-title">Assembly Station</h2>
               <div class="price-container">
                 <span class="currency">€</span>
-                <span class="price">17</span>
+                <span class="price">29<span class="price-decimal">.44</span></span>
                 <span class="period">/one-time</span>
               </div>
               <div class="vat-note">
@@ -190,6 +190,12 @@ export default {
 .price {
   font-size: 6.5rem;
   font-weight: 700;
+}
+
+.price-decimal {
+  font-size: 0.4em;
+  position: relative;
+  top: -1.5rem;
 }
 
 .period {

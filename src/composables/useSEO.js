@@ -86,16 +86,16 @@ export const seoConfigs = {
   },
   
   pricing: {
-    title: 'Assembly Station Pricing - Free Unity Asset for 3D Assembly Documentation',
-    description: 'Assembly Station is completely free! Download our Unity asset and start creating interactive 3D assembly guides today. No hidden costs, no subscriptions.',
-    keywords: 'Assembly Station price, free Unity asset, free 3D assembly tool, Unity asset store, free download',
+    title: 'Assembly Station Pricing - Unity Asset for 3D Assembly Documentation - €29.44',
+    description: 'Assembly Station Unity asset available for €29.44 one-time purchase. Create interactive 3D assembly guides and documentation. Professional tool for developers and educators.',
+    keywords: 'Assembly Station price, Unity asset price, 3D assembly tool, Unity asset store, professional Unity tools',
     url: 'https://www.assembly-station.com/pricing'
   },
   
   pricingIT: {
-    title: 'Prezzi Assembly Station - Asset Unity Gratuito per Documentazione Assemblaggio 3D',
-    description: 'Assembly Station è completamente gratuito! Scarica il nostro asset Unity e inizia a creare guide di assemblaggio 3D interattive oggi stesso. Nessun costo nascosto, nessun abbonamento.',
-    keywords: 'Prezzo Assembly Station, asset Unity gratuito, strumento assemblaggio 3D gratuito, Unity asset store, download gratuito',
+    title: 'Prezzi Assembly Station - Asset Unity per Documentazione Assemblaggio 3D - €29.44',
+    description: 'Asset Unity Assembly Station disponibile per €29.44 acquisto una tantum. Crea guide di assemblaggio 3D interattive e documentazione. Strumento professionale per sviluppatori ed educatori.',
+    keywords: 'Prezzo Assembly Station, prezzo asset Unity, strumento assemblaggio 3D, Unity asset store, strumenti Unity professionali',
     url: 'https://www.assembly-station.com/it/pricing',
     locale: 'it_IT'
   },
