@@ -63,7 +63,7 @@ export const seoConfigs = {
   },
   
   homeIT: {
-    title: 'Assembly Station - Asset Unity per Documentazione Assemblaggio 3D Interattiva',
+    title: 'Assembly Station | Modular System to Bring Your Model to Life - Asset Unity per Assemblaggio 3D Interattivo',
     description: 'Crea guide di assemblaggio 3D interattive con l\'asset Unity Assembly Station. Perfetto per documentazione tecnica, contenuti educativi e istruzioni stile IKEA.',
     keywords: 'Asset Unity, assemblaggio 3D, documentazione interattiva, guida assemblaggio, strumenti Unity, tutorial 3D, documentazione tecnica',
     url: 'https://www.assembly-station.com/it',

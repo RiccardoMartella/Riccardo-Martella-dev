@@ -18,18 +18,26 @@
             <div class="position-relative z-2">
               <div class="accent-shape"></div>
               <div class="reveal-text">
-                <h1 class="display-4 fw-bold text-accent mb-3 animated-heading">Assembly Station</h1>
+                <h1 class="display-3 fw-bold text-accent mb-3 animated-heading">
+                  Assembly Station
+                </h1>
               </div>
-              <h2 class="display-6 fw-bold text-dark mb-4 fade-in-up">Costruisci Meglio, Più Veloce</h2>
+              <h2 class="display-6 fw-bold text-dark mb-4 fade-in-up">Modular System to Bring Your Model to Life</h2>
               <p class="lead mt-3 mb-4 text-secondary fade-in-up delay-1">
                 Assembly Station è lo strumento definitivo per creare istruzioni di assemblaggio interattive in Unity. Progettato per semplificare processi complessi con feedback visivo intuitivo.
               </p>
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
-                <a class="btn btn-primary btn-glow btn-lg shadow px-4" href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569">Ottieni Assembly Station</a>
+                <a class="btn btn-primary btn-glow btn-lg shadow px-4" 
+                   href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+                   aria-label="Ottieni Assembly Station dall'Unity Asset Store"
+                   title="Acquista Assembly Station sull'Unity Asset Store">
+                  Ottieni Assembly Station
+                </a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
-                  <div class="badge-item pulse" title="Made for Unity">
-                    <i class="bi bi-unity fs-4"></i>
-                    <i class="bi bi-windows fs-4"></i>
+                  <div class="badge-item pulse" title="Compatibile con Unity e Windows" aria-label="Compatibile con Unity e Windows">
+                    <i class="bi bi-unity fs-4" aria-hidden="true"></i>
+                    <i class="bi bi-windows fs-4" aria-hidden="true"></i>
+                    <span class="sr-only">Compatibile con Unity e Windows</span>
                   </div>
                 </div>
               </div>
@@ -62,7 +70,11 @@
                 </div>
               </div>
               <div class="credits-section">
-                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472">3D model</a></p>
+                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472" 
+                             aria-label="Modello 3D Colonial Ship sull'Unity Asset Store"
+                             title="Visualizza il modello 3D Colonial Ship sull'Unity Asset Store">
+                    3D model
+                  </a></p>
               </div>
 
               <div class="particle-system">
@@ -122,29 +134,44 @@
           <div class="resources-grid mb-5">
             <div class="resource-card">
               <div class="resource-icon">
-                <i class="bi bi-journal-code"></i>
+                <i class="bi bi-journal-code" aria-hidden="true"></i>
               </div>
               <h4>Documentazione</h4>
               <p>Guide dettagliate e tutorial per i tuoi progetti Unity</p>
-              <RouterLink to="/it/docs/installation" class="btn btn-primary">Leggi Docs</RouterLink>
+              <RouterLink to="/it/docs/installation" 
+                         class="btn btn-primary"
+                         aria-label="Leggi la documentazione di Assembly Station"
+                         title="Leggi la documentazione completa e la guida all'installazione">
+                Leggi Docs
+              </RouterLink>
             </div>
             
             <div class="resource-card">
               <div class="resource-icon">
-                <i class="bi bi-play-btn"></i>
+                <i class="bi bi-play-btn" aria-hidden="true"></i>
               </div>
               <h4>Video Tutorial</h4>
               <p>Video passo-passo per padroneggiare funzionalità avanzate</p>
-              <RouterLink to="/it/tutorials" class="btn btn-outline-primary">Guarda Ora</RouterLink>
+              <RouterLink to="/it/tutorials" 
+                         class="btn btn-outline-primary"
+                         aria-label="Guarda i tutorial di Assembly Station"
+                         title="Guarda i video tutorial e impara funzionalità avanzate">
+                Guarda Ora
+              </RouterLink>
             </div>
             
             <div class="resource-card">
               <div class="resource-icon">
-                <i class="bi bi-git"></i>
+                <i class="bi bi-git" aria-hidden="true"></i>
               </div>
               <h4>Cronologia Versioni</h4>
               <p>Traccia i cambiamenti e i miglioramenti nel tempo</p>
-              <RouterLink to="/it/versions" class="btn btn-outline-primary">Vedi Rilasci</RouterLink>
+              <RouterLink to="/it/versions" 
+                         class="btn btn-outline-primary"
+                         aria-label="Visualizza la cronologia delle versioni di Assembly Station"
+                         title="Vedi le note di rilascio e la cronologia delle versioni">
+                Vedi Rilasci
+              </RouterLink>
             </div>
           </div>
 
@@ -152,8 +179,12 @@
             <h3 class="mb-3">Pronto a Iniziare a Costruire?</h3>
             <p class="mb-4">Ottieni la tua copia di Assembly Station e inizia a creare assemblaggi interattivi oggi</p>
             <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-              <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" target="_blank" class="btn btn-lg btn-primary">
-                <i class="bi bi-cart-fill me-2"></i>Acquista su Asset Store
+              <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" 
+                 target="_blank" 
+                 class="btn btn-lg btn-primary"
+                 aria-label="Acquista Assembly Station sull'Unity Asset Store"
+                 title="Compra Assembly Station dall'Unity Asset Store">
+                <i class="bi bi-cart-fill me-2" aria-hidden="true"></i>Acquista su Asset Store
               </a>
               <!-- <RouterLink to="/it/demo" class="btn btn-lg btn-outline-primary">
                 <i class="bi bi-joystick me-2"></i>Prova la Demo Interattiva
@@ -167,8 +198,14 @@
 </template>
 
 <script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
 export default {
-  name: 'IntroductionIT'
+  name: 'IntroductionIT',
+  setup() {
+    // Applica configurazione SEO per la home page italiana
+    useSEO(seoConfigs.homeIT)
+  }
 }
 </script>
 <style scoped>
@@ -188,6 +225,19 @@ export default {
 .hover-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .intro-logo {
@@ -294,6 +344,14 @@ export default {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.seo-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .logo-spinner {

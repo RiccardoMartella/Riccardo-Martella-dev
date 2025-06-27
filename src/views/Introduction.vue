@@ -18,18 +18,26 @@
             <div class="position-relative z-2">
               <div class="accent-shape"></div>
               <div class="reveal-text">
-                <h1 class="display-4 fw-bold text-accent mb-3 animated-heading">Assembly Station</h1>
+                <h1 class="display-3 fw-bold text-accent mb-3 animated-heading">
+                  Assembly Station
+                </h1>
               </div>
-              <h2 class="display-6 fw-bold text-dark mb-4 fade-in-up">Build Better, Faster</h2>
+              <h2 class="display-6 fw-bold text-dark mb-4 fade-in-up">Modular System to Bring Your Model to Life</h2>
               <p class="lead mt-3 mb-4 text-secondary fade-in-up delay-1">
                 Assembly Station is the ultimate tool for creating interactive assembly instructions in Unity. Designed to streamline complex assembly processes with intuitive visual feedback.
               </p>
               <div class="d-flex flex-wrap gap-3 mt-4 fade-in-up delay-2">
-                <a class="btn btn-primary btn-glow btn-lg shadow px-4" href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569">Get Assembly Station</a>
+                <a class="btn btn-primary btn-glow btn-lg shadow px-4" 
+                   href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+                   aria-label="Get Assembly Station from Unity Asset Store"
+                   title="Purchase Assembly Station on Unity Asset Store">
+                  Get Assembly Station
+                </a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
-                  <div class="badge-item pulse" title="Made for Unity">
-                    <i class="bi bi-unity fs-4"></i>
-                    <i class="bi bi-windows fs-4"></i>
+                  <div class="badge-item pulse" title="Compatible with Unity and Windows" aria-label="Unity and Windows compatible">
+                    <i class="bi bi-unity fs-4" aria-hidden="true"></i>
+                    <i class="bi bi-windows fs-4" aria-hidden="true"></i>
+                    <span class="sr-only">Compatible with Unity and Windows</span>
                   </div>
                 </div>
               </div>
@@ -63,7 +71,11 @@
                 </div>
               </div>
               <div class="credits-section">
-                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472">3D model</a></p>
+                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472" 
+                             aria-label="Colonial Ship 3D model on Unity Asset Store"
+                             title="View Colonial Ship 3D model on Unity Asset Store">
+                    3D model
+                  </a></p>
               </div>
 
               <div class="particle-system">
@@ -77,7 +89,12 @@
 
               <div class="logo-container">
                 <div class="logo-spinner bottom-prominent  float-element">
-                  <img src="/images/logo.png" alt="Assembly Station Logo" class="spinning-logo" />
+                  <img src="/images/logo.png" 
+                       alt="Assembly Station Logo" 
+                       class="spinning-logo" 
+                       width="200" 
+                       height="200" 
+                       loading="lazy" />
                   <div class="glow-effect"></div>
                 </div>
               </div>
@@ -106,7 +123,13 @@
             <div class="row g-0 align-items-center">
               <div class="col-md-5">
                 <div class="about-card-image w-50 center mx-auto mb-4">
-                  <img src="/images/logo.png" alt="Assembly Station Workflow" class="img-fluid rounded-start object-cover" onerror="this.src='/images/logo.png'; this.style.padding='2rem';">
+                  <img src="/images/logo.png" 
+                       alt="Assembly Station Workflow" 
+                       class="img-fluid rounded-start object-cover" 
+                       width="300" 
+                       height="300"
+                       loading="lazy"
+                       onerror="this.src='/images/logo.png'; this.style.padding='2rem';">
                 </div>
               </div>
               <div class="col-md-7">
@@ -123,29 +146,44 @@
           <div class="resources-grid mb-5">
             <div class="resource-card">
               <div class="resource-icon">
-                <i class="bi bi-journal-code"></i>
+                <i class="bi bi-journal-code" aria-hidden="true"></i>
               </div>
               <h4>Documentation</h4>
               <p>Detailed guides and tutorials for your Unity projects</p>
-              <RouterLink to="/docs/installation" class="btn btn-primary">Read Docs</RouterLink>
+              <RouterLink to="/docs/installation" 
+                         class="btn btn-primary"
+                         aria-label="Read Assembly Station Documentation"
+                         title="Read complete documentation and installation guide">
+                Read Docs
+              </RouterLink>
             </div>
             
             <div class="resource-card">
               <div class="resource-icon">
-                <i class="bi bi-play-btn"></i>
+                <i class="bi bi-play-btn" aria-hidden="true"></i>
               </div>
               <h4>Video Tutorials</h4>
               <p>Step-by-step videos to master advanced features</p>
-              <RouterLink to="/tutorials" class="btn btn-outline-primary">Watch Now</RouterLink>
+              <RouterLink to="/tutorials" 
+                         class="btn btn-outline-primary"
+                         aria-label="Watch Assembly Station tutorials"
+                         title="Watch video tutorials and learn advanced features">
+                Watch Now
+              </RouterLink>
             </div>
             
             <div class="resource-card">
               <div class="resource-icon">
-                <i class="bi bi-git"></i>
+                <i class="bi bi-git" aria-hidden="true"></i>
               </div>
               <h4>Version History</h4>
               <p>Track changes and improvements over time</p>
-              <RouterLink to="/versions" class="btn btn-outline-primary">See Releases</RouterLink>
+              <RouterLink to="/versions" 
+                         class="btn btn-outline-primary"
+                         aria-label="View Assembly Station version history"
+                         title="See release notes and version history">
+                See Releases
+              </RouterLink>
             </div>
           </div>
 
@@ -153,12 +191,48 @@
             <h3 class="mb-3">Ready to Start Building?</h3>
             <p class="mb-4">Get your copy of Assembly Station and start creating interactive assemblies today</p>
             <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-              <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" target="_blank" class="btn btn-lg btn-primary">
-                <i class="bi bi-cart-fill me-2"></i>Purchase on Asset Store
+              <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" 
+                 target="_blank" 
+                 class="btn btn-lg btn-primary"
+                 aria-label="Purchase Assembly Station on Unity Asset Store"
+                 title="Buy Assembly Station from Unity Asset Store">
+                <i class="bi bi-cart-fill me-2" aria-hidden="true"></i>Purchase on Asset Store
               </a>
               <!-- <RouterLink to="/demo" class="btn btn-lg btn-outline-primary">
                 <i class="bi bi-joystick me-2"></i>Try Interactive Demo
               </RouterLink> -->
+            </div>
+          </div>
+
+          <div class="social-links-section text-center mt-5 pt-4">
+            <h4 class="mb-4">Connect with Us</h4>
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+              <a href="https://github.com/RiccardoMartella" 
+                 target="_blank" 
+                 class="social-link"
+                 aria-label="Visit Riccardo Martella's GitHub profile"
+                 title="View source code and projects on GitHub">
+                <i class="bi bi-github me-2" aria-hidden="true"></i>
+                GitHub Profile
+              </a>
+              
+              <a href="https://discord.gg/9wJSxtUX2W" 
+                 target="_blank" 
+                 class="social-link"
+                 aria-label="Join Assembly Station Discord community"
+                 title="Get support and connect with other developers">
+                <i class="bi bi-discord me-2" aria-hidden="true"></i>
+                Discord Community
+              </a>
+              
+              <a href="https://www.linkedin.com/in/riccardo-martella-b91854252/" 
+                 target="_blank" 
+                 class="social-link"
+                 aria-label="Connect with Riccardo Martella on LinkedIn"
+                 title="Professional networking and updates">
+                <i class="bi bi-linkedin me-2" aria-hidden="true"></i>
+                LinkedIn Profile
+              </a>
             </div>
           </div>
         </div>
@@ -196,6 +270,19 @@ export default {
 .hover-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .intro-logo {
@@ -805,6 +892,38 @@ iframe.featured-video {
   margin-top: 3rem;
 }
 
+.social-links-section {
+  padding: 2rem 0;
+  border-top: 1px solid #e9ecef;
+  margin-top: 2rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background-color: #f8f9fa;
+  color: #495057;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  background-color: #00A3FF;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 163, 255, 0.3);
+  text-decoration: none;
+}
+
+.social-link:focus {
+  outline: 2px solid #00A3FF;
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
   .resources-grid {
     grid-template-columns: 1fr;
@@ -813,5 +932,18 @@ iframe.featured-video {
   .about-card-image {
     height: 250px;
   }
+}
+.subtitle-smaller {
+  font-size: 0.7em;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.seo-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 </style>
