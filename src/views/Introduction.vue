@@ -168,8 +168,14 @@
 </template>
 
 <script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
 export default {
-  name: 'Introduction'
+  name: 'Introduction',
+  setup() {
+    // Applica configurazione SEO per la home page
+    useSEO(seoConfigs.home)
+  }
 }
 </script>
 

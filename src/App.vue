@@ -2,12 +2,17 @@
 import {RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { useSEO } from './composables/useSEO.js'
 
 export default {
   name: 'App',
   components: {
     Header,
     Footer
+  },
+  setup() {
+    // Configura SEO globale di base
+    useSEO()
   }
 }
 </script>

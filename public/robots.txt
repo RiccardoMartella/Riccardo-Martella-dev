@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.assembly-station.com/sitemap.xml
+
+# Disallow specific files
+Disallow: /Build-Assembly2/
+Disallow: *.js
+Disallow: *.css
+Disallow: /src/
+
+# Crawl delay (optional)
+Crawl-delay: 1
