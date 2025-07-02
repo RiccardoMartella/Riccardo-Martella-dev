@@ -71,7 +71,7 @@
                 </div>
               </div>
               <div class="credits-section">
-                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/environments/historic/colonial-ship-70472" 
+                <p>Credits: <a href="https://assetstore.unity.com/packages/3d/vehicles/sea/stylized-pirate-ship-200192" 
                              aria-label="Colonial Ship 3D model on Unity Asset Store"
                              title="View Colonial Ship 3D model on Unity Asset Store">
                     3D model
