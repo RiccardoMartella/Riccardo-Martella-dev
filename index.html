@@ -103,40 +103,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     
-      gtag('config', 'G-XM2PHLJNHW', {
-        // Abilita il debug per verificare che gli eventi vengano inviati
-        debug_mode: true,
-        // Migliora il tracking delle single page applications
-        send_page_view: true,
-        // Abilita il tracking migliorato degli eventi
-        enhanced_measurement: {
-          scrolls: true,
-          outbound_clicks: true,
-          site_search: true,
-          video_engagement: true,
-          file_downloads: true
-        }
-      });
-
-      // Evento di test per verificare che GA funzioni
-      gtag('event', 'page_view_test', {
-        page_title: document.title,
-        page_location: window.location.href,
-        custom_parameter: 'test_tracking'
-      });
-
-      // Log per debug nella console
-      console.log('Google Analytics initialized with ID: G-XM2PHLJNHW');
-      
-      // Test event dopo 3 secondi per verificare il tracking
-      setTimeout(function() {
-        gtag('event', 'manual_test_event', {
-          event_category: 'test',
-          event_label: 'manual_verification',
-          value: 1
-        });
-        console.log('Test event sent to Google Analytics');
-      }, 3000);
+      gtag('config', 'G-XM2PHLJNHW');
     </script>
   </head>
   <body>
