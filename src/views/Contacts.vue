@@ -31,7 +31,7 @@
                   
                   <div class="d-flex align-items-center mb-3">
                     <div class="contact-icon-wrapper">
-                      <a href="https://discord.gg/9wJSxtUX2W"><i class="bi bi-discord text-accent"></i></a>
+                      <a href="https://discord.gg/dZ2Veb4eM5"><i class="bi bi-discord text-accent"></i></a>
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">Discord</p>
@@ -116,7 +116,7 @@
               <a href="https://github.com/RiccardoMartella" class="social-icon">
                 <i class="bi bi-github fs-3 text-accent"></i>
               </a>
-              <a href="https://discord.gg/9wJSxtUX2W" class="social-icon">
+              <a href="https://discord.gg/dZ2Veb4eM5" class="social-icon">
                 <i class="bi bi-discord fs-3 text-accent"></i>
               </a>
               <a href="https://assetstore.unity.com/packages/slug/313569" class="social-icon">
@@ -132,7 +132,7 @@
             <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" class="btn btn-primary btn-lg me-3 mb-3">
               <i class="bi bi-cart-fill me-2"></i>Get Assembly Station
             </a>
-            <a href="https://discord.gg/9wJSxtUX2W" target="_blank" class="btn btn-outline-primary btn-lg mb-3">
+            <a href="https://discord.gg/dZ2Veb4eM5" target="_blank" class="btn btn-outline-primary btn-lg mb-3">
               <i class="bi bi-discord me-2"></i>Join Discord
             </a>
           </div>

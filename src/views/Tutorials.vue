@@ -196,7 +196,7 @@
                 </div>
                 <div class="col-md-4 mb-2">
                   <a
-                    href="https://discord.gg/9wJSxtUX2W"
+                    href="https://discord.gg/dZ2Veb4eM5"
                     target="_blank"
                     class="btn btn-outline-primary w-100"
                   >

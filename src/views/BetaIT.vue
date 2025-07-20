@@ -77,7 +77,7 @@
             <h3><i class="bi bi-chat-left-text me-2"></i>Il tuo feedback modella queste funzionalità</h3>
             <p class="mb-4">Hai suggerimenti su cosa vorresti vedere in Assembly Station?</p>
             <div class="d-flex justify-content-center gap-3">
-              <a href="https://discord.gg/9wJSxtUX2W" target="_blank" class="btn btn-primary">
+              <a href="https://discord.gg/dZ2Veb4eM5" target="_blank" class="btn btn-primary">
                 <i class="bi bi-discord me-2"></i>Unisciti alla Comunità Discord
               </a>
               <RouterLink to="/it/report-bug#bug" class="btn btn-outline-primary">

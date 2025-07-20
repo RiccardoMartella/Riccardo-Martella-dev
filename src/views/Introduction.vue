@@ -216,7 +216,7 @@
                 GitHub Profile
               </a>
               
-              <a href="https://discord.gg/9wJSxtUX2W" 
+              <a href="https://discord.gg/dZ2Veb4eM5" 
                  target="_blank" 
                  class="social-link"
                  aria-label="Join Assembly Station Discord community"

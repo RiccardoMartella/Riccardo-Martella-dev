@@ -61,7 +61,7 @@
                   <div class="step-content">
                     <h4 class="h5">Unisciti al Nostro Server Discord</h4>
                     <p>Unisciti al nostro server Discord della comunità per essere avvisato quando le prossime chiavi saranno disponibili.</p>
-                    <a href="https://discord.gg/jKeDVaYsXD" target="_blank" rel="noopener noreferrer" class="btn btn-discord mb-3">
+                    <a href="https://discord.gg/m5Yw4MfEUs" target="_blank" rel="noopener noreferrer" class="btn btn-discord mb-3">
                       <i class="bi bi-discord me-2"></i> Unisciti al Server Discord
                     </a>
                   </div>

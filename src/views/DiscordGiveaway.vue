@@ -61,7 +61,7 @@
                   <div class="step-content">
                     <h4 class="h5">Join Our Discord Server</h4>
                     <p>Join our community Discord server to be notified when the next keys become available.</p>
-                    <a href="https://discord.gg/jKeDVaYsXD" target="_blank" rel="noopener noreferrer" class="btn btn-discord mb-3">
+                    <a href="https://discord.gg/m5Yw4MfEUs" target="_blank" rel="noopener noreferrer" class="btn btn-discord mb-3">
                       <i class="bi bi-discord me-2"></i> Join Discord Server
                     </a>
                   </div>

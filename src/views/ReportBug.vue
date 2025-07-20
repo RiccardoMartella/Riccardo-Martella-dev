@@ -75,7 +75,7 @@
                     <h5>Discord</h5>
                     <p class="mb-3">Join our community for support</p>
                     <div class="mt-auto">
-                      <a href="https://discord.gg/9wJSxtUX2W" class="btn btn-primary w-100" target="_blank">Join Discord</a>
+                      <a href="https://discord.gg/dZ2Veb4eM5" class="btn btn-primary w-100" target="_blank">Join Discord</a>
                     </div>
                   </div>
                 </div>
