@@ -70,6 +70,18 @@
                 <div class="step-item">
                   <div class="step-number">2</div>
                   <div class="step-content">
+                    <h4 class="h5">Vai al Canale #roles</h4>
+                    <p>Appena entrato nel server, vai al canale <strong>#roles</strong> e seleziona l'emoji regalo 🎁 per poter visualizzare il canale <strong>#free-keys</strong>.</p>
+                    <div class="alert alert-warning">
+                      <i class="bi bi-exclamation-triangle me-2"></i> 
+                      <strong>Importante:</strong> Senza selezionare l'emoji regalo, non potrai vedere il canale delle chiavi gratuite!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
                     <h4 class="h5">Aspetta il 30 Settembre 2025</h4>
                     <p>Le prossime 2 chiavi gratuite saranno rilasciate il 30 settembre 2025. Segui il countdown qui sopra!</p>
                     <div class="alert alert-info">
@@ -80,7 +92,7 @@
                 </div>
 
                 <div class="step-item">
-                  <div class="step-number">3</div>
+                  <div class="step-number">4</div>
                   <div class="step-content">
                     <h4 class="h5">Richiedi la Tua Chiave</h4>
                     <p>Quando arriverà il momento, invia un messaggio all'admin richiedendo la tua chiave gratuita (primo arrivato, primo servito).</p>

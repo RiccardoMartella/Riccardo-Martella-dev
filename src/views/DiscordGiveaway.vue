@@ -70,6 +70,18 @@
                 <div class="step-item">
                   <div class="step-number">2</div>
                   <div class="step-content">
+                    <h4 class="h5">Go to #roles Channel</h4>
+                    <p>Once you join the server, go to the <strong>#roles</strong> channel and select the gift emoji 🎁 to access the <strong>#free-keys</strong> channel.</p>
+                    <div class="alert alert-warning">
+                      <i class="bi bi-exclamation-triangle me-2"></i> 
+                      <strong>Important:</strong> Without selecting the gift emoji, you won't be able to see the free keys channel!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
                     <h4 class="h5">Wait for September 30, 2025</h4>
                     <p>The next 2 free keys will be released on September 30, 2025. Follow the countdown above!</p>
                     <div class="alert alert-info">
@@ -80,7 +92,7 @@
                 </div>
 
                 <div class="step-item">
-                  <div class="step-number">3</div>
+                  <div class="step-number">4</div>
                   <div class="step-content">
                     <h4 class="h5">Claim Your Key</h4>
                     <p>When the time comes, send a message to the admin requesting your free key (first come, first served).</p>
