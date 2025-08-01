@@ -22,7 +22,7 @@
                   Assembly Station
                 </h1>
               </div>
-              <h2 class="display-6 fw-bold text-dark mb-4 fade-in-up">Modular System to Bring Your Model to Life</h2>
+              <h2 class="display-6 fw-bold text-dark mb-4 fade-in-up">Modular System to Bring Your Model to Lifeeeeeeeeeee</h2>
               <p class="lead mt-3 mb-4 text-secondary fade-in-up delay-1">
                 Assembly Station is the ultimate tool for creating interactive assembly instructions in Unity. Designed to streamline complex assembly processes with intuitive visual feedback.
               </p>
