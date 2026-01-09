@@ -22,8 +22,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.3.3</strong></td>
-                  <td>June 29, 2025</td>
+                  <td><strong>1.3.4</strong></td>
+                  <td>January 9, 2026</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -32,8 +32,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.2.3</strong></td>
-                  <td>May 15, 2025</td>
+                  <td><strong>1.3.3</strong></td>
+                  <td>June 29, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
@@ -42,8 +42,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.2.2</strong></td>
-                  <td>May 8, 2025</td>
+                  <td><strong>1.2.3</strong></td>
+                  <td>May 15, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
@@ -52,8 +52,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
-                  <td><strong>1.2.1</strong></td>
-                  <td>April 28, 2025</td>
+                  <td><strong>1.2.2</strong></td>
+                  <td>May 8, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
@@ -62,8 +62,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(4)" class="version-row">
-                  <td><strong>1.1.1</strong></td>
-                  <td>April 14, 2025</td>
+                  <td><strong>1.2.1</strong></td>
+                  <td>April 28, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
@@ -72,8 +72,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(5)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>April 3, 2025</td>
+                  <td><strong>1.1.1</strong></td>
+                  <td>April 14, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
@@ -82,11 +82,21 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(6)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>April 3, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(6)">
+                      <i class="bi bi-info-circle"></i> Details
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(7)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>April 1, 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(6)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(7)">
                       <i class="bi bi-info-circle"></i> Details
                     </button>
                   </td>
@@ -157,9 +167,30 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Version 1.3.4",
+          date: "January 9, 2026",
+          isLatest: true,
+          changes: [
+            "Update Highlights",
+            "Improved Camera Controls: Camera rotation is now smoother and no longer locks up when the cursor passes over UI elements.",
+            "System Optimizations: Significantly improved loading speeds and reduced memory consumption during extended play sessions.",
+            "Smart Group Building: When building multiple pieces together, resources are verified and consumed only if sufficient for the entire group, preventing partial builds.",
+            "Fixes",
+            "Fixed the \"Save\" button remaining disabled after unbuilding pieces.",
+            "Fixed visual issues with materials on objects with multiple LODs.",
+            "Improved resource handling for more consistent behavior.",
+            "Fixed several minor bugs that could cause slowdowns or freezes in specific situations."
+          ],
+          requirements: {
+            unity: "2022.3.23f1 or newer",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+        },
+        {
           version: "Version 1.3.3",
           date: "June 29 2025",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "Update Highlights",
             "You can now lock pieces during the building process! To unlock them, you'll need to build a required number first — introducing a new progression system that adds strategic depth and planning to construction.",
