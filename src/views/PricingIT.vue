@@ -13,8 +13,8 @@
             <div class="card-header text-center py-4">
               <h2 class="pricing-title">Assembly Station</h2>
               <div class="price-container">
-                <span class="currency">€</span>
-                <span class="price">29<span class="price-decimal">.44</span></span>
+                <span class="currency">$</span>
+                <span class="price">15</span>
                 <span class="period">/una tantum</span>
               </div>
               <div class="vat-note">
@@ -181,7 +181,7 @@ export default {
 }
 
 .currency {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   position: relative;
   top: -15px;
