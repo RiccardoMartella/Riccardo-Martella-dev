@@ -48,13 +48,13 @@
                 isItalian ? "Demo" : "Demo"
               }}</RouterLink>
             </li> -->
-            <li class="nav-item mx-lg-2">
+            <!-- <li class="nav-item mx-lg-2">
               <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
                 isItalian ? "Keys" : "Keys"
               }}
               <span class="free-pill ms-1">FREE</span>
               </RouterLink>
-            </li>
+            </li> -->
             <li class="nav-item mx-lg-2">
               <RouterLink :to="betaPath" class="nav-link">
                 <span class="beta-pill">BETA</span>

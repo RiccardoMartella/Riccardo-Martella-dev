@@ -10,8 +10,8 @@ import Versions from '@/views/Versions.vue'
 import VersionsIT from '@/views/VersionsIT.vue'
 import Licenses from '@/views/Licenses.vue'
 import LicensesIT from '@/views/LicensesIT.vue'
-import DiscordGiveaway from '@/views/DiscordGiveaway.vue'
-import DiscordGiveawayIT from '@/views/DiscordGiveawayIT.vue'
+// import DiscordGiveaway from '@/views/DiscordGiveaway.vue'
+// import DiscordGiveawayIT from '@/views/DiscordGiveawayIT.vue'
 import Demo from '@/views/Demo.vue'
 import DemoIT from '@/views/DemoIT.vue'
 
@@ -276,16 +276,16 @@ const router = createRouter({
       component: () => import('@/views/BetaIT.vue')
     },
 
-    {
-      path: '/discord-giveaway',
-      name: 'discord-giveaway',
-      component: DiscordGiveaway
-    },
-    {
-      path: '/it/discord-giveaway',
-      name: 'discord-giveaway-it',
-      component: DiscordGiveawayIT
-    },
+    // {
+    //   path: '/discord-giveaway',
+    //   name: 'discord-giveaway',
+    //   component: DiscordGiveaway
+    // },
+    // {
+    //   path: '/it/discord-giveaway',
+    //   name: 'discord-giveaway-it',
+    //   component: DiscordGiveawayIT
+    // },
     {
       path: '/demo',
       name: 'demo',
