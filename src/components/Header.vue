@@ -73,6 +73,11 @@
                 isItalian ? "Contatti" : "Contacts"
               }}</RouterLink>
             </li>
+            <li class="nav-item mx-lg-2">
+              <a href="https://paypal.me/riccardomartella" target="_blank" class="nav-link" title="Donate">
+                <i class="bi bi-heart-fill text-danger" style="font-size: 1.2rem;"></i>
+              </a>
+            </li>
             <li class="nav-item ms-lg-2">
               <LanguageSelector />
             </li>
