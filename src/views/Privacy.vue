@@ -273,11 +273,6 @@
                 <p><strong>Email:</strong> riccardomartella77@gmail.com</p>
               </section>
 
-              <div class="text-muted small mt-5">
-                <p><strong>Privacy Policy by iubenda</strong></p>
-                <p>This document was created with the iubenda Privacy and Cookie Policy Generator. See also the Terms and Conditions Generator. iubenda hosts this content and collects only the Personal Data strictly necessary for its provision.</p>
-              </div>
-
             </div>
           </div>
           
