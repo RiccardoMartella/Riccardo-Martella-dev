@@ -14,11 +14,8 @@
               <h2 class="pricing-title">Assembly Station</h2>
               <div class="price-container">
                 <span class="currency">$</span>
-                <span class="price">15</span>
+                <span class="price">33</span>
                 <span class="period">/one-time</span>
-              </div>
-              <div class="vat-note">
-                <span>VAT excluded</span>
               </div>
             </div>
             <div class="card-body p-4">

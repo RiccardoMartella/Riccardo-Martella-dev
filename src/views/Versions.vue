@@ -22,7 +22,7 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.3.4</strong></td>
+                  <td><strong>1.4.3</strong></td>
                   <td>January 9, 2026</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
@@ -167,7 +167,7 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
-          version: "Version 1.3.4",
+          version: "Version 1.4.3",
           date: "January 9, 2026",
           isLatest: true,
           changes: [
