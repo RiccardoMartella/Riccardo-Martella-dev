@@ -121,8 +121,13 @@
 </template>
 
 <script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
 export default {
   name: 'PricingIT',
+  setup() {
+    useSEO(seoConfigs.pricingIT)
+  },
   mounted() {
     this.$nextTick(() => {
       if (window.location.hash) {
@@ -269,14 +274,3 @@ export default {
   display: none;
 }
 </style>
-
-<script>
-import { useSEO, seoConfigs } from '@/composables/useSEO.js'
-
-export default {
-  name: 'PricingIT',
-  setup() {
-    useSEO(seoConfigs.pricingIT)
-  }
-}
-</script>

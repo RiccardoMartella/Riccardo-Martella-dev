@@ -215,9 +215,14 @@
 </template>
 
 <script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
 export default {
-  name: "TutorialsIT",
-};
+  name: 'TutorialsIT',
+  setup() {
+    useSEO(seoConfigs.tutorialsIT)
+  }
+}
 </script>
 
 <style scoped>
@@ -296,14 +301,3 @@ export default {
   font-size: 0.9rem;
 }
 </style>
-
-<script>
-import { useSEO, seoConfigs } from '@/composables/useSEO.js'
-
-export default {
-  name: 'TutorialsIT',
-  setup() {
-    useSEO(seoConfigs.tutorialsIT)
-  }
-}
-</script>

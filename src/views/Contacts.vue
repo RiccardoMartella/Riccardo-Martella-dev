@@ -143,8 +143,13 @@
 </template>
 
 <script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
 export default {
   name: 'Contacts',
+  setup() {
+    useSEO(seoConfigs.contacts)
+  },
   mounted() {
     this.$nextTick(() => {
       if (window.location.hash) {
@@ -219,14 +224,3 @@ export default {
   color: #ff6b6b !important;
 }
 </style>
-
-<script>
-import { useSEO, seoConfigs } from '@/composables/useSEO.js'
-
-export default {
-  name: 'Contacts',
-  setup() {
-    useSEO(seoConfigs.contacts)
-  }
-}
-</script>
