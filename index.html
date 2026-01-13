@@ -103,7 +103,10 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     
-      gtag('config', 'G-XM2PHLJNHW');
+      // Disabilita page_view automatico - lo gestiamo nel router dopo consenso cookie
+      gtag('config', 'G-XM2PHLJNHW', {
+        'send_page_view': false
+      });
     </script>
   </head>
   <body>
