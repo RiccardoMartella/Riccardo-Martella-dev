@@ -15,39 +15,6 @@ import LicensesIT from '@/views/LicensesIT.vue'
 // import Demo from '@/views/Demo.vue'
 // import DemoIT from '@/views/DemoIT.vue'
 
-// Funzione helper per inviare eventi a Google Analytics
-const sendPageView = (url, title, path) => {
-  // Verifica che gtag sia disponibile E non bloccato da Iubenda
-  if (typeof window !== 'undefined' && window.gtag && typeof window.gtag === 'function') {
-    try {
-      // Invia evento page_view esplicito per GA4
-      window.gtag('event', 'page_view', {
-        page_title: title,
-        page_location: url,
-        page_path: path,
-        send_to: 'G-XM2PHLJNHW'
-      })
-    } catch (error) {
-      // Gtag potrebbe essere ancora bloccato da Iubenda - silenzioso in produzione
-    }
-  }
-}
-
-// Funzione per aspettare che Iubenda sblocchi Analytics
-const waitForAnalytics = (callback, maxAttempts = 10) => {
-  let attempts = 0
-  const checkInterval = setInterval(() => {
-    attempts++
-    // Controlla se gtag è disponibile e funzionante
-    if (typeof window !== 'undefined' && window.gtag && typeof window.gtag === 'function') {
-      clearInterval(checkInterval)
-      callback()
-    } else if (attempts >= maxAttempts) {
-      clearInterval(checkInterval)
-    }
-  }, 500) // Controlla ogni 500ms
-}
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -346,27 +313,6 @@ const router = createRouter({
     } 
     return { top: 0, behavior: 'smooth' }
   }
-})
-
-// Google Analytics - Track page views on route change
-router.afterEach((to, from) => {
-  // Senza Iubenda, gtag è disponibile immediatamente
-  setTimeout(() => {
-    const pageTitle = document.title || 'Assembly Station'
-    const pageUrl = window.location.href
-    const pagePath = to.path
-    sendPageView(pageUrl, pageTitle, pagePath)
-  }, 100)
-})
-
-// Invia page view anche al primo caricamento
-router.isReady().then(() => {
-  setTimeout(() => {
-    const pageTitle = document.title || 'Assembly Station'
-    const pageUrl = window.location.href
-    const pagePath = router.currentRoute.value.path
-    sendPageView(pageUrl, pageTitle, pagePath)
-  }, 100)
 })
 
 export default router
