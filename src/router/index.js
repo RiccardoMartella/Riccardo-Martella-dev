@@ -315,4 +315,17 @@ const router = createRouter({
   }
 })
 
+// Google Analytics - Track page views sui cambi di route
+router.afterEach((to) => {
+  setTimeout(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_path: to.path,
+        page_title: document.title,
+        page_location: window.location.href
+      })
+    }
+  }, 300)
+})
+
 export default router
