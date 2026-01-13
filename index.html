@@ -160,7 +160,21 @@
 </html>
 <script type="text/javascript">
   var _iub = _iub || [];
-  _iub.csConfiguration = {"siteId":3949797,"cookiePolicyId":82562185,"lang":"it","storage":{"useSiteId":true}};
+  // Rileva automaticamente la lingua dalla URL
+  var currentLang = window.location.pathname.includes('/it') ? 'it' : 'en';
+  _iub.csConfiguration = {
+    "siteId": 3949797,
+    "cookiePolicyId": 82562185,
+    "lang": currentLang,
+    "storage": {"useSiteId": true},
+    "banner": {
+      "acceptButtonDisplay": true,
+      "customizeButtonDisplay": true,
+      "position": "float-bottom-center",
+      "textColor": "#ffffff",
+      "backgroundColor": "#000000"
+    }
+  };
   </script>
   <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3949797.js"></script>
   <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>

@@ -16,12 +16,21 @@ import LicensesIT from '@/views/LicensesIT.vue'
 // import DemoIT from '@/views/DemoIT.vue'
 
 // Funzione helper per inviare eventi a Google Analytics
-const sendPageView = (url, title) => {
+const sendPageView = (url, title, path) => {
   if (typeof window !== 'undefined' && window.gtag) {
+    // Invia page_view con tutti i parametri necessari
+    window.gtag('config', 'G-XM2PHLJNHW', {
+      'page_title': title,
+      'page_location': url,
+      'page_path': path
+    })
+    
+    // Invia anche evento page_view esplicito per GA4
     window.gtag('event', 'page_view', {
       page_title: title,
       page_location: url,
-      page_path: url.replace(window.location.origin, '')
+      page_path: path,
+      send_to: 'G-XM2PHLJNHW'
     })
   }
 }
@@ -332,8 +341,17 @@ router.afterEach((to, from) => {
   setTimeout(() => {
     const pageTitle = document.title || 'Assembly Station'
     const pageUrl = window.location.href
-    sendPageView(pageUrl, pageTitle)
-  }, 100)
+    const pagePath = to.path
+    sendPageView(pageUrl, pageTitle, pagePath)
+  }, 300)
+})
+
+// Invia page view anche al primo caricamento
+router.isReady().then(() => {
+  const pageTitle = document.title || 'Assembly Station'
+  const pageUrl = window.location.href
+  const pagePath = router.currentRoute.value.path
+  sendPageView(pageUrl, pageTitle, pagePath)
 })
 
 export default router
