@@ -157,9 +157,18 @@
 
 <script>
 import { Modal } from 'bootstrap';
+import { useSEO } from '@/composables/useSEO.js'
 
 export default {
   name: 'Versions',
+  setup() {
+    useSEO({
+      title: 'Version History - Assembly Station Unity Asset',
+      description: 'Complete version history and changelog for Assembly Station Unity asset. See all updates, new features, bug fixes and improvements.',
+      keywords: 'Assembly Station versions, changelog, update history, Unity asset updates, version history',
+      url: 'https://www.assembly-station.com/versions'
+    })
+  },
   data() {
     return {
       versionModal: null,

@@ -4,27 +4,29 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.assembly-station.com/</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.assembly-station.com/" />
   </url>
   
   <!-- Italian Homepage -->
   <url>
     <loc>https://www.assembly-station.com/it</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.assembly-station.com/" />
   </url>
 
   <!-- Tutorials -->
   <url>
     <loc>https://www.assembly-station.com/tutorials</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/tutorials" />
@@ -34,7 +36,7 @@
   <!-- Italian Tutorials -->
   <url>
     <loc>https://www.assembly-station.com/it/tutorials</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/tutorials" />
@@ -44,9 +46,9 @@
   <!-- Pricing -->
   <url>
     <loc>https://www.assembly-station.com/pricing</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/pricing" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/pricing" />
   </url>
@@ -54,39 +56,275 @@
   <!-- Italian Pricing -->
   <url>
     <loc>https://www.assembly-station.com/it/pricing</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/pricing" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/pricing" />
   </url>
 
-  <!-- Documentation -->
+  <!-- Documentation Main -->
   <url>
     <loc>https://www.assembly-station.com/docs</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs" />
   </url>
 
-  <!-- Italian Documentation -->
+  <!-- Italian Documentation Main -->
   <url>
     <loc>https://www.assembly-station.com/it/docs</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs" />
+  </url>
+
+  <!-- Documentation Pages - English -->
+  <url>
+    <loc>https://www.assembly-station.com/docs/installation</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/installation" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/installation" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/fbx-guide</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/fbx-guide" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/fbx-guide" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/prefabs</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/prefabs" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/prefabs" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/descriptions</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/descriptions" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/descriptions" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/buttons</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/buttons" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/buttons" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/categories</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/categories" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/categories" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/effects</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/effects" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/effects" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/resources</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/resources" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/saves</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/saves" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/saves" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/known-issues</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/known-issues" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/known-issues" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/settings</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/settings" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/settings" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/lod-group</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/lod-group" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/lod-group" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/docs/block-piece</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/block-piece" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/block-piece" />
+  </url>
+
+  <!-- Documentation Pages - Italian -->
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/installation</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/installation" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/installation" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/fbx-guide</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/fbx-guide" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/fbx-guide" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/prefabs</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/prefabs" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/prefabs" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/descriptions</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/descriptions" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/descriptions" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/buttons</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/buttons" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/buttons" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/categories</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/categories" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/categories" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/effects</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/effects" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/effects" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/resources</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/resources" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/resources" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/saves</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/saves" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/saves" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/known-issues</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/known-issues" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/known-issues" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/settings</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/settings" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/settings" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/lod-group</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/lod-group" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/lod-group" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/docs/block-piece</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/docs/block-piece" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/docs/block-piece" />
   </url>
 
   <!-- Contacts -->
   <url>
     <loc>https://www.assembly-station.com/contacts</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/contacts" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/contacts" />
   </url>
@@ -94,41 +332,140 @@
   <!-- Italian Contacts -->
   <url>
     <loc>https://www.assembly-station.com/it/contacts</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/contacts" />
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/contacts" />
+  </url>
+
+  <!-- Demo Pages -->
+  <url>
+    <loc>https://www.assembly-station.com/demo</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/demo" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/demo" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/demo</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/demo" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/demo" />
+  </url>
+
+  <!-- Versions Pages -->
+  <url>
+    <loc>https://www.assembly-station.com/versions</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/versions" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/versions" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/versions</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/versions" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/versions" />
+  </url>
+
+  <!-- Licenses Pages -->
+  <url>
+    <loc>https://www.assembly-station.com/licenses</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/licenses" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/licenses" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/licenses</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/licenses" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/licenses" />
+  </url>
+
+  <!-- Privacy Pages -->
+  <url>
+    <loc>https://www.assembly-station.com/privacy</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/privacy" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/privacy</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/privacy" />
+  </url>
+
+  <!-- Cookie Policy Pages -->
+  <url>
+    <loc>https://www.assembly-station.com/cookie-policy</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/cookie-policy" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/cookie-policy</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/cookie-policy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/cookie-policy" />
+  </url>
+
+  <!-- Report Bug Pages -->
+  <url>
+    <loc>https://www.assembly-station.com/report-bug</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/report-bug" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/report-bug" />
+  </url>
+
+  <url>
+    <loc>https://www.assembly-station.com/it/report-bug</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/report-bug" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/report-bug" />
   </url>
 
   <!-- Beta Pages -->
   <url>
     <loc>https://www.assembly-station.com/beta</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.assembly-station.com/it/beta</loc>
-    <lastmod>2025-06-27</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-
-  <!-- Introduction Pages -->
-  <url>
-    <loc>https://www.assembly-station.com/introduction</loc>
-    <lastmod>2025-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assembly-station.com/it/introduction</loc>
-    <lastmod>2025-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>

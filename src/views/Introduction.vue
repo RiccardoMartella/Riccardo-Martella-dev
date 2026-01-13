@@ -947,3 +947,14 @@ iframe.featured-video {
   overflow: hidden;
 }
 </style>
+
+<script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
+export default {
+  name: 'Introduction',
+  setup() {
+    useSEO(seoConfigs.home)
+  }
+}
+</script>

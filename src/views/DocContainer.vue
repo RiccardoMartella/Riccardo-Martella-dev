@@ -31,6 +31,7 @@
 <script>
 import DocSidebar from '@/components/DocSidebar.vue'
 import MobileSidebarToggle from '@/components/MobileSidebarToggle.vue'
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
 
 export default {
   name: 'DocContainer',
@@ -48,8 +49,15 @@ export default {
       return this.$route.path.includes('/it/')
     }
   },
+  watch: {
+    '$route'(to) {
+      // Update SEO when route changes within docs
+      this.updateSEO()
+    }
+  },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    this.updateSEO()
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -62,6 +70,45 @@ export default {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
+      })
+    },
+    updateSEO() {
+      const isItalian = this.$route.path.includes('/it/')
+      const seoConfig = isItalian ? seoConfigs.docsIT : seoConfigs.docs
+      
+      // Customize based on specific doc page
+      const path = this.$route.path
+      let title = seoConfig.title
+      let description = seoConfig.description
+      
+      if (path.includes('installation')) {
+        title = isItalian 
+          ? 'Installazione - Assembly Station Documentation'
+          : 'Installation - Assembly Station Documentation'
+        description = isItalian
+          ? 'Guida completa all\'installazione di Assembly Station per Unity. Requisiti di sistema e istruzioni passo-passo.'
+          : 'Complete installation guide for Assembly Station Unity asset. System requirements and step-by-step instructions.'
+      } else if (path.includes('fbx-guide')) {
+        title = isItalian
+          ? 'Guida FBX - Assembly Station Documentation'
+          : 'FBX Guide - Assembly Station Documentation'
+        description = isItalian
+          ? 'Come preparare e importare modelli FBX in Assembly Station per Unity.'
+          : 'How to prepare and import FBX models into Assembly Station for Unity.'
+      } else if (path.includes('prefabs')) {
+        title = isItalian
+          ? 'Prefabs - Assembly Station Documentation'
+          : 'Prefabs - Assembly Station Documentation'
+        description = isItalian
+          ? 'Creare e gestire prefabs in Assembly Station. Guida completa alla configurazione dei componenti.'
+          : 'Create and manage prefabs in Assembly Station. Complete guide to component configuration.'
+      }
+      
+      useSEO({
+        ...seoConfig,
+        title,
+        description,
+        url: typeof window !== 'undefined' ? window.location.href : seoConfig.url
       })
     }
   }

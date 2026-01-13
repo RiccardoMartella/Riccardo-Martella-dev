@@ -866,3 +866,14 @@ iframe.featured-video {
   }
 }
 </style>
+
+<script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
+export default {
+  name: 'IntroductionIT',
+  setup() {
+    useSEO(seoConfigs.homeIT)
+  }
+}
+</script>

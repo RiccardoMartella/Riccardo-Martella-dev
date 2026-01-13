@@ -219,3 +219,14 @@ export default {
   color: #ff6b6b !important;
 }
 </style>
+
+<script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
+export default {
+  name: 'Contacts',
+  setup() {
+    useSEO(seoConfigs.contacts)
+  }
+}
+</script>

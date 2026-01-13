@@ -9,10 +9,20 @@ export const useSEO = (config = {}) => {
     url: 'https://www.assembly-station.com/',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Assembly Station'
+    siteName: 'Assembly Station',
+    robots: 'index, follow'
   }
 
   const seoConfig = { ...defaultConfig, ...config }
+
+  // Build script content for structured data if provided
+  const scripts = []
+  if (seoConfig.structuredData) {
+    scripts.push({
+      type: 'application/ld+json',
+      children: JSON.stringify(seoConfig.structuredData)
+    })
+  }
 
   useHead({
     title: seoConfig.title,
@@ -21,7 +31,7 @@ export const useSEO = (config = {}) => {
       { name: 'description', content: seoConfig.description },
       { name: 'keywords', content: seoConfig.keywords },
       { name: 'author', content: 'Assembly Station' },
-      { name: 'robots', content: 'index, follow' },
+      { name: 'robots', content: seoConfig.robots },
       
       // Open Graph
       { property: 'og:title', content: seoConfig.title },
@@ -42,7 +52,8 @@ export const useSEO = (config = {}) => {
     ],
     link: [
       { rel: 'canonical', href: seoConfig.url }
-    ]
+    ],
+    script: scripts
   })
 
   return {

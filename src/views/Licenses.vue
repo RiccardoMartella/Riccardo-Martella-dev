@@ -303,3 +303,19 @@ export default {
   }
 }
 </style>
+
+<script>
+import { useSEO } from '@/composables/useSEO.js'
+
+export default {
+  name: 'Licenses',
+  setup() {
+    useSEO({
+      title: 'Licenses & Third-Party Assets - Assembly Station',
+      description: 'Complete list of third-party licenses and assets used in Assembly Station Unity asset. Open source attributions and license information.',
+      keywords: 'Assembly Station licenses, third-party assets, open source, attributions, Unity asset licenses',
+      url: 'https://www.assembly-station.com/licenses'
+    })
+  }
+}
+</script>

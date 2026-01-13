@@ -15,6 +15,17 @@ import LicensesIT from '@/views/LicensesIT.vue'
 import Demo from '@/views/Demo.vue'
 import DemoIT from '@/views/DemoIT.vue'
 
+// Funzione helper per inviare eventi a Google Analytics
+const sendPageView = (url, title) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'page_view', {
+      page_title: title,
+      page_location: url,
+      page_path: url.replace(window.location.origin, '')
+    })
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -30,22 +41,22 @@ const router = createRouter({
     },
     {
       path: '/report-bug',
-      name: 'reportBug',
+      name: 'report-bug',
       component: () => import('@/views/ReportBug.vue')
     },
     {
       path: '/it',
-      name: 'introductionIT',
+      name: 'introduction-it',
       component: () => import('@/views/IntroductionIT.vue')
     },
     {
       path: '/it/contacts',
-      name: 'contactsIT',
+      name: 'contacts-it',
       component: () => import('@/views/ContactsIT.vue')
     },
     {
       path: '/it/report-bug',
-      name: 'reportBugIT',
+      name: 'report-bug-it',
       component: () => import('@/views/ReportBugIT.vue')
     },
     {
@@ -70,12 +81,12 @@ const router = createRouter({
     },
     {
       path: '/tutorials',
-      name: 'Tutorials',
+      name: 'tutorials',
       component: () => import('../views/Tutorials.vue')
     },
     {
       path: '/it/tutorials',
-      name: 'TutorialsIT',
+      name: 'tutorials-it',
       component: () => import('../views/TutorialsIT.vue')
     },
     // Documentation routes - English
@@ -89,67 +100,67 @@ const router = createRouter({
         },
         {
           path: 'installation',
-          name: 'docsInstallation',
+          name: 'docs-installation',
           component: () => import('@/views/docs/en/Installation.vue')
         },
         {
           path: 'fbx-guide',
-          name: 'docsFBXGuide',
+          name: 'docs-fbx-guide',
           component: () => import('@/views/docs/en/FBXGuide.vue')
         },
         {
           path: 'prefabs',
-          name: 'docsPrefabs',
+          name: 'docs-prefabs',
           component: () => import('@/views/docs/en/Prefabs.vue')
         },
         {
           path: 'descriptions',
-          name: 'docsDescriptions',
+          name: 'docs-descriptions',
           component: () => import('@/views/docs/en/Descriptions.vue')
         },
         {
           path: 'buttons',
-          name: 'docsButtons',
+          name: 'docs-buttons',
           component: () => import('@/views/docs/en/Buttons.vue')
         },
         {
           path: 'categories',
-          name: 'docsCategories',
+          name: 'docs-categories',
           component: () => import('@/views/docs/en/Categories.vue')
         },
         {
           path: 'effects',
-          name: 'docsEffects',
+          name: 'docs-effects',
           component: () => import('@/views/docs/en/Effects.vue')
         },
         {
           path: 'resources',
-          name: 'docsResources',
+          name: 'docs-resources',
           component: () => import('@/views/docs/en/Resources.vue')
         },
         {
           path: 'saves',
-          name: 'docsSaves',
+          name: 'docs-saves',
           component: () => import('@/views/docs/en/Saves.vue')
         },
         {
           path: 'known-issues',
-          name: 'docsKnownIssues',
+          name: 'docs-known-issues',
           component: () => import('@/views/docs/en/KnownIssues.vue')
         },
         {
           path: 'settings',
-          name: 'settings',
+          name: 'docs-settings',
           component: () => import('@/views/docs/en/Settings.vue')
         },
         {
           path: 'lod-group',
-          name: 'docsLODGroup',
+          name: 'docs-lod-group',
           component: () => import('@/views/docs/en/LODGroup.vue')
         },
         {
           path: 'block-piece',
-          name: 'docsBlockPiece',
+          name: 'docs-block-piece',
           component: () => import('@/views/docs/en/BlockPiece.vue')
         }
       ]
@@ -166,67 +177,67 @@ const router = createRouter({
         },
         {
           path: 'installation',
-          name: 'docsInstallationIT',
+          name: 'docs-installation-it',
           component: () => import('@/views/docs/it/Installation.vue')
         },
         {
           path: 'fbx-guide',
-          name: 'docsFBXGuideIT',
+          name: 'docs-fbx-guide-it',
           component: () => import('@/views/docs/it/FBXGuide.vue')
         },
         {
           path: 'prefabs',
-          name: 'docsPrefabsIT',
+          name: 'docs-prefabs-it',
           component: () => import('@/views/docs/it/Prefabs.vue')
         },
         {
           path: 'descriptions',
-          name: 'docsDescriptionsIT',
+          name: 'docs-descriptions-it',
           component: () => import('@/views/docs/it/Descriptions.vue')
         },
         {
           path: 'buttons',
-          name: 'docsButtonsIT',
+          name: 'docs-buttons-it',
           component: () => import('@/views/docs/it/Buttons.vue')
         },
         {
           path: 'categories',
-          name: 'docsCategoriesIT',
+          name: 'docs-categories-it',
           component: () => import('@/views/docs/it/Categories.vue')
         },
         {
           path: 'resources',
-          name: 'docsResourcesIT',
+          name: 'docs-resources-it',
           component: () => import('@/views/docs/it/Resources.vue')
         },
         {
           path: 'effects',
-          name: 'docsEffectsIT',
+          name: 'docs-effects-it',
           component: () => import('@/views/docs/it/Effects.vue')
         },
         {
           path: 'saves',
-          name: 'docsSavesIT',
+          name: 'docs-saves-it',
           component: () => import('@/views/docs/it/Saves.vue')
         },
         {
           path: 'known-issues',
-          name: 'docsKnownIssuesIT',
+          name: 'docs-known-issues-it',
           component: () => import('@/views/docs/it/KnownIssues.vue')
         },
         {
           path: 'settings',
-          name: 'settingsIT',
+          name: 'docs-settings-it',
           component: () => import('@/views/docs/it/Settings.vue')
         },
         {
           path: 'lod-group',
-          name: 'docsLODGroupIT',
+          name: 'docs-lod-group-it',
           component: () => import('@/views/docs/it/LODGroup.vue')
         },
         {
           path: 'block-piece',
-          name: 'docsBlockPieceIT',
+          name: 'docs-block-piece-it',
           component: () => import('@/views/docs/it/BlockPiece.vue')
         }
       ]
@@ -234,12 +245,12 @@ const router = createRouter({
 
     {
       path: '/cookie-policy',
-      name: 'CookiePolicy',
+      name: 'cookie-policy',
       component: CookiePolicy
     },
     {
       path: '/it/cookie-policy',
-      name: 'CookiePolicyIT',
+      name: 'cookie-policy-it',
       component: CookiePolicyIT
     },
 
@@ -295,6 +306,13 @@ const router = createRouter({
       path: '/it/demo',
       name: 'demo-it',
       component: DemoIT
+    },
+    
+    // 404 - Catch all route (must be last)
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('@/views/NotFound.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
@@ -306,6 +324,16 @@ const router = createRouter({
     } 
     return { top: 0, behavior: 'smooth' }
   }
+})
+
+// Google Analytics - Track page views on route change
+router.afterEach((to, from) => {
+  // Aspetta che il DOM si aggiorni prima di inviare l'evento
+  setTimeout(() => {
+    const pageTitle = document.title || 'Assembly Station'
+    const pageUrl = window.location.href
+    sendPageView(pageUrl, pageTitle)
+  }, 100)
 })
 
 export default router

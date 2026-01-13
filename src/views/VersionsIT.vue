@@ -157,9 +157,19 @@
 
 <script>
 import { Modal } from 'bootstrap';
+import { useSEO } from '@/composables/useSEO.js'
 
 export default {
   name: 'VersionsIT',
+  setup() {
+    useSEO({
+      title: 'Cronologia Versioni - Assembly Station Asset Unity',
+      description: 'Cronologia completa delle versioni e changelog per l\'asset Unity Assembly Station. Vedi tutti gli aggiornamenti, nuove funzionalità, correzioni di bug e miglioramenti.',
+      keywords: 'Versioni Assembly Station, changelog, cronologia aggiornamenti, aggiornamenti asset Unity, cronologia versioni',
+      url: 'https://www.assembly-station.com/it/versions',
+      locale: 'it_IT'
+    })
+  },
   data() {
     return {
       versionModal: null,

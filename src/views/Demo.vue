@@ -196,8 +196,18 @@
 </template>
 
 <script>
+import { useSEO } from '@/composables/useSEO.js'
+
 export default {
   name: 'Demo',
+  setup() {
+    useSEO({
+      title: 'Try the Demo - Assembly Station Unity Asset',
+      description: 'Try Assembly Station interactive demo. Experience how our Unity asset works for creating 3D assembly guides and interactive documentation.',
+      keywords: 'Assembly Station demo, Unity asset demo, interactive demo, 3D assembly demo, try Assembly Station',
+      url: 'https://www.assembly-station.com/demo'
+    })
+  },
   data() {
     return {
       demoLaunched: false,

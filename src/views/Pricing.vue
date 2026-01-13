@@ -260,3 +260,14 @@ export default {
   box-shadow: 0 0 0 0.25rem rgba(0, 163, 255, 0.25);
 }
 </style>
+
+<script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
+export default {
+  name: 'Pricing',
+  setup() {
+    useSEO(seoConfigs.pricing)
+  }
+}
+</script>

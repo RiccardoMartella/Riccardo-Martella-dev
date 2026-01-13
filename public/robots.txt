@@ -4,11 +4,16 @@ Allow: /
 # Sitemap
 Sitemap: https://www.assembly-station.com/sitemap.xml
 
-# Disallow specific files
+# Disallow specific directories and files
 Disallow: /Build-Assembly2/
-Disallow: *.js
-Disallow: *.css
 Disallow: /src/
+Disallow: /*.json$
+Disallow: /*?*
 
-# Crawl delay (optional)
+# Allow important resources for better rendering
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+
+# Crawl delay
 Crawl-delay: 1

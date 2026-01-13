@@ -294,3 +294,14 @@ export default {
   font-size: 0.9rem;
 }
 </style>
+
+<script>
+import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+
+export default {
+  name: 'Tutorials',
+  setup() {
+    useSEO(seoConfigs.tutorials)
+  }
+}
+</script>
