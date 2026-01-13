@@ -350,25 +350,23 @@ const router = createRouter({
 
 // Google Analytics - Track page views on route change
 router.afterEach((to, from) => {
-  // Aspetta che Analytics sia disponibile (dopo consenso Iubenda)
-  waitForAnalytics(() => {
-    setTimeout(() => {
-      const pageTitle = document.title || 'Assembly Station'
-      const pageUrl = window.location.href
-      const pagePath = to.path
-      sendPageView(pageUrl, pageTitle, pagePath)
-    }, 100)
-  })
+  // Senza Iubenda, gtag è disponibile immediatamente
+  setTimeout(() => {
+    const pageTitle = document.title || 'Assembly Station'
+    const pageUrl = window.location.href
+    const pagePath = to.path
+    sendPageView(pageUrl, pageTitle, pagePath)
+  }, 100)
 })
 
-// Invia page view anche al primo caricamento (dopo consenso cookie)
+// Invia page view anche al primo caricamento
 router.isReady().then(() => {
-  waitForAnalytics(() => {
+  setTimeout(() => {
     const pageTitle = document.title || 'Assembly Station'
     const pageUrl = window.location.href
     const pagePath = router.currentRoute.value.path
     sendPageView(pageUrl, pageTitle, pagePath)
-  })
+  }, 100)
 })
 
 export default router
