@@ -339,25 +339,6 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/contacts" />
   </url>
 
-  <!-- Demo Pages -->
-  <url>
-    <loc>https://www.assembly-station.com/demo</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/demo" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/demo" />
-  </url>
-
-  <url>
-    <loc>https://www.assembly-station.com/it/demo</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.assembly-station.com/demo" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.assembly-station.com/it/demo" />
-  </url>
-
   <!-- Versions Pages -->
   <url>
     <loc>https://www.assembly-station.com/versions</loc>

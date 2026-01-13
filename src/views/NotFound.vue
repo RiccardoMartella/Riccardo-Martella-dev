@@ -35,9 +35,9 @@
                   <i class="bi bi-envelope"></i>
                   Contact
                 </router-link>
-                <router-link to="/demo" class="quick-link">
-                  <i class="bi bi-controller"></i>
-                  Demo
+                <router-link to="/docs" class="quick-link">
+                  <i class="bi bi-book"></i>
+                  Documentation
                 </router-link>
               </div>
             </div>

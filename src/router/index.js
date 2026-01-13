@@ -12,8 +12,8 @@ import Licenses from '@/views/Licenses.vue'
 import LicensesIT from '@/views/LicensesIT.vue'
 // import DiscordGiveaway from '@/views/DiscordGiveaway.vue'
 // import DiscordGiveawayIT from '@/views/DiscordGiveawayIT.vue'
-import Demo from '@/views/Demo.vue'
-import DemoIT from '@/views/DemoIT.vue'
+// import Demo from '@/views/Demo.vue'
+// import DemoIT from '@/views/DemoIT.vue'
 
 // Funzione helper per inviare eventi a Google Analytics
 const sendPageView = (url, title) => {
@@ -297,16 +297,16 @@ const router = createRouter({
     //   name: 'discord-giveaway-it',
     //   component: DiscordGiveawayIT
     // },
-    {
-      path: '/demo',
-      name: 'demo',
-      component: Demo
-    },
-    {
-      path: '/it/demo',
-      name: 'demo-it',
-      component: DemoIT
-    },
+    // {
+    //   path: '/demo',
+    //   name: 'demo',
+    //   component: Demo
+    // },
+    // {
+    //   path: '/it/demo',
+    //   name: 'demo-it',
+    //   component: DemoIT
+    // },
     
     // 404 - Catch all route (must be last)
     {
