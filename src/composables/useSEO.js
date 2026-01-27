@@ -112,16 +112,16 @@ export const seoConfigs = {
   },
   
   docs: {
-    title: 'Assembly Station Documentation - Complete Guide and API Reference',
-    description: 'Complete documentation for Assembly Station Unity asset. Installation guide, API reference, best practices, and troubleshooting for creating 3D assembly documentation.',
-    keywords: 'Assembly Station documentation, Unity asset docs, API reference, installation guide, 3D assembly documentation',
+    title: 'Assembly Station Documentation - Complete Guide',
+    description: 'Complete documentation for Assembly Station Unity asset. Installation guide, best practices, and troubleshooting for creating 3D assembly documentation.',
+    keywords: 'Assembly Station documentation, Unity asset docs, installation guide, 3D assembly documentation, user manual',
     url: 'https://www.assembly-station.com/docs'
   },
   
   docsIT: {
-    title: 'Documentazione Assembly Station - Guida Completa e Riferimento API',
-    description: 'Documentazione completa per l\'asset Unity Assembly Station. Guida all\'installazione, riferimento API, best practice e risoluzione problemi per creare documentazione di assemblaggio 3D.',
-    keywords: 'Documentazione Assembly Station, docs asset Unity, riferimento API, guida installazione, documentazione assemblaggio 3D',
+    title: 'Documentazione Assembly Station - Guida Completa',
+    description: 'Documentazione completa per l\'asset Unity Assembly Station. Guida all\'installazione, best practice e risoluzione problemi per creare documentazione di assemblaggio 3D.',
+    keywords: 'Documentazione Assembly Station, docs asset Unity, guida installazione, documentazione assemblaggio 3D, manuale utente',
     url: 'https://www.assembly-station.com/it/docs',
     locale: 'it_IT'
   },
