@@ -22,8 +22,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.4.3</strong></td>
-                  <td>January 9, 2026</td>
+                  <td><strong>1.5.4</strong></td>
+                  <td>January 28, 2026</td>
                   <td><span class="badge bg-primary">Latest</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -32,8 +32,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.3.3</strong></td>
-                  <td>June 29, 2025</td>
+                  <td><strong>1.4.3</strong></td>
+                  <td>January 9, 2026</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
@@ -42,8 +42,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.2.3</strong></td>
-                  <td>May 15, 2025</td>
+                  <td><strong>1.3.3</strong></td>
+                  <td>June 29, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
@@ -52,8 +52,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
-                  <td><strong>1.2.2</strong></td>
-                  <td>May 8, 2025</td>
+                  <td><strong>1.2.3</strong></td>
+                  <td>May 15, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
@@ -62,8 +62,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(4)" class="version-row">
-                  <td><strong>1.2.1</strong></td>
-                  <td>April 28, 2025</td>
+                  <td><strong>1.2.2</strong></td>
+                  <td>May 8, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
@@ -72,8 +72,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(5)" class="version-row">
-                  <td><strong>1.1.1</strong></td>
-                  <td>April 14, 2025</td>
+                  <td><strong>1.2.1</strong></td>
+                  <td>April 28, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
@@ -82,8 +82,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(6)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>April 3, 2025</td>
+                  <td><strong>1.1.1</strong></td>
+                  <td>April 14, 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(6)">
@@ -92,11 +92,21 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(7)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>April 3, 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(7)">
+                      <i class="bi bi-info-circle"></i> Details
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(8)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>April 1, 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(7)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(8)">
                       <i class="bi bi-info-circle"></i> Details
                     </button>
                   </td>
@@ -176,9 +186,33 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Version 1.5.4",
+          date: "January 28, 2026",
+          isLatest: true,
+          changes: [
+            "Bug Fixes",
+            "Fixed an issue where changing the Orbit Camera zoom sensitivity was not applied correctly.",
+            "Fixed a bug that allowed camera rotation and 3D model interaction while the mouse was over the UI.",
+            "Fixed an issue that prevented the assigned group name from being displayed correctly on a piece.",
+            "New Features",
+            "Added a new resource editing system:",
+            "Users can now freely add new resources.",
+            "Resources are dynamically updated in the visual/UI layer.",
+            "Improved the resource cost assignment workflow for pieces:",
+            "Existing resources can be selected directly from the Resource Layer.",
+            "New resources can be added during the assignment process.",
+            "Overall workflow is faster, clearer, and more practical."
+          ],
+          requirements: {
+            unity: "2022.3.23f1 or newer",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+        },
+        {
           version: "Version 1.4.3",
           date: "January 9, 2026",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "Update Highlights",
             "Improved Camera Controls: Camera rotation is now smoother and no longer locks up when the cursor passes over UI elements.",

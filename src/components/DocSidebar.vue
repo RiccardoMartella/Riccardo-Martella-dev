@@ -3,9 +3,10 @@
     <h4 class="sidebar-title">{{ isItalian ? 'Documentazione' : 'Documentation' }}</h4>
     
     <div class="tutorial-link-container">
+      <h5 class="tutorial-section-title">{{ isItalian ? 'Video Tutorial' : 'Video Tutorials' }}</h5>
       <router-link :to="isItalian ? '/it/tutorials#tutorials' : '/tutorials#tutorials'" class="tutorial-link">
         <i class="bi bi-play-circle-fill me-2"></i>
-        {{ isItalian ? 'Video Tutorial' : 'Video Tutorials' }}
+        {{ isItalian ? 'Guarda i tutorial' : 'Watch tutorials' }}
       </router-link>
     </div>
     
@@ -106,8 +107,20 @@ export default {
 
 .tutorial-link-container {
   margin-bottom: 15px;
-  padding-bottom: 15px;
+  padding: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+  border-radius: 10px;
+  border-left: 4px solid #00A3FF;
+}
+
+.tutorial-section-title {
+  margin: 0 0 0.75rem 0;
+  color: #00A3FF;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
 }
 
 .tutorial-link {
@@ -115,17 +128,19 @@ export default {
   align-items: center;
   background-color: #00A3FF;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 16px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1rem;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 163, 255, 0.25);
 }
 
 .tutorial-link:hover {
   background-color: #0082CC;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 163, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 163, 255, 0.35);
 }
 
 .sidebar-list {

@@ -74,6 +74,16 @@
               }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
+              <a href="https://discord.gg/dZ2Veb4eM5" target="_blank" rel="noopener noreferrer" class="nav-link" title="Discord">
+                <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
+              </a>
+            </li>
+            <li class="nav-item mx-lg-2">
+              <a href="https://youtube.com/@riccardomartella2666?si=LKhiph9HqEq-4CBb" target="_blank" rel="noopener noreferrer" class="nav-link" title="YouTube">
+                <i class="bi bi-youtube" style="font-size: 1.2rem;"></i>
+              </a>
+            </li>
+            <li class="nav-item mx-lg-2">
               <a href="https://paypal.me/riccardomartella" target="_blank" class="nav-link" title="Donate">
                 <i class="bi bi-heart-fill text-danger" style="font-size: 1.2rem;"></i>
               </a>

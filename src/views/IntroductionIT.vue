@@ -34,10 +34,9 @@
                   Ottieni Assembly Station
                 </a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
-                  <div class="badge-item pulse" title="Compatibile con Unity e Windows" aria-label="Compatibile con Unity e Windows">
+                  <div class="badge-item pulse" title="Unity" aria-label="Unity">
                     <i class="bi bi-unity fs-4" aria-hidden="true"></i>
-                    <i class="bi bi-windows fs-4" aria-hidden="true"></i>
-                    <span class="sr-only">Compatibile con Unity e Windows</span>
+                    <span class="sr-only">Unity</span>
                   </div>
                 </div>
               </div>

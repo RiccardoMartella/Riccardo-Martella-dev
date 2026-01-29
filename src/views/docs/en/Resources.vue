@@ -2,12 +2,27 @@
   <div class="doc-page">
     <ContentSection>
       <h1 class="doc-title">7. RESOURCES</h1>
-      
-      <p class="text-lead text-center">
-        The Resources section is more complex and requires programming knowledge.
-        For obvious reasons, I cannot know which and how the resources are managed in your game, so I have added some random ones:
-        Iron, Plastic, Rubber.
-      </p>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">VIDEO TUTORIAL</h2>
+
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              Tutorial on how to set up resources for each prefab piece: assign which resources are used,
+              define the cost for every piece, and create new resources.
+            </p>
+          </div>
+
+          <div class="content-media">
+            <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/ew377fgnnfqvzouyjpcxj/Resources.mp4?rlkey=l8i8cpwiyqqeb0pew05685x0b&dl=1" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <p class="caption">Tutorial: how to configure resources, costs and new entries</p>
+          </div>
+        </div>
+      </div>
       
       <div class="info-box">
         <p class="text-center mb-0">
@@ -45,8 +60,7 @@
         <div class="content-block vertical">
           <div class="content-text">
             <p>
-              Here you will assign the quantity of resources, while in the script (PlayerResources) you can manage the logic.
-              You can easily modify the type and quantity of resources available for testing.
+              In this section you will assign the quantity of resources available to the player; if needed, you can also add new ones (if you haven’t already), as shown in the video above.
             </p>
           </div>
           
@@ -68,8 +82,8 @@
             <p>
               As seen in chapter <a href="#PieceDescriptionR">4</a> this is the section where you can
               add the various texts, images, etc. in the single piece.
-              As you can see, there are 2 sections we haven't discussed yet: <u>RESOURCES VISIBLE</u> and
-              <u>RESOURCES.</u>
+              As you can see, there are 2 sections we haven't discussed yet: <u>RESOURCES COSTS</u> and
+              <u>SHOW IN UI.</u>
             </p>
             <p>
               Here you can enter the costs for each piece and decide whether to make the resources visible or not in the interface.
@@ -113,6 +127,42 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">RESOURCES PANEL</h2>
+
+        <div class="panel-preview-wrapper">
+          <ImageZoomable
+            src="/images/panel_resources.jpeg"
+            alt="Resources panel preview"
+            caption="Resources panel in the interface"
+          />
+        </div>
+
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              The resources panel is automatically updated with the resources assigned to the player.
+            </p>
+            <p>
+              In the Hierarchy, simply select <code>Panel_Resource</code> as shown in the image and, in the
+              <strong>Panel Resource (Script)</strong> section, drag the resource text and assign the one you want.
+            </p>
+            <p>
+              If you want to add a new resource, just copy the existing parent/child structure of the current resources
+              and configure it following the same pattern.
+            </p>
+          </div>
+
+          <div class="content-media">
+            <ImageZoomable
+              src="/images/PanelResources.png"
+              alt="Resources panel in the UI"
+              caption="Resources panel configuration in the Hierarchy and script"
+            />
           </div>
         </div>
       </div>
@@ -208,6 +258,11 @@ export default {
   padding: 20px;
   margin: 30px 0;
   border-left: 4px solid #dc3545;
+}
+
+.panel-preview-wrapper {
+  max-width: 420px;
+  margin: 0 auto 20px;
 }
 
 @media (max-width: 768px) {

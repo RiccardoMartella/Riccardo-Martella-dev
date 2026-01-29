@@ -12,6 +12,9 @@
               passo-passo che coprono tutto, dalla creazione di prefab alla
               gestione delle risorse.
             </p>
+            <p class="lead mb-0">
+              Puoi anche <a href="https://youtube.com/@riccardomartella2666?si=LKhiph9HqEq-4CBb" target="_blank" rel="noopener noreferrer">guardare i tutorial con voce</a> sul mio canale YouTube.
+            </p>
           </div>
 
           <div class="tutorial-list">

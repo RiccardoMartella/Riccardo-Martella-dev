@@ -12,6 +12,9 @@
               tutorials that cover everything from creating prefabs to managing
               resources.
             </p>
+            <p class="lead mb-0">
+              You can also <a href="https://youtube.com/@riccardomartella2666?si=LKhiph9HqEq-4CBb" target="_blank" rel="noopener noreferrer">watch the tutorials with voice</a> on my YouTube channel.
+            </p>
           </div>
 
           <div class="tutorial-list">

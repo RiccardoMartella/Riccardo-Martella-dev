@@ -37,12 +37,12 @@
             <hr>
             <p>
               I file di salvataggio sono divisi in due parti:
-              <ul class="step-list">
-                <li>Un file JSON che contiene il modello con un ID univoco.</li>
-                <li>Un file per salvare ogni singolo pezzo assemblato.</li>
-                <li>Se, dopo aver salvato e tornando in modalità Editor, i file JSON non vengono mostrati, apri l'editor di scripting, apporta una piccola modifica (ad esempio, aggiungi uno spazio o una tabulazione), quindi torna in Editor. I file verranno generati.</li>
-              </ul>
             </p>
+            <ul class="step-list">
+              <li>Un file JSON che contiene il modello con un ID univoco.</li>
+              <li>Un file per salvare ogni singolo pezzo assemblato.</li>
+              <li>Se, dopo aver salvato e tornando in modalità Editor, i file JSON non vengono mostrati, apri l'editor di scripting, apporta una piccola modifica (ad esempio, aggiungi uno spazio o una tabulazione), quindi torna in Editor. I file verranno generati.</li>
+            </ul>
             <p>
               Per reimpostare un modello, puoi eliminare entrambi i file o aprirli
               e rimuovere manualmente i pezzi specifici che desideri ripristinare.

@@ -92,12 +92,6 @@
         </div>
       </div>
       <div class="social-icons">
-        <a
-          href="https://github.com/RiccardoMartella"
-          class="social-icon-footer mx-2"
-        >
-          <i class="bi bi-github"></i>
-        </a>
         <a href="https://discord.gg/dZ2Veb4eM5" class="social-icon-footer mx-2">
           <i class="bi bi-discord"></i>
         </a>
@@ -109,6 +103,15 @@
           class="social-icon-footer mx-2"
         >
           <i class="bi bi-linkedin"></i>
+        </a>
+        <a
+          href="https://youtube.com/@riccardomartella2666?si=LKhiph9HqEq-4CBb"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon-footer mx-2"
+          title="YouTube"
+        >
+          <i class="bi bi-youtube"></i>
         </a>
       </div>
     </div>

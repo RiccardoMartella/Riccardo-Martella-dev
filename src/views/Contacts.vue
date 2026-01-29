@@ -51,7 +51,7 @@
                   
                   <div class="d-flex align-items-center">
                     <div class="contact-icon-wrapper">
-                      <a href="https://github.com/RiccardoMartella"><i class="bi bi-github text-accent"></i></a>
+                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues"><i class="bi bi-github text-accent"></i></a>
                     </div>
                     <div>
                       <p class="mb-0 fw-bold">GitHub</p>
@@ -113,7 +113,7 @@
           <div class="text-center mt-5">
             <h5>Follow me on social media</h5>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <a href="https://github.com/RiccardoMartella" class="social-icon">
+              <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="social-icon">
                 <i class="bi bi-github fs-3 text-accent"></i>
               </a>
               <a href="https://discord.gg/dZ2Veb4eM5" class="social-icon">

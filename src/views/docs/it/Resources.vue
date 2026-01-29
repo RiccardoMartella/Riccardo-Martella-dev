@@ -2,13 +2,28 @@
   <div class="doc-page">
     <ContentSection>
       <h1 class="doc-title">7. RISORSE</h1>
-      
-      <p class="text-lead text-center">
-        La sezione Risorse è più complessa e richiede conoscenze di programmazione.
-        Per ovvi motivi, non posso sapere quali e come vengono gestite le risorse nel tuo gioco, quindi ne ho aggiunte alcune casuali:
-        Ferro, Plastica, Gomma.
-      </p>
-      
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">VIDEO TUTORIAL</h2>
+
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              Tutorial su come impostare le risorse per ogni pezzo del prefab: puoi assegnare quali risorse usare,
+              il costo di ogni pezzo e anche creare nuove risorse.
+            </p>
+          </div>
+
+          <div class="content-media">
+            <video controls class="demo-video w-100">
+              <source src="https://www.dropbox.com/scl/fi/ew377fgnnfqvzouyjpcxj/Resources.mp4?rlkey=l8i8cpwiyqqeb0pew05685x0b&dl=1" type="video/mp4">
+              Il tuo browser non supporta il video HTML5.
+            </video>
+            <p class="caption">Tutorial: configurazione delle risorse, dei costi e di nuove voci</p>
+          </div>
+        </div>
+      </div>
+
       <div class="info-box">
         <p class="text-center mb-0">
           Per impostazione predefinita, l'Assembly Station utilizza un sistema di risorse, 
@@ -45,8 +60,7 @@
         <div class="content-block vertical">
           <div class="content-text">
             <p>
-              Qui assegnerai la quantità di risorse, mentre nello script (PlayerResources) puoi gestire la logica.
-              Puoi facilmente modificare il tipo e la quantità di risorse disponibili per i test.
+              In questa sezione assegnerai la quantità di risorse disponibili al giocatore; se necessario, puoi anche aggiungerne di nuove (se non l’hai già fatto), come mostrato nel video qui sopra.
             </p>
           </div>
           
@@ -54,7 +68,7 @@
             <ImageZoomable 
               src="/images/scriptresources.png" 
               alt="Script Resources"
-              caption="Script per la gestione delle risorse" 
+              caption="Gestione delle risorse" 
             />
           </div>
         </div>
@@ -68,8 +82,8 @@
             <p>
               Come visto nel capitolo <a href="#PieceDescriptionR">4</a> questa è la sezione dove puoi
               aggiungere i vari testi, immagini, ecc. nel singolo pezzo.
-              Come puoi vedere, ci sono 2 sezioni che non abbiamo ancora discusso: <u>RESOURCES VISIBLE</u> e
-              <u>RESOURCES.</u>
+              Come puoi vedere, ci sono 2 sezioni che non abbiamo ancora discusso: <u>RESOURCES COSTS </u> e
+              <u>SHOW IN UI.</u>
             </p>
             <p>
               Qui puoi inserire i costi per ogni pezzo e decidere se rendere le risorse visibili o meno nell'interfaccia.
@@ -113,6 +127,43 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-section">
+        <h2 class="doc-section-title">PANNELLO RISORSE</h2>
+
+        <div class="panel-preview-wrapper">
+          <ImageZoomable
+            src="/images/panel_resources.jpeg"
+            alt="Anteprima del pannello risorse"
+            caption="Pannello risorse nell'interfaccia"
+          />
+        </div>
+
+        <div class="content-block vertical">
+          <div class="content-text">
+            <p>
+              Il pannello risorse si aggiorna automaticamente con le risorse assegnate al player.
+            </p>
+            <p>
+              Nella Hierarchy ti basterà selezionare <code>Panel_Resource</code> come mostrato nell'immagine e,
+              nella sezione <strong>Panel Resource (Script)</strong>, trascinare il testo della risorsa
+              e assegnare quella che desideri.
+            </p>
+            <p>
+              Se vuoi aggiungere una nuova risorsa, ti basta copiare lo schema padre/figlio delle risorse
+              già presenti e configurarla seguendo lo stesso modello.
+            </p>
+          </div>
+
+          <div class="content-media">
+            <ImageZoomable
+              src="/images/PanelResources.png"
+              alt="Pannello risorse dell'interfaccia"
+              caption="Configurazione del pannello risorse in Hierarchy e nello script"
+            />
           </div>
         </div>
       </div>
@@ -208,6 +259,11 @@ export default {
   padding: 20px;
   margin: 30px 0;
   border-left: 4px solid #dc3545;
+}
+
+.panel-preview-wrapper {
+  max-width: 420px;
+  margin: 0 auto 20px;
 }
 
 @media (max-width: 768px) {

@@ -34,10 +34,9 @@
                   Get Assembly Station
                 </a>
                 <div class="feature-badges d-flex align-items-center mt-2 mt-md-0">
-                  <div class="badge-item pulse" title="Compatible with Unity and Windows" aria-label="Unity and Windows compatible">
+                  <div class="badge-item pulse" title="Unity" aria-label="Unity">
                     <i class="bi bi-unity fs-4" aria-hidden="true"></i>
-                    <i class="bi bi-windows fs-4" aria-hidden="true"></i>
-                    <span class="sr-only">Compatible with Unity and Windows</span>
+                    <span class="sr-only">Unity</span>
                   </div>
                 </div>
               </div>
