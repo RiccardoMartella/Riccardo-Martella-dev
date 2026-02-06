@@ -50,7 +50,31 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://www.assembly-station.com">
     
-    <!-- Structured Data -->
+    <!-- Structured Data: WebSite (aiuta Google a capire la struttura e può favorire i sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Assembly Station",
+      "alternateName": "Assembly Station Unity Asset",
+      "url": "https://www.assembly-station.com/",
+      "description": "Unity asset for interactive 3D assembly guides and documentation. Create IKEA-style instructions and technical manuals.",
+      "inLanguage": ["en", "it"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Assembly Station",
+        "url": "https://www.assembly-station.com/"
+      },
+      "potentialAction": [
+        { "@type": "ReadAction", "target": "https://www.assembly-station.com/docs", "name": "Documentation" },
+        { "@type": "ReadAction", "target": "https://www.assembly-station.com/demo", "name": "Demo" },
+        { "@type": "ReadAction", "target": "https://www.assembly-station.com/pricing", "name": "Pricing" },
+        { "@type": "ReadAction", "target": "https://www.assembly-station.com/tutorials", "name": "Tutorials" },
+        { "@type": "ReadAction", "target": "https://www.assembly-station.com/contacts", "name": "Contacts" }
+      ]
+    }
+    </script>
+    <!-- Structured Data: SoftwareApplication (prodotto) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
