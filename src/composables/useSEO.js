@@ -2,7 +2,7 @@ import { useHead } from '@vueuse/head'
 
 export const useSEO = (config = {}) => {
   const defaultConfig = {
-    title: 'Assembly Station - Unity Asset for Interactive 3D Assembly Documentation',
+    title: 'Assembly Station',
     description: 'Assembly Station is a powerful Unity asset that allows you to create interactive 3D assembly guides and documentation. Perfect for IKEA-style instructions, technical manuals, and educational content.',
     keywords: 'Unity asset, 3D assembly, interactive documentation, assembly guide, Unity tools, 3D tutorials, technical documentation, IKEA instructions, Unity package',
     image: 'https://www.assembly-station.com/images/logo.png',
@@ -67,7 +67,7 @@ export const useSEO = (config = {}) => {
 // Configurazioni predefinite per pagine specifiche
 export const seoConfigs = {
   home: {
-    title: 'Assembly Station - Unity Asset for Interactive 3D Assembly Documentation',
+    title: 'Assembly Station',
     description: 'Create stunning interactive 3D assembly guides with Assembly Station Unity asset. Perfect for technical documentation, educational content, and IKEA-style instructions.',
     keywords: 'Unity asset, 3D assembly, interactive documentation, assembly guide, Unity tools, 3D tutorials, technical documentation',
     url: 'https://www.assembly-station.com/'
