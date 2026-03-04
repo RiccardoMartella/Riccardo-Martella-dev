@@ -6,7 +6,7 @@
       <p>{{ isItalian ? 'Prima di effettuare qualsiasi modifica è altamente consigliato fare un backup del tuo progetto. Utilizza prima la scena demo di Assembly Station per verificare il corretto funzionamento delle tue modifiche e non creare errori nel tuo progetto principale.' : 'Before making any modifications, it is highly recommended to back up your project. Use the Assembly Station demo scene first to verify the correct functioning of your modifications and to avoid creating errors in your main project.' }}</p>
     </div>
   </div>
-  <div class="disclaimer-box mb-3">
+  <div class="disclaimer-box ">
     <div class="disclaimer-icon"><i class="bi bi-info-circle-fill"></i></div>
     <div class="disclaimer-content">
       <h4>{{ isItalian ? 'Nota Importante' : 'Important Note' }}</h4>

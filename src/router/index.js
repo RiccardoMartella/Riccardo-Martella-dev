@@ -286,18 +286,17 @@ const router = createRouter({
     //   name: 'discord-giveaway-it',
     //   component: DiscordGiveawayIT
     // },
-    // {
-    //   path: '/demo',
-    //   name: 'demo',
-    //   component: Demo
-    // },
-    // {
-    //   path: '/it/demo',
-    //   name: 'demo-it',
-    //   component: DemoIT
-    // },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: () => import('@/views/Demo.vue')
+    },
+    {
+      path: '/it/demo',
+      name: 'demo-it',
+      component: () => import('@/views/DemoIT.vue')
+    },
     
-    // 404 - Catch all route (must be last)
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',

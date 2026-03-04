@@ -2,7 +2,7 @@
   <div class="demo-page">
     <div class="container py-5">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
           <div class="text-center mb-4">
             <h1 class="display-4 fw-bold text-accent mb-3">Interactive Demo</h1>
             <p class="lead">
@@ -15,28 +15,24 @@
           </div>
 
           <div class="demo-container mb-5">
-            <div v-if="!demoLaunched" class="demo-placeholder">
-              <div class="placeholder-content">
-                <i class="bi bi-joystick fs-1 mb-3"></i>
-                <h3 class="h4">WebGL Demo</h3>
-                <p class="mb-4">Experience Assembly Station directly in your browser</p>
-                <button @click="launchDemo" class="btn btn-primary btn-lg">
-                  <span v-if="!isLoading">Launch Demo</span>
-                  <div v-else class="spinner-border spinner-border-sm me-2" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                  </div>
-                  <span v-if="isLoading">Loading....</span>
-                </button>
+            <div class="demo-container-full">
+            <div class="demo-frame-container">
+              <div id="unity-container" class="unity-desktop">
+                <canvas
+                  id="unity-canvas"
+                  width="1915"
+                  height="825"
+                  tabindex="-1"
+                  class="unity-canvas">
+                </canvas>
+                <iframe
+                  ref="demoFrame"
+                  class="demo-frame unity-iframe"
+                  :src="demoUrl"
+                  title="Assembly Station WebGL Demo">
+                </iframe>
               </div>
             </div>
-            <div v-else class="demo-frame-container">
-              <iframe 
-                ref="demoFrame"
-                class="demo-frame" 
-                :src="demoUrl" 
-                title="Assembly Station WebGL Demo" 
-                allow="fullscreen">
-              </iframe>
             </div>
             <div class="text-center py-2">
               <small class="text-muted">Note: WebGL demo requires a modern browser with WebGL support</small>
@@ -210,21 +206,8 @@ export default {
   },
   data() {
     return {
-      demoLaunched: false,
-      isLoading: false,
       demoUrl: '/Build-Assembly2/index.html',
     };
-  },
-  methods: {
-    launchDemo() {
-      this.isLoading = true;
-      
-      // Simulate demo loading
-      setTimeout(() => {
-        this.demoLaunched = true;
-        this.isLoading = false;
-      }, 1500);
-    }
   },
   mounted() {
     setTimeout(() => {
@@ -253,14 +236,18 @@ export default {
   margin-bottom: 0;
 }
 
-.demo-container {
-  width: 100%;
+.demo-container-full {
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .demo-placeholder {
   background-color: #f5f5f5;
-  min-height: 500px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,8 +263,34 @@ export default {
 .demo-frame-container {
   position: relative;
   width: 100%;
-  padding-top: 66.25%;
-  border-radius: 8px;
+  min-height: 70vh;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+#unity-container.unity-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#unity-canvas.unity-canvas {
+  width: 100%;
+  height: 600px;
+  display: none;
+  cursor: default;
+}
+
+.demo-frame.unity-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
 }
 
 .demo-frame {
