@@ -100,7 +100,6 @@
                         <p class="testimonial-text">"Super easy to integrate and perfect for handling modular interactions exactly what I was looking for."</p>
                         <div class="testimonial-author">
                           <div class="author-name">unity_D6D2A98ECA85AFBEA9CF</div>
-                          <div class="author-title">5 days ago</div>
                         </div>
                       </div>
                     </div>
@@ -116,7 +115,6 @@
                         <p class="testimonial-text">"Very useful tool, the documentation seems complete and well structured. Just follow it step by step..."</p>
                         <div class="testimonial-author">
                           <div class="author-name">chiaramazzone67</div>
-                          <div class="author-title">9 days ago</div>
                         </div>
                       </div>
                     </div>
@@ -136,7 +134,6 @@
                         <p class="testimonial-text">"A great plugin! The installation and integration went very smoothly. The author's documentation is clear and logical, perfect for simulation construction projects."</p>
                         <div class="testimonial-author">
                           <div class="author-name">moonNightElf</div>
-                          <div class="author-title">5 days ago</div>
                         </div>
                       </div>
                     </div>
@@ -152,7 +149,6 @@
                         <p class="testimonial-text">"Looks good."</p>
                         <div class="testimonial-author">
                           <div class="author-name">Axel_Vorte3x</div>
-                          <div class="author-title">a day ago</div>
                         </div>
                       </div>
                     </div>

@@ -101,7 +101,6 @@
                         <p class="testimonial-text">"Facile da integrare e perfetto per gestire interazioni modulari, esattamente quello che cercavo."</p>
                         <div class="testimonial-author">
                           <div class="author-name">unity_D6D2A98ECA85AFBEA9CF</div>
-                          <div class="author-title">5 giorni fa</div>
                         </div>
                       </div>
                     </div>
@@ -117,7 +116,6 @@
                         <p class="testimonial-text">"Strumento molto utile, la documentazione è completa e ben strutturata. Basta seguirla passo dopo passo..."</p>
                         <div class="testimonial-author">
                           <div class="author-name">chiaramazzone67</div>
-                          <div class="author-title">9 giorni fa</div>
                         </div>
                       </div>
                     </div>
@@ -137,7 +135,6 @@
                         <p class="testimonial-text">"Un ottimo plugin! L'installazione e l'integrazione sono state molto semplici. La documentazione dell'autore è chiara e logica, perfetta per progetti di costruzione simulata."</p>
                         <div class="testimonial-author">
                           <div class="author-name">moonNightElf</div>
-                          <div class="author-title">5 giorni fa</div>
                         </div>
                       </div>
                     </div>
@@ -153,7 +150,6 @@
                         <p class="testimonial-text">"Sembra ottimo."</p>
                         <div class="testimonial-author">
                           <div class="author-name">Axel_Vorte3x</div>
-                          <div class="author-title">un giorno fa</div>
                         </div>
                       </div>
                     </div>
