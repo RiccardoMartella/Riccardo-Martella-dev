@@ -16,6 +16,10 @@
 
           <div class="demo-container mb-5">
             <div class="demo-container-full">
+            <div class="demo-click-notice alert alert-warning d-flex align-items-center mb-0" role="alert">
+              <i class="bi bi-mouse-fill me-2 flex-shrink-0"></i>
+              <span><strong>Per utilizzare la demo:</strong> Fare clic sull'area della demo per attivarla — il cursore deve essere in focus sulla demo per il corretto funzionamento dei controlli.</span>
+            </div>
             <div class="demo-frame-container">
               <div id="unity-container" class="unity-desktop">
                 <canvas
@@ -259,6 +263,13 @@ export default {
   color: #00A3FF;
 }
 
+
+.demo-click-notice {
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.25);
+}
 
 .demo-placeholder {
   background-color: #f5f5f5;

@@ -16,6 +16,10 @@
 
           <div class="demo-container mb-5">
             <div class="demo-container-full">
+            <div class="demo-click-notice alert alert-warning d-flex align-items-center mb-0" role="alert">
+              <i class="bi bi-mouse-fill me-2 flex-shrink-0"></i>
+              <span><strong>To use the demo:</strong> Click inside the demo area to activate it — the cursor must be focused on the demo for controls to work correctly.</span>
+            </div>
             <div class="demo-frame-container">
               <div id="unity-container" class="unity-desktop">
                 <canvas
@@ -241,6 +245,13 @@ export default {
   margin-right: -50vw;
 }
 
+.demo-click-notice {
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.25);
+}
+
 .demo-placeholder {
   background-color: #f5f5f5;
   min-height: 70vh;
@@ -251,16 +262,16 @@ export default {
   border-radius: 8px;
 }
 
-.placeholder-content {
-  text-align: center;
-  padding: 20px;
-}
-
 .demo-frame-container {
   position: relative;
   width: 100%;
   min-height: 70vh;
   padding-top: 56.25%; /* 16:9 */
+}
+
+.placeholder-content {
+  text-align: center;
+  padding: 20px;
 }
 
 #unity-container.unity-desktop {
