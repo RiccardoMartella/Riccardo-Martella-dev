@@ -23,8 +23,8 @@
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
-                  <td><strong>1.5.4</strong></td>
-                  <td>28 Gennaio 2026</td>
+                  <td><strong>1.5.5</strong></td>
+                  <td>6 Marzo 2026</td>
                   <td><span class="badge bg-primary">Ultima</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
@@ -33,8 +33,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
-                  <td><strong>1.4.3</strong></td>
-                  <td>9 Gennaio 2026</td>
+                  <td><strong>1.5.4</strong></td>
+                  <td>28 Gennaio 2026</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
@@ -43,8 +43,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
-                  <td><strong>1.3.3</strong></td>
-                  <td>29 Giugno 2025</td>
+                  <td><strong>1.4.3</strong></td>
+                  <td>9 Gennaio 2026</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
@@ -53,8 +53,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
-                  <td><strong>1.2.3</strong></td>
-                  <td>15 Maggio 2025</td>
+                  <td><strong>1.3.3</strong></td>
+                  <td>29 Maggio 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
@@ -63,8 +63,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(4)" class="version-row">
-                  <td><strong>1.2.2</strong></td>
-                  <td>8 Maggio 2025</td>
+                  <td><strong>1.2.3</strong></td>
+                  <td>15 Maggio 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
@@ -73,8 +73,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(5)" class="version-row">
-                  <td><strong>1.2.1</strong></td>
-                  <td>28 Aprile 2025</td>
+                  <td><strong>1.2.2</strong></td>
+                  <td>8 Maggio 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
@@ -83,8 +83,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(6)" class="version-row">
-                  <td><strong>1.1.1</strong></td>
-                  <td>14 Aprile 2025</td>
+                  <td><strong>1.2.1</strong></td>
+                  <td>28 Aprile 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(6)">
@@ -93,8 +93,8 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(7)" class="version-row">
-                  <td><strong>1.0.1</strong></td>
-                  <td>3 Aprile 2025</td>
+                  <td><strong>1.1.1</strong></td>
+                  <td>15 Aprile 2025</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(7)">
@@ -103,11 +103,21 @@
                   </td>
                 </tr>
                 <tr @click="showDetails(8)" class="version-row">
+                  <td><strong>1.0.1</strong></td>
+                  <td>3 Aprile 2025</td>
+                  <td></td>
+                  <td>
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(8)">
+                      <i class="bi bi-info-circle"></i> Dettagli
+                    </button>
+                  </td>
+                </tr>
+                <tr @click="showDetails(9)" class="version-row">
                   <td><strong>1.0.0</strong></td>
                   <td>1 Aprile 2025</td>
                   <td></td>
                   <td>
-                    <button class="btn btn-sm btn-info" @click.stop="showDetails(8)">
+                    <button class="btn btn-sm btn-info" @click.stop="showDetails(9)">
                       <i class="bi bi-info-circle"></i> Dettagli
                     </button>
                   </td>
@@ -187,9 +197,24 @@ export default {
       lastFocusedElement: null,
       versions: [
         {
+          version: "Versione 1.5.5",
+          date: "6 Marzo 2026",
+          isLatest: true,
+          changes: [
+            "Corretta e migliorata l'esperienza della Demo Scene.",
+            "Migliorata la vista del giocatore nella Demo Scene per maggiore chiarezza e usabilità. Ulteriori correzioni e modifiche.",
+            "Migliorato l'adattamento dell'interfaccia a diverse dimensioni e risoluzioni dello schermo per una migliore compatibilità su tutti i display."
+          ],
+          requirements: {
+            unity: "2022.3.23f1 o successiva",
+            platforms: "Windows, macOS, Linux, iOS, Android"
+          },
+          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+        },
+        {
           version: "Versione 1.5.4",
           date: "28 Gennaio 2026",
-          isLatest: true,
+          isLatest: false,
           changes: [
             "Correzioni di bug",
             "Risolto un problema per cui la modifica della sensibilità dello zoom della Orbit Camera non veniva applicata correttamente.",
@@ -233,7 +258,7 @@ export default {
         },
         {
           version: "Versione 1.3.3",
-          date: "29 Giugno 2025",
+          date: "29 Maggio 2025",
           isLatest: false,
           changes: [
             "Novità principali",
@@ -292,7 +317,7 @@ export default {
         },
         {
           version: "Versione 1.1.1",
-          date: "14 Aprile 2025",
+          date: "15 Aprile 2025",
           isLatest: false,
           changes: [
             "Supporto completo per modelli con LOD (Level of Detail)",
