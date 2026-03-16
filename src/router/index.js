@@ -298,6 +298,12 @@ const router = createRouter({
     },
     
     {
+      path: '/rocket',
+      name: 'rocket',
+      component: () => import('@/views/Rocket.vue')
+    },
+
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('@/views/NotFound.vue')
