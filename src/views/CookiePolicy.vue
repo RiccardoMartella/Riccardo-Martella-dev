@@ -2,13 +2,14 @@
   <div class="cookie-policy-page">
     <div class="container py-5">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <!-- English: full cookie policy -->
+        <div v-if="locale === 'en'" class="col-lg-10">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Cookie Policy</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('cookiePolicy.title') }}</h1>
             <p class="lead">
-              Welcome to Assembly Station's cookie policy. This policy will help you understand what cookies and tracking technologies we use, how we use them, and what your rights are regarding them.
+              {{ $t('cookiePolicy.lead') }}
             </p>
-            <p class="text-muted">Last updated: April 6, 2025</p>
+            <p class="text-muted">{{ $t('cookiePolicy.lastUpdated') }}</p>
           </div>
 
           <div class="card shadow-sm mb-4">
@@ -44,7 +45,7 @@
 
                 <div class="tracking-tools-section">
                   <h4>Tracking Tools managed by third parties</h4>
-                  
+
                   <div class="tool-card">
                     <p><strong>Google Analytics 4 (Google LLC)</strong><br>
                     Company: Google LLC<br>
@@ -128,7 +129,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">How Can We Help?</h2>
-                
+
                 <h3>What You Can Do</h3>
                 <h4>Your Data</h4>
                 <ul>
@@ -152,10 +153,43 @@
 
             </div>
           </div>
-          
+
           <div class="text-center mt-5">
-            <RouterLink to="/" class="btn btn-outline-primary">
-              <i class="bi bi-arrow-left me-2"></i> Return to Home
+            <RouterLink :to="localePath('/')" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left me-2"></i> {{ $t('cookiePolicy.returnHome') }}
+            </RouterLink>
+          </div>
+        </div>
+
+        <!-- Italian: iubenda stub -->
+        <div v-else class="col-lg-8">
+          <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('cookiePolicy.itTitle') }}</h1>
+            <p class="lead">
+              {{ $t('cookiePolicy.itLead') }}
+            </p>
+          </div>
+
+          <div class="card shadow-sm mb-5">
+            <div class="card-body p-4">
+              <div class="iubenda-container">
+                <a href="https://www.iubenda.com/privacy-policy/82562185/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">{{ $t('cookiePolicy.itIubendaTitle') }}</a>
+              </div>
+
+              <div class="mt-4">
+                <p>
+                  {{ $t('cookiePolicy.itDesc1') }}
+                </p>
+                <p>
+                  {{ $t('cookiePolicy.itDesc2') }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <RouterLink :to="localePath('/')" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left me-2"></i> {{ $t('cookiePolicy.itReturnHome') }}
             </RouterLink>
           </div>
         </div>
@@ -165,8 +199,36 @@
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
+
 export default {
-  name: 'CookiePolicy'
+  name: 'CookiePolicy',
+  setup() {
+    const { locale } = useI18n()
+    const { localePath } = useLocalePath()
+    return { localePath, locale }
+  },
+  mounted() {
+    // Load iubenda script for Italian locale
+    if (this.locale === 'it') {
+      (function (w,d) {
+        var loader = function () {
+          var s = d.createElement("script"),
+          tag = d.getElementsByTagName("script")[0];
+          s.src="https://cdn.iubenda.com/iubenda.js";
+          tag.parentNode.insertBefore(s,tag);
+        };
+        if(w.addEventListener){
+          w.addEventListener("load", loader, false);
+        } else if(w.attachEvent){
+          w.attachEvent("onload", loader);
+        } else {
+          w.onload = loader;
+        }
+      })(window, document);
+    }
+  }
 }
 </script>
 
@@ -210,6 +272,17 @@ export default {
   border-radius: 6px;
   border-left: 4px solid #00A3FF;
   margin-bottom: 1rem;
+}
+
+.iubenda-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+:deep(.iubenda-white) {
+  font-size: 1.1rem !important;
+  padding: 10px 20px !important;
 }
 
 section h3 {

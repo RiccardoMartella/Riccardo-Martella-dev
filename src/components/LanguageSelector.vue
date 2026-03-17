@@ -3,7 +3,7 @@
     <a
       @click.prevent="switchLanguage('it')"
       class="lang-link"
-      :class="{ active: currentLang === 'it' }"
+      :class="{ active: locale === 'it' }"
     >
       <img src="/public/images/Ita.png" class="img-flag" alt="Italia" />
       <span>IT</span>
@@ -11,7 +11,7 @@
     <a
       @click.prevent="switchLanguage('en')"
       class="lang-link"
-      :class="{ active: currentLang === 'en' }"
+      :class="{ active: locale === 'en' }"
     >
       <img src="/public/images/en.png" class="img-flag" alt="English" />
       <span>EN</span>
@@ -20,81 +20,32 @@
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n'
+
 export default {
   name: "LanguageSelector",
-  data() {
-    return {
-      currentLang: "en",
-    };
-  },
-  created() {
-    this.updateCurrentLang();
-  },
-  watch: {
-    $route() {
-      this.updateCurrentLang();
-    },
+  setup() {
+    const { locale } = useI18n()
+    return { locale }
   },
   methods: {
-    updateCurrentLang() {
-      this.currentLang = this.$route.path.includes("/it") ? "it" : "en";
-    },
     switchLanguage(lang) {
-      if (lang === this.currentLang) return;
+      if (lang === this.locale) return
 
-      const currentPath = this.$route.path;
+      const currentPath = this.$route.path
 
-      if (currentPath === "/" || currentPath === "/it") {
-        this.$router.push(lang === "en" ? "/" : "/it");
-      } else if (
-        currentPath === "/homeEn" ||
-        currentPath === "/it/documentation"
-      ) {
-        this.$router.push(lang === "en" ? "/homeEn" : "/it/documentation");
-      } else if (
-        currentPath === "/contacts" ||
-        currentPath === "/it/contacts"
-      ) {
-        this.$router.push(lang === "en" ? "/contacts" : "/it/contacts");
-      } else if (
-        currentPath.includes("/report-bug") ||
-        currentPath.includes("/it/report-bug")
-      ) {
-        this.$router.push(lang === "en" ? "/report-bug" : "/it/report-bug");
-      } else if (currentPath === "/pricing" || currentPath === "/it/pricing") {
-        this.$router.push(lang === "en" ? "/pricing" : "/it/pricing");
-      } else if (currentPath === "/privacy" || currentPath === "/it/privacy") {
-        this.$router.push(lang === "en" ? "/privacy" : "/it/privacy");
-      } else if (currentPath === "/licenses" || currentPath === "/it/licenses") {
-        this.$router.push(lang === "en" ? "/licenses" : "/it/licenses");
-      } else if (
-        currentPath.includes("/docs/") ||
-        currentPath.includes("/it/docs/")
-      ) {
-        const docPath = currentPath.split("/").pop();
-        this.$router.push(
-          lang === "en" ? `/docs/${docPath}` : `/it/docs/${docPath}`
-        );
-      } else if (currentPath === "/tutorials" || currentPath === "/it/tutorials") {
-        this.$router.push(lang === "en" ? "/tutorials" : "/it/tutorials");
-      } else if (currentPath === "/versions" || currentPath === "/it/versions") {
-        this.$router.push(lang === "en" ? "/versions" : "/it/versions");
-      } else if (currentPath === "/beta" || currentPath === "/it/beta") {
-        this.$router.push(lang === "en" ? "/beta" : "/it/beta");
-      } else if (currentPath === "/settings" || currentPath === "/it/settings") {
-        this.$router.push(lang === "en" ? "/settings" : "/it/settings");
-      } else if (currentPath === "/cookie-policy" || currentPath === "/it/cookie-policy") {
-        this.$router.push(lang === "en" ? "/cookie-policy" : "/it/cookie-policy");
-      } else if (currentPath === "/discord-giveaway" || currentPath === "/it/discord-giveaway") {
-        this.$router.push(lang === "en" ? "/discord-giveaway" : "/it/discord-giveaway");
-      } else if (currentPath === "/demo" || currentPath === "/it/demo") {
-        this.$router.push(lang === "en" ? "/demo" : "/it/demo");
+      if (lang === 'it') {
+        // EN -> IT: add /it prefix
+        const newPath = currentPath === '/' ? '/it' : `/it${currentPath}`
+        this.$router.push(newPath + (this.$route.hash || ''))
       } else {
-        this.$router.push(lang === "en" ? "/" : "/it");
+        // IT -> EN: remove /it prefix
+        let newPath = currentPath.replace(/^\/it/, '') || '/'
+        this.$router.push(newPath + (this.$route.hash || ''))
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>

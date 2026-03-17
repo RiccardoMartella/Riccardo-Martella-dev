@@ -4,40 +4,40 @@
       <div class="row justify-content-center align-items-center min-vh-100">
         <div class="col-lg-6 text-center">
           <div class="error-content">
-            <div class="error-number">404</div>
-            <h1 class="error-title">Page Not Found</h1>
+            <div class="error-number">{{ $t('notFound.title') }}</div>
+            <h1 class="error-title">{{ $t('notFound.subtitle') }}</h1>
             <p class="error-description">
-              Sorry, the page you are looking for does not exist or has been moved.
+              {{ $t('notFound.text') }}
             </p>
             <div class="error-actions">
-              <router-link to="/" class="btn btn-primary btn-lg me-3">
+              <router-link :to="localePath('/')" class="btn btn-primary btn-lg me-3">
                 <i class="bi bi-house-door me-2"></i>
-                Go to Homepage
+                {{ $t('notFound.goHome') }}
               </router-link>
-              <router-link to="/docs" class="btn btn-outline-primary btn-lg">
+              <router-link :to="localePath('/docs')" class="btn btn-outline-primary btn-lg">
                 <i class="bi bi-book me-2"></i>
-                Documentation
+                {{ $t('notFound.documentation') }}
               </router-link>
             </div>
-            
+
             <div class="helpful-links mt-5">
-              <h5>You might be looking for:</h5>
+              <h5>{{ $t('notFound.helpfulTitle') }}</h5>
               <div class="quick-links">
-                <router-link to="/tutorials" class="quick-link">
+                <router-link :to="localePath('/tutorials')" class="quick-link">
                   <i class="bi bi-play-circle"></i>
-                  Tutorials
+                  {{ $t('notFound.tutorials') }}
                 </router-link>
-                <router-link to="/pricing" class="quick-link">
+                <router-link :to="localePath('/pricing')" class="quick-link">
                   <i class="bi bi-tag"></i>
-                  Pricing
+                  {{ $t('notFound.pricing') }}
                 </router-link>
-                <router-link to="/contacts" class="quick-link">
+                <router-link :to="localePath('/contacts')" class="quick-link">
                   <i class="bi bi-envelope"></i>
-                  Contact
+                  {{ $t('notFound.contact') }}
                 </router-link>
-                <router-link to="/docs" class="quick-link">
+                <router-link :to="localePath('/docs')" class="quick-link">
                   <i class="bi bi-book"></i>
-                  Documentation
+                  {{ $t('notFound.documentation') }}
                 </router-link>
               </div>
             </div>
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Animated background -->
     <div class="animated-bg">
       <div class="bg-shape shape-1"></div>
@@ -57,17 +57,24 @@
 
 <script>
 import { useSEO } from '@/composables/useSEO.js'
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'NotFound',
   setup() {
+    const { t, locale } = useI18n()
+    const { localePath } = useLocalePath()
+
     // SEO configuration for 404 page
     useSEO({
-      title: '404 - Page Not Found | Assembly Station',
-      description: 'The page you are looking for does not exist. Return to Assembly Station homepage or explore our documentation.',
+      title: t('notFound.seoTitle'),
+      description: t('notFound.seoDescription'),
       url: typeof window !== 'undefined' ? window.location.href : 'https://www.assembly-station.com/',
       robots: 'noindex, nofollow'
     })
+
+    return { localePath }
   }
 }
 </script>

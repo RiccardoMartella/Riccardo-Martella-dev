@@ -4,9 +4,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4" id="bug">Report a Bug</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4" id="bug">{{ $t('reportBug.title') }}</h1>
             <p class="lead">
-                Have you found a bug or have a proposal to improve Assembly Station? Let me know so I can fix it!
+                {{ $t('reportBug.subtitle') }}
             </p>
           </div>
 
@@ -16,43 +16,43 @@
                 <div class="info-icon">
                   <i class="bi bi-check-circle-fill"></i>
                 </div>
-                <h4>Bug Tracking</h4>
-                <p>All reported issues are tracked and prioritized based on severity and impact.</p>
+                <h4>{{ $t('reportBug.trackingTitle') }}</h4>
+                <p>{{ $t('reportBug.trackingText') }}</p>
               </div>
             </div>
-            
+
             <div class="col-md-4">
               <div class="info-card mb-4">
                 <div class="info-icon">
                   <i class="bi bi-clock-fill"></i>
                 </div>
-                <h4>Response Time</h4>
-                <p>I'm currently the only developer, so I'll do my best to resolve issues as quickly as possible.</p>
+                <h4>{{ $t('reportBug.responseTitle') }}</h4>
+                <p>{{ $t('reportBug.responseText') }}</p>
                 <div class="support-developer mt-3">
                   <a href="https://paypal.me/riccardomartella" target="_blank" class="support-link">
-                    <i class="bi bi-heart-fill me-1"></i> Support my work
+                    <i class="bi bi-heart-fill me-1"></i> {{ $t('reportBug.supportWork') }}
                   </a>
                 </div>
               </div>
             </div>
-            
+
             <div class="col-md-4">
               <div class="info-card mb-4">
                 <div class="info-icon">
                   <i class="bi bi-shield-check"></i>
                 </div>
-                <h4>Your Privacy</h4>
-                <p>Your information is kept confidential and only used for resolving the reported issue.</p>
+                <h4>{{ $t('reportBug.privacyTitle') }}</h4>
+                <p>{{ $t('reportBug.privacyText') }}</p>
               </div>
             </div>
           </div>
 
           <div class="card shadow-sm mb-5">
             <div class="card-body">
-              <h4>Ways to Report Bugs</h4>
+              <h4>{{ $t('reportBug.waysTitle') }}</h4>
               <div class="alert alert-info mb-4">
                 <i class="bi bi-info-circle-fill me-2"></i>
-                <strong>Recommended:</strong> Using GitHub allows you to easily track the status of your bug report and follow updates as I work on fixes.
+                <strong>{{ $t('reportBug.recommended') }}</strong> {{ $t('reportBug.recommendedText') }}
               </div>
               <div class="row mt-4 equal-height-row">
                 <div class="col-md-4 mb-3 mb-md-0">
@@ -60,10 +60,10 @@
                     <div class="bug-report-icon">
                       <i class="bi bi-github"></i>
                     </div>
-                    <h5>GitHub Issues</h5>
-                    <p class="mb-3">Create an issue on my GitHub repository (recommended)</p>
+                    <h5>{{ $t('reportBug.githubTitle') }}</h5>
+                    <p class="mb-3">{{ $t('reportBug.githubText') }}</p>
                     <div class="mt-auto">
-                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary w-100" target="_blank">Open GitHub</a>
+                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary w-100" target="_blank">{{ $t('reportBug.openGithub') }}</a>
                     </div>
                   </div>
                 </div>
@@ -73,9 +73,9 @@
                       <i class="bi bi-discord"></i>
                     </div>
                     <h5>Discord</h5>
-                    <p class="mb-3">Join our community for support</p>
+                    <p class="mb-3">{{ $t('reportBug.discordText') }}</p>
                     <div class="mt-auto">
-                      <a href="https://discord.gg/dZ2Veb4eM5" class="btn btn-primary w-100" target="_blank">Join Discord</a>
+                      <a href="https://discord.gg/dZ2Veb4eM5" class="btn btn-primary w-100" target="_blank">{{ $t('reportBug.joinDiscord') }}</a>
                     </div>
                   </div>
                 </div>
@@ -84,17 +84,17 @@
                     <div class="bug-report-icon">
                       <i class="bi bi-envelope"></i>
                     </div>
-                    <h5>Email</h5>
-                    <p class="mb-3">Send me an email with details</p>
+                    <h5>{{ $t('reportBug.emailTitle') }}</h5>
+                    <p class="mb-3">{{ $t('reportBug.emailText') }}</p>
                     <div class="mt-auto">
-                      <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary w-100">Email Me</a>
+                      <a href="mailto:riccardomartella77@gmail.com" class="btn btn-outline-primary w-100">{{ $t('reportBug.emailMe') }}</a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="mt-4 alert alert-secondary">
                 <i class="bi bi-shield-check me-2"></i>
-                <strong>Verification:</strong> After purchasing the asset, please send me your order number via Discord private message to get verified.
+                <strong>{{ $t('reportBug.verification') }}</strong> {{ $t('reportBug.verificationText') }}
               </div>
             </div>
           </div>
@@ -104,73 +104,73 @@
               <div class="mb-4">
                 <div class="d-flex align-items-center mb-3">
                   <i class="bi bi-bug fs-1 text-accent me-3"></i>
-                  <h2>Bug Report Form</h2>
+                  <h2>{{ $t('reportBug.formTitle') }}</h2>
                 </div>
                 <p class="text-muted">
-                  If you prefer not to use GitHub, you can fill out this form to report an issue directly.
+                  {{ $t('reportBug.formSubtitle') }}
                 </p>
               </div>
-              
-              <form name="reportbugen" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="reportbugen" />
+
+              <form :name="locale === 'it' ? 'reportbugit' : 'reportbugen'" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" :value="locale === 'it' ? 'reportbugit' : 'reportbugen'" />
                 <div class="mb-3">
-                  <label for="bugTitle" class="form-label">Bug Title</label>
-                  <input type="text" class="form-control" id="bugTitle" name="bugTitle" placeholder="Short description of the bug">
+                  <label for="bugTitle" class="form-label">{{ $t('reportBug.bugTitleLabel') }}</label>
+                  <input type="text" class="form-control" id="bugTitle" name="bugTitle" :placeholder="$t('reportBug.bugTitlePlaceholder')">
                 </div>
-                
+
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <label for="version" class="form-label">Assembly Station Version</label>
-                    <input type="text" class="form-control" id="version" name="version" placeholder="e.g. 1.2.5">
+                    <label for="version" class="form-label">{{ $t('reportBug.versionLabel') }}</label>
+                    <input type="text" class="form-control" id="version" name="version" :placeholder="$t('reportBug.versionPlaceholder')">
                   </div>
                   <div class="col-md-6">
-                    <label for="unityVersion" class="form-label">Unity Version</label>
-                    <input type="text" class="form-control" id="unityVersion" name="unityVersion" placeholder="e.g. 2022.3.1f1">
+                    <label for="unityVersion" class="form-label">{{ $t('reportBug.unityVersionLabel') }}</label>
+                    <input type="text" class="form-control" id="unityVersion" name="unityVersion" :placeholder="$t('reportBug.unityVersionPlaceholder')">
                   </div>
                 </div>
-                
+
                 <div class="mb-3">
-                  <label for="severity" class="form-label">Bug Severity</label>
+                  <label for="severity" class="form-label">{{ $t('reportBug.severityLabel') }}</label>
                   <select class="form-select" id="severity"  name="severity">
-                    <option selected>Select severity level</option>
-                    <option value="critical">Critical - App crashes or cannot function</option>
-                    <option value="major">Major - Core functionality broken</option>
-                    <option value="minor">Minor - Non-critical issue or UI problem</option>
-                    <option value="enhancement">Enhancement - Feature request or suggestion</option>
+                    <option selected>{{ $t('reportBug.severityDefault') }}</option>
+                    <option value="critical">{{ $t('reportBug.severityCritical') }}</option>
+                    <option value="major">{{ $t('reportBug.severityMajor') }}</option>
+                    <option value="minor">{{ $t('reportBug.severityMinor') }}</option>
+                    <option value="enhancement">{{ $t('reportBug.severityEnhancement') }}</option>
                   </select>
                 </div>
-                
+
                 <div class="mb-3">
-                  <label for="bugDescription" class="form-label">Bug Description</label>
-                  <textarea class="form-control" id="bugDescription" name="bugDescription" rows="5" placeholder="Detailed description of what happens..."></textarea>
+                  <label for="bugDescription" class="form-label">{{ $t('reportBug.descriptionLabel') }}</label>
+                  <textarea class="form-control" id="bugDescription" name="bugDescription" rows="5" :placeholder="$t('reportBug.descriptionPlaceholder')"></textarea>
                 </div>
-                
+
                 <div class="mb-3">
-                  <label for="reproduction" class="form-label">Steps to Reproduce</label>
-                  <textarea class="form-control" id="reproduction" name="reproduction" rows="4" placeholder="1. Open scene... 2. Select object... 3. Click on..."></textarea>
+                  <label for="reproduction" class="form-label">{{ $t('reportBug.stepsLabel') }}</label>
+                  <textarea class="form-control" id="reproduction" name="reproduction" rows="4" :placeholder="$t('reportBug.stepsPlaceholder')"></textarea>
                 </div>
-                
+
                 <div class="mb-3">
-                  <label for="expected" class="form-label">Expected Behavior</label>
-                  <textarea class="form-control" id="expected" name="expected" rows="2" placeholder="What should happen instead?"></textarea>
+                  <label for="expected" class="form-label">{{ $t('reportBug.expectedLabel') }}</label>
+                  <textarea class="form-control" id="expected" name="expected" rows="2" :placeholder="$t('reportBug.expectedPlaceholder')"></textarea>
                 </div>
-                
+
                 <div class="mb-3">
-                  <label class="form-label">Screenshots/Videos</label>
+                  <label class="form-label">{{ $t('reportBug.screenshotsLabel') }}</label>
                   <div class="input-group">
                     <input type="file" class="form-control" id="attachments" name="attachments" multiple>
-                    <label class="input-group-text" for="attachments">Upload</label>
+                    <label class="input-group-text" for="attachments">{{ $t('reportBug.upload') }}</label>
                   </div>
-                  <div class="form-text">Attach any relevant screenshots or videos (optional)</div>
+                  <div class="form-text">{{ $t('reportBug.screenshotsHelp') }}</div>
                 </div>
-                
-                <div class="mb-3">
-                  <label for="email" class="form-label">Your Email (for follow-up)</label>
-                  <input type="email" class="form-control" id="email"  name="email" placeholder="your.email@example.com">
-                </div>
-                <div><p class="form-text">"The data entered will be used exclusively to respond to your request. They will not be shared with third parties."</p></div>
 
-                <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Submit Bug Report</button>
+                <div class="mb-3">
+                  <label for="email" class="form-label">{{ $t('reportBug.emailLabel') }}</label>
+                  <input type="email" class="form-control" id="email"  name="email" :placeholder="$t('reportBug.emailPlaceholder')">
+                </div>
+                <div><p class="form-text">{{ $t('reportBug.formPrivacy') }}</p></div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2 mt-3">{{ $t('reportBug.submitBtn') }}</button>
               </form>
             </div>
           </div>
@@ -179,44 +179,44 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  What happens after I submit a bug report?
+                  {{ $t('reportBug.faq1Question') }}
                 </button>
               </h2>
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>After submitting a bug report, I will review the issue and respond as soon as possible. I'll provide updates on the status of the fix and may request additional information if needed. Once fixed, you'll receive a notification and the fix will be included in the next update.</p>
+                  <p>{{ $t('reportBug.faq1Answer') }}</p>
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                  How can I check the status of my bug report?
+                  {{ $t('reportBug.faq2Question') }}
                 </button>
               </h2>
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>You can check the status of your report through the email you provided in the report. If you reported via GitHub, you can track the issue there. I also send email updates when there's progress on your reported issue.</p>
+                  <p>{{ $t('reportBug.faq2Answer') }}</p>
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                  What information is most helpful in bug reports?
+                  {{ $t('reportBug.faq3Question') }}
                 </button>
               </h2>
               <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  <p>The most helpful information includes:</p>
+                  <p>{{ $t('reportBug.faq3Answer') }}</p>
                   <ul>
-                    <li>Clear, detailed steps to reproduce the issue</li>
-                    <li>Screenshots or screen recordings showing the problem</li>
-                    <li>Exact version information of Assembly Station and Unity</li>
-                    <li>Error messages (if any)</li>
-                    <li>When the issue started occurring (after an update, etc.)</li>
+                    <li>{{ $t('reportBug.faq3List1') }}</li>
+                    <li>{{ $t('reportBug.faq3List2') }}</li>
+                    <li>{{ $t('reportBug.faq3List3') }}</li>
+                    <li>{{ $t('reportBug.faq3List4') }}</li>
+                    <li>{{ $t('reportBug.faq3List5') }}</li>
                   </ul>
                 </div>
               </div>
@@ -229,10 +229,18 @@
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
+
 export default {
   name: 'ReportBug',
+  setup() {
+    const { locale } = useI18n()
+    const { localePath } = useLocalePath()
+    return { localePath, locale }
+  },
   mounted() {
-    
+
     this.$nextTick(() => {
       if (window.location.hash) {
         const id = window.location.hash.slice(1);
@@ -240,7 +248,7 @@ export default {
         if (element) {
           setTimeout(() => {
             element.scrollIntoView({ behavior: 'smooth' });
-          }, 100); 
+          }, 100);
         }
       }
     });

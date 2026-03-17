@@ -2,18 +2,18 @@
   <div class="rocket-page">
     <div class="container py-5">
       <div class="text-center mb-4">
-        <h1 class="display-4 fw-bold text-accent">Rocket Demo</h1>
+        <h1 class="display-4 fw-bold text-accent">{{ $t('rocket.title') }}</h1>
       </div>
       <div class="demo-container">
         <div class="demo-click-notice alert alert-warning d-flex align-items-center mb-0" role="alert">
           <i class="bi bi-mouse-fill me-2 flex-shrink-0"></i>
-          <span><strong>To use the demo:</strong> Click inside the demo area to activate it.</span>
+          <span v-html="$t('rocket.demoNotice')"></span>
         </div>
         <div class="demo-frame-container">
           <iframe
             class="demo-frame"
             src="/TestRocket/index.html"
-            title="Rocket Demo"
+            :title="$t('rocket.iframeTitle')"
             allowfullscreen>
           </iframe>
         </div>
@@ -23,8 +23,17 @@
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
+
 export default {
-  name: 'Rocket'
+  name: 'Rocket',
+  setup() {
+    const { locale } = useI18n()
+    const { localePath } = useLocalePath()
+
+    return { localePath }
+  }
 }
 </script>
 

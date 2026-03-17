@@ -2,15 +2,15 @@
   <div class="warning-box mb-3">
     <div class="warning-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
     <div class="warning-content">
-      <h4>{{ isItalian ? 'ATTENZIONE!' : 'CAUTION!' }}</h4>
-      <p>{{ isItalian ? 'Prima di effettuare qualsiasi modifica è altamente consigliato fare un backup del tuo progetto. Utilizza prima la scena demo di Assembly Station per verificare il corretto funzionamento delle tue modifiche e non creare errori nel tuo progetto principale.' : 'Before making any modifications, it is highly recommended to back up your project. Use the Assembly Station demo scene first to verify the correct functioning of your modifications and to avoid creating errors in your main project.' }}</p>
+      <h4>{{ $t('contentSection.cautionTitle') }}</h4>
+      <p>{{ $t('contentSection.warning') }}</p>
     </div>
   </div>
   <div class="disclaimer-box ">
     <div class="disclaimer-icon"><i class="bi bi-info-circle-fill"></i></div>
     <div class="disclaimer-content">
-      <h4>{{ isItalian ? 'Nota Importante' : 'Important Note' }}</h4>
-      <p>{{ isItalian ? 'Le immagini e i video presenti nella documentazione potrebbero non riflettere esattamente l\'aspetto attuale dell\'asset, poiché Assembly Station è in costante evoluzione e aggiornamento. Mi impegno ad aggiornare regolarmente questa documentazione e ho evitato di utilizzare un linguaggio troppo tecnico per rendere la documentazione facilmente comprensibile a tutti.' : 'The images and videos in this documentation might not exactly match the current appearance of the asset, as Assembly Station is constantly evolving and being updated. I am committed to regularly updating this documentation and have avoided using overly technical language to make this documentation more accessible and easier to understand for everyone.' }}</p>
+      <h4>{{ $t('contentSection.noteTitle') }}</h4>
+      <p>{{ $t('contentSection.disclaimer') }}</p>
     </div>
   </div>
   <div class="content-section">
@@ -20,12 +20,7 @@
 
 <script>
 export default {
-  name: 'ContentSection',
-  computed: {
-    isItalian() {
-      return this.$route.path.includes('/it');
-    }
-  }
+  name: 'ContentSection'
 }
 </script>
 
@@ -108,11 +103,11 @@ export default {
   .content-section {
     padding: 1.5rem;
   }
-  
+
   .warning-box, .disclaimer-box {
     flex-direction: column;
   }
-  
+
   .warning-icon, .disclaimer-icon {
     margin-bottom: 8px;
   }

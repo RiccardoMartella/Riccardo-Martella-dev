@@ -4,9 +4,9 @@
       <div class="row">
 
         <div class="col-lg-3 col-md-4 d-none d-md-block">
-          <DocSidebar :isItalian="isItalian" />
+          <DocSidebar />
         </div>
-   
+
         <MobileSidebarToggle />
 
         <div class="col-lg-9 col-md-8">
@@ -17,9 +17,9 @@
       </div>
     </div>
 
-    <button 
-      v-show="showBackToTop" 
-      @click="scrollToTop" 
+    <button
+      v-show="showBackToTop"
+      @click="scrollToTop"
       class="back-to-top-btn me-4"
       aria-label="Back to top"
     >
@@ -32,6 +32,7 @@
 import DocSidebar from '@/components/DocSidebar.vue'
 import MobileSidebarToggle from '@/components/MobileSidebarToggle.vue'
 import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'DocContainer',
@@ -44,14 +45,8 @@ export default {
       showBackToTop: false
     }
   },
-  computed: {
-    isItalian() {
-      return this.$route.path.includes('/it/')
-    }
-  },
   watch: {
     '$route'(to) {
-      // Update SEO when route changes within docs
       this.updateSEO()
     }
   },
@@ -73,37 +68,36 @@ export default {
       })
     },
     updateSEO() {
-      const isItalian = this.$route.path.includes('/it/')
-      const seoConfig = isItalian ? seoConfigs.docsIT : seoConfigs.docs
-      
-      // Customize based on specific doc page
+      const locale = this.$route.meta?.locale || 'en'
+      const seoConfig = locale === 'it' ? seoConfigs.docsIT : seoConfigs.docs
+
       const path = this.$route.path
       let title = seoConfig.title
       let description = seoConfig.description
-      
+
       if (path.includes('installation')) {
-        title = isItalian 
+        title = locale === 'it'
           ? 'Installazione - Assembly Station Documentation'
           : 'Installation - Assembly Station Documentation'
-        description = isItalian
+        description = locale === 'it'
           ? 'Guida completa all\'installazione di Assembly Station per Unity. Requisiti di sistema e istruzioni passo-passo.'
           : 'Complete installation guide for Assembly Station Unity asset. System requirements and step-by-step instructions.'
       } else if (path.includes('fbx-guide')) {
-        title = isItalian
+        title = locale === 'it'
           ? 'Guida FBX - Assembly Station Documentation'
           : 'FBX Guide - Assembly Station Documentation'
-        description = isItalian
+        description = locale === 'it'
           ? 'Come preparare e importare modelli FBX in Assembly Station per Unity.'
           : 'How to prepare and import FBX models into Assembly Station for Unity.'
       } else if (path.includes('prefabs')) {
-        title = isItalian
+        title = locale === 'it'
           ? 'Prefabs - Assembly Station Documentation'
           : 'Prefabs - Assembly Station Documentation'
-        description = isItalian
+        description = locale === 'it'
           ? 'Creare e gestire prefabs in Assembly Station. Guida completa alla configurazione dei componenti.'
           : 'Create and manage prefabs in Assembly Station. Complete guide to component configuration.'
       }
-      
+
       useSEO({
         ...seoConfig,
         title,
@@ -162,7 +156,7 @@ export default {
   .content-wrapper {
     padding: 0 10px;
   }
-  
+
   .back-to-top-btn {
     bottom: 20px;
     right: 20px;

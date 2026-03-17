@@ -3,99 +3,97 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <h1 class="display-4 fw-bold text-accent mb-4">Licenses</h1>
-          
+          <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('licenses.title') }}</h1>
+
           <div class="introduction mb-5">
             <p class="lead">
-              Assembly Station uses various third-party assets, tools, and resources that are 
-              distributed under different licenses. This page provides attribution and licensing 
-              information for all third-party content included in this asset.
+              {{ $t('licenses.lead') }}
             </p>
           </div>
-          
+
           <div class="license-section mb-5">
-            <h2 class="section-title">Unity Components</h2>
+            <h2 class="section-title">{{ $t('licenses.unityComponents') }}</h2>
             <div class="license-item">
-              <p>This asset uses "TextMesh Pro" under the Unity Companion License.<br>
-              See <a href="https://unity.com/legal/licenses/unity-companion-license" target="_blank">https://unity.com/legal/licenses/unity-companion-license</a> for details.</p>
+              <p>{{ $t('licenses.textMeshPro') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://unity.com/legal/licenses/unity-companion-license" target="_blank">https://unity.com/legal/licenses/unity-companion-license</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
-            
+
             <div class="license-item">
-              <p>This asset uses the Unity "Player Input System" under the Unity Companion License.<br>
-              See <a href="https://unity.com/legal/licenses/unity-companion-license" target="_blank">https://unity.com/legal/licenses/unity-companion-license</a> for details.</p>
+              <p>{{ $t('licenses.playerInput') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://unity.com/legal/licenses/unity-companion-license" target="_blank">https://unity.com/legal/licenses/unity-companion-license</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
           </div>
-          
+
           <div class="license-section mb-5">
-            <h2 class="section-title">Audio</h2>
+            <h2 class="section-title">{{ $t('licenses.audioTitle') }}</h2>
             <div class="license-item">
-              <p>This asset uses the audio file "hammer and nail.wav" by fennelliott under Creative Commons 0 License.<br>
-              See <a href="https://freesound.org/s/347841/" target="_blank">https://freesound.org/s/347841/</a> for details.</p>
+              <p>{{ $t('licenses.audioHammer') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://freesound.org/s/347841/" target="_blank">https://freesound.org/s/347841/</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
           </div>
-          
+
           <div class="license-section mb-5">
-            <h2 class="section-title">Fiverr</h2>
+            <h2 class="section-title">{{ $t('licenses.fiverrTitle') }}</h2>
             <div class="license-item">
-              <p>All other assets not mentioned here were created through Fiverr services and are subject to Fiverr's Terms of Service.<br>
-              See <a href="https://www.fiverr.com/terms_of_service" target="_blank">https://help.fiverr.com/hc/it/articles/360011569298-Dettagli-della-licenza-per-uso-commerciale</a> for details.</p>
+              <p>{{ $t('licenses.fiverrDesc') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.fiverr.com/terms_of_service" target="_blank">https://help.fiverr.com/hc/it/articles/360011569298-Dettagli-della-licenza-per-uso-commerciale</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
-            
+
             <div class="license-item">
-              <p><a href="https://it.fiverr.com/pxl_dynamics">PIXEL DYNAMICS STUDIO LTD</a> ( UK Company No: 15750313 ), confirm that the images created for Riccardo Martella are to be considered his property. Riccardo Martella has full rights to use, modify, distribute and sell these images for commercial purposes, including selling on platforms such as Unity Asset Store, without any restrictions.</p>
+              <p><a href="https://it.fiverr.com/pxl_dynamics">PIXEL DYNAMICS STUDIO LTD</a> {{ $t('licenses.fiverrPixel') }}</p>
             </div>
           </div>
-          
+
           <div class="license-section mb-5">
-            <h2 class="section-title">Icons and Images</h2>
+            <h2 class="section-title">{{ $t('licenses.iconsTitle') }}</h2>
             <div class="license-item">
               <p>
-                This asset includes "Steel icons, Plastic Icons, Rubber Icons, Coin Icons, Lock Padlock Symbol" created by Smashicons from Flaticon under Creative Commons Attribution 3.0 Unported (CC BY 3.0).<br>
-                See <a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a> for details.<br>
-                See <a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a> for details.<br>
-                See <a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a> for details.<br>
-                See <a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a> for details.<br>
-                See <a href="https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface" target="_blank">https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface</a> for details.
+                {{ $t('licenses.iconsSmash') }}<br>
+                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/steel" target="_blank">https://www.flaticon.com/free-icons/steel</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
+                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">https://www.flaticon.com/free-icons/plastic-film</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
+                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/rubber" target="_blank">https://www.flaticon.com/free-icons/rubber</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
+                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/coin" target="_blank">https://www.flaticon.com/free-icons/coin</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
+                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface" target="_blank">https://www.flaticon.com/free-icons/lock-padlock-symbol-for-security-interface</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}
               </p>
             </div>
-            
+
             <div class="license-item">
-              <p>This asset includes an image generated by Craiyon "Smoke", which is a free AI image generator.<br>
-              See <a href="https://www.craiyon.com" target="_blank">https://www.craiyon.com</a> for details.</p>
+              <p>{{ $t('licenses.iconsCraiyon') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.craiyon.com" target="_blank">https://www.craiyon.com</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
-            
+
           </div>
-          
+
           <div class="license-section mb-5">
-            <h2 class="section-title">Fonts</h2>
+            <h2 class="section-title">{{ $t('licenses.fontsTitle') }}</h2>
             <div class="license-item">
-              <p>This asset uses the "Liberation Sans" font licensed under the SIL Open Font License, Version 1.1.<br>
-              See <a href="http://scripts.sil.org/OFL" target="_blank">http://scripts.sil.org/OFL</a> for details.</p>
+              <p>{{ $t('licenses.fontsLiberation') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="http://scripts.sil.org/OFL" target="_blank">http://scripts.sil.org/OFL</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
-            
+
             <div class="license-item">
-              <p>Copyright (c) 2016-2020 The Inter Project Authors.<br>
-              "Inter" is trademark of Rasmus Andersson.<br>
+              <p>{{ $t('licenses.fontsInter') }}<br>
+              {{ $t('licenses.fontsInterTm') }}<br>
               <a href="https://github.com/rsms/inter" target="_blank">https://github.com/rsms/inter</a></p>
-              
-              <p>This Font Software is licensed under the SIL Open Font License, Version 1.1.<br>
-              This license is copied below, and is also available with a FAQ at:<br>
+
+              <p>{{ $t('licenses.fontsInterLicense') }}<br>
+              {{ $t('licenses.fontsInterFaq') }}<br>
               <a href="http://scripts.sil.org/OFL" target="_blank">http://scripts.sil.org/OFL</a></p>
             </div>
           </div>
-          
+
           <div class="license-section mb-5">
             <h2 class="section-title">SIL OPEN FONT LICENSE</h2>
             <div class="license-text">
               <h3>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h3>
-              
+
               <h4>PREAMBLE</h4>
               <p>The goals of the Open Font License (OFL) are to stimulate worldwide
               development of collaborative font projects, to support the font creation
               efforts of academic and linguistic communities, and to provide a free and
               open framework in which fonts may be shared and improved in partnership
               with others.</p>
-              
+
               <p>The OFL allows the licensed fonts to be used, studied, modified and
               redistributed freely as long as they are not sold by themselves. The
               fonts, including any derivative works, can be bundled, embedded,
@@ -104,65 +102,65 @@
               however, cannot be released under any other type of license. The
               requirement for fonts to remain under this license does not apply
               to any document created using the fonts or their derivatives.</p>
-              
+
               <h4>DEFINITIONS</h4>
               <p>"Font Software" refers to the set of files released by the Copyright
               Holder(s) under this license and clearly marked as such. This may
               include source files, build scripts and documentation.</p>
-              
+
               <p>"Reserved Font Name" refers to any names specified as such after the
               copyright statement(s).</p>
-              
+
               <p>"Original Version" refers to the collection of Font Software components as
               distributed by the Copyright Holder(s).</p>
-              
+
               <p>"Modified Version" refers to any derivative made by adding to, deleting,
               or substituting -- in part or in whole -- any of the components of the
               Original Version, by changing formats or by porting the Font Software to a
               new environment.</p>
-              
+
               <p>"Author" refers to any designer, engineer, programmer, technical
               writer or other person who contributed to the Font Software.</p>
-              
+
               <h4>PERMISSION AND CONDITIONS</h4>
               <p>Permission is hereby granted, free of charge, to any person obtaining
               a copy of the Font Software, to use, study, copy, merge, embed, modify,
               redistribute, and sell modified and unmodified copies of the Font
               Software, subject to the following conditions:</p>
-              
+
               <ol>
                 <li>Neither the Font Software nor any of its individual components,
                 in Original or Modified Versions, may be sold by itself.</li>
-                
+
                 <li>Original or Modified Versions of the Font Software may be bundled,
                 redistributed and/or sold with any software, provided that each copy
                 contains the above copyright notice and this license. These can be
                 included either as stand-alone text files, human-readable headers or
                 in the appropriate machine-readable metadata fields within text or
                 binary files as long as those fields can be easily viewed by the user.</li>
-                
+
                 <li>No Modified Version of the Font Software may use the Reserved Font
                 Name(s) unless explicit written permission is granted by the corresponding
                 Copyright Holder. This restriction only applies to the primary font name as
                 presented to the users.</li>
-                
+
                 <li>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
                 Software shall not be used to promote, endorse or advertise any
                 Modified Version, except to acknowledge the contribution(s) of the
                 Copyright Holder(s) and the Author(s) or with their explicit written
                 permission.</li>
-                
+
                 <li>The Font Software, modified or unmodified, in part or in whole,
                 must be distributed entirely under this license, and must not be
                 distributed under any other license. The requirement for fonts to
                 remain under this license does not apply to any document created
                 using the Font Software.</li>
               </ol>
-              
+
               <h4>TERMINATION</h4>
               <p>This license becomes null and void if any of the above conditions are
               not met.</p>
-              
+
               <h4>DISCLAIMER</h4>
               <p>THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
               EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
@@ -183,16 +181,22 @@
 
 <script>
 import { useSEO } from '@/composables/useSEO.js'
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'Licenses',
   setup() {
+    const { locale, t } = useI18n()
+    const { localePath } = useLocalePath()
     useSEO({
-      title: 'Licenses & Third-Party Assets - Assembly Station',
-      description: 'Complete list of third-party licenses and assets used in Assembly Station Unity asset. Open source attributions and license information.',
-      keywords: 'Assembly Station licenses, third-party assets, open source, attributions, Unity asset licenses',
-      url: 'https://www.assembly-station.com/licenses'
+      title: t('licenses.seoTitle'),
+      description: t('licenses.seoDescription'),
+      keywords: t('licenses.seoKeywords'),
+      url: t('licenses.seoUrl'),
+      locale: locale.value === 'it' ? 'it_IT' : undefined
     })
+    return { localePath, locale }
   }
 }
 </script>
@@ -271,33 +275,33 @@ export default {
     font-size: 1.5rem;
     padding-bottom: 0.4rem;
   }
-  
+
   .license-item {
     padding: 1rem;
     margin-bottom: 1rem;
   }
-  
+
   .license-text {
     font-size: 0.8rem;
     padding: 1rem;
   }
-  
+
   .license-text h3 {
     font-size: 1.1rem;
   }
-  
+
   .license-text h4 {
     font-size: 1rem;
   }
-  
+
   .license-text ol {
     padding-left: 1rem;
   }
-  
+
   .license-text li {
     margin-bottom: 0.5rem;
   }
-  
+
   .display-4 {
     font-size: 2.5rem;
   }
@@ -307,7 +311,7 @@ export default {
   .section-title {
     font-size: 1.3rem;
   }
-  
+
   .display-4 {
     font-size: 2rem;
   }

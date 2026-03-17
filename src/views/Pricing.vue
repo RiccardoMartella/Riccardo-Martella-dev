@@ -4,99 +4,100 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Pricing</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('pricing.title') }}</h1>
             <p class="lead">
-              One single price, complete access: everything you need to excel in assembly guides            </p>
+              {{ $t('pricing.lead') }}
+            </p>
           </div>
 
           <div class="card pricing-card shadow mb-5">
             <div class="card-header text-center py-4">
-              <h2 class="pricing-title">Assembly Station</h2>
+              <h2 class="pricing-title">{{ $t('pricing.productName') }}</h2>
               <div class="price-container">
                 <span class="currency">$</span>
                 <span class="price">39</span>
-                <span class="period">/one-time</span>
+                <span class="period">{{ $t('pricing.period') }}</span>
               </div>
             </div>
             <div class="card-body p-4">
               <div class="package-features">
-                <h4 class="mb-3">What's included:</h4>
+                <h4 class="mb-3">{{ $t('pricing.whatsIncluded') }}</h4>
                 <ul class="feature-list">
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Complete Unity Asset for Assembly Instructions</span>
-                  </li>     
-                  <li>
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Full Source Code Access</span>
+                    <span>{{ $t('pricing.feature1') }}</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Comprehensive Documentation</span>
+                    <span>{{ $t('pricing.feature2') }}</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Direct Author Support</span>
+                    <span>{{ $t('pricing.feature3') }}</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Unity 2022.3.23f1 LTS or newer</span>
+                    <span>{{ $t('pricing.feature4') }}</span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    <span>Compatible with Unity 6</span>
+                    <span>{{ $t('pricing.feature5') }}</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span>{{ $t('pricing.feature6') }}</span>
                   </li>
                 </ul>
               </div>
-              
+
               <div class="text-center mt-4">
                 <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" class="btn btn-primary btn-lg px-5 py-3" target="_blank">
                   <i class="bi bi-cart-fill me-2"></i>
-                  Buy on Unity Asset Store
+                  {{ $t('pricing.buyBtn') }}
                 </a>
               </div>
             </div>
           </div>
 
           <div class="faq-section mt-5">
-            <h3 class="text-center mb-4">Frequently Asked Questions</h3>
-            
+            <h3 class="text-center mb-4">{{ $t('pricing.faqTitle') }}</h3>
+
             <div class="accordion" id="pricingFaq">
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    Is this a one-time payment or subscription?
+                    {{ $t('pricing.faq1Q') }}
                   </button>
                 </h2>
                 <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFaq">
                   <div class="accordion-body">
-                    This is a one-time purchase. You'll get the current version and all future updates to the asset with no additional costs.
+                    {{ $t('pricing.faq1A') }}
                   </div>
                 </div>
               </div>
-              
+
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                    Can I use this asset in multiple projects?
+                    {{ $t('pricing.faq2Q') }}
                   </button>
                 </h2>
                 <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
                   <div class="accordion-body">
-                    Yes, once purchased, you can use Assembly Station in multiple projects according to Unity Asset Store's standard license terms.
+                    {{ $t('pricing.faq2A') }}
                   </div>
                 </div>
               </div>
-              
+
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                    How do I get support if I have questions?
+                    {{ $t('pricing.faq3Q') }}
                   </button>
                 </h2>
                 <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
                   <div class="accordion-body">
-                    You can contact me directly through the support channels provided in this documentation. I'm committed to helping you implement Assembly Station successfully in your projects.
+                    {{ $t('pricing.faq3A') }}
                   </div>
                 </div>
               </div>
@@ -104,13 +105,13 @@
           </div>
 
           <div class="text-center mt-5">
-            <p>Need more information before making a decision?</p>
+            <p>{{ $t('pricing.moreInfo') }}</p>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <RouterLink to="/contacts#contEn" class="btn btn-outline-primary">
-                <i class="bi bi-envelope me-2"></i>Contact Me
+              <RouterLink :to="localePath('/contacts#contEn')" class="btn btn-outline-primary">
+                <i class="bi bi-envelope me-2"></i>{{ $t('pricing.contactMe') }}
               </RouterLink>
-              <RouterLink to="docs/installation" class="btn btn-outline-primary">
-                <i class="bi bi-book me-2"></i>Read Documentation
+              <RouterLink :to="localePath('/docs/installation')" class="btn btn-outline-primary">
+                <i class="bi bi-book me-2"></i>{{ $t('pricing.readDocs') }}
               </RouterLink>
             </div>
           </div>
@@ -122,11 +123,16 @@
 
 <script>
 import { useSEO, seoConfigs } from '@/composables/useSEO.js'
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'Pricing',
   setup() {
-    useSEO(seoConfigs.pricing)
+    const { locale } = useI18n()
+    const { localePath } = useLocalePath()
+    useSEO(seoConfigs.pricing[locale.value] || seoConfigs.pricing)
+    return { localePath, locale }
   },
   mounted() {
     this.$nextTick(() => {
@@ -263,5 +269,14 @@ export default {
 .accordion-button:focus {
   border-color: #00A3FF;
   box-shadow: 0 0 0 0.25rem rgba(0, 163, 255, 0.25);
+}
+
+/* Remove these styles as they're no longer needed */
+.price-original {
+  display: none;
+}
+
+.discount-badge {
+  display: none;
 }
 </style>

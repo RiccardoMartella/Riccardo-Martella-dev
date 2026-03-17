@@ -1,86 +1,84 @@
 <template>
   <div class="d-md-none mobile-toggle-container">
-    <button 
-      class="btn btn-primary mobile-toggle-btn" 
+    <button
+      class="btn btn-primary mobile-toggle-btn"
       @click="toggleSidebar"
       aria-label="Toggle sidebar navigation"
     >
       <i class="bi" :class="isOpen ? 'bi-x-lg' : 'bi-list'"></i>
     </button>
-    
+
     <div class="mobile-sidebar" :class="{ 'open': isOpen }">
       <div class="mobile-sidebar-header">
-        <h5 class="m-0">{{ $route.path.includes('/it') ? 'Contenuti' : 'Contents' }}</h5>
+        <h5 class="m-0">{{ $t('sidebar.contents') }}</h5>
         <button class="btn btn-close" @click="toggleSidebar" aria-label="Close sidebar"></button>
       </div>
-      
-      <!-- New Video Tutorials Link -->
+
       <div class="mobile-tutorial-link-container">
-        <RouterLink :to="$route.path.includes('/it') ? '/it/tutorials' : '/tutorials'" 
-                  class="mobile-tutorial-link" 
+        <RouterLink :to="localePath('/tutorials')"
+                  class="mobile-tutorial-link"
                   @click="toggleSidebar">
           <i class="bi bi-play-circle-fill me-2"></i>
-          {{ $route.path.includes('/it') ? 'Video Tutorial' : 'Video Tutorials' }}
+          {{ $t('sidebar.videoTutorials') }}
         </RouterLink>
       </div>
-      
+
       <ul class="mobile-sidebar-list">
-        <template v-if="isItalian">
-          <!-- Italian links -->
-          <li><RouterLink to="/it/docs/installation" class="sidebar-link" @click="hideMobileSidebar">1 - Installazione</RouterLink></li>
-          <li><RouterLink to="/it/docs/fbx-guide" class="sidebar-link" @click="hideMobileSidebar">2 - Guida FBX e Materiali</RouterLink></li>
-          <li><RouterLink to="/it/docs/prefabs" class="sidebar-link" @click="hideMobileSidebar">3 - Posizionare i Prefab</RouterLink></li>
-          <li><RouterLink to="/it/docs/descriptions" class="sidebar-link" @click="hideMobileSidebar">4 - Aggiungere Descrizioni e Immagini</RouterLink></li>
-          <li><RouterLink to="/it/docs/buttons" class="sidebar-link" @click="hideMobileSidebar">5 - Pulsanti e Categorie</RouterLink></li>
-          <li><RouterLink to="/it/docs/categories" class="sidebar-link" @click="hideMobileSidebar">6 - Tag/Categorie/Gruppi</RouterLink></li>
-          <li><RouterLink to="/it/docs/resources" class="sidebar-link" @click="hideMobileSidebar">7 - Risorse</RouterLink></li>
-          <li><RouterLink to="/it/docs/effects" class="sidebar-link" @click="hideMobileSidebar">8 - Effetti Sonori & Visivi</RouterLink></li>
-          <li><RouterLink to="/it/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Salvataggi</RouterLink></li>
-          <li><RouterLink to="/it/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Problemi Noti</RouterLink></li>
-          <li><RouterLink to="/it/docs/lod-group" class="sidebar-link" @click="hideMobileSidebar">11 - LOD Group</RouterLink></li>
-          <li><RouterLink to="/it/docs/block-piece" class="sidebar-link" @click="hideMobileSidebar">12 - Sistema di Blocco dei Pezzi</RouterLink></li>
-          <li><RouterLink to="/it/docs/settings" class="sidebar-link" @click="hideMobileSidebar">13 - Impostazioni Generali</RouterLink></li>
-          <li><RouterLink to="/it/beta" class="beta-mobile-link" @click="hideMobileSidebar">
-            <span class="beta-mobile-badge">BETA</span> Funzionalità Beta
-          </RouterLink></li>
-        </template>
-        <template v-else>
-          <!-- English links -->
-          <li><RouterLink to="/docs/installation" class="sidebar-link" @click="hideMobileSidebar">1 - Get Started</RouterLink></li>
-          <li><RouterLink to="/docs/fbx-guide" class="sidebar-link" @click="hideMobileSidebar">2 - FBX and Materials Guide</RouterLink></li>
-          <li><RouterLink to="/docs/prefabs" class="sidebar-link" @click="hideMobileSidebar">3 - Place Prefabs</RouterLink></li>
-          <li><RouterLink to="/docs/descriptions" class="sidebar-link" @click="hideMobileSidebar">4 - Add Descriptions and Images</RouterLink></li>
-          <li><RouterLink to="/docs/buttons" class="sidebar-link" @click="hideMobileSidebar">5 - Buttons and Categories</RouterLink></li>
-          <li><RouterLink to="/docs/categories" class="sidebar-link" @click="hideMobileSidebar">6 - Tags/Categories/Groups</RouterLink></li>
-          <li><RouterLink to="/docs/resources" class="sidebar-link" @click="hideMobileSidebar">7 - Resources</RouterLink></li>
-          <li><RouterLink to="/docs/effects" class="sidebar-link" @click="hideMobileSidebar">8 - Sound & Visual Effects</RouterLink></li>
-          <li><RouterLink to="/docs/saves" class="sidebar-link" @click="hideMobileSidebar">9 - Saves</RouterLink></li>
-          <li><RouterLink to="/docs/known-issues" class="sidebar-link" @click="hideMobileSidebar">10 - Known Issues</RouterLink></li>
-          <li><RouterLink to="/docs/lod-group" class="sidebar-link" @click="hideMobileSidebar">11 - LOD Group</RouterLink></li>
-          <li><RouterLink to="/docs/block-piece" class="sidebar-link" @click="hideMobileSidebar">12 - Piece Locking System</RouterLink></li>
-          <li><RouterLink to="/docs/settings" class="sidebar-link" @click="hideMobileSidebar">13 - General Settings</RouterLink></li>
-          <li><RouterLink to="/beta" class="beta-mobile-link" @click="hideMobileSidebar">
-            <span class="beta-mobile-badge">BETA</span> Beta Features
-          </RouterLink></li>
-        </template>
+        <li v-for="(item, index) in menuItems" :key="index">
+          <RouterLink
+            v-if="!item.isBeta"
+            :to="localePath('/' + item.path)"
+            class="sidebar-link"
+            @click="hideMobileSidebar">
+            {{ item.number }} - {{ $t(item.textKey) }}
+          </RouterLink>
+          <RouterLink
+            v-else
+            :to="localePath('/' + item.path)"
+            class="beta-mobile-link"
+            @click="hideMobileSidebar">
+            <span class="beta-mobile-badge">BETA</span> {{ $t(item.textKey) }}
+          </RouterLink>
+        </li>
       </ul>
     </div>
-    
+
     <div class="sidebar-backdrop" v-if="isOpen" @click="toggleSidebar"></div>
   </div>
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+
 export default {
   name: 'MobileSidebarToggle',
+  setup() {
+    const { localePath } = useLocalePath()
+    return { localePath }
+  },
   data() {
     return {
       isOpen: false
     }
   },
   computed: {
-    isItalian() {
-      return this.$route.path.includes('/it');
+    menuItems() {
+      return [
+        { number: "1", textKey: "sidebar.items.installation", path: "docs/installation" },
+        { number: "2", textKey: "sidebar.items.fbxGuide", path: "docs/fbx-guide" },
+        { number: "3", textKey: "sidebar.items.prefabs", path: "docs/prefabs" },
+        { number: "4", textKey: "sidebar.items.descriptions", path: "docs/descriptions" },
+        { number: "5", textKey: "sidebar.items.buttons", path: "docs/buttons" },
+        { number: "6", textKey: "sidebar.items.categories", path: "docs/categories" },
+        { number: "7", textKey: "sidebar.items.resources", path: "docs/resources" },
+        { number: "8", textKey: "sidebar.items.effects", path: "docs/effects" },
+        { number: "9", textKey: "sidebar.items.saves", path: "docs/saves" },
+        { number: "10", textKey: "sidebar.items.knownIssues", path: "docs/known-issues" },
+        { number: "11", textKey: "sidebar.items.lodGroup", path: "docs/lod-group" },
+        { number: "12", textKey: "sidebar.items.blockPiece", path: "docs/block-piece" },
+        { number: "13", textKey: "sidebar.items.settings", path: "docs/settings" },
+        { textKey: "sidebar.items.betaFeatures", path: "beta", isBeta: true }
+      ]
     }
   },
   methods: {
@@ -104,7 +102,7 @@ export default {
 
 .mobile-toggle-btn {
   position: fixed;
-  top: 85px; 
+  top: 85px;
   right: 20px;
   width: 50px;
   height: 50px;

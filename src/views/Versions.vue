@@ -4,9 +4,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Released Versions</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('versions.title') }}</h1>
             <p class="lead">
-              Track the evolution of Assembly Station with our version history. Click on a version for details or download directly from Unity Asset Store.
+              {{ $t('versions.lead') }}
             </p>
           </div>
 
@@ -14,110 +14,110 @@
             <table class="versions-table table table-hover">
               <thead>
                 <tr>
-                  <th>Version</th>
-                  <th>Release Date</th>
-                  <th>Status</th>
-                  <th>Actions</th>
+                  <th>{{ $t('versions.thVersion') }}</th>
+                  <th>{{ $t('versions.thDate') }}</th>
+                  <th>{{ $t('versions.thStatus') }}</th>
+                  <th>{{ $t('versions.thActions') }}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr @click="showDetails(0)" class="version-row">
                   <td><strong>1.5.5</strong></td>
-                  <td>March 6, 2026</td>
-                  <td><span class="badge bg-primary">Latest</span></td>
+                  <td>{{ $t('versions.v155date') }}</td>
+                  <td><span class="badge bg-primary">{{ $t('versions.latest') }}</span></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(0)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(1)" class="version-row">
                   <td><strong>1.5.4</strong></td>
-                  <td>January 28, 2026</td>
+                  <td>{{ $t('versions.v154date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(1)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(2)" class="version-row">
                   <td><strong>1.4.3</strong></td>
-                  <td>January 9, 2026</td>
+                  <td>{{ $t('versions.v143date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(2)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(3)" class="version-row">
                   <td><strong>1.3.3</strong></td>
-                  <td>May 29, 2025</td>
+                  <td>{{ $t('versions.v133date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(3)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(4)" class="version-row">
                   <td><strong>1.2.3</strong></td>
-                  <td>May 15, 2025</td>
+                  <td>{{ $t('versions.v123date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(4)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(5)" class="version-row">
                   <td><strong>1.2.2</strong></td>
-                  <td>May 8, 2025</td>
+                  <td>{{ $t('versions.v122date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(5)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(6)" class="version-row">
                   <td><strong>1.2.1</strong></td>
-                  <td>April 28, 2025</td>
+                  <td>{{ $t('versions.v121date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(6)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(7)" class="version-row">
                   <td><strong>1.1.1</strong></td>
-                  <td>April 15, 2025</td>
+                  <td>{{ $t('versions.v111date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(7)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(8)" class="version-row">
                   <td><strong>1.0.1</strong></td>
-                  <td>April 3, 2025</td>
+                  <td>{{ $t('versions.v101date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(8)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
                 <tr @click="showDetails(9)" class="version-row">
                   <td><strong>1.0.0</strong></td>
-                  <td>April 1, 2025</td>
+                  <td>{{ $t('versions.v100date') }}</td>
                   <td></td>
                   <td>
                     <button class="btn btn-sm btn-info" @click.stop="showDetails(9)">
-                      <i class="bi bi-info-circle"></i> Details
+                      <i class="bi bi-info-circle"></i> {{ $t('versions.details') }}
                     </button>
                   </td>
                 </tr>
@@ -126,17 +126,17 @@
           </div>
 
           <div class="text-center mt-5">
-            <RouterLink to="/" class="btn btn-outline-secondary me-3">
-              <i class="bi bi-arrow-left me-2"></i>Return to Home
+            <RouterLink :to="localePath('/')" class="btn btn-outline-secondary me-3">
+              <i class="bi bi-arrow-left me-2"></i>{{ $t('versions.returnHome') }}
             </RouterLink>
             <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" target="_blank" class="btn btn-primary">
-              <i class="bi bi-cart-fill me-2"></i>Purchase
+              <i class="bi bi-cart-fill me-2"></i>{{ $t('versions.purchase') }}
             </a>
           </div>
         </div>
       </div>
     </div>
-    
+
 
     <div class="modal fade" id="versionDetailsModal" tabindex="-1" aria-labelledby="versionDetailsModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -144,29 +144,29 @@
           <div class="modal-header" :class="{ 'modal-header-latest': selectedVersion?.isLatest }">
             <h5 class="modal-title" id="versionDetailsModalLabel">
               {{ selectedVersion?.version }} - {{ selectedVersion?.date }}
-              <span v-if="selectedVersion?.isLatest" class="badge bg-primary ms-2">Latest</span>
+              <span v-if="selectedVersion?.isLatest" class="badge bg-primary ms-2">{{ $t('versions.latest') }}</span>
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ref="closeModalButton"></button>
           </div>
           <div class="modal-body">
             <div v-if="selectedVersion">
-              <h4>What's New</h4>
+              <h4>{{ $t('versions.whatsNew') }}</h4>
               <ul class="changelog-list">
                 <li v-for="(item, index) in selectedVersion.changes" :key="index">
                   {{ item }}
                 </li>
               </ul>
-              
+
               <div class="version-requirements mt-4">
-                <h4>Requirements</h4>
-                <p><strong>Unity Version:</strong> {{ selectedVersion.requirements.unity }}</p>
+                <h4>{{ $t('versions.requirements') }}</h4>
+                <p><strong>{{ $t('versions.unityVersion') }}</strong> {{ selectedVersion.requirements.unity }}</p>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ $t('versions.close') }}</button>
             <a :href="selectedVersion?.downloadUrl" target="_blank" class="btn btn-primary">
-              <i class="bi bi-download me-2"></i>Download from Asset Store
+              <i class="bi bi-download me-2"></i>{{ $t('versions.downloadAssetStore') }}
             </a>
           </div>
         </div>
@@ -178,184 +178,196 @@
 <script>
 import { Modal } from 'bootstrap';
 import { useSEO } from '@/composables/useSEO.js'
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'Versions',
   setup() {
+    const { locale, t } = useI18n()
+    const { localePath } = useLocalePath()
     useSEO({
-      title: 'Version History - Assembly Station Unity Asset',
-      description: 'Complete version history and changelog for Assembly Station Unity asset. See all updates, new features, bug fixes and improvements.',
-      keywords: 'Assembly Station versions, changelog, update history, Unity asset updates, version history',
-      url: 'https://www.assembly-station.com/versions'
+      title: t('versions.seoTitle'),
+      description: t('versions.seoDescription'),
+      keywords: t('versions.seoKeywords'),
+      url: t('versions.seoUrl'),
+      locale: locale.value === 'it' ? 'it_IT' : undefined
     })
+    return { localePath, locale, t }
   },
   data() {
     return {
       versionModal: null,
       selectedVersion: null,
       lastFocusedElement: null,
-      versions: [
+    }
+  },
+  computed: {
+    versions() {
+      const t = this.t
+      const downloadUrl = "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+      return [
         {
-          version: "Version 1.5.5",
-          date: "March 6, 2026",
+          version: t('versions.v155version'),
+          date: t('versions.v155date'),
           isLatest: true,
           changes: [
-            "Fixed and improved the Demo Scene experience.",
-            "Improved the player view in the Demo Scene for better clarity and usability. Additional fixes and adjustments.",
-            "Improved UI adaptation across different screen sizes and resolutions to ensure better compatibility on all displays."
+            t('versions.v155c1'),
+            t('versions.v155c2'),
+            t('versions.v155c3')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.5.4",
-          date: "January 28, 2026",
+          version: t('versions.v154version'),
+          date: t('versions.v154date'),
           isLatest: false,
           changes: [
-            "Bug Fixes",
-            "Fixed an issue where changing the Orbit Camera zoom sensitivity was not applied correctly.",
-            "Fixed a bug that allowed camera rotation and 3D model interaction while the mouse was over the UI.",
-            "Fixed an issue that prevented the assigned group name from being displayed correctly on a piece.",
-            "New Features",
-            "Added a new resource editing system:",
-            "Users can now freely add new resources.",
-            "Resources are dynamically updated in the visual/UI layer.",
-            "Improved the resource cost assignment workflow for pieces:",
-            "Existing resources can be selected directly from the Resource Layer.",
-            "New resources can be added during the assignment process.",
-            "Overall workflow is faster, clearer, and more practical."
+            t('versions.v154c1'),
+            t('versions.v154c2'),
+            t('versions.v154c3'),
+            t('versions.v154c4'),
+            t('versions.v154c5'),
+            t('versions.v154c6'),
+            t('versions.v154c7'),
+            t('versions.v154c8'),
+            t('versions.v154c9'),
+            t('versions.v154c10'),
+            t('versions.v154c11'),
+            t('versions.v154c12')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.4.3",
-          date: "January 9, 2026",
+          version: t('versions.v143version'),
+          date: t('versions.v143date'),
           isLatest: false,
           changes: [
-            "Update Highlights",
-            "Improved Camera Controls: Camera rotation is now smoother and no longer locks up when the cursor passes over UI elements.",
-            "System Optimizations: Significantly improved loading speeds and reduced memory consumption during extended play sessions.",
-            "Smart Group Building: When building multiple pieces together, resources are verified and consumed only if sufficient for the entire group, preventing partial builds.",
-            "Fixes",
-            "Fixed the \"Save\" button remaining disabled after unbuilding pieces.",
-            "Fixed visual issues with materials on objects with multiple LODs.",
-            "Improved resource handling for more consistent behavior.",
-            "Fixed several minor bugs that could cause slowdowns or freezes in specific situations."
+            t('versions.v143c1'),
+            t('versions.v143c2'),
+            t('versions.v143c3'),
+            t('versions.v143c4'),
+            t('versions.v143c5'),
+            t('versions.v143c6'),
+            t('versions.v143c7'),
+            t('versions.v143c8'),
+            t('versions.v143c9')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.3.3",
-          date: "May 29, 2025",
+          version: t('versions.v133version'),
+          date: t('versions.v133date'),
           isLatest: false,
           changes: [
-            "Update Highlights",
-            "You can now lock pieces during the building process! To unlock them, you'll need to build a required number first — introducing a new progression system that adds strategic depth and planning to construction.",
-            "Fixed an issue where the squares in the left panel (representing each piece) didn't wrap correctly.",
-            "Fixed a bug where long descriptions would not wrap properly, causing layout and UI issues."
+            t('versions.v133c1'),
+            t('versions.v133c2'),
+            t('versions.v133c3'),
+            t('versions.v133c4')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.2.3",
-          date: "May 15, 2025",
+          version: t('versions.v123version'),
+          date: t('versions.v123date'),
           isLatest: false,
           changes: [
-            "It is now possible to safely move the assembly point without manually realigning it to the boundaries or the grid"
+            t('versions.v123c1')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.2.2",
-          date: "May 8, 2025",
+          version: t('versions.v122version'),
+          date: t('versions.v122date'),
           isLatest: false,
           changes: [
-            "Small improvements to the category panel for better usability",
-            "Refined click behavior on piece buttons for a smoother and more consistent interaction experience"
+            t('versions.v122c1'),
+            t('versions.v122c2')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.2.1",
-          date: "April 28, 2025",
+          version: t('versions.v121version'),
+          date: t('versions.v121date'),
           isLatest: false,
           changes: [
-            "Object placement grid added for easier and more precise positioning",
-            "Improved camera control: each piece can now have a custom zoom distance and angle when focusing",
-            "Added custom orbit angles per prefab for more tailored camera behavior",
-            "Fixed UI behavior issues related to piece selection and confirmation"
+            t('versions.v121c1'),
+            t('versions.v121c2'),
+            t('versions.v121c3'),
+            t('versions.v121c4')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.1.1",
-          date: "April 15, 2025",
+          version: t('versions.v111version'),
+          date: t('versions.v111date'),
           isLatest: false,
           changes: [
-            "Full support for models with LOD (Level of Detail)",
-            "Ability to load more complex and detailed models",
-            "Improved camera control: each piece can now have a custom zoom distance and angle when focusing on it",
-            "Fixed an issue where the button associated with a piece would not behave correctly after confirmation"
+            t('versions.v111c1'),
+            t('versions.v111c2'),
+            t('versions.v111c3'),
+            t('versions.v111c4')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.0.1",
-          date: "April 3, 2025",
+          version: t('versions.v101version'),
+          date: t('versions.v101date'),
           isLatest: false,
           changes: [
-            "Fixed: visual effects bugs",
-            "Bug fixes and performance improvements"
+            t('versions.v101c1'),
+            t('versions.v101c2')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         },
         {
-          version: "Version 1.0.0",
-          date: "April 1, 2025",
+          version: t('versions.v100version'),
+          date: t('versions.v100date'),
           isLatest: false,
           changes: [
-            "Initial release of Assembly Station"
+            t('versions.v100c1')
           ],
           requirements: {
-            unity: "2022.3.23f1 or newer",
+            unity: t('versions.unityReq'),
             platforms: "Windows, macOS, Linux, iOS, Android"
           },
-          downloadUrl: "https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569"
+          downloadUrl
         }
       ]
     }
@@ -363,10 +375,8 @@ export default {
   mounted() {
     const modalEl = document.getElementById('versionDetailsModal');
     this.versionModal = new Modal(modalEl);
-    
-  
-    modalEl.addEventListener('hidden.bs.modal', () => {
 
+    modalEl.addEventListener('hidden.bs.modal', () => {
       if (this.lastFocusedElement) {
         this.lastFocusedElement.focus();
       }
@@ -374,11 +384,9 @@ export default {
   },
   methods: {
     showDetails(index) {
- 
       this.lastFocusedElement = document.activeElement;
       this.selectedVersion = this.versions[index];
       this.versionModal.show();
-      
 
       this.$nextTick(() => {
         if (this.$refs.closeModalButton) {

@@ -4,13 +4,13 @@
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="text-center mb-4">
-            <h1 class="display-4 fw-bold text-accent mb-3">Interactive Demo</h1>
+            <h1 class="display-4 fw-bold text-accent mb-3">{{ $t('demo.title') }}</h1>
             <p class="lead">
-              Experience Assembly Station in action with our interactive demo. Explore the features and functionality before making your purchase.
+              {{ $t('demo.lead') }}
             </p>
             <div class="alert alert-info">
               <i class="bi bi-info-circle me-2"></i>
-              <strong>Note:</strong> Assembly Station is constantly evolving. The demo version may not fully represent the latest features and improvements available in the current release.
+              <strong>{{ $t('demo.noteLabel') }}</strong> {{ $t('demo.noteText') }}
             </div>
           </div>
 
@@ -18,7 +18,7 @@
             <div class="demo-container-full">
             <div class="demo-click-notice alert alert-warning d-flex align-items-center mb-0" role="alert">
               <i class="bi bi-mouse-fill me-2 flex-shrink-0"></i>
-              <span><strong>To use the demo:</strong> Click inside the demo area to activate it — the cursor must be focused on the demo for controls to work correctly.</span>
+              <span><strong>{{ $t('demo.clickNoticeStrong') }}</strong> {{ $t('demo.clickNoticeText') }}</span>
             </div>
             <div class="demo-frame-container">
               <div id="unity-container" class="unity-desktop">
@@ -39,20 +39,20 @@
             </div>
             </div>
             <div class="text-center py-2">
-              <small class="text-muted">Note: WebGL demo requires a modern browser with WebGL support</small>
+              <small class="text-muted">{{ $t('demo.webglNote') }}</small>
             </div>
           </div>
 
           <div class="feature-highlights mb-5">
-            <h2 class="text-center mb-4">Feature Highlights</h2>
+            <h2 class="text-center mb-4">{{ $t('demo.featureHighlights') }}</h2>
             <div class="row g-4">
               <div class="col-md-4">
                 <div class="feature-card">
                   <div class="feature-icon">
                     <i class="bi bi-collection"></i>
                   </div>
-                  <h3 class="h5">Component Assembly</h3>
-                  <p>Easily combine and arrange parts to create complex assemblies with intuitive functionality.</p>
+                  <h3 class="h5">{{ $t('demo.feat1Title') }}</h3>
+                  <p>{{ $t('demo.feat1Desc') }}</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -60,8 +60,8 @@
                   <div class="feature-icon">
                     <i class="bi bi-palette"></i>
                   </div>
-                  <h3 class="h5">Resource System</h3>
-                  <p>Comprehensive system for managing and organizing your assembly resources efficiently.</p>
+                  <h3 class="h5">{{ $t('demo.feat2Title') }}</h3>
+                  <p>{{ $t('demo.feat2Desc') }}</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -69,8 +69,8 @@
                   <div class="feature-icon">
                     <i class="bi bi-arrows-move"></i>
                   </div>
-                  <h3 class="h5">Model Positioning System</h3>
-                  <p>Position and align your models precisely with our positioning tools.</p>
+                  <h3 class="h5">{{ $t('demo.feat3Title') }}</h3>
+                  <p>{{ $t('demo.feat3Desc') }}</p>
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@
               </div>
               <div class="divider-line"></div>
             </div>
-            <h3 class="text-accent">What Users Say</h3>
+            <h3 class="text-accent">{{ $t('demo.whatUsersSay') }}</h3>
           </div>
 
           <div class="testimonials-section mb-5">
@@ -101,7 +101,7 @@
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Super easy to integrate and perfect for handling modular interactions exactly what I was looking for."</p>
+                        <p class="testimonial-text">{{ $t('demo.testimonial1') }}</p>
                         <div class="testimonial-author">
                           <div class="author-name">unity_D6D2A98ECA85AFBEA9CF</div>
                         </div>
@@ -116,7 +116,7 @@
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Very useful tool, the documentation seems complete and well structured. Just follow it step by step..."</p>
+                        <p class="testimonial-text">{{ $t('demo.testimonial2') }}</p>
                         <div class="testimonial-author">
                           <div class="author-name">chiaramazzone67</div>
                         </div>
@@ -135,7 +135,7 @@
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"A great plugin! The installation and integration went very smoothly. The author's documentation is clear and logical, perfect for simulation construction projects."</p>
+                        <p class="testimonial-text">{{ $t('demo.testimonial3') }}</p>
                         <div class="testimonial-author">
                           <div class="author-name">moonNightElf</div>
                         </div>
@@ -150,7 +150,7 @@
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Looks good."</p>
+                        <p class="testimonial-text">{{ $t('demo.testimonial4') }}</p>
                         <div class="testimonial-author">
                           <div class="author-name">Axel_Vorte3x</div>
                         </div>
@@ -161,11 +161,11 @@
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">{{ $t('demo.previous') }}</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">{{ $t('demo.next') }}</span>
               </button>
               <div class="carousel-indicators position-relative mt-3">
                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -175,13 +175,13 @@
           </div>
 
           <div class="cta-section text-center">
-            <h2 class="mb-4">Ready to Get Started?</h2>
+            <h2 class="mb-4">{{ $t('demo.ctaTitle') }}</h2>
             <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
               <a href="https://assetstore.unity.com/packages/slug/313569" target="_blank" class="btn btn-primary btn-lg">
-                <i class="bi bi-cart-fill me-2"></i>Purchase on Asset Store
+                <i class="bi bi-cart-fill me-2"></i>{{ $t('demo.purchaseBtn') }}
               </a>
-              <RouterLink to="/pricing" class="btn btn-outline-primary btn-lg">
-                <i class="bi bi-tag-fill me-2"></i>View Pricing
+              <RouterLink :to="localePath('/pricing')" class="btn btn-outline-primary btn-lg">
+                <i class="bi bi-tag-fill me-2"></i>{{ $t('demo.viewPricing') }}
               </RouterLink>
             </div>
           </div>
@@ -193,16 +193,22 @@
 
 <script>
 import { useSEO } from '@/composables/useSEO.js'
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'Demo',
   setup() {
+    const { locale, t } = useI18n()
+    const { localePath } = useLocalePath()
     useSEO({
-      title: 'Try the Demo - Assembly Station Unity Asset',
-      description: 'Try Assembly Station interactive demo. Experience how our Unity asset works for creating 3D assembly guides and interactive documentation.',
-      keywords: 'Assembly Station demo, Unity asset demo, interactive demo, 3D assembly demo, try Assembly Station',
-      url: 'https://www.assembly-station.com/demo'
+      title: t('demo.seoTitle'),
+      description: t('demo.seoDescription'),
+      keywords: t('demo.seoKeywords'),
+      url: t('demo.seoUrl'),
+      locale: locale.value === 'it' ? 'it_IT' : undefined
     })
+    return { localePath, locale }
   },
   data() {
     return {
@@ -427,7 +433,7 @@ export default {
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
-  filter: invert(100%);
+  filter: invert(60%);
 }
 
 .carousel-indicators [data-bs-target] {
@@ -442,7 +448,6 @@ export default {
   padding: 30px;
   text-align: center;
 }
-
 
 .assembly-logo-section {
   overflow: hidden;
@@ -481,11 +486,5 @@ export default {
 
 .carousel-item .row {
   margin: 0 20px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-  filter: invert(60%);
 }
 </style>

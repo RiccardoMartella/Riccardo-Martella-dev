@@ -2,21 +2,22 @@
   <div class="privacy-page">
     <div class="container py-5">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <!-- English: full privacy policy -->
+        <div v-if="locale === 'en'" class="col-lg-10">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold text-accent mb-4">Privacy Policy</h1>
+            <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('privacy.title') }}</h1>
             <p class="lead">
-              Welcome to Assembly Station's privacy policy. This policy will help you understand what data we collect, why we collect it, and what your rights are regarding it.
+              {{ $t('privacy.lead') }}
             </p>
-            <p class="text-muted">Last updated: April 6, 2025</p>
+            <p class="text-muted">{{ $t('privacy.lastUpdated') }}</p>
           </div>
 
           <div class="card shadow-sm mb-4">
             <div class="card-body p-4">
-              
+
               <section class="mb-5">
                 <h2 class="section-title">Summary</h2>
-                
+
                 <div class="data-section">
                   <h3>Data we automatically collect</h3>
                   <p>We automatically collect your data, for example when you visit Assembly Station.</p>
@@ -26,13 +27,13 @@
                     <li>Device information</li>
                     <li>Number of sessions</li>
                   </ul>
-                  
+
                   <h4>Trusted third parties that help us process them</h4>
                   <ul>
                     <li>Google LLC</li>
                     <li>Netlify, Inc.</li>
                   </ul>
-                  
+
                   <h4>How we use them</h4>
                   <ul>
                     <li>Hosting and backend infrastructure</li>
@@ -48,7 +49,7 @@
                     <li>Last name</li>
                     <li>Email</li>
                   </ul>
-                  
+
                   <h4>How we use them</h4>
                   <ul>
                     <li>Contacting the User</li>
@@ -90,7 +91,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Methods and Place of Data Processing</h2>
-                
+
                 <h3>Processing Methods</h3>
                 <p>The Owner takes appropriate security measures to prevent unauthorized access, disclosure, modification, or destruction of Personal Data.</p>
                 <p>Processing is carried out using computers and/or IT-enabled tools, following organizational procedures and modes strictly related to the purposes indicated. In addition to the Owner, in some cases, other parties involved in the organization of this Application (administrative, commercial, marketing, legal, system administrators) or external parties (such as third-party technical service providers, mail carriers, hosting providers, IT companies, communication agencies) may have access to the Data, appointed as Data Processors by the Owner if necessary. An updated list of Processors can always be requested from the Owner.</p>
@@ -115,7 +116,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Details on Personal Data Processing</h2>
-                
+
                 <h3>Contacting the User</h3>
                 <p><strong>Contact Form</strong><br>
                 Personal Data processed: Last name, First name, Email</p>
@@ -123,7 +124,7 @@
                 <h3>Hosting and Backend Infrastructure</h3>
                 <p>This type of service has the purpose of hosting Data and files that enable this Application to run and be distributed, or to provide a ready-made infrastructure to run specific features or parts of this Application.</p>
                 <p>Some services among those listed below, if present, may work through geographically distributed servers, making it difficult to determine the actual location where Personal Data is stored.</p>
-                
+
                 <p><strong>Netlify (Netlify, Inc.)</strong><br>
                 Place of processing: United States<br>
                 Personal Data processed: Usage Data</p>
@@ -143,7 +144,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Additional Information for Users in the European Union</h2>
-                
+
                 <h3>Legal Basis for Processing</h3>
                 <p>The Owner processes Personal Data relating to the User if one of the following conditions applies:</p>
                 <ul>
@@ -190,7 +191,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Additional Information on Data Processing</h2>
-                
+
                 <h3>Legal Defense</h3>
                 <p>The User's Personal Data may be used by the Owner in court or in the stages leading to possible legal action arising from improper use of this Application or the related Services by the User.</p>
                 <p>The User declares to be aware that the Owner may be required to reveal Personal Data upon request of public authorities.</p>
@@ -211,7 +212,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Definitions and Legal References</h2>
-                
+
                 <h3>Personal Data (or Data)</h3>
                 <p>Any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.</p>
 
@@ -251,7 +252,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">How Can We Help?</h2>
-                
+
                 <h3>What You Can Do</h3>
                 <h4>Your Data</h4>
                 <ul>
@@ -275,10 +276,43 @@
 
             </div>
           </div>
-          
+
           <div class="text-center mt-5">
-            <RouterLink to="/" class="btn btn-outline-primary">
-              <i class="bi bi-arrow-left me-2"></i> Return to Home
+            <RouterLink :to="localePath('/')" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left me-2"></i> {{ $t('privacy.returnHome') }}
+            </RouterLink>
+          </div>
+        </div>
+
+        <!-- Italian: iubenda stub -->
+        <div v-else class="col-lg-8">
+          <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-accent mb-4">{{ $t('privacy.itTitle') }}</h1>
+            <p class="lead">
+              {{ $t('privacy.itLead') }}
+            </p>
+          </div>
+
+          <div class="card shadow-sm mb-5">
+            <div class="card-body p-4">
+              <div class="privacy-content">
+                <a href="https://www.iubenda.com/privacy-policy/82562185" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">{{ $t('privacy.itIubendaTitle') }}</a>
+              </div>
+
+              <div class="mt-4">
+                <p>
+                  {{ $t('privacy.itDesc1') }}
+                </p>
+                <p>
+                  {{ $t('privacy.itDesc2') }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <RouterLink :to="localePath('/')" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left me-2"></i> {{ $t('privacy.itReturnHome') }}
             </RouterLink>
           </div>
         </div>
@@ -288,8 +322,36 @@
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
+
 export default {
-  name: 'Privacy'
+  name: 'Privacy',
+  setup() {
+    const { locale } = useI18n()
+    const { localePath } = useLocalePath()
+    return { localePath, locale }
+  },
+  mounted() {
+    // Load iubenda script for Italian locale
+    if (this.locale === 'it') {
+      (function (w,d) {
+        var loader = function () {
+          var s = d.createElement("script"),
+          tag = d.getElementsByTagName("script")[0];
+          s.src="https://cdn.iubenda.com/iubenda.js";
+          tag.parentNode.insertBefore(s,tag);
+        };
+        if(w.addEventListener){
+          w.addEventListener("load", loader, false);
+        } else if(w.attachEvent){
+          w.attachEvent("onload", loader);
+        } else {
+          w.onload = loader;
+        }
+      })(window, document);
+    }
+  }
 }
 </script>
 
@@ -362,6 +424,19 @@ ul li {
 p {
   margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+.privacy-content {
+ text-align: center;
+}
+
+a {
+  color: #00A3FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .btn-outline-primary {

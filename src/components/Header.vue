@@ -6,7 +6,7 @@
     >
       <div class="container">
         <router-link
-          :to="introPath"
+          :to="localePath('/#home2')"
           class="navbar-brand d-flex align-items-center"
         >
           <img
@@ -29,34 +29,24 @@
         <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="navbarNav">
           <ul class="navbar-nav me-auto ms-lg-5">
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="introPath" class="nav-link">{{
-                isItalian ? "Introduzione" : "Introduction"
-              }}</RouterLink>
+              <RouterLink :to="localePath('/#home2')" class="nav-link">{{ $t('header.introduction') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="docPath" class="nav-link">{{
-                isItalian ? "Documentazione" : "Documentation"
-              }}</RouterLink>
+              <RouterLink :to="localePath('/docs/installation')" class="nav-link">{{ $t('header.documentation') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="pricePath" class="nav-link">{{
-                isItalian ? "Prezzi" : "Pricing"
-              }}</RouterLink>
+              <RouterLink :to="localePath('/pricing')" class="nav-link">{{ $t('header.pricing') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="demoPath" class="nav-link">{{
-                isItalian ? "Demo" : "Demo"
-              }}</RouterLink>
+              <RouterLink :to="localePath('/demo')" class="nav-link">{{ $t('header.demo') }}</RouterLink>
             </li>
             <!-- <li class="nav-item mx-lg-2">
-              <RouterLink :to="discordGiveawayPath" class="nav-link giveaway-nav-link">{{
-                isItalian ? "Keys" : "Keys"
-              }}
+              <RouterLink :to="localePath('/discord-giveaway')" class="nav-link giveaway-nav-link">{{ $t('header.keys') }}
               <span class="free-pill ms-1">FREE</span>
               </RouterLink>
             </li> -->
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="betaPath" class="nav-link">
+              <RouterLink :to="localePath('/beta')" class="nav-link">
                 <span class="beta-pill">BETA</span>
               </RouterLink>
             </li>
@@ -64,14 +54,10 @@
 
           <ul class="navbar-nav align-items-center">
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="bugPath" class="nav-link">{{
-                isItalian ? "Segnala Bug" : "Report Bug"
-              }}</RouterLink>
+              <RouterLink :to="localePath('/report-bug')" class="nav-link">{{ $t('header.reportBug') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="contactPath" class="nav-link">{{
-                isItalian ? "Contatti" : "Contacts"
-              }}</RouterLink>
+              <RouterLink :to="localePath('/contacts')" class="nav-link">{{ $t('header.contacts') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
               <a href="https://discord.gg/dZ2Veb4eM5" target="_blank" rel="noopener noreferrer" class="nav-link" title="Discord">
@@ -99,12 +85,17 @@
 </template>
 
 <script>
-import LanguageSelector from "@/components/LanguageSelector.vue";
+import LanguageSelector from "@/components/LanguageSelector.vue"
+import { useLocalePath } from "@/composables/useLocalePath.js"
 
 export default {
   name: "AppHeader",
   components: {
     LanguageSelector,
+  },
+  setup() {
+    const { localePath } = useLocalePath()
+    return { localePath }
   },
   data() {
     return {
@@ -112,35 +103,6 @@ export default {
       lastScrollPosition: 0,
       isNavOpen: false,
     };
-  },
-  computed: {
-    isItalian() {
-      return this.$route.path.includes("/it");
-    },
-    introPath() {
-      return this.isItalian ? "/it#home2" : "/#home2";
-    },
-    docPath() {
-      return this.isItalian ? "/it/docs/installation" : "/docs/installation";
-    },
-    contactPath() {
-      return this.isItalian ? "/it/contacts" : "/contacts";
-    },
-    bugPath() {
-      return this.isItalian ? "/it/report-bug" : "/report-bug";
-    },
-    pricePath() {
-      return this.isItalian ? "/it/pricing" : "/pricing";
-    },
-    betaPath() {
-      return this.isItalian ? "/it/beta" : "/beta";
-    },
-    discordGiveawayPath() {
-      return this.isItalian ? "/it/discord-giveaway" : "/discord-giveaway";
-    },
-    demoPath() {
-      return this.isItalian ? "/it/demo" : "/demo";
-    }
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
@@ -155,7 +117,6 @@ export default {
     toggleNavbar() {
       this.isNavOpen = !this.isNavOpen;
     },
-    
     closeNavbar() {
       this.isNavOpen = false;
     }
@@ -307,11 +268,11 @@ export default {
   .navbar-nav .nav-item {
     position: relative;
   }
-  
+
   .navbar-nav .nav-link {
     padding: 0.5rem 0.5rem;
   }
-  
+
   .navbar-nav .nav-item:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -332,7 +293,7 @@ export default {
   .navbar-nav {
     margin-top: 0.5rem;
   }
-  
+
   .navbar-collapse.show {
     display: block;
   }

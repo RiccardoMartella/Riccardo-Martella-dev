@@ -1,323 +1,130 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import i18n from '@/i18n'
 import Introduction from '../views/Introduction.vue'
-import Pricing from '@/views/Pricing.vue'
-import PricingIT from '@/views/PricingIT.vue'
-import Privacy from '@/views/Privacy.vue'
-import PrivacyIT from '@/views/PrivacyIT.vue'
-import CookiePolicy from '@/views/CookiePolicy.vue'
-import CookiePolicyIT from '@/views/CookiePolicyIT.vue'
-import Versions from '@/views/Versions.vue'
-import VersionsIT from '@/views/VersionsIT.vue'
-import Licenses from '@/views/Licenses.vue'
-import LicensesIT from '@/views/LicensesIT.vue'
-// import DiscordGiveaway from '@/views/DiscordGiveaway.vue'
-// import DiscordGiveawayIT from '@/views/DiscordGiveawayIT.vue'
-// import Demo from '@/views/Demo.vue'
-// import DemoIT from '@/views/DemoIT.vue'
+
+const pages = [
+  { path: '/', name: 'introduction', component: Introduction, eager: true },
+  { path: '/contacts', name: 'contacts', component: () => import('@/views/Contacts.vue') },
+  { path: '/report-bug', name: 'report-bug', component: () => import('@/views/ReportBug.vue') },
+  { path: '/privacy', name: 'privacy', component: () => import('@/views/Privacy.vue') },
+  { path: '/pricing', name: 'pricing', component: () => import('@/views/Pricing.vue') },
+  { path: '/tutorials', name: 'tutorials', component: () => import('@/views/Tutorials.vue') },
+  { path: '/cookie-policy', name: 'cookie-policy', component: () => import('@/views/CookiePolicy.vue') },
+  { path: '/versions', name: 'versions', component: () => import('@/views/Versions.vue') },
+  { path: '/licenses', name: 'licenses', component: () => import('@/views/Licenses.vue') },
+  { path: '/beta', name: 'beta', component: () => import('@/views/Beta.vue') },
+  { path: '/demo', name: 'demo', component: () => import('@/views/Demo.vue') },
+  // { path: '/discord-giveaway', name: 'discord-giveaway', component: () => import('@/views/DiscordGiveaway.vue') },
+]
+
+const docPages = [
+  { path: 'installation', name: 'docs-installation', component: () => import('@/views/docs/Installation.vue') },
+  { path: 'fbx-guide', name: 'docs-fbx-guide', component: () => import('@/views/docs/FBXGuide.vue') },
+  { path: 'prefabs', name: 'docs-prefabs', component: () => import('@/views/docs/Prefabs.vue') },
+  { path: 'descriptions', name: 'docs-descriptions', component: () => import('@/views/docs/Descriptions.vue') },
+  { path: 'buttons', name: 'docs-buttons', component: () => import('@/views/docs/Buttons.vue') },
+  { path: 'categories', name: 'docs-categories', component: () => import('@/views/docs/Categories.vue') },
+  { path: 'effects', name: 'docs-effects', component: () => import('@/views/docs/Effects.vue') },
+  { path: 'resources', name: 'docs-resources', component: () => import('@/views/docs/Resources.vue') },
+  { path: 'saves', name: 'docs-saves', component: () => import('@/views/docs/Saves.vue') },
+  { path: 'known-issues', name: 'docs-known-issues', component: () => import('@/views/docs/KnownIssues.vue') },
+  { path: 'settings', name: 'docs-settings', component: () => import('@/views/docs/Settings.vue') },
+  { path: 'lod-group', name: 'docs-lod-group', component: () => import('@/views/docs/LODGroup.vue') },
+  { path: 'block-piece', name: 'docs-block-piece', component: () => import('@/views/docs/BlockPiece.vue') },
+]
+
+function generateRoutes() {
+  const routes = []
+
+  // Generate EN and IT routes for each page
+  for (const page of pages) {
+    // EN route
+    routes.push({
+      path: page.path,
+      name: page.name,
+      component: page.component,
+      meta: { locale: 'en' }
+    })
+    // IT route
+    const itPath = page.path === '/' ? '/it' : `/it${page.path}`
+    routes.push({
+      path: itPath,
+      name: `${page.name}-it`,
+      component: page.component,
+      meta: { locale: 'it' }
+    })
+  }
+
+  // Generate EN doc routes
+  const docComponent = () => import('@/views/DocContainer.vue')
+  routes.push({
+    path: '/docs',
+    component: docComponent,
+    meta: { locale: 'en' },
+    children: [
+      { path: '', redirect: '/docs/installation' },
+      ...docPages.map(p => ({
+        path: p.path,
+        name: p.name,
+        component: p.component,
+        meta: { locale: 'en' }
+      }))
+    ]
+  })
+
+  // Generate IT doc routes
+  routes.push({
+    path: '/it/docs',
+    component: docComponent,
+    meta: { locale: 'it' },
+    children: [
+      { path: '', redirect: '/it/docs/installation' },
+      ...docPages.map(p => ({
+        path: p.path,
+        name: `${p.name}-it`,
+        component: p.component,
+        meta: { locale: 'it' }
+      }))
+    ]
+  })
+
+  // Single-language pages
+  routes.push({
+    path: '/rocket',
+    name: 'rocket',
+    component: () => import('@/views/Rocket.vue'),
+    meta: { locale: 'en' }
+  })
+
+  // Catch-all
+  routes.push({
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: () => import('@/views/NotFound.vue')
+  })
+
+  return routes
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'introduction',
-      component: Introduction
-    },
-    {
-      path: '/contacts',
-      name: 'contacts',
-      component: () => import('@/views/Contacts.vue')
-    },
-    {
-      path: '/report-bug',
-      name: 'report-bug',
-      component: () => import('@/views/ReportBug.vue')
-    },
-    {
-      path: '/it',
-      name: 'introduction-it',
-      component: () => import('@/views/IntroductionIT.vue')
-    },
-    {
-      path: '/it/contacts',
-      name: 'contacts-it',
-      component: () => import('@/views/ContactsIT.vue')
-    },
-    {
-      path: '/it/report-bug',
-      name: 'report-bug-it',
-      component: () => import('@/views/ReportBugIT.vue')
-    },
-    {
-      path: '/privacy',
-      name: 'privacy',
-      component: Privacy
-    },
-    {
-      path: '/it/privacy',
-      name: 'privacy-it',
-      component: PrivacyIT
-    },
-    {
-      path: '/pricing',
-      name: 'pricing',
-      component: Pricing
-    },
-    {
-      path: '/it/pricing',
-      name: 'pricing-it',
-      component: PricingIT
-    },
-    {
-      path: '/tutorials',
-      name: 'tutorials',
-      component: () => import('../views/Tutorials.vue')
-    },
-    {
-      path: '/it/tutorials',
-      name: 'tutorials-it',
-      component: () => import('../views/TutorialsIT.vue')
-    },
-    // Documentation routes - English
-    {
-      path: '/docs',
-      component: () => import('@/views/DocContainer.vue'),
-      children: [
-        {
-          path: '',
-          redirect: '/docs/installation'
-        },
-        {
-          path: 'installation',
-          name: 'docs-installation',
-          component: () => import('@/views/docs/en/Installation.vue')
-        },
-        {
-          path: 'fbx-guide',
-          name: 'docs-fbx-guide',
-          component: () => import('@/views/docs/en/FBXGuide.vue')
-        },
-        {
-          path: 'prefabs',
-          name: 'docs-prefabs',
-          component: () => import('@/views/docs/en/Prefabs.vue')
-        },
-        {
-          path: 'descriptions',
-          name: 'docs-descriptions',
-          component: () => import('@/views/docs/en/Descriptions.vue')
-        },
-        {
-          path: 'buttons',
-          name: 'docs-buttons',
-          component: () => import('@/views/docs/en/Buttons.vue')
-        },
-        {
-          path: 'categories',
-          name: 'docs-categories',
-          component: () => import('@/views/docs/en/Categories.vue')
-        },
-        {
-          path: 'effects',
-          name: 'docs-effects',
-          component: () => import('@/views/docs/en/Effects.vue')
-        },
-        {
-          path: 'resources',
-          name: 'docs-resources',
-          component: () => import('@/views/docs/en/Resources.vue')
-        },
-        {
-          path: 'saves',
-          name: 'docs-saves',
-          component: () => import('@/views/docs/en/Saves.vue')
-        },
-        {
-          path: 'known-issues',
-          name: 'docs-known-issues',
-          component: () => import('@/views/docs/en/KnownIssues.vue')
-        },
-        {
-          path: 'settings',
-          name: 'docs-settings',
-          component: () => import('@/views/docs/en/Settings.vue')
-        },
-        {
-          path: 'lod-group',
-          name: 'docs-lod-group',
-          component: () => import('@/views/docs/en/LODGroup.vue')
-        },
-        {
-          path: 'block-piece',
-          name: 'docs-block-piece',
-          component: () => import('@/views/docs/en/BlockPiece.vue')
-        }
-      ]
-    },
-    
-    // Documentation routes - Italian
-    {
-      path: '/it/docs',
-      component: () => import('@/views/DocContainer.vue'),
-      children: [
-        {
-          path: '',
-          redirect: '/it/docs/installation'
-        },
-        {
-          path: 'installation',
-          name: 'docs-installation-it',
-          component: () => import('@/views/docs/it/Installation.vue')
-        },
-        {
-          path: 'fbx-guide',
-          name: 'docs-fbx-guide-it',
-          component: () => import('@/views/docs/it/FBXGuide.vue')
-        },
-        {
-          path: 'prefabs',
-          name: 'docs-prefabs-it',
-          component: () => import('@/views/docs/it/Prefabs.vue')
-        },
-        {
-          path: 'descriptions',
-          name: 'docs-descriptions-it',
-          component: () => import('@/views/docs/it/Descriptions.vue')
-        },
-        {
-          path: 'buttons',
-          name: 'docs-buttons-it',
-          component: () => import('@/views/docs/it/Buttons.vue')
-        },
-        {
-          path: 'categories',
-          name: 'docs-categories-it',
-          component: () => import('@/views/docs/it/Categories.vue')
-        },
-        {
-          path: 'resources',
-          name: 'docs-resources-it',
-          component: () => import('@/views/docs/it/Resources.vue')
-        },
-        {
-          path: 'effects',
-          name: 'docs-effects-it',
-          component: () => import('@/views/docs/it/Effects.vue')
-        },
-        {
-          path: 'saves',
-          name: 'docs-saves-it',
-          component: () => import('@/views/docs/it/Saves.vue')
-        },
-        {
-          path: 'known-issues',
-          name: 'docs-known-issues-it',
-          component: () => import('@/views/docs/it/KnownIssues.vue')
-        },
-        {
-          path: 'settings',
-          name: 'docs-settings-it',
-          component: () => import('@/views/docs/it/Settings.vue')
-        },
-        {
-          path: 'lod-group',
-          name: 'docs-lod-group-it',
-          component: () => import('@/views/docs/it/LODGroup.vue')
-        },
-        {
-          path: 'block-piece',
-          name: 'docs-block-piece-it',
-          component: () => import('@/views/docs/it/BlockPiece.vue')
-        }
-      ]
-    },
-
-    {
-      path: '/cookie-policy',
-      name: 'cookie-policy',
-      component: CookiePolicy
-    },
-    {
-      path: '/it/cookie-policy',
-      name: 'cookie-policy-it',
-      component: CookiePolicyIT
-    },
-
-    {
-      path: '/versions',
-      name: 'versions',
-      component: Versions
-    },
-    {
-      path: '/it/versions',
-      name: 'versions-it',
-      component: VersionsIT
-    },
-
-    {
-      path: '/licenses',
-      name: 'licenses',
-      component: Licenses
-    },
-    {
-      path: '/it/licenses',
-      name: 'licenses-it',
-      component: LicensesIT
-    },
-
-    {
-      path: '/beta',
-      name: 'beta',
-      component: () => import('@/views/Beta.vue')
-    },
-    {
-      path: '/it/beta',
-      name: 'beta-it',
-      component: () => import('@/views/BetaIT.vue')
-    },
-
-    // {
-    //   path: '/discord-giveaway',
-    //   name: 'discord-giveaway',
-    //   component: DiscordGiveaway
-    // },
-    // {
-    //   path: '/it/discord-giveaway',
-    //   name: 'discord-giveaway-it',
-    //   component: DiscordGiveawayIT
-    // },
-    {
-      path: '/demo',
-      name: 'demo',
-      component: () => import('@/views/Demo.vue')
-    },
-    {
-      path: '/it/demo',
-      name: 'demo-it',
-      component: () => import('@/views/DemoIT.vue')
-    },
-    
-    {
-      path: '/rocket',
-      name: 'rocket',
-      component: () => import('@/views/Rocket.vue')
-    },
-
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'not-found',
-      component: () => import('@/views/NotFound.vue')
-    }
-  ],
+  routes: generateRoutes(),
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
       return {
         el: to.hash,
         behavior: 'smooth'
       }
-    } 
+    }
     return { top: 0, behavior: 'smooth' }
   }
+})
+
+// Sync i18n locale from route and set document lang
+router.beforeEach((to) => {
+  const locale = to.meta?.locale || (to.path.startsWith('/it') ? 'it' : 'en')
+  i18n.global.locale.value = locale
+  document.documentElement.lang = locale
 })
 
 // Google Analytics - Track page views sui cambi di route

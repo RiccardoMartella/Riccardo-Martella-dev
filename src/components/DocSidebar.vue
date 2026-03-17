@@ -1,21 +1,21 @@
 <template>
   <div class="sidebar-container">
-    <h4 class="sidebar-title">{{ isItalian ? 'Documentazione' : 'Documentation' }}</h4>
-    
+    <h4 class="sidebar-title">{{ $t('sidebar.documentation') }}</h4>
+
     <div class="tutorial-link-container">
-      <h5 class="tutorial-section-title">{{ isItalian ? 'Video Tutorial' : 'Video Tutorials' }}</h5>
-      <router-link :to="isItalian ? '/it/tutorials#tutorials' : '/tutorials#tutorials'" class="tutorial-link">
+      <h5 class="tutorial-section-title">{{ $t('sidebar.videoTutorials') }}</h5>
+      <router-link :to="localePath('/tutorials#tutorials')" class="tutorial-link">
         <i class="bi bi-play-circle-fill me-2"></i>
-        {{ isItalian ? 'Guarda i tutorial' : 'Watch tutorials' }}
+        {{ $t('sidebar.watchTutorials') }}
       </router-link>
     </div>
-    
+
     <ul class="sidebar-list">
       <li v-for="(item, index) in menuItems" :key="index">
-        <router-link :to="baseRoute + item.path" class="sidebar-link" :class="{'beta-item': item.isBeta}">
+        <router-link :to="localePath('/' + item.path)" class="sidebar-link" :class="{'beta-item': item.isBeta}">
           <span class="sidebar-number" v-if="!item.isBeta">{{ item.number }}</span>
           <span class="beta-badge" v-else>BETA</span>
-          <span class="sidebar-text">{{ item.text }}</span>
+          <span class="sidebar-text">{{ $t(item.textKey) }}</span>
         </router-link>
       </li>
     </ul>
@@ -23,52 +23,32 @@
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+
 export default {
   name: 'DocSidebar',
-  props: {
-    isItalian: {
-      type: Boolean,
-      default: false
-    }
+  setup() {
+    const { localePath } = useLocalePath()
+    return { localePath }
   },
   computed: {
-    baseRoute() {
-      return this.isItalian ? '/it/' : '/';
-    },
     menuItems() {
-      const items = this.isItalian ? [
-        { number: "1", text: "Installazione", path: "docs/installation" },
-        { number: "2", text: "Guida FBX e Materiali", path: "docs/fbx-guide" },
-        { number: "3", text: "Posizionare i Prefab", path: "docs/prefabs" },
-        { number: "4", text: "Aggiungere Descrizioni e Immagini", path: "docs/descriptions" },
-        { number: "5", text: "Pulsanti e Categorie", path: "docs/buttons" },
-        { number: "6", text: "Tag/Categorie/Gruppi", path: "docs/categories" },
-        { number: "7", text: "Risorse", path: "docs/resources" },
-        { number: "8", text: "Effetti Sonori & Visivi", path: "docs/effects" },
-        { number: "9", text: "Salvataggi", path: "docs/saves" },
-        { number: "10", text: "Problemi Noti", path: "docs/known-issues" },
-        { number: "11", text: "LOD Group", path: "docs/lod-group" },
-        { number: "12", text: "Sistema di Blocco dei Pezzi", path: "docs/block-piece" },
-        { number: "13", text: "Impostazioni Generali", path: "docs/settings" },
-        { text: "Funzionalità Beta", path: "beta", isBeta: true }
-      ] : [
-        { number: "1", text: "Get Started", path: "docs/installation" },
-        { number: "2", text: "FBX and Materials Guide", path: "docs/fbx-guide" },
-        { number: "3", text: "Place Prefabs", path: "docs/prefabs" },
-        { number: "4", text: "Add Descriptions and Images", path: "docs/descriptions" },
-        { number: "5", text: "Buttons and Categories", path: "docs/buttons" },
-        { number: "6", text: "Tags/Categories/Groups", path: "docs/categories" },
-        { number: "7", text: "Resources", path: "docs/resources" },
-        { number: "8", text: "Sound & Visual Effects", path: "docs/effects" },
-        { number: "9", text: "Saves", path: "docs/saves" },
-        { number: "10", text: "Known Issues", path: "docs/known-issues" },
-        { number: "11", text: "LOD Group", path: "docs/lod-group" },
-        { number: "12", text: "Piece Locking System", path: "docs/block-piece" },
-        { number: "13", text: "General Settings", path: "docs/settings" },
-        { text: "Beta Features", path: "beta", isBeta: true }
-      ];
-      
-      return items;
+      return [
+        { number: "1", textKey: "sidebar.items.installation", path: "docs/installation" },
+        { number: "2", textKey: "sidebar.items.fbxGuide", path: "docs/fbx-guide" },
+        { number: "3", textKey: "sidebar.items.prefabs", path: "docs/prefabs" },
+        { number: "4", textKey: "sidebar.items.descriptions", path: "docs/descriptions" },
+        { number: "5", textKey: "sidebar.items.buttons", path: "docs/buttons" },
+        { number: "6", textKey: "sidebar.items.categories", path: "docs/categories" },
+        { number: "7", textKey: "sidebar.items.resources", path: "docs/resources" },
+        { number: "8", textKey: "sidebar.items.effects", path: "docs/effects" },
+        { number: "9", textKey: "sidebar.items.saves", path: "docs/saves" },
+        { number: "10", textKey: "sidebar.items.knownIssues", path: "docs/known-issues" },
+        { number: "11", textKey: "sidebar.items.lodGroup", path: "docs/lod-group" },
+        { number: "12", textKey: "sidebar.items.blockPiece", path: "docs/block-piece" },
+        { number: "13", textKey: "sidebar.items.settings", path: "docs/settings" },
+        { textKey: "sidebar.items.betaFeatures", path: "beta", isBeta: true }
+      ]
     }
   }
 }
@@ -77,8 +57,8 @@ export default {
 <style scoped>
 .sidebar-container {
   position: sticky;
-  top: 90px; 
-  max-height: calc(100vh - 110px); 
+  top: 90px;
+  max-height: calc(100vh - 110px);
   overflow-y: auto;
   padding: 1.5rem;
   background-color: #f8f9fa;
@@ -201,7 +181,7 @@ export default {
   .sidebar-container {
     padding: 1rem;
   }
-  
+
   .sidebar-link {
     padding: 0.6rem 0.8rem;
   }

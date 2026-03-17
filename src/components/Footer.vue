@@ -16,19 +16,19 @@
 
           <div class="col-md-3 mb-4 mb-md-0">
             <h5 class="mb-3 title-color">
-              <u>{{ isItalian ? "Informazioni" : "Info" }}</u>
+              <u>{{ $t('footer.info') }}</u>
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
                 <a
                   href="https://github.com/RiccardoMartella"
                   class="footer-link"
-                  >{{ isItalian ? "Chi Sono" : "About Me" }}</a
+                  >{{ $t('footer.aboutMe') }}</a
                 >
               </li>
               <li class="mb-2">
-                <RouterLink :to="contactPath" class="footer-link">{{
-                  isItalian ? "Contatti" : "Contact"
+                <RouterLink :to="localePath('/contacts')" class="footer-link">{{
+                  $t('footer.contact')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
@@ -38,7 +38,7 @@
                   class="footer-link donate-link"
                 >
                   <i class="bi bi-heart-fill me-1"></i
-                  >{{ isItalian ? "Supportami" : "Donate" }}
+                  >{{ $t('footer.donate') }}
                 </a>
               </li>
             </ul>
@@ -46,22 +46,22 @@
 
           <div class="col-md-3 mb-4 mb-md-0">
             <h5 class="mb-3 title-color">
-              <u>{{ isItalian ? "Inizia" : "Get Started" }}</u>
+              <u>{{ $t('footer.getStarted') }}</u>
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="docPath" class="footer-link">{{
-                  isItalian ? "Documentazione" : "Documentation"
+                <RouterLink :to="localePath('/docs/installation')" class="footer-link">{{
+                  $t('footer.documentation')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="supportPath" class="footer-link">{{
-                  isItalian ? "Supporto" : "Support"
+                <RouterLink :to="localePath('/report-bug#bug')" class="footer-link">{{
+                  $t('footer.support')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="versionsPath" class="footer-link">{{
-                  isItalian ? "Versioni" : "Version History"
+                <RouterLink :to="localePath('/versions')" class="footer-link">{{
+                  $t('footer.versionHistory')
                 }}</RouterLink>
               </li>
             </ul>
@@ -69,22 +69,22 @@
 
           <div class="col-md-3">
             <h5 class="mb-3 title-color">
-              <u>{{ isItalian ? "Legale" : "Legal" }}</u>
+              <u>{{ $t('footer.legal') }}</u>
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="privacyPath" class="footer-link" @click="scrollToTop">{{
-                  isItalian ? "Politica sulla Privacy" : "Privacy Policy"
+                <RouterLink :to="localePath('/privacy')" class="footer-link" @click="scrollToTop">{{
+                  $t('footer.privacyPolicy')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="cookiePolicyPath" class="footer-link" @click="scrollToTop">{{
-                  isItalian ? "Politica sui Cookie" : "Cookie Policy"
+                <RouterLink :to="localePath('/cookie-policy')" class="footer-link" @click="scrollToTop">{{
+                  $t('footer.cookiePolicy')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="licensesPath" class="footer-link" @click="scrollToTop">{{
-                  isItalian ? "Licenze" : "Licenses"
+                <RouterLink :to="localePath('/licenses')" class="footer-link" @click="scrollToTop">{{
+                  $t('footer.licenses')
                 }}</RouterLink>
               </li>
             </ul>
@@ -122,7 +122,7 @@
         >
           <p class="mb-0 text-powered">Copyright © 2025 Assembly Station</p>
           <p style="font-size: 12px" class="mb-0 text-dark">
-            {{ isItalian ? "Creato da " : "Powered by " }}
+            {{ $t('footer.poweredBy') }}
             <a
               class="text-dark"
               href="https://www.linkedin.com/in/riccardo-martella-b91854252/"
@@ -136,64 +136,25 @@
 </template>
 
 <script>
+import { useLocalePath } from "@/composables/useLocalePath.js"
+
 export default {
   name: "AppFooter",
+  setup() {
+    const { localePath } = useLocalePath()
+    return { localePath }
+  },
+  computed: {
+    donateLink() {
+      return "https://paypal.me/riccardomartella";
+    }
+  },
   methods: {
     scrollToTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-    }
-  },
-  computed: {
-    isItalian() {
-      return this.$route.path.includes("/it");
-    },
-    featuresPath() {
-      return this.isItalian ? "/it/features" : "/features";
-    },
-    casesPath() {
-      return this.isItalian ? "/it/case-studies" : "/case-studies";
-    },
-    contactPath() {
-      return this.isItalian ? "/it/contacts" : "/contacts";
-    },
-    docPath() {
-      return this.isItalian ? "/it/docs/installation" : "/docs/installation";
-    },
-    tutorialsPath() {
-      return this.isItalian ? "/it/tutorials" : "/tutorials";
-    },
-    resourcesPath() {
-      return this.isItalian ? "/it/resources" : "/resources";
-    },
-    supportPath() {
-      return this.isItalian ? "/it/report-bug#bug" : "/report-bug#bug";
-    },
-    termsPath() {
-      return this.isItalian ? "/it/terms" : "/terms";
-    },
-    privacyPath() {
-      return this.isItalian ? "/it/privacy" : "/privacy";
-    },
-    licensesPath() {
-      return this.isItalian ? "/it/licenses" : "/licenses";
-    },
-    developerPath() {
-      return this.isItalian ? "/it/about-developer" : "/about-developer";
-    },
-    cookiePolicyPath() {
-      return this.isItalian ? "/it/cookie-policy" : "/cookie-policy";
-    },
-    donateLink() {
-      return "https://paypal.me/riccardomartella";
-    },
-    versionsPath() {
-      return this.isItalian ? "/it/versions" : "/versions";
-    },
-    betaPath() {
-      return this.isItalian ? "/it/beta" : "/beta";
     }
   }
 };
@@ -299,11 +260,11 @@ h5 {
   .footer-logo {
     height: 60px;
   }
-  
+
   h5 {
     font-size: 1rem;
   }
-  
+
   .social-icon-footer {
     width: 35px;
     height: 35px;

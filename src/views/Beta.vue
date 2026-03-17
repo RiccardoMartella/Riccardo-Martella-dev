@@ -5,61 +5,60 @@
         <div class="col-lg-10">
           <div class="text-center mb-5">
             <div class="beta-tag mb-3">
-              <span class="badge bg-primary">BETA</span>
+              <span class="badge bg-primary">{{ $t('beta.badge') }}</span>
             </div>
-            <h1 class="display-4 fw-bold text-accent mb-3">Upcoming Features</h1>
+            <h1 class="display-4 fw-bold text-accent mb-3">{{ $t('beta.title') }}</h1>
             <p class="lead mb-0">
-              Get a sneak peek at features I'm currently developing for Assembly Station.
+              {{ $t('beta.lead') }}
             </p>
           </div>
 
           <div class="feature-card card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="feature-header">
-                <h2 class="text-accent">Dynamic Component Positioning</h2>
-                <span class="feature-status">Coming soon</span>
+                <h2 class="text-accent">{{ $t('beta.feature1Title') }}</h2>
+                <span class="feature-status">{{ $t('beta.feature1Status') }}</span>
               </div>
-              
+
               <p class="feature-description my-4">
-                My new positioning system gives you complete control over each prefab element before assembly.
-                You can precisely position components to create more realistic and intuitive assembly instructions.
+                {{ $t('beta.feature1Desc') }}
               </p>
-              
+
               <div class="video-container">
                 <video controls class="demo-video w-100">
               <source src="https://www.dropbox.com/scl/fi/qyscpehd1bj31jx1wnxmq/Beta.mp4?rlkey=3f4d8r8bcackc2li12zkbhpe1&st=56dphla7&dl=1" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
               </div>
-              
+
               <div class="feature-details mt-4">
-                <h3>How to Use This Feature:</h3>
+                <h3>{{ $t('beta.howToUse') }}</h3>
                 <ol class="feature-steps">
-                  <li>Select the prefab component you want to reposition</li>
-                  <li>Enter positioning mode through the component inspector</li>
-                  <li>Use the transformation handles to adjust position and rotation</li>
-                  <li>Save your custom positioning for future assemblies</li>
+                  <li>{{ $t('beta.step1') }}</li>
+                  <li>{{ $t('beta.step2') }}</li>
+                  <li>{{ $t('beta.step3') }}</li>
+                  <li>{{ $t('beta.step4') }}</li>
                 </ol>
-                
+
                 <div class="key-benefits mt-4">
-                  <h3>Key Benefits:</h3>
+                  <h3>{{ $t('beta.keyBenefits') }}</h3>
                   <ul>
-                    <li>Precise control over each component's position in your assemblies</li>
-                    <li>Real-time visual feedback as you position elements</li>
-                    <li>Create more intuitive assembly sequences with proper spatial relationships</li>
-                    <li>Simplifies the workflow for complex multi-part assemblies</li>
-                    <li>Seamlessly integrates with existing prefab structures</li>
+                    <li>{{ $t('beta.benefit1') }}</li>
+                    <li>{{ $t('beta.benefit2') }}</li>
+                    <li>{{ $t('beta.benefit3') }}</li>
+                    <li>{{ $t('beta.benefit4') }}</li>
+                    <li>{{ $t('beta.benefit5') }}</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div class="feature-card card shadow-sm mb-5">
             <div class="card-body p-4">
               <div class="feature-header">
-                <h2 class="text-accent">Advanced assembly system</h2>
-                <span class="feature-status">In development</span>
+                <h2 class="text-accent">{{ $t('beta.feature2Title') }}</h2>
+                <span class="feature-status">{{ $t('beta.feature2Status') }}</span>
               </div>
               <div class="video-container">
                 <video controls class="demo-video w-100">
@@ -69,16 +68,16 @@
               </div>
             </div>
           </div>
-          
+
           <div class="feedback-section text-center mt-5">
-            <h3><i class="bi bi-chat-left-text me-2"></i>Your feedback shapes these features</h3>
-            <p class="mb-4">Have suggestions for what you'd like to see in Assembly Station?</p>
+            <h3><i class="bi bi-chat-left-text me-2"></i>{{ $t('beta.feedbackTitle') }}</h3>
+            <p class="mb-4">{{ $t('beta.feedbackText') }}</p>
             <div class="d-flex justify-content-center gap-3">
               <a href="https://discord.gg/dZ2Veb4eM5" target="_blank" class="btn btn-primary">
-                <i class="bi bi-discord me-2"></i>Join Discord Community
+                <i class="bi bi-discord me-2"></i>{{ $t('beta.joinDiscord') }}
               </a>
-              <RouterLink to="/report-bug#bug" class="btn btn-outline-primary">
-                <i class="bi bi-bug me-2"></i>Submit Feature Request
+              <RouterLink :to="localePath('/report-bug#bug')" class="btn btn-outline-primary">
+                <i class="bi bi-bug me-2"></i>{{ $t('beta.submitFeature') }}
               </RouterLink>
             </div>
           </div>
@@ -89,8 +88,16 @@
 </template>
 
 <script>
+import { useLocalePath } from '@/composables/useLocalePath.js'
+import { useI18n } from 'vue-i18n'
+
 export default {
-  name: 'Beta'
+  name: 'Beta',
+  setup() {
+    const { locale } = useI18n()
+    const { localePath } = useLocalePath()
+    return { localePath, locale }
+  }
 }
 </script>
 
@@ -182,7 +189,7 @@ export default {
   .feature-video {
     height: 300px;
   }
-  
+
   .feature-header {
     flex-direction: column;
     align-items: flex-start;
