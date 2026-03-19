@@ -5,27 +5,47 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# Configurazione form
+# Configurazione form — Assembly Station
 [forms]
   [forms.contact]
     name = "contact"
-    # Ricevi notifiche per email quando qualcuno compila il form
     [forms.contact.notifications]
       email = "riccardomartella77@gmail.com"
-  
+
   [forms.contactit]
     name = "contactit"
     [forms.contactit.notifications]
       email = "riccardomartella77@gmail.com"
 
-      [forms.reportbugen]
+  [forms.reportbugen]
     name = "reportbugen"
     [forms.reportbugen.notifications]
       email = "riccardomartella77@gmail.com"
 
-      [forms.reportbugit]
+  [forms.reportbugit]
     name = "reportbugit"
     [forms.reportbugit.notifications]
+      email = "riccardomartella77@gmail.com"
+
+# Configurazione form — Homing Missile
+  [forms.hm-contacten]
+    name = "hm-contacten"
+    [forms.hm-contacten.notifications]
+      email = "riccardomartella77@gmail.com"
+
+  [forms.hm-contactit]
+    name = "hm-contactit"
+    [forms.hm-contactit.notifications]
+      email = "riccardomartella77@gmail.com"
+
+  [forms.hm-reportbugen]
+    name = "hm-reportbugen"
+    [forms.hm-reportbugen.notifications]
+      email = "riccardomartella77@gmail.com"
+
+  [forms.hm-reportbugit]
+    name = "hm-reportbugit"
+    [forms.hm-reportbugit.notifications]
       email = "riccardomartella77@gmail.com"
 
 # Redirect dopo invio del form (opzionale)
