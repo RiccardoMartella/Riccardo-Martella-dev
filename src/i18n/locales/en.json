@@ -151,7 +151,7 @@
     "screenshotsLabel": "Screenshots/Videos",
     "upload": "Upload",
     "screenshotsHelp": "Attach any relevant screenshots or videos (optional)",
-    "emailLabel": "Your Email (for follow-up)",
+    "emailLabel": "Your Email",
     "emailPlaceholder": "your.email{'@'}example.com",
     "formPrivacy": "",
     "submitBtn": "Submit Bug Report",
