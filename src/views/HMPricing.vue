@@ -50,7 +50,7 @@
               </div>
 
               <div class="text-center mt-4">
-                <a href="https://assetstore.unity.com" class="hm-buy-btn" target="_blank">
+                <a href="https://af.unity.com/sr/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F368542" class="hm-buy-btn" target="_blank">
                   <i class="bi bi-cart-fill me-2"></i>
                   {{ $t('hmPricing.buyBtn') }}
                 </a>

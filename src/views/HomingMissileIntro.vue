@@ -56,7 +56,7 @@
                 <i class="bi bi-book me-2"></i>{{ $t('hmIntro.docTitle') }}
               </router-link>
               <a
-                href="https://assetstore.unity.com"
+                href="https://af.unity.com/sr/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F368542"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hm-btn-secondary"
@@ -216,7 +216,7 @@
         <h2 class="hm-cta-title">{{ $t('hmIntro.ctaTitle') }}</h2>
         <p class="hm-cta-text">{{ $t('hmIntro.ctaText') }}</p>
         <a
-          href="https://assetstore.unity.com"
+          href="https://af.unity.com/sr/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F368542"
           target="_blank"
           rel="noopener noreferrer"
           class="hm-btn-primary"
