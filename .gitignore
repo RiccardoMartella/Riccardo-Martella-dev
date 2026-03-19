@@ -26,7 +26,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-*.claude
+.claude/
 *.tsbuildinfo
 CLAUDE.md
 HomingMissile_AssetDocumentation.txt
