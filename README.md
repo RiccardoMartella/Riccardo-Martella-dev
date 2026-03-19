@@ -1,4 +1,4 @@
-# Welcome to Assembly Station!
+# Welcome to Riccardo Martella Dev!
 
 ## Report a Problem
 
@@ -6,7 +6,7 @@ We greatly appreciate your feedback! If you encounter an issue or have suggestio
 
 Follow these simple steps to report a problem:
 
-1. Go to the **Issues** section of this repository: [Issues](https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues)
+1. Go to the **Issues** section of this repository: [Issues](https://github.com/RiccardoMartella/Riccardo-Martella-dev/issues)
 2. Click on **New Issue**.
 3. Fill out the form with a detailed description of the issue, including:
    - The version of **Unity** you are using.

@@ -24,7 +24,7 @@ A clear and concise description of what you expected to happen when using the as
 - The version of **Unity** you're using: [e.g., Unity 2022.1.0f1]
 
 **Asset Version**  
-- The version of the **Asset** you're using: [e.g., Assembly Station v1.2.3]
+- The version of the **Asset** you're using: [e.g., v1.2.3]
 
 **Screenshots**  
 If applicable, add screenshots or videos that help explain your issue.
