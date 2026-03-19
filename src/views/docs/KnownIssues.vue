@@ -88,7 +88,7 @@
             </p>
             <div class="d-flex justify-content-center gap-4 mt-3">
               <a
-                href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues"
+                href="https://github.com/RiccardoMartella/Riccardo-Martella-dev/issues"
                 class="btn btn-outline-primary"
               >
                 <i class="bi bi-github me-2"></i>Report Issue on GitHub

@@ -63,7 +63,7 @@
                     <h5>{{ $t('reportBug.githubTitle') }}</h5>
                     <p class="mb-3">{{ $t('reportBug.githubText') }}</p>
                     <div class="mt-auto">
-                      <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="btn btn-primary w-100" target="_blank">{{ $t('reportBug.openGithub') }}</a>
+                      <a href="https://github.com/RiccardoMartella/Riccardo-Martella-dev/issues" class="btn btn-primary w-100" target="_blank">{{ $t('reportBug.openGithub') }}</a>
                     </div>
                   </div>
                 </div>

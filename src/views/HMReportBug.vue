@@ -51,7 +51,7 @@
                   <h5 class="hm-text">{{ $t('reportBug.githubTitle') }}</h5>
                   <p class="hm-muted-text mb-3">{{ $t('reportBug.githubText') }}</p>
                   <div class="mt-auto">
-                    <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="hm-btn-primary w-100 justify-content-center" target="_blank">{{ $t('reportBug.openGithub') }}</a>
+                    <a href="https://github.com/RiccardoMartella/Riccardo-Martella-dev/issues" class="hm-btn-primary w-100 justify-content-center" target="_blank">{{ $t('reportBug.openGithub') }}</a>
                   </div>
                 </div>
               </div>

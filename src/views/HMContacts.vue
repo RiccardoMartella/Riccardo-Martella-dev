@@ -47,7 +47,7 @@
 
                 <div class="d-flex align-items-center">
                   <div class="hm-contact-icon">
-                    <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues"><i class="bi bi-github"></i></a>
+                    <a href="https://github.com/RiccardoMartella/Riccardo-Martella-dev/issues"><i class="bi bi-github"></i></a>
                   </div>
                   <div>
                     <p class="mb-0 fw-bold hm-text">GitHub</p>
@@ -105,7 +105,7 @@
           <div class="text-center mt-5">
             <h5 class="hm-text">{{ $t('contacts.socialTitle') }}</h5>
             <div class="d-flex justify-content-center gap-4 mt-3">
-              <a href="https://github.com/RiccardoMartella/Assembly-Station-Documentation/issues" class="hm-social-icon">
+              <a href="https://github.com/RiccardoMartella/Riccardo-Martella-dev/issues" class="hm-social-icon">
                 <i class="bi bi-github fs-3"></i>
               </a>
               <a href="https://discord.gg/dZ2Veb4eM5" class="hm-social-icon">
