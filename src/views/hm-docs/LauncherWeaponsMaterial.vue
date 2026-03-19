@@ -202,6 +202,24 @@
         MeshRenderer o ParticleSystemRenderer del prefab corrispondente.
       </template>
     </div>
+
+    <div class="hm-alert hm-alert-info">
+      <template v-if="locale === 'en'">
+        <strong>Automatic Pipeline Conversion</strong>
+        The editor script <span class="hm-code">Scripts/Editor/PipelineMaterialConverter.cs</span>
+        automatically converts all materials in the asset when you switch between render pipelines
+        (Built-in, URP, HDRP). You do not need to manually reassign shaders — just run the converter
+        from the Unity menu and all launcher weapon materials will be updated to the correct pipeline shaders.
+      </template>
+      <template v-else>
+        <strong>Conversione Automatica Pipeline</strong>
+        Lo script editor <span class="hm-code">Scripts/Editor/PipelineMaterialConverter.cs</span>
+        converte automaticamente tutti i materiali dell'asset quando si cambia pipeline di rendering
+        (Built-in, URP, HDRP). Non è necessario riassegnare manualmente gli shader — basta eseguire il
+        convertitore dal menu di Unity e tutti i materiali delle armi del lanciatore verranno aggiornati
+        con gli shader corretti della pipeline selezionata.
+      </template>
+    </div>
   </div>
 </template>
 
