@@ -231,7 +231,7 @@
     "seoTitle": "Cronologia Versioni - Assembly Station Asset Unity",
     "seoDescription": "Cronologia completa delle versioni e changelog per l'asset Unity Assembly Station. Vedi tutti gli aggiornamenti, nuove funzionalit\u00e0, correzioni di bug e miglioramenti.",
     "seoKeywords": "Versioni Assembly Station, changelog, cronologia aggiornamenti, aggiornamenti asset Unity, cronologia versioni",
-    "seoUrl": "https://www.assembly-station.com/it/versions",
+    "seoUrl": "https://riccardomartella-dev.com/it/versions",
     "v155version": "Versione 1.5.5",
     "v155date": "6 Marzo 2026",
     "v155c1": "Corretta e migliorata l'esperienza della Demo Scene.",
@@ -393,7 +393,7 @@
     "seoTitle": "Licenze e Asset di Terze Parti - Assembly Station",
     "seoDescription": "Elenco completo delle licenze di terze parti e asset utilizzati nell'asset Unity Assembly Station. Attribuzioni open source e informazioni sulle licenze.",
     "seoKeywords": "Licenze Assembly Station, asset terze parti, open source, attribuzioni, licenze asset Unity",
-    "seoUrl": "https://www.assembly-station.com/it/licenses"
+    "seoUrl": "https://riccardomartella-dev.com/it/licenses"
   },
   "demo": {
     "title": "Demo Interattiva",
@@ -423,7 +423,7 @@
     "seoTitle": "Prova la Demo - Assembly Station Asset Unity",
     "seoDescription": "Prova la demo interattiva di Assembly Station. Sperimenta come funziona il nostro asset Unity per creare guide di assemblaggio 3D e documentazione interattiva.",
     "seoKeywords": "Demo Assembly Station, demo asset Unity, demo interattiva, demo assemblaggio 3D, prova Assembly Station",
-    "seoUrl": "https://www.assembly-station.com/it/demo"
+    "seoUrl": "https://riccardomartella-dev.com/it/demo"
   },
   "rocket": {
     "title": "Demo Razzo",

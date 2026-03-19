@@ -231,7 +231,7 @@
     "seoTitle": "Version History - Assembly Station Unity Asset",
     "seoDescription": "Complete version history and changelog for Assembly Station Unity asset. See all updates, new features, bug fixes and improvements.",
     "seoKeywords": "Assembly Station versions, changelog, update history, Unity asset updates, version history",
-    "seoUrl": "https://www.assembly-station.com/versions",
+    "seoUrl": "https://riccardomartella-dev.com/versions",
     "v155version": "Version 1.5.5",
     "v155date": "March 6, 2026",
     "v155c1": "Fixed and improved the Demo Scene experience.",
@@ -393,7 +393,7 @@
     "seoTitle": "Licenses & Third-Party Assets - Assembly Station",
     "seoDescription": "Complete list of third-party licenses and assets used in Assembly Station Unity asset. Open source attributions and license information.",
     "seoKeywords": "Assembly Station licenses, third-party assets, open source, attributions, Unity asset licenses",
-    "seoUrl": "https://www.assembly-station.com/licenses"
+    "seoUrl": "https://riccardomartella-dev.com/licenses"
   },
   "demo": {
     "title": "Interactive Demo",
@@ -423,7 +423,7 @@
     "seoTitle": "Try the Demo - Assembly Station Unity Asset",
     "seoDescription": "Try Assembly Station interactive demo. Experience how our Unity asset works for creating 3D assembly guides and interactive documentation.",
     "seoKeywords": "Assembly Station demo, Unity asset demo, interactive demo, 3D assembly demo, try Assembly Station",
-    "seoUrl": "https://www.assembly-station.com/demo"
+    "seoUrl": "https://riccardomartella-dev.com/demo"
   },
   "rocket": {
     "title": "Rocket Demo",

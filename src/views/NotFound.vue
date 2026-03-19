@@ -70,7 +70,7 @@ export default {
     useSEO({
       title: t('notFound.seoTitle'),
       description: t('notFound.seoDescription'),
-      url: typeof window !== 'undefined' ? window.location.href : 'https://www.assembly-station.com/',
+      url: typeof window !== 'undefined' ? window.location.href : 'https://riccardomartella-dev.com/',
       robots: 'noindex, nofollow'
     })
 

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.assembly-station.com/sitemap.xml
+Sitemap: https://riccardomartella-dev.com/sitemap.xml
 
 # Disallow specific directories and files
 Disallow: /Build-Assembly2/
