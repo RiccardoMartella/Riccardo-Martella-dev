@@ -20,7 +20,7 @@
 
                 <div class="data-section">
                   <h3>Data we automatically collect</h3>
-                  <p>We automatically collect your data, for example when you visit Assembly Station.</p>
+                  <p>We automatically collect your data, for example when you visit riccardomartella-dev.com.</p>
                   <ul>
                     <li>Usage Data</li>
                     <li>Tracking Tools</li>
@@ -59,7 +59,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Data Controller</h2>
-                <p><strong>Assembly Station</strong><br>
+                <p><strong>Riccardo Martella</strong><br>
                 Via Monte Sant' Anna 18<br>
                 Atri (TE), Italy</p>
                 <p><strong>Email:</strong> riccardomartella77@gmail.com</p>
@@ -268,7 +268,7 @@
 
               <section class="mb-5">
                 <h2 class="section-title">Contact Us</h2>
-                <p><strong>Assembly Station</strong><br>
+                <p><strong>Riccardo Martella</strong><br>
                 Via Monte Sant' Anna 18<br>
                 Atri (TE), Italy</p>
                 <p><strong>Email:</strong> riccardomartella77@gmail.com</p>
