@@ -73,6 +73,8 @@ function generateRoutes() {
   routes.push({ path: '/it/homing-missile/report-bug', name: 'hm-report-bug-it', component: () => import('@/views/HMReportBug.vue'), meta: { locale: 'it' } })
   routes.push({ path: '/homing-missile/pricing', name: 'hm-pricing', component: () => import('@/views/HMPricing.vue'), meta: { locale: 'en' } })
   routes.push({ path: '/it/homing-missile/pricing', name: 'hm-pricing-it', component: () => import('@/views/HMPricing.vue'), meta: { locale: 'it' } })
+  routes.push({ path: '/homing-missile/licenses', name: 'hm-licenses', component: () => import('@/views/HMLicenses.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile/licenses', name: 'hm-licenses-it', component: () => import('@/views/HMLicenses.vue'), meta: { locale: 'it' } })
 
   // Shared pages (contacts, pricing, etc.)
   for (const page of pages) {
