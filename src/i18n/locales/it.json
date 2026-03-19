@@ -152,7 +152,7 @@
     "upload": "Carica",
     "screenshotsHelp": "Allega screenshot o video pertinenti (opzionale)",
     "emailLabel": "La tua Email (per follow-up)",
-    "emailPlaceholder": "tua.email@esempio.com",
+    "emailPlaceholder": "tua.email{'@'}esempio.com",
     "formPrivacy": "",
     "submitBtn": "Invia Segnalazione",
     "faq1Question": "Cosa succede dopo aver inviato una segnalazione di bug?",
@@ -999,6 +999,7 @@
     "hmCardTag": "Armi & Combattimento",
     "hmCardDesc": "Un sistema completo di lanciarazzi guidati per Unity 6. Navigazione Proporzionale reale, HUD militare con UI Toolkit e audio di aggancio procedurale.",
     "hmCardBtn": "Apri Documentazione",
+    "hmComingSoon": "Presto in arrivo",
     "moreComingSoon": "Altri asset in arrivo"
   },
   "hmIntro": {

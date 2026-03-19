@@ -152,7 +152,7 @@
     "upload": "Upload",
     "screenshotsHelp": "Attach any relevant screenshots or videos (optional)",
     "emailLabel": "Your Email (for follow-up)",
-    "emailPlaceholder": "your.email@example.com",
+    "emailPlaceholder": "your.email{'@'}example.com",
     "formPrivacy": "",
     "submitBtn": "Submit Bug Report",
     "faq1Question": "What happens after I submit a bug report?",
@@ -999,6 +999,7 @@
     "hmCardTag": "Weapons & Combat",
     "hmCardDesc": "A complete guided missile launcher system for Unity 6. Real Proportional Navigation guidance, military HUD with UI Toolkit, and procedural lock-on audio.",
     "hmCardBtn": "Open Documentation",
+    "hmComingSoon": "Coming Soon",
     "moreComingSoon": "More assets coming soon"
   },
   "hmIntro": {
