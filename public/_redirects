@@ -1,1 +1,6 @@
+# Redirect dal vecchio dominio al nuovo (301 permanente)
+https://assembly-station.com/* https://riccardomartella-dev.com/:splat 301!
+https://www.assembly-station.com/* https://riccardomartella-dev.com/:splat 301!
+
+# SPA fallback
 /* /index.html 200
