@@ -1052,7 +1052,8 @@
       "scriptableObjectConfig": "Config ScriptableObject",
       "setupChecklist": "Checklist Configurazione",
       "demoScenes": "Scene Demo",
-      "technicalNotes": "Note Tecniche"
+      "technicalNotes": "Note Tecniche",
+      "launcherWeaponsMaterial": "Materiale Armi Lanciatore"
     }
   },
   "hmHeader": {

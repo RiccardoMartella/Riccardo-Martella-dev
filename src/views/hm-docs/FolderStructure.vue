@@ -36,6 +36,7 @@
                     <li class="hm-vtree-file">GroundDemo.unity</li>
                   </ul>
                 </li>
+                <li class="hm-vtree-file">Documentation.pdf</li>
                 <li class="hm-vtree-folder">Input/
                   <ul>
                     <li class="hm-vtree-file">InputSystem_Actions.cs</li>
@@ -71,11 +72,35 @@
                                 <li class="hm-vtree-folder">Explosion/
                                   <ul>
                                     <li class="hm-vtree-file">ExplosionFX.prefab</li>
+                                    <li class="hm-vtree-folder">Materials/
+                                      <ul>
+                                        <li class="hm-vtree-file">explosion.mat</li>
+                                      </ul>
+                                    </li>
                                   </ul>
                                 </li>
                                 <li class="hm-vtree-folder">Rocket/
                                   <ul>
                                     <li class="hm-vtree-file">RocketLaunchFX.prefab</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="hm-vtree-folder">Materials/
+                              <ul>
+                                <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_BaseColor.mat</li>
+                                <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_BaseColor.mat</li>
+                                <li class="hm-vtree-file">bullet.mat</li>
+                                <li class="hm-vtree-folder">Explosion/
+                                  <ul>
+                                    <li class="hm-vtree-file">ExplosionFX_Additive.mat</li>
+                                    <li class="hm-vtree-file">ExplosionFX_AlphaBlend.mat</li>
+                                  </ul>
+                                </li>
+                                <li class="hm-vtree-folder">Start/
+                                  <ul>
+                                    <li class="hm-vtree-file">RocketFX_Additive.mat</li>
+                                    <li class="hm-vtree-file">RocketFX_AlphaBlend.mat</li>
                                   </ul>
                                 </li>
                               </ul>
@@ -103,12 +128,17 @@
                     <li class="hm-vtree-folder">Core/
                       <ul>
                         <li class="hm-vtree-file">HomingMissile.cs</li>
+                        <li class="hm-vtree-file">LauncherConfig.cs</li>
                         <li class="hm-vtree-file">LauncherController.cs</li>
                         <li class="hm-vtree-file">LauncherControllerConfig.cs</li>
-                        <li class="hm-vtree-file">LauncherConfig.cs</li>
                         <li class="hm-vtree-file">MissileConfig.cs</li>
                         <li class="hm-vtree-file">MissileLauncher.cs</li>
                         <li class="hm-vtree-file">TargetHealth.cs</li>
+                      </ul>
+                    </li>
+                    <li class="hm-vtree-folder">Editor/
+                      <ul>
+                        <li class="hm-vtree-file">PipelineMaterialConverter.cs</li>
                       </ul>
                     </li>
                     <li class="hm-vtree-folder">Player/
@@ -134,13 +164,19 @@
                   <ul>
                     <li class="hm-vtree-folder">Plane/
                       <ul>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_*.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_AmbientOcclusion.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_Color.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_Displacement.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_NormalDX.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_NormalGL.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_Roughness.jpg</li>
                       </ul>
                     </li>
                     <li class="hm-vtree-folder">TexturesMecha/
                       <ul>
-                        <li class="hm-vtree-file">02-rocketluncher_MAT-*.jpg</li>
-                        <li class="hm-vtree-file">06-bullet_MAT-*.jpg</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_*.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_*.png</li>
+                        <li class="hm-vtree-file">06-bullet_MAT-bullet_*.png / *.jpg</li>
                       </ul>
                     </li>
                   </ul>
@@ -202,18 +238,23 @@
             <td v-if="locale === 'en'">
               <span class="hm-code">RocketLauncher.prefab</span> — the complete launcher station.
               <span class="hm-code">RocketBullet.prefab</span> — the missile projectile with all required components.
-              Also contains VFX prefabs (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), sound files, materials, and 3D models.
+              Also contains VFX prefabs (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), VFX materials (additive and alpha-blend for explosion and launch effects), sound files, and 3D models.
             </td>
             <td v-else>
               <span class="hm-code">RocketLauncher.prefab</span> — la stazione di lancio completa.
               <span class="hm-code">RocketBullet.prefab</span> — il proiettile missile con tutti i componenti necessari.
-              Contiene anche prefab VFX (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), file audio, materiali e modelli 3D.
+              Contiene anche prefab VFX (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), materiali VFX (additive e alpha-blend per gli effetti di esplosione e lancio), file audio e modelli 3D.
             </td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/Core/</span></td>
-            <td v-if="locale === 'en'">The four primary runtime scripts: missile flight controller, launcher manager, turret rotation controller, and target health.</td>
-            <td v-else>I quattro script runtime principali: controllore di volo del missile, gestore del lanciatore, controllore di rotazione della torretta e salute del bersaglio.</td>
+            <td v-if="locale === 'en'">The primary runtime scripts: missile flight controller, launcher manager, turret rotation controller, ScriptableObject configs (<span class="hm-code">MissileConfig</span>, <span class="hm-code">LauncherConfig</span>, <span class="hm-code">LauncherControllerConfig</span>), and target health.</td>
+            <td v-else>Gli script runtime principali: controllore di volo del missile, gestore del lanciatore, controllore di rotazione della torretta, configurazioni ScriptableObject (<span class="hm-code">MissileConfig</span>, <span class="hm-code">LauncherConfig</span>, <span class="hm-code">LauncherControllerConfig</span>) e salute del bersaglio.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">Scripts/Editor/</span></td>
+            <td v-if="locale === 'en'">Editor-only utility: <span class="hm-code">PipelineMaterialConverter.cs</span> automatically converts materials when switching between render pipelines.</td>
+            <td v-else>Utilità solo per l'Editor: <span class="hm-code">PipelineMaterialConverter.cs</span> converte automaticamente i materiali quando si cambia pipeline di rendering.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/Player/</span></td>

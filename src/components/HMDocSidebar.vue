@@ -106,6 +106,12 @@
           {{ $t('hmSidebar.items.technicalNotes') }}
         </router-link>
       </li>
+      <li>
+        <router-link :to="localePath('/homing-missile/docs/launcher-weapons-material')" class="hm-sidebar-link">
+          <span class="hm-sidebar-num">17</span>
+          {{ $t('hmSidebar.items.launcherWeaponsMaterial') }}
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
