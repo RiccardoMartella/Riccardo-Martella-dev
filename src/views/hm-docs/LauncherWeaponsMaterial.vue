@@ -203,21 +203,77 @@
       </template>
     </div>
 
-    <div class="hm-alert hm-alert-info">
-      <template v-if="locale === 'en'">
-        <strong>Automatic Pipeline Conversion</strong>
+    <div class="hm-doc-section">
+      <div v-if="locale === 'en'" class="hm-doc-section-title">Automatic Pipeline Conversion</div>
+      <div v-else class="hm-doc-section-title">Conversione Automatica Pipeline</div>
+
+      <p v-if="locale === 'en'">
         The editor script <span class="hm-code">Scripts/Editor/PipelineMaterialConverter.cs</span>
         automatically converts all materials in the asset when you switch between render pipelines
         (Built-in, URP, HDRP). You do not need to manually reassign shaders — just run the converter
         from the Unity menu and all launcher weapon materials will be updated to the correct pipeline shaders.
-      </template>
-      <template v-else>
-        <strong>Conversione Automatica Pipeline</strong>
+      </p>
+      <p v-else>
         Lo script editor <span class="hm-code">Scripts/Editor/PipelineMaterialConverter.cs</span>
         converte automaticamente tutti i materiali dell'asset quando si cambia pipeline di rendering
         (Built-in, URP, HDRP). Non è necessario riassegnare manualmente gli shader — basta eseguire il
         convertitore dal menu di Unity e tutti i materiali delle armi del lanciatore verranno aggiornati
         con gli shader corretti della pipeline selezionata.
+      </p>
+    </div>
+
+    <div class="hm-doc-section">
+      <div v-if="locale === 'en'" class="hm-doc-section-title">How to Access from Unity Menu</div>
+      <div v-else class="hm-doc-section-title">Come accedere dal menu Unity</div>
+
+      <ol v-if="locale === 'en'" class="hm-step-list">
+        <li>Open Unity with the project loaded.</li>
+        <li>In the top menu bar, go to <span class="hm-code">Tools → Homing Missile → Convert Materials to Current Pipeline</span>.</li>
+        <li>The "Material Converter" window will open.</li>
+        <li>At the top, the currently detected pipeline is shown (Built-in, URP, or HDRP).</li>
+        <li>Click one of the three buttons to convert all asset materials:
+          <ul>
+            <li><strong>URP</strong> (Universal Render Pipeline)</li>
+            <li><strong>Built-in</strong> (Standard)</li>
+            <li><strong>HDRP</strong> (High Definition)</li>
+          </ul>
+        </li>
+        <li>When the conversion is complete, a confirmation dialog will show the number of converted materials.</li>
+      </ol>
+      <ol v-else class="hm-step-list">
+        <li>Apri Unity con il progetto caricato.</li>
+        <li>Nella barra dei menu in alto, vai su <span class="hm-code">Tools → Homing Missile → Convert Materials to Current Pipeline</span>.</li>
+        <li>Si aprirà la finestra "Material Converter".</li>
+        <li>In alto viene mostrata la pipeline attualmente rilevata (Built-in, URP o HDRP).</li>
+        <li>Clicca uno dei tre pulsanti per convertire tutti i materiali dell'asset:
+          <ul>
+            <li><strong>URP</strong> (Universal Render Pipeline)</li>
+            <li><strong>Built-in</strong> (Standard)</li>
+            <li><strong>HDRP</strong> (High Definition)</li>
+          </ul>
+        </li>
+        <li>Al termine della conversione, un dialog di conferma mostrerà il numero di materiali convertiti.</li>
+      </ol>
+    </div>
+
+    <div class="hm-alert hm-alert-info">
+      <template v-if="locale === 'en'">
+        <strong>Notes</strong>
+        <ul class="mb-0">
+          <li>The script automatically detects whether a material is a particle type and applies the correct shader (Lit for objects, Particles/Unlit for effects).</li>
+          <li>Textures (albedo, normal, metallic, occlusion, emission) and properties (color, smoothness, metallic) are preserved during conversion.</li>
+          <li>For particle materials with additive blend mode, the blend mode is maintained after conversion.</li>
+          <li>Make sure the target pipeline package is installed in your project (e.g. <span class="hm-code">com.unity.render-pipelines.universal</span> for URP), otherwise the shader will not be found.</li>
+        </ul>
+      </template>
+      <template v-else>
+        <strong>Note</strong>
+        <ul class="mb-0">
+          <li>Lo script rileva automaticamente se un materiale è di tipo particella e applica lo shader corretto (Lit per oggetti, Particles/Unlit per effetti).</li>
+          <li>Le texture (albedo, normal, metallic, occlusion, emission) e le proprietà (colore, smoothness, metallic) vengono preservate durante la conversione.</li>
+          <li>Per i materiali particella con blend mode additivo, il blend mode viene mantenuto dopo la conversione.</li>
+          <li>Assicurati di avere il pacchetto della pipeline target installato nel progetto (es. <span class="hm-code">com.unity.render-pipelines.universal</span> per URP), altrimenti lo shader non verrà trovato.</li>
+        </ul>
       </template>
     </div>
   </div>
