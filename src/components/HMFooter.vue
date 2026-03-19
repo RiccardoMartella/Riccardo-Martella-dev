@@ -66,17 +66,17 @@
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="localePath('/privacy')" class="hm-footer-link" @click="scrollToTop">{{
+                <RouterLink :to="localePath('/homing-missile/privacy')" class="hm-footer-link" @click="scrollToTop">{{
                   $t('footer.privacyPolicy')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/cookie-policy')" class="hm-footer-link" @click="scrollToTop">{{
+                <RouterLink :to="localePath('/homing-missile/cookie-policy')" class="hm-footer-link" @click="scrollToTop">{{
                   $t('footer.cookiePolicy')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/licenses')" class="hm-footer-link" @click="scrollToTop">{{
+                <RouterLink :to="localePath('/homing-missile/licenses')" class="hm-footer-link" @click="scrollToTop">{{
                   $t('footer.licenses')
                 }}</RouterLink>
               </li>
