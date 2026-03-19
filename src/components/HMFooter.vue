@@ -1,33 +1,27 @@
 <template>
-  <footer class="footer mt-4">
-    <div class="footer-main py-5 pb-4">
+  <footer class="hm-footer mt-4">
+    <div class="hm-footer-main py-5 pb-4">
       <div class="container">
         <div class="row">
           <div class="col-md-3 mb-4 mb-md-0 d-flex">
             <div class="d-flex align-items-center mb-2">
-              <img
-                src="/images/logo.png"
-                alt="Assembly Station Logo"
-                class="footer-logo me-2"
-              />
-              <h5 class="mb-0 text-white">Assembly Station</h5>
+              <h5 class="mb-0 hm-footer-brand">Homing <span class="hm-cyan">Missile</span></h5>
             </div>
           </div>
 
           <div class="col-md-3 mb-4 mb-md-0">
-            <h5 class="mb-3 title-color">
+            <h5 class="mb-3 hm-footer-heading">
               <u>{{ $t('footer.info') }}</u>
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
                 <a
                   href="https://github.com/RiccardoMartella"
-                  class="footer-link"
-                  >{{ $t('footer.aboutMe') }}</a
-                >
+                  class="hm-footer-link"
+                >{{ $t('footer.aboutMe') }}</a>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/contacts')" class="footer-link">{{
+                <RouterLink :to="localePath('/homing-missile/contacts')" class="hm-footer-link">{{
                   $t('footer.contact')
                 }}</RouterLink>
               </li>
@@ -35,55 +29,54 @@
                 <a
                   :href="donateLink"
                   target="_blank"
-                  class="footer-link donate-link"
+                  class="hm-footer-link hm-donate-link"
                 >
-                  <i class="bi bi-heart-fill me-1"></i
-                  >{{ $t('footer.donate') }}
+                  <i class="bi bi-heart-fill me-1"></i>{{ $t('footer.donate') }}
                 </a>
               </li>
             </ul>
           </div>
 
           <div class="col-md-3 mb-4 mb-md-0">
-            <h5 class="mb-3 title-color">
+            <h5 class="mb-3 hm-footer-heading">
               <u>{{ $t('footer.getStarted') }}</u>
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="localePath('/assembly-station/docs/installation')" class="footer-link">{{
+                <RouterLink :to="localePath('/homing-missile/docs/overview')" class="hm-footer-link">{{
                   $t('footer.documentation')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/report-bug#bug')" class="footer-link">{{
+                <RouterLink :to="localePath('/homing-missile/report-bug#bug')" class="hm-footer-link">{{
                   $t('footer.support')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/versions')" class="footer-link">{{
-                  $t('footer.versionHistory')
+                <RouterLink :to="localePath('/')" class="hm-footer-link">{{
+                  $t('hmFooter.allAssets')
                 }}</RouterLink>
               </li>
             </ul>
           </div>
 
           <div class="col-md-3">
-            <h5 class="mb-3 title-color">
+            <h5 class="mb-3 hm-footer-heading">
               <u>{{ $t('footer.legal') }}</u>
             </h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <RouterLink :to="localePath('/privacy')" class="footer-link" @click="scrollToTop">{{
+                <RouterLink :to="localePath('/privacy')" class="hm-footer-link" @click="scrollToTop">{{
                   $t('footer.privacyPolicy')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/cookie-policy')" class="footer-link" @click="scrollToTop">{{
+                <RouterLink :to="localePath('/cookie-policy')" class="hm-footer-link" @click="scrollToTop">{{
                   $t('footer.cookiePolicy')
                 }}</RouterLink>
               </li>
               <li class="mb-2">
-                <RouterLink :to="localePath('/licenses')" class="footer-link" @click="scrollToTop">{{
+                <RouterLink :to="localePath('/licenses')" class="hm-footer-link" @click="scrollToTop">{{
                   $t('footer.licenses')
                 }}</RouterLink>
               </li>
@@ -91,16 +84,16 @@
           </div>
         </div>
       </div>
-      <div class="social-icons">
-        <a href="https://discord.gg/dZ2Veb4eM5" class="social-icon-footer mx-2">
+      <div class="hm-social-icons">
+        <a href="https://discord.gg/dZ2Veb4eM5" class="hm-social-icon mx-2">
           <i class="bi bi-discord"></i>
         </a>
-        <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" class="social-icon-footer mx-2">
-          <i class="bi bi-unity"></i>
+        <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" class="hm-social-icon mx-2">
+          <img src="/images/logo.png" alt="Assembly Station" class="hm-social-logo">
         </a>
         <a
           href="https://www.linkedin.com/in/riccardo-martella-b91854252/"
-          class="social-icon-footer mx-2"
+          class="hm-social-icon mx-2"
         >
           <i class="bi bi-linkedin"></i>
         </a>
@@ -108,26 +101,23 @@
           href="https://youtube.com/@riccardomartella2666?si=LKhiph9HqEq-4CBb"
           target="_blank"
           rel="noopener noreferrer"
-          class="social-icon-footer mx-2"
+          class="hm-social-icon mx-2"
           title="YouTube"
         >
           <i class="bi bi-youtube"></i>
         </a>
       </div>
     </div>
-    <div class="footer-bottom py-3">
+    <div class="hm-footer-bottom py-3">
       <div class="container">
-        <div
-          class="d-flex justify-content-center align-items-center flex-column"
-        >
-          <p class="mb-0 text-powered">Copyright © 2025 Assembly Station</p>
-          <p style="font-size: 12px" class="mb-0 text-dark">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+          <p class="mb-0 hm-copyright">{{ $t('hmFooter.copyright') }}</p>
+          <p style="font-size: 12px" class="mb-0 hm-powered">
             {{ $t('footer.poweredBy') }}
             <a
-              class="text-dark"
+              class="hm-powered-link"
               href="https://www.linkedin.com/in/riccardo-martella-b91854252/"
-              >Riccardo Martella</a
-            >
+            >Riccardo Martella</a>
           </p>
         </div>
       </div>
@@ -139,7 +129,7 @@
 import { useLocalePath } from "@/composables/useLocalePath.js"
 
 export default {
-  name: "AppFooter",
+  name: "HMFooter",
   setup() {
     const { localePath } = useLocalePath()
     return { localePath }
@@ -161,111 +151,117 @@ export default {
 </script>
 
 <style scoped>
-.title-color {
-  color: #ffffff;
+.hm-footer {
+  border-top: 1px solid rgba(85, 195, 235, 0.15);
 }
 
-.footer {
-  border-top: 1px solid #ffffff;
+.hm-footer-main {
+  background-color: #0d1520;
 }
 
-.footer-main {
-  background-color: #4dbeff;
+.hm-footer-bottom {
+  background-color: #060a10;
 }
 
-.footer-bottom {
-  background-color: #b3e4ff;
+.hm-footer-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #E1EBF2;
 }
 
-.text-accent {
-  color: #00a3ff;
+.hm-cyan {
+  color: #55C3EB;
 }
 
-.text-dark {
-  color: #333333;
+.hm-footer-heading {
+  color: #55C3EB;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-.footer-link {
-  color: #ededed;
+.hm-footer-link {
+  color: rgba(225, 235, 242, 0.7);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-link:hover {
-  color: #00a3ff;
+.hm-footer-link:hover {
+  color: #55C3EB;
   text-decoration: none;
 }
 
-.donate-link {
-  color: #fff2cc;
+.hm-donate-link {
+  color: rgba(255, 220, 130, 0.8);
   font-weight: 500;
 }
 
-.donate-link:hover {
+.hm-donate-link:hover {
   color: #ffdd57;
 }
 
-.donate-link i {
+.hm-donate-link i {
   color: #ff6b6b;
 }
 
-.discord-link {
-  color: #7289da;
-  font-weight: 500;
-}
-
-.discord-link:hover {
-  color: #5e73bc;
-}
-
-.social-icons {
+.hm-social-icons {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
-.social-icon-footer {
+.hm-social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: rgba(85, 195, 235, 0.1);
   margin: 0 5px;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  color: #4dbeff;
+  color: #55C3EB;
 }
 
-.social-icon-footer:hover {
+.hm-social-icon:hover {
   transform: translateY(-3px);
-  background-color: #e6f7ff;
-  color: #00a3ff;
+  background-color: rgba(85, 195, 235, 0.2);
+  color: #78d0ef;
 }
 
-h5 {
-  color: #333333;
-  font-weight: 600;
+.hm-social-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
-.footer-logo {
-  height: 80px;
-  width: auto;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: #ffffffad;
+.hm-copyright {
+  color: rgba(225, 235, 242, 0.5);
+  font-size: 0.9rem;
 }
 
-/* Mobile optimization */
+.hm-powered {
+  color: rgba(225, 235, 242, 0.3);
+}
+
+.hm-powered-link {
+  color: rgba(225, 235, 242, 0.4);
+  transition: color 0.2s ease;
+}
+
+.hm-powered-link:hover {
+  color: #55C3EB;
+}
+
 @media (max-width: 767px) {
-  .footer-logo {
-    height: 60px;
+  .hm-footer-brand {
+    font-size: 1.1rem;
   }
 
-  h5 {
-    font-size: 1rem;
+  .hm-footer-heading {
+    font-size: 0.9rem;
   }
 
-  .social-icon-footer {
+  .hm-social-icon {
     width: 35px;
     height: 35px;
   }

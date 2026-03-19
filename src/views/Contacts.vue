@@ -81,8 +81,8 @@
 
                 <div class="col-lg-6">
                   <h4>{{ $t('contacts.formTitle') }}</h4>
-                  <form :name="locale === 'it' ? 'contactit' : 'contacten'" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" :value="locale === 'it' ? 'contactit' : 'contacten'" />
+                  <form :name="formName" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" :value="formName" />
                     <p class="d-none">
                       <label>{{ $t('contacts.honeypot') }}<input name="bot-field" /></label>
                     </p>
@@ -156,6 +156,15 @@ export default {
     useSEO(seoConfig)
     return { localePath, locale }
   },
+  computed: {
+    isHM() {
+      return this.$route.path.includes('homing-missile')
+    },
+    formName() {
+      const prefix = this.isHM ? 'hm-' : ''
+      return this.locale === 'it' ? `${prefix}contactit` : `${prefix}contacten`
+    }
+  },
   mounted() {
     this.$nextTick(() => {
       if (window.location.hash) {
@@ -174,6 +183,8 @@ export default {
 .contacts-page {
   padding-top: 20px;
   padding-bottom: 50px;
+  background-color: rgb(240, 240, 240);
+  min-height: 100vh;
 }
 
 .text-accent {

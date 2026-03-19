@@ -111,8 +111,8 @@
                 </p>
               </div>
 
-              <form :name="locale === 'it' ? 'reportbugit' : 'reportbugen'" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" :value="locale === 'it' ? 'reportbugit' : 'reportbugen'" />
+              <form :name="formName" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" :value="formName" />
                 <div class="mb-3">
                   <label for="bugTitle" class="form-label">{{ $t('reportBug.bugTitleLabel') }}</label>
                   <input type="text" class="form-control" id="bugTitle" name="bugTitle" :placeholder="$t('reportBug.bugTitlePlaceholder')">
@@ -239,6 +239,15 @@ export default {
     const { localePath } = useLocalePath()
     return { localePath, locale }
   },
+  computed: {
+    isHM() {
+      return this.$route.path.includes('homing-missile')
+    },
+    formName() {
+      const prefix = this.isHM ? 'hm-' : ''
+      return this.locale === 'it' ? `${prefix}reportbugit` : `${prefix}reportbugen`
+    }
+  },
   mounted() {
 
     this.$nextTick(() => {
@@ -260,6 +269,8 @@ export default {
 .report-bug-page {
   padding-top: 20px;
   padding-bottom: 50px;
+  background-color: rgb(240, 240, 240);
+  min-height: 100vh;
 }
 
 .text-accent {

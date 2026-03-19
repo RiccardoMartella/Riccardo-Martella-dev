@@ -47,6 +47,8 @@
     
     <!-- Performance hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://www.assembly-station.com">
     
@@ -186,7 +188,54 @@
       <input type="file" class="form-control" name="attachments" multiple>
       <input type="email" class="form-control"  name="email" placeholder="tua.email@esempio.com">
     </form>
-    
+
+    <!-- Homing Missile forms -->
+    <form name="hm-contacten" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="hm-contactit" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="hm-reportbugen" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bugTitle">
+      <input type="text" name="version">
+      <input type="text" name="unityVersion">
+      <select name="severity">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="critical">Critical</option>
+      </select>
+      <textarea name="bugDescription"></textarea>
+      <textarea name="reproduction"></textarea>
+      <textarea name="expected"></textarea>
+      <input type="file" name="attachments" multiple>
+      <input type="email" name="email">
+    </form>
+
+    <form name="hm-reportbugit" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bugTitle">
+      <input type="text" name="version">
+      <input type="text" name="unityVersion">
+      <select name="severity">
+        <option value="basso">Basso</option>
+        <option value="medio">Medio</option>
+        <option value="alto">Alto</option>
+        <option value="critico">Critico</option>
+      </select>
+      <textarea name="bugDescription"></textarea>
+      <textarea name="reproduction"></textarea>
+      <textarea name="expected"></textarea>
+      <input type="file" name="attachments" multiple>
+      <input type="email" name="email">
+    </form>
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

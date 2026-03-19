@@ -1,11 +1,11 @@
 <template>
-  <div class="language-selector">
+  <div class="language-selector" :class="{ 'language-selector--dark': theme === 'dark' }">
     <a
       @click.prevent="switchLanguage('it')"
       class="lang-link"
       :class="{ active: locale === 'it' }"
     >
-      <img src="/public/images/Ita.png" class="img-flag" alt="Italia" />
+      <img src="/images/Ita.png" class="img-flag" alt="Italia" />
       <span>IT</span>
     </a>
     <a
@@ -13,7 +13,7 @@
       class="lang-link"
       :class="{ active: locale === 'en' }"
     >
-      <img src="/public/images/en.png" class="img-flag" alt="English" />
+      <img src="/images/en.png" class="img-flag" alt="English" />
       <span>EN</span>
     </a>
   </div>
@@ -24,6 +24,12 @@ import { useI18n } from 'vue-i18n'
 
 export default {
   name: "LanguageSelector",
+  props: {
+    theme: {
+      type: String,
+      default: 'light'
+    }
+  },
   setup() {
     const { locale } = useI18n()
     return { locale }
@@ -57,6 +63,10 @@ export default {
   padding: 2px 5px;
 }
 
+.language-selector--dark {
+  background-color: rgba(85, 195, 235, 0.1);
+}
+
 .lang-link {
   display: flex;
   align-items: center;
@@ -71,6 +81,10 @@ export default {
   cursor: pointer;
 }
 
+.language-selector--dark .lang-link {
+  color: rgba(225, 235, 242, 0.7);
+}
+
 .img-flag {
   width: 16px;
   height: 12px;
@@ -83,8 +97,17 @@ export default {
   color: white;
 }
 
+.language-selector--dark .lang-link.active {
+  background-color: #55C3EB;
+  color: #060a10;
+}
+
 .lang-link:hover:not(.active) {
   background-color: #e6f7ff;
+}
+
+.language-selector--dark .lang-link:hover:not(.active) {
+  background-color: rgba(85, 195, 235, 0.15);
 }
 
 @media (max-width: 768px) {

@@ -33,7 +33,8 @@
                   ref="demoFrame"
                   class="demo-frame unity-iframe"
                   :src="demoUrl"
-                  title="Assembly Station WebGL Demo">
+                  title="Assembly Station WebGL Demo"
+                  allow="pointer-lock; autoplay; fullscreen">
                 </iframe>
               </div>
             </div>

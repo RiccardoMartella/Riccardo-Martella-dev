@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import i18n from '@/i18n'
+import Hub from '../views/Hub.vue'
 import Introduction from '../views/Introduction.vue'
 
 const pages = [
-  { path: '/', name: 'introduction', component: Introduction, eager: true },
   { path: '/contacts', name: 'contacts', component: () => import('@/views/Contacts.vue') },
   { path: '/report-bug', name: 'report-bug', component: () => import('@/views/ReportBug.vue') },
   { path: '/privacy', name: 'privacy', component: () => import('@/views/Privacy.vue') },
@@ -14,7 +14,6 @@ const pages = [
   { path: '/licenses', name: 'licenses', component: () => import('@/views/Licenses.vue') },
   { path: '/beta', name: 'beta', component: () => import('@/views/Beta.vue') },
   { path: '/demo', name: 'demo', component: () => import('@/views/Demo.vue') },
-  // { path: '/discord-giveaway', name: 'discord-giveaway', component: () => import('@/views/DiscordGiveaway.vue') },
 ]
 
 const docPages = [
@@ -33,75 +32,109 @@ const docPages = [
   { path: 'block-piece', name: 'docs-block-piece', component: () => import('@/views/docs/BlockPiece.vue') },
 ]
 
+const hmDocPages = [
+  { path: 'overview', name: 'hm-docs-overview', component: () => import('@/views/hm-docs/Overview.vue') },
+  { path: 'folder-structure', name: 'hm-docs-folder-structure', component: () => import('@/views/hm-docs/FolderStructure.vue') },
+  { path: 'required-tags', name: 'hm-docs-required-tags', component: () => import('@/views/hm-docs/RequiredTags.vue') },
+  { path: 'how-it-works', name: 'hm-docs-how-it-works', component: () => import('@/views/hm-docs/HowItWorks.vue') },
+  { path: 'homing-missile-script', name: 'hm-docs-homing-missile-script', component: () => import('@/views/hm-docs/HomingMissileScript.vue') },
+  { path: 'missile-launcher', name: 'hm-docs-missile-launcher', component: () => import('@/views/hm-docs/MissileLauncherScript.vue') },
+  { path: 'launcher-controller', name: 'hm-docs-launcher-controller', component: () => import('@/views/hm-docs/LauncherControllerScript.vue') },
+  { path: 'player-controller', name: 'hm-docs-player-controller', component: () => import('@/views/hm-docs/PlayerControllerScript.vue') },
+  { path: 'hud-controller', name: 'hm-docs-hud-controller', component: () => import('@/views/hm-docs/HUDControllerScript.vue') },
+  { path: 'target-utility', name: 'hm-docs-target-utility', component: () => import('@/views/hm-docs/TargetUtilityScripts.vue') },
+  { path: 'hud-reference', name: 'hm-docs-hud-reference', component: () => import('@/views/hm-docs/HUDReference.vue') },
+  { path: 'integration', name: 'hm-docs-integration', component: () => import('@/views/hm-docs/Integration.vue') },
+  { path: 'scriptableobject-config', name: 'hm-docs-scriptableobject-config', component: () => import('@/views/hm-docs/ScriptableObjectConfig.vue') },
+  { path: 'setup-checklist', name: 'hm-docs-setup-checklist', component: () => import('@/views/hm-docs/SetupChecklist.vue') },
+  { path: 'demo-scenes', name: 'hm-docs-demo-scenes', component: () => import('@/views/hm-docs/DemoScenes.vue') },
+  { path: 'technical-notes', name: 'hm-docs-technical-notes', component: () => import('@/views/hm-docs/TechnicalNotes.vue') },
+]
+
 function generateRoutes() {
   const routes = []
 
-  // Generate EN and IT routes for each page
+  // Hub (new home)
+  routes.push({ path: '/', name: 'hub', component: Hub, meta: { locale: 'en' } })
+  routes.push({ path: '/it', name: 'hub-it', component: Hub, meta: { locale: 'it' } })
+
+  // Assembly Station intro (was '/')
+  routes.push({ path: '/assembly-station', name: 'assembly-station', component: Introduction, meta: { locale: 'en' } })
+  routes.push({ path: '/it/assembly-station', name: 'assembly-station-it', component: Introduction, meta: { locale: 'it' } })
+
+  // Homing Missile intro
+  routes.push({ path: '/homing-missile', name: 'homing-missile', component: () => import('@/views/HomingMissileIntro.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile', name: 'homing-missile-it', component: () => import('@/views/HomingMissileIntro.vue'), meta: { locale: 'it' } })
+
+  // Homing Missile specific pages
+  routes.push({ path: '/homing-missile/contacts', name: 'hm-contacts', component: () => import('@/views/HMContacts.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile/contacts', name: 'hm-contacts-it', component: () => import('@/views/HMContacts.vue'), meta: { locale: 'it' } })
+  routes.push({ path: '/homing-missile/report-bug', name: 'hm-report-bug', component: () => import('@/views/HMReportBug.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile/report-bug', name: 'hm-report-bug-it', component: () => import('@/views/HMReportBug.vue'), meta: { locale: 'it' } })
+  routes.push({ path: '/homing-missile/pricing', name: 'hm-pricing', component: () => import('@/views/HMPricing.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile/pricing', name: 'hm-pricing-it', component: () => import('@/views/HMPricing.vue'), meta: { locale: 'it' } })
+
+  // Shared pages (contacts, pricing, etc.)
   for (const page of pages) {
-    // EN route
-    routes.push({
-      path: page.path,
-      name: page.name,
-      component: page.component,
-      meta: { locale: 'en' }
-    })
-    // IT route
-    const itPath = page.path === '/' ? '/it' : `/it${page.path}`
-    routes.push({
-      path: itPath,
-      name: `${page.name}-it`,
-      component: page.component,
-      meta: { locale: 'it' }
-    })
+    routes.push({ path: page.path, name: page.name, component: page.component, meta: { locale: 'en' } })
+    routes.push({ path: `/it${page.path}`, name: `${page.name}-it`, component: page.component, meta: { locale: 'it' } })
   }
 
-  // Generate EN doc routes
+  // Assembly Station docs (EN)
   const docComponent = () => import('@/views/DocContainer.vue')
   routes.push({
-    path: '/docs',
+    path: '/assembly-station/docs',
     component: docComponent,
     meta: { locale: 'en' },
     children: [
-      { path: '', redirect: '/docs/installation' },
-      ...docPages.map(p => ({
-        path: p.path,
-        name: p.name,
-        component: p.component,
-        meta: { locale: 'en' }
-      }))
+      { path: '', redirect: '/assembly-station/docs/installation' },
+      ...docPages.map(p => ({ path: p.path, name: p.name, component: p.component, meta: { locale: 'en' } }))
     ]
   })
-
-  // Generate IT doc routes
+  // Assembly Station docs (IT)
   routes.push({
-    path: '/it/docs',
+    path: '/it/assembly-station/docs',
     component: docComponent,
     meta: { locale: 'it' },
     children: [
-      { path: '', redirect: '/it/docs/installation' },
-      ...docPages.map(p => ({
-        path: p.path,
-        name: `${p.name}-it`,
-        component: p.component,
-        meta: { locale: 'it' }
-      }))
+      { path: '', redirect: '/it/assembly-station/docs/installation' },
+      ...docPages.map(p => ({ path: p.path, name: `${p.name}-it`, component: p.component, meta: { locale: 'it' } }))
+    ]
+  })
+
+  // Redirects from old /docs paths
+  routes.push({ path: '/docs', redirect: '/assembly-station/docs' })
+  routes.push({ path: '/docs/:page+', redirect: to => `/assembly-station/docs/${Array.isArray(to.params.page) ? to.params.page.join('/') : to.params.page}` })
+  routes.push({ path: '/it/docs', redirect: '/it/assembly-station/docs' })
+  routes.push({ path: '/it/docs/:page+', redirect: to => `/it/assembly-station/docs/${Array.isArray(to.params.page) ? to.params.page.join('/') : to.params.page}` })
+
+  // Homing Missile docs (EN)
+  const hmDocComponent = () => import('@/views/HMDocContainer.vue')
+  routes.push({
+    path: '/homing-missile/docs',
+    component: hmDocComponent,
+    meta: { locale: 'en' },
+    children: [
+      { path: '', redirect: '/homing-missile/docs/overview' },
+      ...hmDocPages.map(p => ({ path: p.path, name: p.name, component: p.component, meta: { locale: 'en' } }))
+    ]
+  })
+  // Homing Missile docs (IT)
+  routes.push({
+    path: '/it/homing-missile/docs',
+    component: hmDocComponent,
+    meta: { locale: 'it' },
+    children: [
+      { path: '', redirect: '/it/homing-missile/docs/overview' },
+      ...hmDocPages.map(p => ({ path: p.path, name: `${p.name}-it`, component: p.component, meta: { locale: 'it' } }))
     ]
   })
 
   // Single-language pages
-  routes.push({
-    path: '/rocket',
-    name: 'rocket',
-    component: () => import('@/views/Rocket.vue'),
-    meta: { locale: 'en' }
-  })
+  routes.push({ path: '/rocket', name: 'rocket', component: () => import('@/views/Rocket.vue'), meta: { locale: 'en' } })
 
   // Catch-all
-  routes.push({
-    path: '/:pathMatch(.*)*',
-    name: 'not-found',
-    component: () => import('@/views/NotFound.vue')
-  })
+  routes.push({ path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFound.vue') })
 
   return routes
 }
@@ -111,23 +144,18 @@ const router = createRouter({
   routes: generateRoutes(),
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth'
-      }
+      return { el: to.hash, behavior: 'smooth' }
     }
     return { top: 0, behavior: 'smooth' }
   }
 })
 
-// Sync i18n locale from route and set document lang
 router.beforeEach((to) => {
   const locale = to.meta?.locale || (to.path.startsWith('/it') ? 'it' : 'en')
   i18n.global.locale.value = locale
   document.documentElement.lang = locale
 })
 
-// Google Analytics - Track page views sui cambi di route
 router.afterEach((to) => {
   setTimeout(() => {
     if (typeof window !== 'undefined' && window.gtag) {

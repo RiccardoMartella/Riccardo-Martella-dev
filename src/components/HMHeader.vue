@@ -1,73 +1,59 @@
 <template>
   <header>
     <nav
-      class="navbar navbar-expand-lg custom-navbar"
+      class="hm-navbar navbar navbar-expand-lg"
       :class="{ scrolled: isScrolled }"
     >
       <div class="container">
         <div class="d-flex align-items-center">
           <router-link
             :to="localePath('/')"
-            class="hub-btn me-2"
+            class="hm-hub-btn me-2"
             :title="$t('header.allAssets')"
           >
             <i class="bi bi-grid-fill"></i>
           </router-link>
           <router-link
-            :to="localePath('/assembly-station')"
+            :to="localePath('/homing-missile')"
             class="navbar-brand d-flex align-items-center"
           >
-            <img
-              src="/images/logo.png"
-              alt="Assembly Station Logo"
-              class="header-logo me-2"
-            />
-            Assembly Station
+            <img src="/images/logo.png" alt="Logo" class="hm-brand-logo">
+            <span class="hm-brand-text">Homing <span class="hm-cyan">Missile</span></span>
           </router-link>
         </div>
         <button
           class="navbar-toggler"
           type="button"
           @click="toggleNavbar"
-          aria-controls="navbarNav"
+          aria-controls="hmNavbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="navbarNav">
+        <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="hmNavbarNav">
           <ul class="navbar-nav me-auto ms-lg-5">
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/assembly-station')" class="nav-link">{{ $t('header.introduction') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile')" class="nav-link" exact>{{ $t('hmHeader.overview') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/assembly-station/docs/installation')" class="nav-link">{{ $t('header.documentation') }}</RouterLink>
+              <a href="#demo" class="nav-link" @click.prevent="scrollToDemo">{{ $t('hmHeader.demo') }}</a>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/pricing')" class="nav-link">{{ $t('header.pricing') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile/docs/overview')" class="nav-link">{{ $t('header.documentation') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/demo')" class="nav-link">{{ $t('header.demo') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile/pricing')" class="nav-link">{{ $t('header.pricing') }}</RouterLink>
             </li>
-            <!-- <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/discord-giveaway')" class="nav-link giveaway-nav-link">{{ $t('header.keys') }}
-              <span class="free-pill ms-1">FREE</span>
-              </RouterLink>
-            </li> -->
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/beta')" class="nav-link">
-                <span class="beta-pill">BETA</span>
-              </RouterLink>
+              <RouterLink :to="localePath('/homing-missile/report-bug')" class="nav-link">{{ $t('header.reportBug') }}</RouterLink>
+            </li>
+            <li class="nav-item mx-lg-2">
+              <RouterLink :to="localePath('/homing-missile/contacts')" class="nav-link">{{ $t('header.contacts') }}</RouterLink>
             </li>
           </ul>
 
           <ul class="navbar-nav align-items-center">
-            <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/report-bug')" class="nav-link">{{ $t('header.reportBug') }}</RouterLink>
-            </li>
-            <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/contacts')" class="nav-link">{{ $t('header.contacts') }}</RouterLink>
-            </li>
             <li class="nav-item mx-lg-2">
               <a href="https://discord.gg/dZ2Veb4eM5" target="_blank" rel="noopener noreferrer" class="nav-link" title="Discord">
                 <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
@@ -84,7 +70,7 @@
               </a>
             </li>
             <li class="nav-item ms-lg-2">
-              <LanguageSelector />
+              <LanguageSelector theme="dark" />
             </li>
           </ul>
         </div>
@@ -98,7 +84,7 @@ import LanguageSelector from "@/components/LanguageSelector.vue"
 import { useLocalePath } from "@/composables/useLocalePath.js"
 
 export default {
-  name: "AppHeader",
+  name: "HMHeader",
   components: {
     LanguageSelector,
   },
@@ -109,7 +95,6 @@ export default {
   data() {
     return {
       isScrolled: false,
-      lastScrollPosition: 0,
       isNavOpen: false,
     };
   },
@@ -126,86 +111,115 @@ export default {
     toggleNavbar() {
       this.isNavOpen = !this.isNavOpen;
     },
-    closeNavbar() {
-      this.isNavOpen = false;
-    }
+    scrollToDemo() {
+      const introPath = this.localePath('/homing-missile')
+      if (this.$route.path !== introPath) {
+        this.$router.push(introPath).then(() => {
+          this.$nextTick(() => {
+            setTimeout(() => {
+              const el = document.getElementById('demo')
+              if (el) el.scrollIntoView({ behavior: 'smooth' })
+            }, 300)
+          })
+        })
+      } else {
+        const el = document.getElementById('demo')
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }
+      this.isNavOpen = false
+    },
   },
 };
 </script>
 
 <style scoped>
-.custom-navbar {
+.hm-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1030;
-  background-color: #00A3FF;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #0d1520;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
   padding: 1rem;
+  border-bottom: 1px solid rgba(85, 195, 235, 0.1);
 }
 
-.custom-navbar.scrolled {
+.hm-navbar.scrolled {
   padding: 0.5rem 1rem;
-  background-color: #00A3FF;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
-.hub-btn {
+.hm-hub-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  background-color: rgba(85, 195, 235, 0.1);
+  color: rgba(225, 235, 242, 0.6);
   text-decoration: none;
   font-size: 0.85rem;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  border: 1px solid rgba(85, 195, 235, 0.15);
 }
 
-.hub-btn:hover {
-  background-color: rgba(255, 255, 255, 0.35);
-  color: white;
+.hm-hub-btn:hover {
+  background-color: rgba(85, 195, 235, 0.2);
+  color: #55C3EB;
+  border-color: rgba(85, 195, 235, 0.3);
 }
 
 .navbar-brand {
   font-size: 1.2rem;
   font-weight: 600;
-  color: white;
+  color: #E1EBF2;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus,
 .navbar-brand:visited,
 .navbar-brand:active {
-  color: #E6F3FF;
+  color: #E1EBF2;
   text-decoration: none;
 }
 
-.scrolled .navbar-brand {
-  font-size: 1.3rem;
+.hm-brand-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.hm-brand-text {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.hm-cyan {
+  color: #55C3EB;
 }
 
 .nav-link {
   font-weight: 500;
   position: relative;
   transition: color 0.3s;
-  color: white;
+  color: rgba(225, 235, 242, 0.7);
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: #E6F3FF !important;
+  color: #E1EBF2 !important;
 }
 
 .nav-link.router-link-active {
-  color: #E6F3FF !important;
+  color: #E1EBF2 !important;
 }
 
 .nav-link.router-link-active::after {
@@ -215,82 +229,20 @@ export default {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: white;
-}
-
-.header-logo {
-  height: 45px;
-  width: auto;
-  transition: all 0.3s ease;
-  background-color: #C6EAFF;
-  border-radius: 8px;
-  padding: 4px;
-}
-
-.scrolled .header-logo {
-  height: 28px;
+  background-color: #55C3EB;
 }
 
 .navbar-toggler {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(85, 195, 235, 0.3);
   padding: 4px 8px;
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(85, 195, 235, 0.25);
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.beta-pill {
-  background-color: white;
-  color: #00a3ff;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  animation: pulse-glow-white 2s infinite alternate;
-}
-
-.free-pill {
-  background-color: #22c55e;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 12px;
-  font-size: 0.65rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  animation: pulse-green 2s infinite alternate;
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 163, 255, 0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(0, 163, 255, 0); }
-}
-
-@keyframes pulse-glow-white {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
-}
-
-@keyframes pulse-green {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-}
-
-.beta-nav-link {
-  padding-top: 0.65rem;
-  padding-bottom: 0.35rem;
-}
-
-.giveaway-nav-link {
-  display: flex;
-  align-items: center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2885, 195, 235, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 @media (min-width: 992px) {
@@ -309,7 +261,7 @@ export default {
     top: 50%;
     height: 60%;
     transform: translateY(-50%);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(85, 195, 235, 0.15);
   }
 }
 

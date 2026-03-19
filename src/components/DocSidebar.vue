@@ -34,19 +34,19 @@ export default {
   computed: {
     menuItems() {
       return [
-        { number: "1", textKey: "sidebar.items.installation", path: "docs/installation" },
-        { number: "2", textKey: "sidebar.items.fbxGuide", path: "docs/fbx-guide" },
-        { number: "3", textKey: "sidebar.items.prefabs", path: "docs/prefabs" },
-        { number: "4", textKey: "sidebar.items.descriptions", path: "docs/descriptions" },
-        { number: "5", textKey: "sidebar.items.buttons", path: "docs/buttons" },
-        { number: "6", textKey: "sidebar.items.categories", path: "docs/categories" },
-        { number: "7", textKey: "sidebar.items.resources", path: "docs/resources" },
-        { number: "8", textKey: "sidebar.items.effects", path: "docs/effects" },
-        { number: "9", textKey: "sidebar.items.saves", path: "docs/saves" },
-        { number: "10", textKey: "sidebar.items.knownIssues", path: "docs/known-issues" },
-        { number: "11", textKey: "sidebar.items.lodGroup", path: "docs/lod-group" },
-        { number: "12", textKey: "sidebar.items.blockPiece", path: "docs/block-piece" },
-        { number: "13", textKey: "sidebar.items.settings", path: "docs/settings" },
+        { number: "1", textKey: "sidebar.items.installation", path: "assembly-station/docs/installation" },
+        { number: "2", textKey: "sidebar.items.fbxGuide", path: "assembly-station/docs/fbx-guide" },
+        { number: "3", textKey: "sidebar.items.prefabs", path: "assembly-station/docs/prefabs" },
+        { number: "4", textKey: "sidebar.items.descriptions", path: "assembly-station/docs/descriptions" },
+        { number: "5", textKey: "sidebar.items.buttons", path: "assembly-station/docs/buttons" },
+        { number: "6", textKey: "sidebar.items.categories", path: "assembly-station/docs/categories" },
+        { number: "7", textKey: "sidebar.items.resources", path: "assembly-station/docs/resources" },
+        { number: "8", textKey: "sidebar.items.effects", path: "assembly-station/docs/effects" },
+        { number: "9", textKey: "sidebar.items.saves", path: "assembly-station/docs/saves" },
+        { number: "10", textKey: "sidebar.items.knownIssues", path: "assembly-station/docs/known-issues" },
+        { number: "11", textKey: "sidebar.items.lodGroup", path: "assembly-station/docs/lod-group" },
+        { number: "12", textKey: "sidebar.items.blockPiece", path: "assembly-station/docs/block-piece" },
+        { number: "13", textKey: "sidebar.items.settings", path: "assembly-station/docs/settings" },
         { textKey: "sidebar.items.betaFeatures", path: "beta", isBeta: true }
       ]
     }

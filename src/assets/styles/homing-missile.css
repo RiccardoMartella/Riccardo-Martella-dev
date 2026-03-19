@@ -1,0 +1,518 @@
+/* =====================================================================
+   HOMING MISSILE — Military Dark Theme
+   Color palette from the asset's HUD:
+   bg:      rgba(6, 10, 16, 0.97)   — dark navy
+   accent:  #55C3EB                  — cyan
+   text:    #E1EBF2                  — near-white
+   locked:  #28DC64                  — green
+   orange:  rgba(255, 148, 30, 0.95) — low ammo
+   red:     rgba(220, 50, 40, 0.95)  — no ammo
+   ===================================================================== */
+
+.hm-doc-container {
+  background-color: #060a10;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.hm-sidebar-container {
+  position: sticky;
+  top: 90px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  padding: 1.25rem;
+  background: rgba(13, 21, 32, 0.98);
+  border: 1px solid rgba(85, 195, 235, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(85, 195, 235, 0.08);
+}
+
+.hm-sidebar-container::-webkit-scrollbar { display: none; }
+
+.hm-sidebar-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(85, 195, 235, 0.7);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(85, 195, 235, 0.1);
+}
+
+.hm-sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hm-sidebar-list li {
+  margin-bottom: 2px;
+}
+
+.hm-sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem 0.85rem;
+  color: rgba(225, 235, 242, 0.55);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  gap: 10px;
+}
+
+.hm-sidebar-link:hover {
+  background: rgba(85, 195, 235, 0.08);
+  color: rgba(85, 195, 235, 0.9);
+}
+
+.hm-sidebar-link.router-link-active {
+  background: rgba(85, 195, 235, 0.15);
+  color: #55C3EB;
+  border-left: 2px solid #55C3EB;
+}
+
+.hm-sidebar-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(85, 195, 235, 0.6);
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.hm-sidebar-link.router-link-active .hm-sidebar-num {
+  color: #55C3EB;
+}
+
+.hm-sidebar-divider {
+  height: 1px;
+  background: rgba(85, 195, 235, 0.08);
+  margin: 0.6rem 0;
+}
+
+/* Back to hub link in sidebar */
+.hm-back-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: rgba(225, 235, 242, 0.35);
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(85, 195, 235, 0.08);
+  padding-bottom: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.hm-back-link:hover {
+  color: rgba(85, 195, 235, 0.7);
+}
+
+/* Content area */
+.hm-content-wrapper {
+  padding: 0 15px;
+  color: #E1EBF2;
+}
+
+/* Doc page */
+.hm-doc-page {
+  padding: 1rem 0 3rem;
+}
+
+/* Title */
+.hm-doc-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #E1EBF2;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(85, 195, 235, 0.15);
+  letter-spacing: 0.02em;
+}
+
+.hm-doc-title span {
+  color: #55C3EB;
+  margin-right: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Lead text */
+.hm-text-lead {
+  font-size: 1rem;
+  color: rgba(225, 235, 242, 0.65);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Sections */
+.hm-doc-section {
+  margin-bottom: 2.5rem;
+}
+
+.hm-doc-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #55C3EB;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hm-doc-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(85, 195, 235, 0.12);
+}
+
+/* Content block */
+.hm-content-block {
+  background: rgba(13, 21, 32, 0.7);
+  border: 1px solid rgba(85, 195, 235, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hm-content-block p {
+  color: rgba(225, 235, 242, 0.75);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.hm-content-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inspector field tables */
+.hm-field-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+}
+
+.hm-field-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(85, 195, 235, 0.6);
+  border-bottom: 1px solid rgba(85, 195, 235, 0.15);
+}
+
+.hm-field-table td {
+  padding: 9px 12px;
+  color: rgba(225, 235, 242, 0.7);
+  border-bottom: 1px solid rgba(85, 195, 235, 0.06);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.hm-field-table tr:hover td {
+  background: rgba(85, 195, 235, 0.04);
+}
+
+.hm-field-name {
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: #E1EBF2;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.hm-field-type {
+  color: rgba(85, 195, 235, 0.7);
+  font-family: monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.hm-field-default {
+  color: rgba(40, 220, 100, 0.7);
+  font-family: monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Alert boxes */
+.hm-alert {
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.hm-alert-info {
+  background: rgba(85, 195, 235, 0.07);
+  border-color: rgba(85, 195, 235, 0.5);
+  color: rgba(225, 235, 242, 0.75);
+}
+
+.hm-alert-warning {
+  background: rgba(255, 148, 30, 0.07);
+  border-color: rgba(255, 148, 30, 0.5);
+  color: rgba(225, 235, 242, 0.75);
+}
+
+.hm-alert-success {
+  background: rgba(40, 220, 100, 0.07);
+  border-color: rgba(40, 220, 100, 0.5);
+  color: rgba(225, 235, 242, 0.75);
+}
+
+.hm-alert strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.hm-alert-info strong { color: #55C3EB; }
+.hm-alert-warning strong { color: rgba(255, 148, 30, 0.9); }
+.hm-alert-success strong { color: #28DC64; }
+
+/* Code inline */
+.hm-code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background: rgba(85, 195, 235, 0.1);
+  color: #55C3EB;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* Code blocks */
+.hm-code-block {
+  background: rgba(4, 7, 12, 0.9);
+  border: 1px solid rgba(85, 195, 235, 0.12);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.hm-code-block pre {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.83rem;
+  color: rgba(225, 235, 242, 0.8);
+  line-height: 1.6;
+  white-space: pre;
+}
+
+/* Folder tree (legacy) */
+.hm-folder-tree {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.83rem;
+  color: rgba(225, 235, 242, 0.8);
+  line-height: 1.8;
+  background: rgba(4, 7, 12, 0.9);
+  border: 1px solid rgba(85, 195, 235, 0.12);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Vertical folder tree */
+.hm-vtree,
+.hm-vtree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hm-vtree {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.83rem;
+  color: rgba(225, 235, 242, 0.8);
+  line-height: 1.6;
+  background: rgba(4, 7, 12, 0.9);
+  border: 1px solid rgba(85, 195, 235, 0.12);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+.hm-vtree ul {
+  padding-left: 1.25rem;
+  border-left: 1px solid rgba(85, 195, 235, 0.15);
+  margin-left: 0.4rem;
+}
+
+.hm-vtree li {
+  position: relative;
+  padding: 0.2rem 0 0.2rem 0.75rem;
+}
+
+.hm-vtree li::before {
+  content: '';
+  position: absolute;
+  left: -0.05rem;
+  top: 0.85em;
+  width: 0.6rem;
+  height: 1px;
+  background: rgba(85, 195, 235, 0.2);
+}
+
+.hm-vtree-folder {
+  color: #55C3EB;
+  font-weight: 600;
+}
+
+.hm-vtree-file {
+  color: rgba(225, 235, 242, 0.7);
+  font-weight: 400;
+}
+
+/* Step list for "how it works" */
+.hm-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hm-step-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: rgba(13, 21, 32, 0.7);
+  border: 1px solid rgba(85, 195, 235, 0.08);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+
+.hm-step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: rgba(85, 195, 235, 0.12);
+  color: #55C3EB;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(85, 195, 235, 0.25);
+}
+
+.hm-step-text {
+  color: rgba(225, 235, 242, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-top: 2px;
+}
+
+/* Tag reference cards */
+.hm-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hm-tag-card {
+  background: rgba(13, 21, 32, 0.8);
+  border: 1px solid rgba(85, 195, 235, 0.12);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+
+.hm-tag-name {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.95rem;
+  color: #55C3EB;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hm-tag-desc {
+  font-size: 0.83rem;
+  color: rgba(225, 235, 242, 0.6);
+  line-height: 1.55;
+}
+
+/* Checklist */
+.hm-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hm-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: rgba(225, 235, 242, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.hm-checklist-item::before {
+  content: '\25B8';
+  color: #55C3EB;
+  font-size: 0.8rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Events table section */
+.hm-event-row td:first-child {
+  font-family: monospace;
+  color: #E1EBF2;
+}
+
+.hm-event-row td:nth-child(2) {
+  color: rgba(40, 220, 100, 0.8);
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+/* Back to top button for HM */
+.hm-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(85, 195, 235, 0.15);
+  border: 1px solid rgba(85, 195, 235, 0.35);
+  color: #55C3EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.hm-back-to-top:hover {
+  background: rgba(85, 195, 235, 0.25);
+  box-shadow: 0 4px 20px rgba(85, 195, 235, 0.2);
+}
+
+@media (max-width: 767.98px) {
+  .hm-content-wrapper { padding: 0 10px; }
+  .hm-back-to-top { bottom: 20px; right: 20px; }
+}

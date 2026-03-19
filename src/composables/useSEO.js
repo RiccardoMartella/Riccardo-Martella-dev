@@ -146,4 +146,68 @@ export const seoConfigs = {
     }
   },
 
+  hub: {
+    en: {
+      title: 'Unity Assets by Riccardo Martella - Assembly Station & Homing Missile',
+      description: 'Explore Unity assets by Riccardo Martella. Assembly Station for interactive 3D assembly guides and Homing Missile for realistic homing missile systems.',
+      keywords: 'Unity assets, Assembly Station, Homing Missile, Unity tools, game development, 3D assembly, missile system',
+      url: 'https://www.assembly-station.com/'
+    },
+    it: {
+      title: 'Unity Assets di Riccardo Martella - Assembly Station & Homing Missile',
+      description: 'Esplora gli asset Unity di Riccardo Martella. Assembly Station per guide di assemblaggio 3D interattive e Homing Missile per sistemi di missili a ricerca realistica.',
+      keywords: 'Asset Unity, Assembly Station, Homing Missile, strumenti Unity, sviluppo giochi, assemblaggio 3D, sistema missili',
+      url: 'https://www.assembly-station.com/it',
+      locale: 'it_IT'
+    }
+  },
+
+  hmIntro: {
+    en: {
+      title: 'Homing Missile - Unity Asset for Realistic Missile Systems',
+      description: 'Homing Missile is a Unity asset providing a complete homing missile system with launcher, HUD, and customizable flight parameters. Ready-to-use in any Unity project.',
+      keywords: 'Homing Missile, Unity asset, missile system, homing missile Unity, game weapon, launcher system, HUD controller',
+      url: 'https://www.assembly-station.com/homing-missile'
+    },
+    it: {
+      title: 'Homing Missile - Asset Unity per Sistemi di Missili Realistici',
+      description: 'Homing Missile è un asset Unity che fornisce un sistema completo di missili a ricerca con lanciatore, HUD e parametri di volo personalizzabili. Pronto all\'uso in qualsiasi progetto Unity.',
+      keywords: 'Homing Missile, asset Unity, sistema missili, missile a ricerca Unity, arma gioco, sistema lanciatore, controller HUD',
+      url: 'https://www.assembly-station.com/it/homing-missile',
+      locale: 'it_IT'
+    }
+  },
+
+  hmPricing: {
+    en: {
+      title: 'Homing Missile Pricing - Unity Asset for Missile Systems - $19',
+      description: 'Homing Missile Unity asset available for $19 one-time purchase. Complete missile system with launcher, HUD, demo scenes, and full documentation.',
+      keywords: 'Homing Missile price, Unity asset price, missile system tool, Unity asset store',
+      url: 'https://www.assembly-station.com/homing-missile/pricing'
+    },
+    it: {
+      title: 'Prezzi Homing Missile - Asset Unity per Sistemi di Missili - $19',
+      description: 'Asset Unity Homing Missile disponibile a $19 acquisto una tantum. Sistema completo di missili con lanciatore, HUD, scene demo e documentazione completa.',
+      keywords: 'Prezzo Homing Missile, prezzo asset Unity, strumento sistema missili, Unity asset store',
+      url: 'https://www.assembly-station.com/it/homing-missile/pricing',
+      locale: 'it_IT'
+    }
+  },
+
+  hmDocs: {
+    en: {
+      title: 'Homing Missile Documentation - Complete Guide',
+      description: 'Complete documentation for Homing Missile Unity asset. Script reference, setup checklist, integration guide, and technical notes for the homing missile system.',
+      keywords: 'Homing Missile documentation, Unity asset docs, missile system guide, script reference, setup guide',
+      url: 'https://www.assembly-station.com/homing-missile/docs'
+    },
+    it: {
+      title: 'Documentazione Homing Missile - Guida Completa',
+      description: 'Documentazione completa per l\'asset Unity Homing Missile. Riferimento script, checklist configurazione, guida integrazione e note tecniche per il sistema di missili.',
+      keywords: 'Documentazione Homing Missile, docs asset Unity, guida sistema missili, riferimento script, guida configurazione',
+      url: 'https://www.assembly-station.com/it/homing-missile/docs',
+      locale: 'it_IT'
+    }
+  },
+
 }

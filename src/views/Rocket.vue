@@ -14,7 +14,8 @@
             class="demo-frame"
             src="/TestRocket/index.html"
             :title="$t('rocket.iframeTitle')"
-            allowfullscreen>
+            allowfullscreen
+            allow="pointer-lock; autoplay; fullscreen">
           </iframe>
         </div>
       </div>
