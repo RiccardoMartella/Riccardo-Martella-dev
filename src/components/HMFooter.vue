@@ -88,7 +88,7 @@
         <a href="https://discord.gg/dZ2Veb4eM5" class="hm-social-icon mx-2">
           <i class="bi bi-discord"></i>
         </a>
-        <a href="https://prf.hn/click/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F313569" class="hm-social-icon mx-2">
+        <a href="https://af.unity.com/sr/camref:1110l4PAz/destination:https%3A%2F%2Fassetstore.unity.com%2Fpackages%2Fslug%2F368542" class="hm-social-icon mx-2">
           <img src="/images/logo.png" alt="Assembly Station" class="hm-social-logo">
         </a>
         <a
