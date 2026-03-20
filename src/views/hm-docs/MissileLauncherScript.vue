@@ -32,8 +32,8 @@
             <td><span class="hm-field-name">config</span></td>
             <td><span class="hm-field-type">LauncherConfig</span></td>
             <td><span class="hm-field-default">null</span></td>
-            <td v-if="locale === 'en'">Optional ScriptableObject config. When assigned, overrides all Inspector fields below. See <router-link :to="localePath('/homing-missile/docs/scriptable-object-config')">ScriptableObject Configuration</router-link>.</td>
-            <td v-else>ScriptableObject config opzionale. Quando assegnato, sovrascrive tutti i campi Inspector sottostanti. Vedi <router-link :to="localePath('/homing-missile/docs/scriptable-object-config')">Configurazione ScriptableObject</router-link>.</td>
+            <td v-if="locale === 'en'">Optional ScriptableObject config. When assigned, overrides all Inspector fields below. See <router-link :to="localePath('/homing-missile/docs/scriptableobject-config')">ScriptableObject Configuration</router-link>.</td>
+            <td v-else>ScriptableObject config opzionale. Quando assegnato, sovrascrive tutti i campi Inspector sottostanti. Vedi <router-link :to="localePath('/homing-missile/docs/scriptableobject-config')">Configurazione ScriptableObject</router-link>.</td>
           </tr>
         </tbody>
       </table>
