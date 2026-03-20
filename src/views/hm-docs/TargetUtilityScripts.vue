@@ -39,7 +39,7 @@
           <tr>
             <td><span class="hm-field-name">hitsToDestroy</span></td>
             <td><span class="hm-field-type">int</span></td>
-            <td><span class="hm-field-default">1</span></td>
+            <td><span class="hm-field-default">2</span></td>
             <td>Number of TakeDamage calls before the target is destroyed. Set to 1 for single-hit destruction.</td>
           </tr>
           <tr>
@@ -74,7 +74,7 @@
           <tr>
             <td><span class="hm-field-name">hitsToDestroy</span></td>
             <td><span class="hm-field-type">int</span></td>
-            <td><span class="hm-field-default">1</span></td>
+            <td><span class="hm-field-default">2</span></td>
             <td>Numero di chiamate TakeDamage necessarie per attivare la distruzione. Impostare a 1 per distruzione a colpo singolo.</td>
           </tr>
           <tr>
@@ -169,7 +169,7 @@
           <tr>
             <td><span class="hm-field-name">fadeDuration</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">1.0</span></td>
+            <td><span class="hm-field-default">0.5</span></td>
             <td>Time in seconds to fade the light intensity from its initial value to zero.</td>
           </tr>
         </tbody>
@@ -180,7 +180,7 @@
           <tr>
             <td><span class="hm-field-name">fadeDuration</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">1.0</span></td>
+            <td><span class="hm-field-default">0.5</span></td>
             <td>Tempo in secondi per dissolvere l'intensità della luce dal suo valore iniziale a zero.</td>
           </tr>
         </tbody>
@@ -193,14 +193,14 @@
       <div class="hm-content-block">
         <p v-if="locale === 'en'">
           A convenience script for the demo scenes. When the player presses
-          <span class="hm-code">switchKey</span> (default <span class="hm-code">1</span>),
+          <span class="hm-code">switchKey</span> (default <span class="hm-code">F1</span>),
           the next scene in the Unity Build Settings list is loaded. If the current scene is
           the last in the list, it wraps back to scene index 0. Both demo scenes include this
           script so the player can cycle between them at any time.
         </p>
         <p v-else>
           Uno script di convenienza per le scene demo. Quando il giocatore preme
-          <span class="hm-code">switchKey</span> (predefinito <span class="hm-code">1</span>),
+          <span class="hm-code">switchKey</span> (predefinito <span class="hm-code">F1</span>),
           la scena successiva nella lista Build Settings di Unity viene caricata. Se la scena corrente è
           l'ultima nella lista, ritorna all'indice di scena 0. Entrambe le scene demo includono questo
           script così il giocatore può ciclare tra di esse in qualsiasi momento.
@@ -212,7 +212,7 @@
           <tr>
             <td><span class="hm-field-name">switchKey</span></td>
             <td><span class="hm-field-type">Key</span></td>
-            <td><span class="hm-field-default">1</span></td>
+            <td><span class="hm-field-default">F1</span></td>
             <td>The keyboard key (from UnityEngine.InputSystem.Key enum) that triggers the scene switch.</td>
           </tr>
         </tbody>
@@ -223,7 +223,7 @@
           <tr>
             <td><span class="hm-field-name">switchKey</span></td>
             <td><span class="hm-field-type">Key</span></td>
-            <td><span class="hm-field-default">1</span></td>
+            <td><span class="hm-field-default">F1</span></td>
             <td>Il tasto della tastiera (dall'enum UnityEngine.InputSystem.Key) che attiva il cambio scena.</td>
           </tr>
         </tbody>

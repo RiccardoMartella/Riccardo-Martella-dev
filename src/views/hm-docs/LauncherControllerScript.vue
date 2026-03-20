@@ -38,6 +38,27 @@
       </div>
     </div>
 
+    <!-- Config Override -->
+    <div class="hm-doc-section">
+      <div class="hm-doc-section-title" v-if="locale === 'en'">Config Override</div>
+      <div class="hm-doc-section-title" v-else>Override Configurazione</div>
+      <table class="hm-field-table">
+        <thead>
+          <tr v-if="locale === 'en'"><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          <tr v-else><th>Campo</th><th>Tipo</th><th>Predefinito</th><th>Descrizione</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="hm-field-name">config</span></td>
+            <td><span class="hm-field-type">LauncherControllerConfig</span></td>
+            <td><span class="hm-field-default">null</span></td>
+            <td v-if="locale === 'en'">Optional ScriptableObject config. When assigned, overrides all Inspector fields below. See <router-link :to="localePath('/homing-missile/docs/scriptable-object-config')">ScriptableObject Configuration</router-link>.</td>
+            <td v-else>ScriptableObject config opzionale. Quando assegnato, sovrascrive tutti i campi Inspector sottostanti. Vedi <router-link :to="localePath('/homing-missile/docs/scriptable-object-config')">Configurazione ScriptableObject</router-link>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <!-- Inspector Fields -->
     <div class="hm-doc-section">
       <div class="hm-doc-section-title" v-if="locale === 'en'">Inspector Fields</div>
@@ -68,7 +89,7 @@
           <tr>
             <td><span class="hm-field-name">rotationSpeed</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">120.0</span></td>
+            <td><span class="hm-field-default">180.0</span></td>
             <td v-if="locale === 'en'">Degrees per second for turret azimuth rotation.</td>
             <td v-else>Gradi al secondo per la rotazione azimutale della torretta.</td>
           </tr>
@@ -76,7 +97,7 @@
           <tr>
             <td><span class="hm-field-name">elevationSpeed</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">60.0</span></td>
+            <td><span class="hm-field-default">90.0</span></td>
             <td v-if="locale === 'en'">Degrees per second for cannon elevation.</td>
             <td v-else>Gradi al secondo per l'elevazione del cannone.</td>
           </tr>
@@ -101,14 +122,14 @@
             <td><span class="hm-field-name">airMode</span></td>
             <td><span class="hm-field-type">bool</span></td>
             <td><span class="hm-field-default">false</span></td>
-            <td v-if="locale === 'en'">When enabled, increases the default maximum elevation to 85° for engaging aerial targets.</td>
-            <td v-else>Quando abilitato, aumenta l'elevazione massima predefinita a 85° per ingaggiare bersagli aerei.</td>
+            <td v-if="locale === 'en'">When enabled, inverts the elevation controls for upside-down mounting (e.g. under an aircraft). Used by the Air Demo scene.</td>
+            <td v-else>Quando abilitato, inverte i controlli di elevazione per il montaggio capovolto (es. sotto un aereo). Usato nella scena Air Demo.</td>
           </tr>
           <!-- smoothSpeed -->
           <tr>
             <td><span class="hm-field-name">smoothSpeed</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">8.0</span></td>
+            <td><span class="hm-field-default">10.0</span></td>
             <td v-if="locale === 'en'">Exponential smoothing factor for both rotation axes. Higher values = snappier response; lower values = smoother, more cinematic movement.</td>
             <td v-else>Fattore di smussamento esponenziale per entrambi gli assi di rotazione. Valori più alti = risposta più reattiva; valori più bassi = movimento più fluido e cinematografico.</td>
           </tr>
@@ -116,7 +137,7 @@
           <tr>
             <td><span class="hm-field-name">startElevation</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">0.0</span></td>
+            <td><span class="hm-field-default">90.0</span></td>
             <td v-if="locale === 'en'">Initial elevation angle on scene start.</td>
             <td v-else>Angolo di elevazione iniziale all'avvio della scena.</td>
           </tr>
@@ -168,12 +189,14 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
 
 export default {
   name: 'HMLauncherControllerScript',
   setup() {
     const { locale } = useI18n()
-    return { locale }
+    const { localePath } = useLocalePath()
+    return { locale, localePath }
   }
 }
 </script>

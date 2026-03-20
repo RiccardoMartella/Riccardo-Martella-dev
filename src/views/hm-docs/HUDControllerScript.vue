@@ -87,14 +87,14 @@
           <tr>
             <td><span class="hm-field-name">lockBlinkIntervalMs</span></td>
             <td><span class="hm-field-type">int</span></td>
-            <td><span class="hm-field-default">400</span></td>
+            <td><span class="hm-field-default">150</span></td>
             <td v-if="locale === 'en'">Blink interval for the lock-on overlay in milliseconds while locking is in progress.</td>
             <td v-else>Intervallo di lampeggio per l'overlay di aggancio in millisecondi durante la fase di aggancio.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">lockBracketStartSize</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">120.0</span></td>
+            <td><span class="hm-field-default">140.0</span></td>
             <td v-if="locale === 'en'">Initial size (px) of the four corner brackets when a target first enters the lock-on cone.</td>
             <td v-else>Dimensione iniziale (px) dei quattro bracket angolari quando un bersaglio entra per la prima volta nel cono di aggancio.</td>
           </tr>
@@ -122,14 +122,14 @@
           <tr>
             <td><span class="hm-field-name">maxDisplaySlots</span></td>
             <td><span class="hm-field-type">int</span></td>
-            <td><span class="hm-field-default">8</span></td>
+            <td><span class="hm-field-default">20</span></td>
             <td v-if="locale === 'en'">Maximum number of ammo slots shown in the bottom strip. If rocketList has more missiles, slots are batched.</td>
             <td v-else>Numero massimo di slot munizioni mostrati nella striscia inferiore. Se rocketList ha più missili, gli slot vengono raggruppati.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">slotFiredFlashDurationMs</span></td>
             <td><span class="hm-field-type">int</span></td>
-            <td><span class="hm-field-default">150</span></td>
+            <td><span class="hm-field-default">80</span></td>
             <td v-if="locale === 'en'">Duration in ms of the bright flash on the fired slot before it dims to expended.</td>
             <td v-else>Durata in ms del flash luminoso sullo slot lanciato prima che si attenui allo stato esaurito.</td>
           </tr>
@@ -150,40 +150,61 @@
           <tr>
             <td><span class="hm-field-name">bottomOffset</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">20.0</span></td>
+            <td><span class="hm-field-default">24.0</span></td>
             <td v-if="locale === 'en'">Distance from the screen bottom edge to the bottom strip.</td>
             <td v-else>Distanza dal bordo inferiore dello schermo alla striscia inferiore.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">sideOffset</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">20.0</span></td>
+            <td><span class="hm-field-default">24.0</span></td>
             <td v-if="locale === 'en'">Distance from the screen side edges to the outer HUD elements.</td>
             <td v-else>Distanza dai bordi laterali dello schermo agli elementi HUD esterni.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">panelCenterOffset</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">8.0</span></td>
-            <td v-if="locale === 'en'">Gap between the three bottom panels.</td>
-            <td v-else>Spazio tra i tre pannelli inferiori.</td>
+            <td><span class="hm-field-default">0.0</span></td>
+            <td v-if="locale === 'en'">Horizontal offset to shift bottom panels towards the centre (px).</td>
+            <td v-else>Offset orizzontale per spostare i pannelli inferiori verso il centro (px).</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">panelPadding</span></td>
-            <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">12.0</span></td>
-            <td v-if="locale === 'en'">Internal padding within each bottom panel.</td>
-            <td v-else>Padding interno all'interno di ciascun pannello inferiore.</td>
+            <td><span class="hm-field-type">Vector4</span></td>
+            <td><span class="hm-field-default">(7, 12, 9, 10)</span></td>
+            <td v-if="locale === 'en'">Internal padding within each bottom panel (top, right, bottom, left).</td>
+            <td v-else>Padding interno di ciascun pannello inferiore (alto, destra, basso, sinistra).</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">azimuthTopOffset</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">10.0</span></td>
+            <td><span class="hm-field-default">8.0</span></td>
             <td v-if="locale === 'en'">Distance from the screen top edge to the azimuth bar.</td>
             <td v-else>Distanza dal bordo superiore dello schermo alla barra azimutale.</td>
           </tr>
         </tbody>
       </table>
+    </div>
+    <!-- How References Are Obtained -->
+    <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
+      <strong>How the HUD Gets Its References</strong>
+      The HUD does <em>not</em> use serialized fields for <span class="hm-code">MissileLauncher</span> or
+      <span class="hm-code">LauncherController</span>. Instead, <span class="hm-code">PlayerController</span>
+      calls <span class="hm-code">Show(MissileLauncher, LauncherController)</span> when entering launcher mode.
+      The HUD subscribes to all launcher events (OnFire, OnLockProgressChanged, OnTargetLocked, OnTargetLost)
+      inside <span class="hm-code">Show()</span> and unsubscribes in <span class="hm-code">Hide()</span>.
+      A <span class="hm-code">UIDocument</span> component must be present on the same GameObject — it is obtained
+      via <span class="hm-code">GetComponent&lt;UIDocument&gt;()</span>.
+    </div>
+    <div class="hm-alert hm-alert-info" v-else>
+      <strong>Come l'HUD Ottiene i Riferimenti</strong>
+      L'HUD <em>non</em> usa campi serializzati per <span class="hm-code">MissileLauncher</span> o
+      <span class="hm-code">LauncherController</span>. Invece, <span class="hm-code">PlayerController</span>
+      chiama <span class="hm-code">Show(MissileLauncher, LauncherController)</span> quando entra in modalità lanciatore.
+      L'HUD si sottoscrive a tutti gli eventi del lanciatore (OnFire, OnLockProgressChanged, OnTargetLocked, OnTargetLost)
+      dentro <span class="hm-code">Show()</span> e si cancella in <span class="hm-code">Hide()</span>.
+      Un componente <span class="hm-code">UIDocument</span> deve essere presente sullo stesso GameObject — viene ottenuto
+      tramite <span class="hm-code">GetComponent&lt;UIDocument&gt;()</span>.
     </div>
   </div>
 </template>

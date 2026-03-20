@@ -53,9 +53,9 @@
             </tr>
             <tr>
               <td><span class="hm-field-name">Zoom</span></td>
-              <td><span class="hm-field-type">Button</span></td>
-              <td v-if="locale === 'en'">Right mouse button / left trigger. Reduces the camera FOV to baseFOV − (zoomStep × zoomSteps) for a zoom effect.</td>
-              <td v-else>Tasto destro del mouse / grilletto sinistro. Riduce il FOV della camera a baseFOV − (zoomStep × zoomSteps) per un effetto zoom.</td>
+              <td><span class="hm-field-type">Value (float)</span></td>
+              <td v-if="locale === 'en'">Mouse scroll wheel. Cycles through the <span class="hm-code">zoomSteps</span> array, adjusting the camera FOV to <span class="hm-code">baseFOV / zoomSteps[index]</span>.</td>
+              <td v-else>Rotella del mouse. Cicla attraverso l'array <span class="hm-code">zoomSteps</span>, regolando il FOV della camera a <span class="hm-code">baseFOV / zoomSteps[index]</span>.</td>
             </tr>
           </tbody>
         </table>
@@ -110,7 +110,7 @@
           <tr>
             <td><span class="hm-field-name">cameraLerpSpeedLauncher</span></td>
             <td><span class="hm-field-type">float</span></td>
-            <td><span class="hm-field-default">5.0</span></td>
+            <td><span class="hm-field-default">6.0</span></td>
             <td v-if="locale === 'en'">Speed at which the camera position lerps to cameraPositionTarget each frame.</td>
             <td v-else>Velocità alla quale la posizione della camera interpola verso cameraPositionTarget ad ogni frame.</td>
           </tr>
@@ -123,10 +123,10 @@
           </tr>
           <tr>
             <td><span class="hm-field-name">zoomSteps</span></td>
-            <td><span class="hm-field-type">int</span></td>
-            <td><span class="hm-field-default">3</span></td>
-            <td v-if="locale === 'en'">Number of discrete zoom levels available via repeated Zoom presses.</td>
-            <td v-else>Numero di livelli di zoom discreti disponibili tramite pressioni ripetute di Zoom.</td>
+            <td><span class="hm-field-type">int[]</span></td>
+            <td><span class="hm-field-default">{ 1, 2, 4, 8 }</span></td>
+            <td v-if="locale === 'en'">Array of zoom multipliers. Scroll cycles through these levels: 1&times; (no zoom), 2&times;, 4&times;, 8&times;. The camera FOV is set to <span class="hm-code">baseFOV / zoomSteps[index]</span>.</td>
+            <td v-else>Array di moltiplicatori di zoom. Lo scroll cicla tra questi livelli: 1&times; (nessuno zoom), 2&times;, 4&times;, 8&times;. Il FOV della camera è impostato a <span class="hm-code">baseFOV / zoomSteps[index]</span>.</td>
           </tr>
         </tbody>
       </table>

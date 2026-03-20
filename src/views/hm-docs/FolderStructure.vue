@@ -75,6 +75,8 @@
                                     <li class="hm-vtree-folder">Materials/
                                       <ul>
                                         <li class="hm-vtree-file">explosion.mat</li>
+                                        <li class="hm-vtree-file">ExplosionFX_Additive.mat</li>
+                                        <li class="hm-vtree-file">ExplosionFX_AlphaBlend.mat</li>
                                       </ul>
                                     </li>
                                   </ul>
@@ -82,6 +84,12 @@
                                 <li class="hm-vtree-folder">Rocket/
                                   <ul>
                                     <li class="hm-vtree-file">RocketLaunchFX.prefab</li>
+                                    <li class="hm-vtree-folder">Materials/
+                                      <ul>
+                                        <li class="hm-vtree-file">RocketFX_Additive.mat</li>
+                                        <li class="hm-vtree-file">RocketFX_AlphaBlend.mat</li>
+                                      </ul>
+                                    </li>
                                   </ul>
                                 </li>
                               </ul>
@@ -91,18 +99,16 @@
                                 <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_BaseColor.mat</li>
                                 <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_BaseColor.mat</li>
                                 <li class="hm-vtree-file">bullet.mat</li>
-                                <li class="hm-vtree-folder">Explosion/
-                                  <ul>
-                                    <li class="hm-vtree-file">ExplosionFX_Additive.mat</li>
-                                    <li class="hm-vtree-file">ExplosionFX_AlphaBlend.mat</li>
-                                  </ul>
-                                </li>
-                                <li class="hm-vtree-folder">Start/
-                                  <ul>
-                                    <li class="hm-vtree-file">RocketFX_Additive.mat</li>
-                                    <li class="hm-vtree-file">RocketFX_AlphaBlend.mat</li>
-                                  </ul>
-                                </li>
+                              </ul>
+                            </li>
+                            <li class="hm-vtree-folder">PrefabVariantAir/
+                              <ul>
+                                <li class="hm-vtree-file">RocketLauncher.prefab</li>
+                              </ul>
+                            </li>
+                            <li class="hm-vtree-folder">PrefabvariantGround/
+                              <ul>
+                                <li class="hm-vtree-file">RocketLauncher.prefab</li>
                               </ul>
                             </li>
                             <li class="hm-vtree-folder">Sounds/
@@ -113,10 +119,9 @@
                                 <li class="hm-vtree-file">partenza2.wav</li>
                               </ul>
                             </li>
-                            <li class="hm-vtree-file">RocketBullet.prefab</li>
-                            <li class="hm-vtree-file">rocket_bullet.fbx</li>
-                            <li class="hm-vtree-file">rocket-luncher.fbx</li>
-                            <li class="hm-vtree-file">RocketLauncher.prefab</li>
+                            <li class="hm-vtree-file">Rocket.prefab</li>
+                            <li class="hm-vtree-file">Rocket.fbx</li>
+                            <li class="hm-vtree-file">RocketLauncher.fbx</li>
                           </ul>
                         </li>
                       </ul>
@@ -164,19 +169,30 @@
                   <ul>
                     <li class="hm-vtree-folder">Plane/
                       <ul>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_AmbientOcclusion.jpg</li>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_Color.jpg</li>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_Displacement.jpg</li>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_NormalDX.jpg</li>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_NormalGL.jpg</li>
-                        <li class="hm-vtree-file">Tiles106_4K-JPG_Roughness.jpg</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_AmbientOcclusion.png</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_Color.png</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_Displacement.png</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_NormalDX.png</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_NormalGL.png</li>
+                        <li class="hm-vtree-file">Tiles106_4K-JPG_Roughness.png</li>
                       </ul>
                     </li>
                     <li class="hm-vtree-folder">TexturesMecha/
                       <ul>
-                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_*.png</li>
-                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_*.png</li>
-                        <li class="hm-vtree-file">06-bullet_MAT-bullet_*.png / *.jpg</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_BaseColor.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_Height.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_Metallic.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_Normal.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher_Roughness.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_BaseColor.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_Height.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_Metallic.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_Normal.png</li>
+                        <li class="hm-vtree-file">02-rocketluncher_MAT-RocketLauncher-upper_Roughness.png</li>
+                        <li class="hm-vtree-file">06-bullet_MAT-bullet_BaseColor.png</li>
+                        <li class="hm-vtree-file">06-bullet_MAT-bullet_Height.png</li>
+                        <li class="hm-vtree-file">06-bullet_MAT-bullet_Metallic.png</li>
+                        <li class="hm-vtree-file">06-bullet_MAT-bullet_Normal.png</li>
                       </ul>
                     </li>
                   </ul>
@@ -236,14 +252,16 @@
           <tr>
             <td><span class="hm-field-name">Prefabs/</span></td>
             <td v-if="locale === 'en'">
-              <span class="hm-code">RocketLauncher.prefab</span> — the complete launcher station.
-              <span class="hm-code">RocketBullet.prefab</span> — the missile projectile with all required components.
-              Also contains VFX prefabs (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), VFX materials (additive and alpha-blend for explosion and launch effects), sound files, and 3D models.
+              <span class="hm-code">Rocket.prefab</span> — the missile projectile with all required components.
+              <span class="hm-code">PrefabVariantAir/RocketLauncher.prefab</span> — launcher variant for aerial mounting (airMode enabled).
+              <span class="hm-code">PrefabvariantGround/RocketLauncher.prefab</span> — launcher variant for ground stations.
+              Also contains VFX prefabs (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), VFX materials (additive and alpha-blend for explosion and launch effects), sound files, and 3D models (<span class="hm-code">Rocket.fbx</span>, <span class="hm-code">RocketLauncher.fbx</span>).
             </td>
             <td v-else>
-              <span class="hm-code">RocketLauncher.prefab</span> — la stazione di lancio completa.
-              <span class="hm-code">RocketBullet.prefab</span> — il proiettile missile con tutti i componenti necessari.
-              Contiene anche prefab VFX (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), materiali VFX (additive e alpha-blend per gli effetti di esplosione e lancio), file audio e modelli 3D.
+              <span class="hm-code">Rocket.prefab</span> — il proiettile missile con tutti i componenti necessari.
+              <span class="hm-code">PrefabVariantAir/RocketLauncher.prefab</span> — variante lanciatore per montaggio aereo (airMode abilitato).
+              <span class="hm-code">PrefabvariantGround/RocketLauncher.prefab</span> — variante lanciatore per postazioni terrestri.
+              Contiene anche prefab VFX (<span class="hm-code">ExplosionFX</span>, <span class="hm-code">RocketLaunchFX</span>), materiali VFX (additive e alpha-blend per gli effetti di esplosione e lancio), file audio e modelli 3D (<span class="hm-code">Rocket.fbx</span>, <span class="hm-code">RocketLauncher.fbx</span>).
             </td>
           </tr>
           <tr>
