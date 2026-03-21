@@ -185,6 +185,34 @@
         </tbody>
       </table>
     </div>
+    <!-- Elevation Display Internals -->
+    <div class="hm-doc-section">
+      <div v-if="locale === 'en'" class="hm-doc-section-title">Elevation Display Internals</div>
+      <div v-else class="hm-doc-section-title">Funzionamento Interno della Visualizzazione Elevazione</div>
+      <div class="hm-content-block" v-if="locale === 'en'">
+        <p>Because <span class="hm-code">LauncherController</span> stores elevation as a <strong>negative value</strong> internally, the HUD applies three compensations:</p>
+        <ul>
+          <li><strong>Elevation readout</strong> — the value is negated before display so the player sees a positive number when aiming up:<br/>
+            <span class="hm-code">float e = -launcherCtrl.CurrentElevation;</span></li>
+          <li><strong>Elevation indicator position</strong> — the normalised value is used directly (not inverted) for the indicator's vertical offset:<br/>
+            <span class="hm-code">elevIndicator.style.top = norm * (trackH - 2f);</span></li>
+          <li><strong>Elevation bar normalisation</strong> — <span class="hm-code">InverseLerp</span> maps the inverted range so the bar fills correctly:<br/>
+            <span class="hm-code">float norm = Mathf.InverseLerp(-launcherCtrl.maxElevation, -launcherCtrl.minElevation, launcherCtrl.CurrentElevation);</span></li>
+        </ul>
+      </div>
+      <div class="hm-content-block" v-else>
+        <p>Poiché <span class="hm-code">LauncherController</span> memorizza l'elevazione come <strong>valore negativo</strong> internamente, l'HUD applica tre compensazioni:</p>
+        <ul>
+          <li><strong>Lettura elevazione</strong> — il valore viene negato prima della visualizzazione, così il giocatore vede un numero positivo quando mira verso l'alto:<br/>
+            <span class="hm-code">float e = -launcherCtrl.CurrentElevation;</span></li>
+          <li><strong>Posizione indicatore elevazione</strong> — il valore normalizzato viene usato direttamente (non invertito) per l'offset verticale dell'indicatore:<br/>
+            <span class="hm-code">elevIndicator.style.top = norm * (trackH - 2f);</span></li>
+          <li><strong>Normalizzazione barra elevazione</strong> — <span class="hm-code">InverseLerp</span> mappa il range invertito perché la barra si riempia correttamente:<br/>
+            <span class="hm-code">float norm = Mathf.InverseLerp(-launcherCtrl.maxElevation, -launcherCtrl.minElevation, launcherCtrl.CurrentElevation);</span></li>
+        </ul>
+      </div>
+    </div>
+
     <!-- How References Are Obtained -->
     <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
       <strong>How the HUD Gets Its References</strong>

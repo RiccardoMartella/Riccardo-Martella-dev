@@ -171,6 +171,26 @@
       </table>
     </div>
 
+    <!-- Elevation Internals -->
+    <div class="hm-doc-section">
+      <div class="hm-doc-section-title" v-if="locale === 'en'">Elevation Internals</div>
+      <div class="hm-doc-section-title" v-else>Funzionamento Interno dell'Elevazione</div>
+      <div class="hm-content-block" v-if="locale === 'en'">
+        <p>Internally the elevation value is <strong>stored as negative</strong>. The update formula subtracts mouse input instead of adding it:</p>
+        <div class="hm-code-block"><pre>targetElevation -= mouseY * elevationSpeed * Time.deltaTime * invert;</pre></div>
+        <p>The clamp mirrors this by negating the Inspector limits:</p>
+        <div class="hm-code-block"><pre>targetElevation = Mathf.Clamp(targetElevation, -maxElevation, -minElevation);</pre></div>
+        <p>This means <span class="hm-code">CurrentElevation</span> is negative when the cannon aims upward and closer to zero when it aims at the horizon. The HUD negates the value before display so the player always sees a positive readout when aiming up.</p>
+      </div>
+      <div class="hm-content-block" v-else>
+        <p>Internamente il valore di elevazione è <strong>memorizzato come negativo</strong>. La formula di aggiornamento sottrae l'input del mouse invece di aggiungerlo:</p>
+        <div class="hm-code-block"><pre>targetElevation -= mouseY * elevationSpeed * Time.deltaTime * invert;</pre></div>
+        <p>Il clamp rispecchia questo negando i limiti impostati nell'Inspector:</p>
+        <div class="hm-code-block"><pre>targetElevation = Mathf.Clamp(targetElevation, -maxElevation, -minElevation);</pre></div>
+        <p>Questo significa che <span class="hm-code">CurrentElevation</span> è negativo quando il cannone punta verso l'alto e più vicino a zero quando punta all'orizzonte. L'HUD nega il valore prima della visualizzazione, così il giocatore vede sempre un valore positivo quando mira verso l'alto.</p>
+      </div>
+    </div>
+
     <!-- Separation of Concerns alert -->
     <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
       <strong>Separation of Concerns</strong>
