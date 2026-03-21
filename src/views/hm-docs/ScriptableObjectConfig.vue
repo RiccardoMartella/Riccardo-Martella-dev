@@ -207,6 +207,21 @@
       </div>
     </div>
 
+    <div class="hm-alert hm-alert-warning" v-if="locale === 'en'">
+      <strong>Don't Forget: UI Document Panel Settings</strong>
+      If you are building a new scene or a custom launcher setup, remember to assign a
+      <strong>Panel Settings</strong> asset to the <span class="hm-code">UIDocument</span> component in the Inspector.
+      Without it the HUD will not be rendered and Unity will throw an error at runtime.
+      Create one via <strong>Assets &rarr; Create &rarr; UI Toolkit &rarr; Panel Settings Asset</strong>.
+    </div>
+    <div class="hm-alert hm-alert-warning" v-else>
+      <strong>Non Dimenticare: Panel Settings del UI Document</strong>
+      Se stai costruendo una nuova scena o una configurazione personalizzata del lanciatore, ricordati di assegnare
+      un asset <strong>Panel Settings</strong> al componente <span class="hm-code">UIDocument</span> nell'Inspector.
+      Senza di esso l'HUD non verrà visualizzato e Unity genererà un errore a runtime.
+      Creane uno tramite <strong>Assets &rarr; Create &rarr; UI Toolkit &rarr; Panel Settings Asset</strong>.
+    </div>
+
     <!-- QUICK START -->
     <div class="hm-doc-section">
       <div class="hm-doc-section-title" v-if="locale === 'en'">Quick Start</div>

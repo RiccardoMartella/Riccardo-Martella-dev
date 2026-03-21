@@ -109,6 +109,23 @@
       </div>
     </div>
 
+    <div class="hm-alert hm-alert-warning" v-if="locale === 'en'">
+      <strong>UI Document — Panel Settings Required</strong>
+      The HUD uses Unity's UI Toolkit. Make sure the <span class="hm-code">UIDocument</span> component on the
+      launcher has a <strong>Panel Settings</strong> asset assigned in the Inspector. Without it the UI will
+      not be rendered and Unity will throw an error. If you are using the included prefabs, the Panel Settings
+      is already assigned — but if you set up a launcher from scratch or create a new scene, you must assign
+      it manually (<strong>Assets &rarr; Create &rarr; UI Toolkit &rarr; Panel Settings Asset</strong>).
+    </div>
+    <div class="hm-alert hm-alert-warning" v-else>
+      <strong>UI Document — Panel Settings Obbligatorio</strong>
+      L'HUD utilizza UI Toolkit di Unity. Assicurati che il componente <span class="hm-code">UIDocument</span> sul
+      lanciatore abbia un asset <strong>Panel Settings</strong> assegnato nell'Inspector. Senza di esso la UI non
+      verrà visualizzata e Unity genererà un errore. Se usi i prefab inclusi, il Panel Settings è già assegnato —
+      ma se configuri un lanciatore da zero o crei una nuova scena, devi assegnarlo manualmente
+      (<strong>Assets &rarr; Create &rarr; UI Toolkit &rarr; Panel Settings Asset</strong>).
+    </div>
+
     <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
       <strong>Self-Contained System</strong>
       The asset is fully self-contained and works out of the box with the included demo scenes. Open

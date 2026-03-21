@@ -849,10 +849,10 @@ export default {
 .hm-demo-disclaimer {
   display: flex;
   align-items: flex-start;
-  padding: 14px 18px;
+  padding: 10px 14px;
   margin-bottom: 16px;
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: 0.75rem;
+  line-height: 1.4;
   color: #d4edda;
   background: rgba(40, 167, 69, 0.15);
   border: 1px solid rgba(40, 167, 69, 0.35);
