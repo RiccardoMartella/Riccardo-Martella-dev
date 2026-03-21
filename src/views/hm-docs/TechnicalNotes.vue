@@ -11,6 +11,91 @@
     </p>
 
     <div class="hm-doc-section">
+      <div class="hm-doc-section-title" v-if="locale === 'en'">Assembly Definitions (.asmdef)</div>
+      <div class="hm-doc-section-title" v-else>Assembly Definition (.asmdef)</div>
+      <div class="hm-alert hm-alert-info" style="margin-bottom: 0.75rem;" v-if="locale === 'en'">
+        <strong>Why Assembly Definitions?</strong>
+        Without <span class="hm-code">.asmdef</span> files, all scripts end up in
+        <span class="hm-code">Assembly-CSharp.dll</span> (Unity's default assembly). This causes a
+        full recompilation on every script change and potential naming conflicts with other imported
+        assets. With Assembly Definitions the code is isolated into separate DLLs.
+      </div>
+      <div class="hm-alert hm-alert-info" style="margin-bottom: 0.75rem;" v-else>
+        <strong>Perché le Assembly Definition?</strong>
+        Senza i file <span class="hm-code">.asmdef</span>, tutti gli script finiscono in
+        <span class="hm-code">Assembly-CSharp.dll</span> (l'assembly di default di Unity). Questo
+        causa una ricompilazione completa ad ogni modifica e possibili conflitti di nomi con altri
+        asset importati. Con le Assembly Definition il codice viene isolato in DLL separate.
+      </div>
+
+      <table class="hm-field-table">
+        <thead>
+          <tr v-if="locale === 'en'">
+            <th>File</th>
+            <th>Details</th>
+          </tr>
+          <tr v-else>
+            <th>File</th>
+            <th>Dettagli</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="hm-field-name">HomingMissile.asmdef</span></td>
+            <td v-if="locale === 'en'">
+              <strong>Runtime assembly.</strong> Located at <span class="hm-code">Assets/HomingMissile/HomingMissile.asmdef</span>.
+              Assembly name: <span class="hm-code">HomingMissile</span>.
+              Root namespace: <span class="hm-code">HomingMissile</span>.
+              References: <span class="hm-code">Unity.InputSystem</span> (required by InputSystem_Actions and PlayerController).
+              Platforms: all. <span class="hm-code">autoReferenced: true</span> — other assemblies in the project can use it without manual configuration.
+              Covers: <span class="hm-code">Scripts/Core</span>, <span class="hm-code">Scripts/Player</span>, <span class="hm-code">Scripts/UI</span>, <span class="hm-code">Scripts/Utility</span>, <span class="hm-code">Input/</span>.
+            </td>
+            <td v-else>
+              <strong>Assembly runtime.</strong> Posizionato in <span class="hm-code">Assets/HomingMissile/HomingMissile.asmdef</span>.
+              Nome assembly: <span class="hm-code">HomingMissile</span>.
+              Root namespace: <span class="hm-code">HomingMissile</span>.
+              Riferimenti: <span class="hm-code">Unity.InputSystem</span> (necessario per InputSystem_Actions e PlayerController).
+              Piattaforme: tutte. <span class="hm-code">autoReferenced: true</span> — altri assembly del progetto possono usarlo senza configurazione manuale.
+              Copre: <span class="hm-code">Scripts/Core</span>, <span class="hm-code">Scripts/Player</span>, <span class="hm-code">Scripts/UI</span>, <span class="hm-code">Scripts/Utility</span>, <span class="hm-code">Input/</span>.
+            </td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">HomingMissile.Editor.asmdef</span></td>
+            <td v-if="locale === 'en'">
+              <strong>Editor-only assembly.</strong> Located at <span class="hm-code">Assets/HomingMissile/Scripts/Editor/HomingMissile.Editor.asmdef</span>.
+              References: <span class="hm-code">HomingMissile</span> (the runtime assembly, for accessing project types).
+              Platforms: <span class="hm-code">Editor</span> only — excluded from the final game build.
+              Covers: <span class="hm-code">Scripts/Editor/</span> (<span class="hm-code">PipelineMaterialConverter.cs</span>).
+            </td>
+            <td v-else>
+              <strong>Assembly solo per l'Editor.</strong> Posizionato in <span class="hm-code">Assets/HomingMissile/Scripts/Editor/HomingMissile.Editor.asmdef</span>.
+              Riferimenti: <span class="hm-code">HomingMissile</span> (l'assembly runtime, per accedere ai tipi del progetto).
+              Piattaforme: solo <span class="hm-code">Editor</span> — escluso dal build finale del gioco.
+              Copre: <span class="hm-code">Scripts/Editor/</span> (<span class="hm-code">PipelineMaterialConverter.cs</span>).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="hm-alert hm-alert-info" style="margin-top: 0.75rem;" v-if="locale === 'en'">
+        <strong>Placement Note</strong>
+        The runtime <span class="hm-code">.asmdef</span> is placed at the root
+        <span class="hm-code">Assets/HomingMissile/</span> (not inside <span class="hm-code">Scripts/</span>)
+        because <span class="hm-code">InputSystem_Actions.cs</span> lives in
+        <span class="hm-code">Input/</span>, which is outside <span class="hm-code">Scripts/</span>.
+        Unity applies the <span class="hm-code">.asmdef</span> to all scripts in its folder and subfolders.
+      </div>
+      <div class="hm-alert hm-alert-info" style="margin-top: 0.75rem;" v-else>
+        <strong>Nota sul Posizionamento</strong>
+        L'<span class="hm-code">.asmdef</span> runtime è posizionato alla radice
+        <span class="hm-code">Assets/HomingMissile/</span> (non dentro <span class="hm-code">Scripts/</span>)
+        perché <span class="hm-code">InputSystem_Actions.cs</span> si trova in
+        <span class="hm-code">Input/</span>, che è fuori da <span class="hm-code">Scripts/</span>.
+        Unity applica l'<span class="hm-code">.asmdef</span> a tutti gli script nella cartella e sottocartelle.
+      </div>
+    </div>
+
+    <div class="hm-doc-section">
       <div class="hm-doc-section-title" v-if="locale === 'en'">Architecture &amp; Namespacing</div>
       <div class="hm-doc-section-title" v-else>Architettura &amp; Namespacing</div>
       <div class="hm-alert hm-alert-info" style="margin-bottom: 0.75rem;" v-if="locale === 'en'">

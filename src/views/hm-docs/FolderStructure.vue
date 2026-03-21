@@ -37,6 +37,7 @@
                   </ul>
                 </li>
                 <li class="hm-vtree-file">Documentation.pdf</li>
+                <li class="hm-vtree-file">HomingMissile.asmdef</li>
                 <li class="hm-vtree-folder">Input/
                   <ul>
                     <li class="hm-vtree-file">InputSystem_Actions.cs</li>
@@ -143,6 +144,7 @@
                     </li>
                     <li class="hm-vtree-folder">Editor/
                       <ul>
+                        <li class="hm-vtree-file">HomingMissile.Editor.asmdef</li>
                         <li class="hm-vtree-file">PipelineMaterialConverter.cs</li>
                       </ul>
                     </li>
