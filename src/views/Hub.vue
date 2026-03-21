@@ -116,9 +116,10 @@
                 <span class="meta-item meta-item--hm"><span class="meta-dot meta-dot--cyan"></span>Unity 6</span>
                 <span class="meta-item meta-item--hm"><span class="meta-dot meta-dot--cyan"></span>URP 17</span>
               </div>
-              <span class="card-btn card-btn--hm card-btn--disabled">
-                {{ $t('hub.hmComingSoon') }}
-              </span>
+              <router-link :to="localePath('/homing-missile')" class="card-btn card-btn--hm">
+                {{ $t('hub.hmCardBtn') }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </router-link>
             </div>
           </div>
         </div>
@@ -229,7 +230,7 @@ export default {
   cursor: pointer;
 }
 
-.asset-card:hover:not(.asset-card--hm) {
+.asset-card:hover {
   transform: translateY(-8px);
 }
 
@@ -414,11 +415,6 @@ export default {
   color: #55C3EB;
 }
 
-.card-btn--disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  pointer-events: none;
-}
 
 .hub-footer-note {
   font-size: 0.8rem;

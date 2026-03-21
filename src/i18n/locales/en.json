@@ -400,6 +400,7 @@
     "lead": "Experience Assembly Station in action with our interactive demo. Explore the features and functionality before making your purchase.",
     "noteLabel": "Note:",
     "noteText": "Assembly Station is constantly evolving. The demo version may not fully represent the latest features and improvements available in the current release.",
+    "disclaimerText": "This demo may not reflect the latest version of the project. It is a different, non-optimized build, so you may experience visual or audio bugs. It is only meant as a quick representation of the asset.",
     "clickNoticeStrong": "To use the demo:",
     "clickNoticeText": "Click inside the demo area to activate it — the cursor must be focused on the demo for controls to work correctly.",
     "webglNote": "Note: WebGL demo requires a modern browser with WebGL support",
