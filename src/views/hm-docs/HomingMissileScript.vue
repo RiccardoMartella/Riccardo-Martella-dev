@@ -304,6 +304,38 @@
     </div>
 
     <div class="hm-doc-section">
+      <div v-if="locale === 'en'" class="hm-doc-section-title">Spawn Safety</div>
+      <div v-else class="hm-doc-section-title">Sicurezza allo Spawn</div>
+      <table class="hm-field-table">
+        <thead>
+          <tr v-if="locale === 'en'"><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          <tr v-else><th>Campo</th><th>Tipo</th><th>Predefinito</th><th>Descrizione</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="hm-field-name">visibilityDelay</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">0.08</span></td>
+            <td v-if="locale === 'en'">Time in seconds the missile's renderers stay hidden after spawn. Prevents visual clipping when the launcher rotates quickly. Renderers are re-enabled in <span class="hm-code">FixedUpdate</span> once the delay has elapsed.</td>
+            <td v-else>Tempo in secondi per cui i renderer del missile restano nascosti dopo lo spawn. Previene il clipping visivo quando il launcher ruota velocemente. I renderer vengono riattivati nel <span class="hm-code">FixedUpdate</span> una volta trascorso il delay.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
+        <strong>Launcher Collision Ignore</strong>
+        During <span class="hm-code">Initialize()</span>, the missile calls
+        <span class="hm-code">Physics.IgnoreCollision</span> on every launcher collider so the
+        projectile cannot physically interact with the turret that fired it.
+      </div>
+      <div class="hm-alert hm-alert-info" v-else>
+        <strong>Ignora Collisioni Launcher</strong>
+        Durante <span class="hm-code">Initialize()</span>, il missile chiama
+        <span class="hm-code">Physics.IgnoreCollision</span> su ogni collider del launcher in modo che
+        il proiettile non possa interagire fisicamente con la torretta che lo ha sparato.
+      </div>
+    </div>
+
+    <div class="hm-doc-section">
       <div v-if="locale === 'en'" class="hm-doc-section-title">Flight Phases</div>
       <div v-else class="hm-doc-section-title">Fasi di Volo</div>
       <table class="hm-field-table">
