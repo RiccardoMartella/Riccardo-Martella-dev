@@ -428,8 +428,7 @@
   "rocket": {
     "title": "Rocket Demo",
     "demoNotice": "<strong>To use the demo:</strong> Click inside the demo area to activate it.",
-    "iframeTitle": "Rocket Demo",
-    "disclaimerText": "This demo may not reflect the latest version of the project. It is a different, non-optimized build, so you may experience visual or audio bugs. It is only meant as a quick representation of the asset."
+    "iframeTitle": "Rocket Demo"
   },
   "discordGiveaway": {
     "title": "Free Unity Asset Keys",
@@ -1029,6 +1028,7 @@
     "backToHub": "All Assets",
     "demoTitle": "Interactive Demo",
     "demoLead": "Try the Homing Missile system directly in your browser. Launch missiles, lock on targets and see the PN guidance in action.",
+    "disclaimerText": "This demo may not reflect the latest version of the project. It is a different, non-optimized build, so you may experience visual or audio bugs. It is only meant as a quick representation of the asset.",
     "demoClickStrong": "Click inside the demo",
     "demoClickText": "to interact. Use mouse to aim and fire.",
     "demoWebglNote": "Requires a WebGL-compatible browser. Best experienced on desktop."

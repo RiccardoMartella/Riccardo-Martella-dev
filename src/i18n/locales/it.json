@@ -428,8 +428,7 @@
   "rocket": {
     "title": "Demo Razzo",
     "demoNotice": "<strong>Per usare la demo:</strong> Clicca all'interno dell'area demo per attivarla.",
-    "iframeTitle": "Demo Razzo",
-    "disclaimerText": "Questa demo potrebbe non essere aggiornata all'ultima versione del progetto. Si tratta di una build differente e non ottimizzata, quindi potrebbero verificarsi bug visivi o audio. \u00c8 solo una rappresentazione veloce dell'asset."
+    "iframeTitle": "Demo Razzo"
   },
   "discordGiveaway": {
     "title": "Chiavi Gratuite per Unity Asset",
@@ -1029,6 +1028,7 @@
     "backToHub": "Tutti gli Asset",
     "demoTitle": "Demo Interattiva",
     "demoLead": "Prova il sistema Homing Missile direttamente nel browser. Lancia missili, aggancia i bersagli e osserva la guida PN in azione.",
+    "disclaimerText": "Questa demo potrebbe non essere aggiornata all'ultima versione del progetto. Si tratta di una build differente e non ottimizzata, quindi potrebbero verificarsi bug visivi o audio. \u00c8 solo una rappresentazione veloce dell'asset.",
     "demoClickStrong": "Clicca dentro la demo",
     "demoClickText": "per interagire. Usa il mouse per mirare e sparare.",
     "demoWebglNote": "Richiede un browser compatibile con WebGL. Esperienza migliore su desktop."

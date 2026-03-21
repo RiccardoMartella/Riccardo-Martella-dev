@@ -4,10 +4,6 @@
       <div class="text-center mb-4">
         <h1 class="display-4 fw-bold text-accent">{{ $t('rocket.title') }}</h1>
       </div>
-      <div class="alert alert-success d-flex align-items-start mb-4" role="alert">
-        <i class="bi bi-exclamation-triangle-fill me-2 mt-1 flex-shrink-0"></i>
-        <span>{{ $t('rocket.disclaimerText') }}</span>
-      </div>
       <div class="demo-container">
         <div class="demo-click-notice alert alert-warning d-flex align-items-center mb-0" role="alert">
           <i class="bi bi-mouse-fill me-2 flex-shrink-0"></i>
