@@ -12,10 +12,6 @@
               <i class="bi bi-info-circle me-2"></i>
               <strong>{{ $t('demo.noteLabel') }}</strong> {{ $t('demo.noteText') }}
             </div>
-            <div class="alert alert-success">
-              <i class="bi bi-exclamation-triangle-fill me-2"></i>
-              {{ $t('demo.disclaimerText') }}
-            </div>
           </div>
 
           <div class="demo-container mb-5">

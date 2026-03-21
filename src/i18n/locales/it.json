@@ -400,7 +400,6 @@
     "lead": "Scopri Assembly Station in azione con la nostra demo interattiva. Esplora le funzionalit\u00e0 prima dell'acquisto.",
     "noteLabel": "Nota:",
     "noteText": "Assembly Station \u00e8 in continua evoluzione. La versione demo potrebbe non rappresentare completamente le ultime funzionalit\u00e0 e miglioramenti disponibili nella release attuale.",
-    "disclaimerText": "Questa demo potrebbe non essere aggiornata all'ultima versione del progetto. Si tratta di una build differente e non ottimizzata, quindi potrebbero verificarsi bug visivi o audio. \u00c8 solo una rappresentazione veloce dell'asset.",
     "clickNoticeStrong": "Per utilizzare la demo:",
     "clickNoticeText": "Fare clic sull'area della demo per attivarla \u2014 il cursore deve essere in focus sulla demo per il corretto funzionamento dei controlli.",
     "webglNote": "Nota: La demo WebGL richiede un browser moderno con supporto WebGL",
@@ -429,7 +428,8 @@
   "rocket": {
     "title": "Demo Razzo",
     "demoNotice": "<strong>Per usare la demo:</strong> Clicca all'interno dell'area demo per attivarla.",
-    "iframeTitle": "Demo Razzo"
+    "iframeTitle": "Demo Razzo",
+    "disclaimerText": "Questa demo potrebbe non essere aggiornata all'ultima versione del progetto. Si tratta di una build differente e non ottimizzata, quindi potrebbero verificarsi bug visivi o audio. \u00c8 solo una rappresentazione veloce dell'asset."
   },
   "discordGiveaway": {
     "title": "Chiavi Gratuite per Unity Asset",
