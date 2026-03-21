@@ -1054,7 +1054,8 @@
       "setupChecklist": "Checklist Configurazione",
       "demoScenes": "Scene Demo",
       "technicalNotes": "Note Tecniche",
-      "launcherWeaponsMaterial": "Materiale Armi Lanciatore"
+      "launcherWeaponsMaterial": "Materiale Armi Lanciatore",
+      "includedModels": "Modelli 3D Inclusi"
     }
   },
   "hmHeader": {

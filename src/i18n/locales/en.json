@@ -1054,7 +1054,8 @@
       "setupChecklist": "Setup Checklist",
       "demoScenes": "Demo Scenes",
       "technicalNotes": "Technical Notes",
-      "launcherWeaponsMaterial": "Launcher Weapons Material"
+      "launcherWeaponsMaterial": "Launcher Weapons Material",
+      "includedModels": "Included 3D Models"
     }
   },
   "hmHeader": {

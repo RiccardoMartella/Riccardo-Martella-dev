@@ -235,6 +235,7 @@
         fluidamente anche i bersagli veloci.
       </div>
     </div>
+
   </div>
 </template>
 

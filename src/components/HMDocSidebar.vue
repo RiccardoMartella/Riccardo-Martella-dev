@@ -112,6 +112,12 @@
           {{ $t('hmSidebar.items.launcherWeaponsMaterial') }}
         </router-link>
       </li>
+      <li>
+        <router-link :to="localePath('/homing-missile/docs/included-models')" class="hm-sidebar-link">
+          <span class="hm-sidebar-num">18</span>
+          {{ $t('hmSidebar.items.includedModels') }}
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>

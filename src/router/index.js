@@ -50,6 +50,7 @@ const hmDocPages = [
   { path: 'demo-scenes', name: 'hm-docs-demo-scenes', component: () => import('@/views/hm-docs/DemoScenes.vue') },
   { path: 'technical-notes', name: 'hm-docs-technical-notes', component: () => import('@/views/hm-docs/TechnicalNotes.vue') },
   { path: 'launcher-weapons-material', name: 'hm-docs-launcher-weapons-material', component: () => import('@/views/hm-docs/LauncherWeaponsMaterial.vue') },
+  { path: 'included-models', name: 'hm-docs-included-models', component: () => import('@/views/hm-docs/IncludedModels.vue') },
 ]
 
 function generateRoutes() {
