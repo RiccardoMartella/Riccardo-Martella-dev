@@ -1014,7 +1014,7 @@
     "aboutP2": "Every field is exposed in the Inspector and fully documented. The included demo scenes let you explore the entire system immediately out of the box.",
     "resourcesTitle": "Getting Started",
     "docCardTitle": "Script Reference",
-    "docCardText": "Complete documentation for all 9 scripts and inspector fields",
+    "docCardText": "Complete documentation for all 13 scripts and inspector fields",
     "docCardBtn": "Read Docs",
     "setupCardTitle": "Setup Checklist",
     "setupCardText": "Quick step-by-step guide to integrate in your own scene",

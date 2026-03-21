@@ -19,7 +19,7 @@
       <div class="hm-doc-section-title" v-else>Cosa Include</div>
       <div class="hm-content-block">
         <ul class="hm-checklist" v-if="locale === 'en'">
-          <li class="hm-checklist-item">9 C# scripts covering every aspect of the system (guidance, launcher, HUD, player input, targets, utilities)</li>
+          <li class="hm-checklist-item">13 C# scripts covering every aspect of the system (guidance, launcher, HUD, player input, targets, utilities)</li>
           <li class="hm-checklist-item">2 demo scenes: <span class="hm-code">GroundDemo.unity</span> and <span class="hm-code">AirDemo.unity</span></li>
           <li class="hm-checklist-item">Launcher prefab with fully rigged turret and cannon</li>
           <li class="hm-checklist-item">Missile prefab with Rigidbody, trail renderer, and proximity fuze</li>
@@ -28,7 +28,7 @@
           <li class="hm-checklist-item">Procedural lock-on audio — no audio files required</li>
         </ul>
         <ul class="hm-checklist" v-else>
-          <li class="hm-checklist-item">9 script C# che coprono ogni aspetto del sistema (guida, lanciatore, HUD, input giocatore, bersagli, utilità)</li>
+          <li class="hm-checklist-item">13 script C# che coprono ogni aspetto del sistema (guida, lanciatore, HUD, input giocatore, bersagli, utilità)</li>
           <li class="hm-checklist-item">2 scene demo: <span class="hm-code">GroundDemo.unity</span> e <span class="hm-code">AirDemo.unity</span></li>
           <li class="hm-checklist-item">Prefab lanciatore con torretta e cannone completamente configurati</li>
           <li class="hm-checklist-item">Prefab missile con Rigidbody, trail renderer e spoletta di prossimità</li>
