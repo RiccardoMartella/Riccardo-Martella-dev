@@ -12,9 +12,14 @@
           <div class="hm-pricing-card mb-5">
             <div class="hm-pricing-card-header text-center py-4">
               <h2 class="hm-product-name">Homing Missile</h2>
+              <div class="hm-discount-badge">
+                <i class="bi bi-lightning-fill me-1"></i>50% OFF
+              </div>
               <div class="hm-price-container">
+                <span class="hm-price-original">$16.99</span>
                 <span class="hm-currency">$</span>
-                <span class="hm-price">19</span>
+                <span class="hm-price">8</span>
+                <span class="hm-price-decimal">.50</span>
                 <span class="hm-period">{{ $t('hmPricing.period') }}</span>
               </div>
             </div>
@@ -200,6 +205,41 @@ export default {
   font-size: 5rem;
   font-weight: 700;
   color: #55C3EB;
+}
+
+.hm-discount-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b35, #ff4444);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.hm-price-original {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgba(225, 235, 242, 0.4);
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.hm-price-decimal {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #55C3EB;
+  position: relative;
+  top: -1.5rem;
 }
 
 .hm-period {
