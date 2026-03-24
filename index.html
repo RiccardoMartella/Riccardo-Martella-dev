@@ -154,12 +154,17 @@
         "storage": {"useSiteId": true},
         "callback": {
           "onConsentGiven": function() {
-            gtag('consent', 'update', {
-              'ad_storage': 'granted',
-              'ad_user_data': 'granted',
-              'ad_personalization': 'granted',
-              'analytics_storage': 'granted'
-            });
+            var purposes = _iub.cs && _iub.cs.consent && _iub.cs.consent.purposes;
+            if (purposes) {
+              for (var key in purposes) {
+                if (purposes[key] === true && key !== '1') {
+                  gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                  });
+                  break;
+                }
+              }
+            }
           }
         }
       };
