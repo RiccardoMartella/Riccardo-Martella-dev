@@ -1003,6 +1003,7 @@
     "moreComingSoon": "More assets coming soon"
   },
   "hmIntro": {
+    "comingSoon": "Coming Soon to Unity Asset Store",
     "subtitle": "Complete Guided Missile Launcher System for Unity 6",
     "heroText": "Homing Missile delivers everything you need for a realistic guided-missile launcher station — Proportional Navigation guidance, military-grade HUD, procedural lock-on audio, and a turret the player can control from the first frame.",
     "getBtn": "Get Homing Missile",

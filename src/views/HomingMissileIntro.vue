@@ -43,6 +43,9 @@
               {{ $t('hmIntro.backToHub') }}
             </router-link>
             <div class="ms-2 hm-hero-badge">Homing Missile</div>
+            <div class="hm-coming-soon-badge">
+              <i class="bi bi-clock me-2"></i>{{ $t('hmIntro.comingSoon') }}
+            </div>
             <h1 class="hm-hero-title">
               Homing <span class="hm-cyan">Missile</span>
             </h1>
@@ -639,6 +642,26 @@ export default {
   padding: 5px 14px;
   border-radius: 20px;
   margin-bottom: 1.25rem;
+}
+
+.hm-coming-soon-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffc107;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  animation: comingSoonPulse 2s ease-in-out infinite;
+}
+
+@keyframes comingSoonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .hm-hero-title {
