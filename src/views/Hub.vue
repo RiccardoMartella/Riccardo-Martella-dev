@@ -109,7 +109,10 @@
           <div class="asset-card asset-card--hm">
             <div class="card-glow card-glow--hm"></div>
             <div class="card-inner">
-              <div class="card-badge card-badge--hm">{{ $t('hub.hmCardTag') }}</div>
+              <div class="card-badges-row">
+                <div class="card-badge card-badge--hm">{{ $t('hub.hmCardTag') }}</div>
+                <div class="card-badge card-badge--coming-soon">{{ $t('hub.hmComingSoon') }}</div>
+              </div>
               <h2 class="card-title card-title--hm">Homing Missile</h2>
               <p class="card-desc card-desc--hm">{{ $t('hub.hmCardDesc') }}</p>
               <div class="card-meta">
@@ -310,6 +313,25 @@ export default {
   background-color: rgba(85, 195, 235, 0.12);
   color: #55C3EB;
   border: 1px solid rgba(85, 195, 235, 0.3);
+}
+
+.card-badges-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-badge--coming-soon {
+  background-color: rgba(255, 193, 7, 0.12);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  animation: comingSoonPulse 2s ease-in-out infinite;
+}
+
+@keyframes comingSoonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
 /* Titles */
