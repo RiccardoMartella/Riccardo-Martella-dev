@@ -80,6 +80,11 @@
                   $t('footer.licenses')
                 }}</RouterLink>
               </li>
+              <li class="mb-2">
+                <a href="#" class="hm-footer-link" @click.prevent="openCookiePreferences">{{
+                  $t('footer.doNotSell')
+                }}</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -145,6 +150,11 @@ export default {
         top: 0,
         behavior: 'smooth'
       });
+    },
+    openCookiePreferences() {
+      if (window._iub && window._iub.cs && window._iub.cs.api) {
+        window._iub.cs.api.openPreferences();
+      }
     }
   }
 };

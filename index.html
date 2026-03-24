@@ -122,17 +122,51 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XM2PHLJNHW"></script>
+    <!-- Google Consent Mode v2 (must be before gtag.js) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XM2PHLJNHW"></script>
+    <script>
       gtag('js', new Date());
-    
       gtag('config', 'G-XM2PHLJNHW', {
         send_page_view: false
       });
     </script>
+
+    <!-- iubenda Cookie Solution -->
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        "siteId": 3949797,
+        "cookiePolicyId": 82562185,
+        "lang": "it",
+        "storage": {"useSiteId": true},
+        "callback": {
+          "onConsentGiven": function() {
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'ad_user_data': 'granted',
+              'ad_personalization': 'granted',
+              'analytics_storage': 'granted'
+            });
+          }
+        }
+      };
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3949797.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
   </head>
   <body>
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
@@ -233,10 +267,3 @@
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
-<script type="text/javascript">
-  var _iub = _iub || [];
-  _iub.csConfiguration = {"siteId":3949797,"cookiePolicyId":82562185,"lang":"it","storage":{"useSiteId":true}};
-  </script>
-  <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3949797.js"></script>
-  <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
