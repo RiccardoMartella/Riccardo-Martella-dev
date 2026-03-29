@@ -288,12 +288,15 @@ export default {
   }
 
   .navbar-collapse {
+    display: flex !important;
+    flex-direction: column;
     position: fixed;
     top: 0;
     right: -100%;
     width: 80%;
     max-width: 320px;
     height: 100vh;
+    height: 100dvh;
     background: #0a1628;
     z-index: 1060;
     padding: 5rem 1.5rem 2rem;
@@ -301,13 +304,13 @@ export default {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
     border-left: 1px solid rgba(85, 195, 235, 0.12);
+    visibility: hidden;
   }
 
   .navbar-collapse.show {
     right: 0;
+    visibility: visible;
   }
 
   .navbar-nav {
