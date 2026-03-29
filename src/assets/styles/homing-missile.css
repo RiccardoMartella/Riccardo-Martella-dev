@@ -520,7 +520,7 @@
 
 @media (max-width: 767.98px) {
   .hm-content-wrapper { padding: 0 10px; }
-  .hm-back-to-top { bottom: 80px; left: 20px; right: auto; }
+  .hm-back-to-top { bottom: 80px; right: 20px; }
 
   .hm-doc-title {
     font-size: 1.3rem;

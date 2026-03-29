@@ -159,8 +159,7 @@ export default {
 
   .back-to-top-btn {
     bottom: 80px;
-    left: 20px;
-    right: auto;
+    right: 20px;
     width: 40px;
     height: 40px;
   }
