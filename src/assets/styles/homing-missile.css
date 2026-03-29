@@ -120,6 +120,7 @@
 .hm-content-wrapper {
   padding: 0 15px;
   color: #E1EBF2;
+  overflow-x: hidden;
 }
 
 /* Doc page */
@@ -184,6 +185,7 @@
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 .hm-content-block p {
@@ -293,6 +295,7 @@
   padding: 2px 7px;
   border-radius: 4px;
   font-size: 0.85em;
+  word-break: break-word;
 }
 
 /* Code blocks */
@@ -466,6 +469,9 @@
   color: rgba(225, 235, 242, 0.7);
   font-size: 0.9rem;
   line-height: 1.5;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .hm-checklist-item::before {
@@ -514,7 +520,7 @@
 
 @media (max-width: 767.98px) {
   .hm-content-wrapper { padding: 0 10px; }
-  .hm-back-to-top { bottom: 20px; right: 20px; }
+  .hm-back-to-top { bottom: 80px; left: 20px; right: auto; }
 
   .hm-doc-title {
     font-size: 1.3rem;

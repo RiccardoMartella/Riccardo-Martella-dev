@@ -158,8 +158,9 @@ export default {
   }
 
   .back-to-top-btn {
-    bottom: 20px;
-    right: 20px;
+    bottom: 80px;
+    left: 20px;
+    right: auto;
     width: 40px;
     height: 40px;
   }
