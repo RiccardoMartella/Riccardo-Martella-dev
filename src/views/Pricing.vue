@@ -15,7 +15,7 @@
               <h2 class="pricing-title">{{ $t('pricing.productName') }}</h2>
               <div class="price-container">
                 <span class="currency">$</span>
-                <span class="price">39</span>
+                <span class="price">33</span>
                 <span class="period">{{ $t('pricing.period') }}</span>
               </div>
             </div>
