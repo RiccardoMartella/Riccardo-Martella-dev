@@ -515,4 +515,83 @@
 @media (max-width: 767.98px) {
   .hm-content-wrapper { padding: 0 10px; }
   .hm-back-to-top { bottom: 20px; right: 20px; }
+
+  .hm-doc-title {
+    font-size: 1.3rem;
+  }
+
+  .hm-doc-title span {
+    font-size: 0.9rem;
+  }
+
+  .hm-text-lead {
+    font-size: 0.9rem;
+  }
+
+  .hm-content-block {
+    padding: 1rem;
+  }
+
+  /* Responsive tables */
+  .hm-field-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .hm-field-name,
+  .hm-field-type,
+  .hm-field-default {
+    font-size: 0.78rem;
+  }
+
+  .hm-field-table th,
+  .hm-field-table td {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Code blocks */
+  .hm-code-block {
+    padding: 0.75rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  .hm-code-block pre {
+    font-size: 0.78rem;
+  }
+
+  /* Folder tree */
+  .hm-folder-tree {
+    padding: 1rem;
+    font-size: 0.78rem;
+  }
+
+  .hm-vtree {
+    padding: 1rem;
+    font-size: 0.78rem;
+    overflow-x: auto;
+  }
+
+  /* Step list */
+  .hm-step-item {
+    padding: 0.75rem 0.8rem;
+    gap: 0.75rem;
+  }
+
+  .hm-step-text {
+    font-size: 0.85rem;
+  }
+
+  /* Tag grid */
+  .hm-tag-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Alerts */
+  .hm-alert {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
 }

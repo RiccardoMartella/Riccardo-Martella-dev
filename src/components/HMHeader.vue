@@ -25,31 +25,33 @@
           class="navbar-toggler"
           type="button"
           @click="toggleNavbar"
-          aria-controls="hmNavbarNav"
-          aria-expanded="false"
+          :aria-expanded="isNavOpen"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi" :class="isNavOpen ? 'bi-x-lg' : 'bi-list'" style="font-size: 1.3rem; color: #55C3EB;"></i>
         </button>
+
+        <div class="mobile-nav-backdrop" v-if="isNavOpen" @click="closeNavbar"></div>
+
         <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="hmNavbarNav">
           <ul class="navbar-nav me-auto ms-lg-5">
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/homing-missile')" class="nav-link" exact>{{ $t('hmHeader.overview') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile')" class="nav-link" exact @click="closeNavbar">{{ $t('hmHeader.overview') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
               <a href="#demo" class="nav-link" @click.prevent="scrollToDemo">{{ $t('hmHeader.demo') }}</a>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/homing-missile/docs/overview')" class="nav-link">{{ $t('header.documentation') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile/docs/overview')" class="nav-link" @click="closeNavbar">{{ $t('header.documentation') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/homing-missile/pricing')" class="nav-link">{{ $t('header.pricing') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile/pricing')" class="nav-link" @click="closeNavbar">{{ $t('header.pricing') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/homing-missile/report-bug')" class="nav-link">{{ $t('header.reportBug') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile/report-bug')" class="nav-link" @click="closeNavbar">{{ $t('header.reportBug') }}</RouterLink>
             </li>
             <li class="nav-item mx-lg-2">
-              <RouterLink :to="localePath('/homing-missile/contacts')" class="nav-link">{{ $t('header.contacts') }}</RouterLink>
+              <RouterLink :to="localePath('/homing-missile/contacts')" class="nav-link" @click="closeNavbar">{{ $t('header.contacts') }}</RouterLink>
             </li>
           </ul>
 
@@ -110,6 +112,11 @@ export default {
     },
     toggleNavbar() {
       this.isNavOpen = !this.isNavOpen;
+      document.body.style.overflow = this.isNavOpen ? 'hidden' : '';
+    },
+    closeNavbar() {
+      this.isNavOpen = false;
+      document.body.style.overflow = '';
     },
     scrollToDemo() {
       const introPath = this.localePath('/homing-missile')
@@ -234,15 +241,18 @@ export default {
 
 .navbar-toggler {
   border: 1px solid rgba(85, 195, 235, 0.3);
-  padding: 4px 8px;
+  padding: 6px 10px;
+  background: rgba(85, 195, 235, 0.08);
+  border-radius: 8px;
+  z-index: 1061;
 }
 
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.2rem rgba(85, 195, 235, 0.25);
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2885, 195, 235, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.mobile-nav-backdrop {
+  display: none;
 }
 
 @media (min-width: 992px) {
@@ -266,17 +276,81 @@ export default {
 }
 
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    padding: 1rem 0;
-    transition: all 0.3s ease;
+  .mobile-nav-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1059;
   }
 
-  .navbar-nav {
-    margin-top: 0.5rem;
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #0a1628;
+    z-index: 1060;
+    padding: 5rem 1.5rem 2rem;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(85, 195, 235, 0.12);
   }
 
   .navbar-collapse.show {
-    display: block;
+    right: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(85, 195, 235, 0.08);
+  }
+
+  .navbar-nav .nav-link.router-link-active::after {
+    display: none;
+  }
+
+  .navbar-nav .nav-link.router-link-active {
+    background: rgba(85, 195, 235, 0.12);
+    border-radius: 6px;
+    color: #55C3EB !important;
+  }
+
+  .navbar-nav:last-child {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(85, 195, 235, 0.12);
+  }
+
+  .navbar-nav:last-child .nav-link {
+    border-bottom: none;
+    padding: 0.5rem;
+  }
+
+  .navbar-nav.align-items-center {
+    align-items: flex-start !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
   }
 }
 </style>
