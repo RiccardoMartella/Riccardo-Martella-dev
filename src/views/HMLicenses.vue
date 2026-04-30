@@ -5,7 +5,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <h1 class="hm-page-title">{{ $t('licenses.title') }}</h1>
-          <p class="hm-page-lead">{{ $t('licenses.lead') }}</p>
+          <p class="hm-page-lead">{{ $t('hmLicenses.lead') }}</p>
 
           <div class="hm-license-section">
             <h2 class="hm-section-label">{{ $t('licenses.unityComponents') }}</h2>
@@ -20,39 +20,19 @@
           </div>
 
           <div class="hm-license-section">
+            <h2 class="hm-section-label">{{ $t('hmLicenses.texturesTitle') }}</h2>
+            <div class="hm-license-item">
+              <p>{{ $t('hmLicenses.texturesAmbientCG') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://ambientcg.com/view?id=Tiles106" target="_blank">https://ambientcg.com/view?id=Tiles106</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
+            </div>
+          </div>
+
+          <div class="hm-license-section">
             <h2 class="hm-section-label">{{ $t('licenses.audioTitle') }}</h2>
             <div class="hm-license-item">
-              <p>{{ $t('licenses.audioHammer') }}<br>
-              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://freesound.org/s/347841/" target="_blank">https://freesound.org/s/347841/</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
-            </div>
-          </div>
-
-          <div class="hm-license-section">
-            <h2 class="hm-section-label">{{ $t('licenses.fiverrTitle') }}</h2>
-            <div class="hm-license-item">
-              <p>{{ $t('licenses.fiverrDesc') }}<br>
-              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://help.fiverr.com/hc/it/articles/360011569298-Dettagli-della-licenza-per-uso-commerciale" target="_blank">https://help.fiverr.com/hc/it/articles/360011569298</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
-            </div>
-            <div class="hm-license-item">
-              <p><a href="https://it.fiverr.com/pxl_dynamics">PIXEL DYNAMICS STUDIO LTD</a> {{ $t('licenses.fiverrPixel') }}</p>
-            </div>
-          </div>
-
-          <div class="hm-license-section">
-            <h2 class="hm-section-label">{{ $t('licenses.iconsTitle') }}</h2>
-            <div class="hm-license-item">
-              <p>
-                {{ $t('licenses.iconsSmash') }}<br>
-                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/steel" target="_blank">flaticon.com/free-icons/steel</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
-                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/plastic-film" target="_blank">flaticon.com/free-icons/plastic-film</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
-                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/rubber" target="_blank">flaticon.com/free-icons/rubber</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
-                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/coin" target="_blank">flaticon.com/free-icons/coin</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}<br>
-                {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.flaticon.com/free-icons/padlock" target="_blank">flaticon.com/free-icons/padlock</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}
-              </p>
-            </div>
-            <div class="hm-license-item">
-              <p>{{ $t('licenses.iconsCraiyon') }}<br>
-              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.craiyon.com" target="_blank">https://www.craiyon.com</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
+              <p>{{ $t('hmLicenses.audioAdobe') }}<br>
+              {{ $t('licenses.seeDetails').split('{0}')[0] }}<a href="https://www.adobe.com/legal/terms.html" target="_blank">https://www.adobe.com/legal/terms.html</a>{{ $t('licenses.seeDetails').split('{0}')[1] }}</p>
             </div>
           </div>
 
