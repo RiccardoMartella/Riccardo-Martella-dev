@@ -1067,6 +1067,12 @@
     "allAssets": "All Assets",
     "copyright": "Copyright \u00a9 2025 Homing Missile"
   },
+  "hmLicenses": {
+    "lead": "Homing Missile uses various third-party assets, tools, and resources that are distributed under different licenses. This page provides attribution and licensing information for all third-party content included in this asset.",
+    "texturesTitle": "Textures",
+    "texturesAmbientCG": "This asset includes plane/ground textures (\"Tiles106\" series: BaseColor, AmbientOcclusion, Displacement, NormalDX, NormalGL, Roughness) from AmbientCG under Creative Commons CC0 1.0 Universal.",
+    "audioAdobe": "This asset includes audio files (explosion.wav, missile-navigazione.wav, partenza.wav, partenza2.wav) generated using Adobe AI tools under Adobe's Terms of Use."
+  },
   "hmPricing": {
     "title": "Pricing",
     "lead": "One single price, complete access: a production-ready homing missile system for your Unity project",
