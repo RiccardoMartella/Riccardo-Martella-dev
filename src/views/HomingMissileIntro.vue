@@ -43,9 +43,6 @@
               {{ $t('hmIntro.backToHub') }}
             </router-link>
             <div class="ms-2 hm-hero-badge">Homing Missile</div>
-            <div class="hm-coming-soon-badge">
-              <i class="bi bi-clock me-2"></i>{{ $t('hmIntro.comingSoon') }}
-            </div>
             <h1 class="hm-hero-title">
               Homing <span class="hm-cyan">Missile</span>
             </h1>

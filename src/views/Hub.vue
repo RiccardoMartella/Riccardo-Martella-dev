@@ -111,7 +111,6 @@
             <div class="card-inner">
               <div class="card-badges-row">
                 <div class="card-badge card-badge--hm">{{ $t('hub.hmCardTag') }}</div>
-                <div class="card-badge card-badge--coming-soon">{{ $t('hub.hmComingSoon') }}</div>
               </div>
               <h2 class="card-title card-title--hm">Homing Missile</h2>
               <p class="card-desc card-desc--hm">{{ $t('hub.hmCardDesc') }}</p>
