@@ -139,9 +139,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XM2PHLJNHW"></script>
     <script>
       gtag('js', new Date());
-      gtag('config', 'G-XM2PHLJNHW', {
-        send_page_view: false
-      });
+      gtag('config', 'G-XM2PHLJNHW');
     </script>
 
     <!-- iubenda Cookie Solution -->
@@ -152,19 +150,21 @@
         "cookiePolicyId": 82562185,
         "lang": "it",
         "storage": {"useSiteId": true},
+        "perPurposeConsent": true,
         "callback": {
-          "onConsentGiven": function() {
+          "onPreferenceExpressedOrNotNeeded": function(preference) {
+            if (!preference) return;
+            var p = preference.purposes || {};
             gtag('consent', 'update', {
-              'analytics_storage': 'granted',
-              'ad_storage': 'granted',
-              'ad_user_data': 'granted',
-              'ad_personalization': 'granted'
+              'analytics_storage': p[4] ? 'granted' : 'denied',
+              'ad_storage': p[5] ? 'granted' : 'denied',
+              'ad_user_data': p[5] ? 'granted' : 'denied',
+              'ad_personalization': p[5] ? 'granted' : 'denied'
             });
           }
         }
       };
     </script>
-    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3949797.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
   </head>
