@@ -153,10 +153,8 @@
         "perPurposeConsent": true,
         "callback": {
           "onPreferenceExpressedOrNotNeeded": function(preference) {
-            console.log('[iubenda] preference:', preference);
             if (!preference) return;
             var p = preference.purposes || {};
-            console.log('[iubenda] purposes:', p);
             var analyticsGranted = p[4] ? 'granted' : 'denied';
             gtag('consent', 'update', {
               'analytics_storage': analyticsGranted,
@@ -164,14 +162,12 @@
               'ad_user_data': p[5] ? 'granted' : 'denied',
               'ad_personalization': p[5] ? 'granted' : 'denied'
             });
-            console.log('[iubenda] consent updated, analytics_storage =', analyticsGranted);
             if (analyticsGranted === 'granted') {
               gtag('event', 'page_view', {
                 page_location: window.location.href,
                 page_title: document.title,
                 page_path: window.location.pathname
               });
-              console.log('[iubenda] page_view fired post-consent');
             }
           }
         }
