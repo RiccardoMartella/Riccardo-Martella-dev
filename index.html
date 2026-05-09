@@ -153,14 +153,17 @@
         "perPurposeConsent": true,
         "callback": {
           "onPreferenceExpressedOrNotNeeded": function(preference) {
+            console.log('[iubenda] preference:', preference);
             if (!preference) return;
             var p = preference.purposes || {};
+            console.log('[iubenda] purposes:', p);
             gtag('consent', 'update', {
               'analytics_storage': p[4] ? 'granted' : 'denied',
               'ad_storage': p[5] ? 'granted' : 'denied',
               'ad_user_data': p[5] ? 'granted' : 'denied',
               'ad_personalization': p[5] ? 'granted' : 'denied'
             });
+            console.log('[iubenda] consent updated, analytics_storage =', p[4] ? 'granted' : 'denied');
           }
         }
       };
