@@ -210,4 +210,20 @@ export const seoConfigs = {
     }
   },
 
+  hmVersions: {
+    en: {
+      title: 'Homing Missile Version History - Changelog & Updates',
+      description: 'Complete version history and changelog for the Homing Missile Unity asset. See all updates, new features, bug fixes and improvements.',
+      keywords: 'Homing Missile versions, changelog, update history, Unity asset updates, version history',
+      url: 'https://riccardomartella-dev.com/homing-missile/versions'
+    },
+    it: {
+      title: 'Cronologia Versioni Homing Missile - Changelog e Aggiornamenti',
+      description: 'Cronologia completa delle versioni e changelog per l\'asset Unity Homing Missile. Vedi tutti gli aggiornamenti, nuove funzionalità, correzioni di bug e miglioramenti.',
+      keywords: 'Versioni Homing Missile, changelog, cronologia aggiornamenti, aggiornamenti asset Unity, cronologia versioni',
+      url: 'https://riccardomartella-dev.com/it/homing-missile/versions',
+      locale: 'it_IT'
+    }
+  },
+
 }

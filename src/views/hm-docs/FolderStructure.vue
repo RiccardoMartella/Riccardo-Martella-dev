@@ -167,6 +167,11 @@
                     </li>
                   </ul>
                 </li>
+                <li class="hm-vtree-folder">SkyBox/
+                  <ul>
+                    <li class="hm-vtree-file">Skybox_Dark.mat</li>
+                  </ul>
+                </li>
                 <li class="hm-vtree-folder">texture/
                   <ul>
                     <li class="hm-vtree-folder">Plane/
@@ -290,6 +295,11 @@
             <td><span class="hm-field-name">Scripts/Utility/</span></td>
             <td v-if="locale === 'en'">Three helper scripts: explosion light fade, scene switching, and animator auto-play.</td>
             <td v-else>Tre script di utilità: dissolvenza luce esplosione, cambio scena e auto-play dell'animator.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">skybox/</span></td>
+            <td v-if="locale === 'en'">Contains <span class="hm-code">Skybox_Dark.mat</span> — the dark Skybox/Procedural material used by both demo scenes.</td>
+            <td v-else>Contiene <span class="hm-code">Skybox_Dark.mat</span> — il materiale Skybox/Procedural scuro usato da entrambe le scene demo.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">texture/</span></td>

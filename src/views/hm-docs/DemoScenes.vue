@@ -147,6 +147,22 @@
     </div>
 
     <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
+      <strong>Environment Lighting</strong>
+      Both demo scenes ship with a custom dark skybox (<span class="hm-code">skybox/Skybox_Dark.mat</span> —
+      a Skybox/Procedural material with low exposure and a deep-blue tint) and a reduced ambient
+      intensity of <span class="hm-code">0.8</span>. This keeps the cyan military HUD readable and gives
+      the missile trails and explosions more contrast. Swap the scene's Skybox Material under
+      <strong>Window &gt; Rendering &gt; Lighting</strong> if you prefer a brighter environment.
+    </div>
+    <div class="hm-alert hm-alert-info" v-else>
+      <strong>Illuminazione Ambiente</strong>
+      Entrambe le scene demo includono uno skybox scuro personalizzato (<span class="hm-code">skybox/Skybox_Dark.mat</span> —
+      un materiale Skybox/Procedural con esposizione bassa e tinta blu scura) e un'intensità ambientale
+      ridotta a <span class="hm-code">0.8</span>. Questo mantiene leggibile l'HUD militare ciano e dà più
+      contrasto alle scie dei missili e alle esplosioni. Cambia il Skybox Material della scena in
+      <strong>Window &gt; Rendering &gt; Lighting</strong> se preferisci un ambiente più luminoso.
+    </div>
+    <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
       <strong>Scene Switching</strong>
       Both scenes include the <span class="hm-code">SceneSwitcher</span> component configured with
       <span class="hm-code">1</span>. Make sure both scenes are added to your

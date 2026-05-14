@@ -161,7 +161,7 @@
             <td><span class="hm-field-name">Crosshair</span></td>
             <td>40 px</td>
             <td>40 px</td>
-            <td>4 lines + center dot. Centered on screen.</td>
+            <td>4 L-shaped corners + center dot. Size, corner length, thickness, rotation and colour are all driven by LauncherHUDController. Centered on screen.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Lock-on overlay</span></td>
@@ -214,7 +214,7 @@
             <td><span class="hm-field-name">Mirino</span></td>
             <td>40 px</td>
             <td>40 px</td>
-            <td>4 linee + punto centrale. Centrato sullo schermo.</td>
+            <td>4 angoli a L + punto centrale. Dimensione, lunghezza degli angoli, spessore, rotazione e colore sono tutti gestiti da LauncherHUDController. Centrato sullo schermo.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Overlay aggancio</span></td>

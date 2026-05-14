@@ -48,6 +48,11 @@
                 }}</RouterLink>
               </li>
               <li class="mb-2">
+                <RouterLink :to="localePath('/homing-missile/versions')" class="hm-footer-link">{{
+                  $t('footer.versionHistory')
+                }}</RouterLink>
+              </li>
+              <li class="mb-2">
                 <RouterLink :to="localePath('/homing-missile/report-bug#bug')" class="hm-footer-link">{{
                   $t('footer.support')
                 }}</RouterLink>

@@ -263,6 +263,13 @@
             <td v-if="locale === 'en'">Frequency (Hz) of the continuous tone played once a lock is acquired.</td>
             <td v-else>Frequenza (Hz) del tono continuo riprodotto una volta acquisito l'aggancio.</td>
           </tr>
+          <tr>
+            <td><span class="hm-field-name">lockedToneVolume</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">0.4</span></td>
+            <td v-if="locale === 'en'">Volume (0–1) of the continuous locked-on tone. Independent from <span class="hm-code">beepVolume</span>, so the steady lock tone can be balanced separately from the search beeps.</td>
+            <td v-else>Volume (0–1) del tono continuo di aggancio acquisito. Indipendente da <span class="hm-code">beepVolume</span>, così il tono fisso di aggancio può essere bilanciato separatamente dai beep di ricerca.</td>
+          </tr>
         </tbody>
       </table>
     </div>

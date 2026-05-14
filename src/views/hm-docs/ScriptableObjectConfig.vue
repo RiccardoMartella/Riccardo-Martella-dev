@@ -110,7 +110,7 @@
             </tr>
             <tr>
               <td><span class="hm-field-name">Lock-On Audio</span></td>
-              <td><span class="hm-code">beepFrequency</span>, <span class="hm-code">beepDuration</span>, <span class="hm-code">beepVolume</span>, <span class="hm-code">beepIntervalMax</span>, <span class="hm-code">beepIntervalMin</span>, <span class="hm-code">lockedToneFrequency</span></td>
+              <td><span class="hm-code">beepFrequency</span>, <span class="hm-code">beepDuration</span>, <span class="hm-code">beepVolume</span>, <span class="hm-code">beepIntervalMax</span>, <span class="hm-code">beepIntervalMin</span>, <span class="hm-code">lockedToneFrequency</span>, <span class="hm-code">lockedToneVolume</span></td>
             </tr>
           </tbody>
         </table>

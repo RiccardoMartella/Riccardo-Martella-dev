@@ -81,6 +81,8 @@ function generateRoutes() {
   routes.push({ path: '/it/homing-missile/privacy', name: 'hm-privacy-it', component: () => import('@/views/HMPrivacy.vue'), meta: { locale: 'it' } })
   routes.push({ path: '/homing-missile/cookie-policy', name: 'hm-cookie-policy', component: () => import('@/views/HMCookiePolicy.vue'), meta: { locale: 'en' } })
   routes.push({ path: '/it/homing-missile/cookie-policy', name: 'hm-cookie-policy-it', component: () => import('@/views/HMCookiePolicy.vue'), meta: { locale: 'it' } })
+  routes.push({ path: '/homing-missile/versions', name: 'hm-versions', component: () => import('@/views/HMVersions.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile/versions', name: 'hm-versions-it', component: () => import('@/views/HMVersions.vue'), meta: { locale: 'it' } })
 
   // Shared pages (contacts, pricing, etc.)
   for (const page of pages) {
