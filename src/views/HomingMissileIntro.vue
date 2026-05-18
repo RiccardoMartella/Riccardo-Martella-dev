@@ -185,6 +185,10 @@
       <div id="demo" class="hm-demo-section">
         <h2 class="hm-section-title">{{ $t('hmIntro.demoTitle') }}</h2>
         <p class="hm-demo-lead">{{ $t('hmIntro.demoLead') }}</p>
+        <div class="hm-demo-v13-notice">
+          <i class="bi bi-rocket-takeoff-fill me-2"></i>
+          <span><strong>{{ $t('hmIntro.v13NoticeStrong') }}</strong> {{ $t('hmIntro.v13NoticeText') }}</span>
+        </div>
         <div class="hm-demo-disclaimer">
           <i class="bi bi-exclamation-triangle-fill me-2"></i>
           <span>{{ $t('hmIntro.disclaimerText') }}</span>
@@ -864,6 +868,25 @@ export default {
   color: rgba(225, 235, 242, 0.55);
   margin-bottom: 1.5rem;
   max-width: 600px;
+}
+
+.hm-demo-v13-notice {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #ffe9b8;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.18), rgba(85, 195, 235, 0.10));
+  border: 1px solid rgba(255, 165, 0, 0.45);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.12);
+}
+
+.hm-demo-v13-notice strong {
+  color: #ffd27a;
+  margin-right: 4px;
 }
 
 .hm-demo-disclaimer {

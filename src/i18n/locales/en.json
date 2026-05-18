@@ -1029,6 +1029,8 @@
     "backToHub": "All Assets",
     "demoTitle": "Interactive Demo",
     "demoLead": "Try the Homing Missile system directly in your browser. Launch missiles, lock on targets and see the PN guidance in action.",
+    "v13NoticeStrong": "Coming soon in v1.3:",
+    "v13NoticeText": "first-person missile mode in demo scene 2 — pilot the missile yourself. Releasing in the next few days.",
     "disclaimerText": "This demo may not reflect the latest version of the project. It is a different, non-optimized build, so you may experience visual or audio bugs. It is only meant as a quick representation of the asset.",
     "demoClickStrong": "Click inside the demo",
     "demoClickText": "to interact. Use mouse to aim and fire.",
