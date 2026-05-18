@@ -272,8 +272,8 @@ export default {
 .demo-frame-container {
   position: relative;
   width: 100%;
-  min-height: 70vh;
-  padding-top: 56.25%; /* 16:9 */
+  height: 90vh;
+  min-height: 600px;
 }
 
 .placeholder-content {

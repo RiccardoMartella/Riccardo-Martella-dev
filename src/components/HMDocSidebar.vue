@@ -32,89 +32,107 @@
           {{ $t('hmSidebar.items.howItWorks') }}
         </router-link>
       </li>
+      <li>
+        <router-link :to="localePath('/homing-missile/docs/manual-guidance')" class="hm-sidebar-link">
+          <span class="hm-sidebar-num">05</span>
+          {{ $t('hmSidebar.items.manualGuidance') }}
+        </router-link>
+      </li>
       <div class="hm-sidebar-divider"></div>
       <li>
         <router-link :to="localePath('/homing-missile/docs/homing-missile-script')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">05</span>
+          <span class="hm-sidebar-num">06</span>
           {{ $t('hmSidebar.items.homingMissileScript') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/missile-launcher')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">06</span>
+          <span class="hm-sidebar-num">07</span>
           {{ $t('hmSidebar.items.missileLauncherScript') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/launcher-controller')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">07</span>
+          <span class="hm-sidebar-num">08</span>
           {{ $t('hmSidebar.items.launcherControllerScript') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/player-controller')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">08</span>
+          <span class="hm-sidebar-num">09</span>
           {{ $t('hmSidebar.items.playerControllerScript') }}
         </router-link>
       </li>
       <li>
+        <router-link :to="localePath('/homing-missile/docs/player-guided-missile')" class="hm-sidebar-link">
+          <span class="hm-sidebar-num">10</span>
+          {{ $t('hmSidebar.items.playerGuidedMissileScript') }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="localePath('/homing-missile/docs/missile-camera-overlay')" class="hm-sidebar-link">
+          <span class="hm-sidebar-num">11</span>
+          {{ $t('hmSidebar.items.missileCameraOverlayScript') }}
+        </router-link>
+      </li>
+      <li>
         <router-link :to="localePath('/homing-missile/docs/hud-controller')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">09</span>
+          <span class="hm-sidebar-num">12</span>
           {{ $t('hmSidebar.items.hudControllerScript') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/target-utility')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">10</span>
+          <span class="hm-sidebar-num">13</span>
           {{ $t('hmSidebar.items.targetUtilityScripts') }}
         </router-link>
       </li>
       <div class="hm-sidebar-divider"></div>
       <li>
         <router-link :to="localePath('/homing-missile/docs/hud-reference')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">11</span>
+          <span class="hm-sidebar-num">14</span>
           {{ $t('hmSidebar.items.hudReference') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/integration')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">12</span>
+          <span class="hm-sidebar-num">15</span>
           {{ $t('hmSidebar.items.integration') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/scriptableobject-config')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">13</span>
+          <span class="hm-sidebar-num">16</span>
           {{ $t('hmSidebar.items.scriptableObjectConfig') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/setup-checklist')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">14</span>
+          <span class="hm-sidebar-num">17</span>
           {{ $t('hmSidebar.items.setupChecklist') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/demo-scenes')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">15</span>
+          <span class="hm-sidebar-num">18</span>
           {{ $t('hmSidebar.items.demoScenes') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/technical-notes')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">16</span>
+          <span class="hm-sidebar-num">19</span>
           {{ $t('hmSidebar.items.technicalNotes') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/launcher-weapons-material')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">17</span>
+          <span class="hm-sidebar-num">20</span>
           {{ $t('hmSidebar.items.launcherWeaponsMaterial') }}
         </router-link>
       </li>
       <li>
         <router-link :to="localePath('/homing-missile/docs/included-models')" class="hm-sidebar-link">
-          <span class="hm-sidebar-num">18</span>
+          <span class="hm-sidebar-num">21</span>
           {{ $t('hmSidebar.items.includedModels') }}
         </router-link>
       </li>

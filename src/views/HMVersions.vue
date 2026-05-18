@@ -124,10 +124,43 @@ export default {
       const t = this.t
       return [
         {
+          number: '1.3.0',
+          version: t('hmVersions.v130version'),
+          date: t('hmVersions.v130date'),
+          isLatest: true,
+          changes: [
+            t('hmVersions.v130c1'),
+            t('hmVersions.v130c2'),
+            t('hmVersions.v130c3'),
+            t('hmVersions.v130c4'),
+            t('hmVersions.v130c5'),
+            t('hmVersions.v130c6'),
+            t('hmVersions.v130c7'),
+            t('hmVersions.v130c8'),
+            t('hmVersions.v130c9')
+          ],
+          requirements: {
+            unity: t('hmVersions.unityReq')
+          }
+        },
+        {
+          number: '1.2.0',
+          version: t('hmVersions.v120version'),
+          date: t('hmVersions.v120date'),
+          isLatest: false,
+          changes: [
+            t('hmVersions.v120c1'),
+            t('hmVersions.v120c2')
+          ],
+          requirements: {
+            unity: t('hmVersions.unityReq')
+          }
+        },
+        {
           number: '1.1.0',
           version: t('hmVersions.v110version'),
           date: t('hmVersions.v110date'),
-          isLatest: true,
+          isLatest: false,
           changes: [
             t('hmVersions.v110c1'),
             t('hmVersions.v110c2'),
@@ -138,7 +171,7 @@ export default {
             t('hmVersions.v110c7')
           ],
           requirements: {
-            unity: t('hmVersions.unityReq')
+            unity: 'Unity 6 (6000.0+)'
           }
         }
       ]
