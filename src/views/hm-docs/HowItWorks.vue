@@ -197,6 +197,138 @@
       </ol>
     </div>
 
+    <div class="hm-doc-section">
+      <div v-if="locale === 'en'" class="hm-doc-section-title">Player-Guided Missile Flow</div>
+      <div v-else class="hm-doc-section-title">Flusso del Missile Guidato dal Player</div>
+
+      <p v-if="locale === 'en'">
+        When the launcher's <span class="hm-code">playerGuided</span> flag is enabled, steps 5–7 above
+        (target lock-on, lock progress, lock acquired) are <strong>skipped entirely</strong>: the missile
+        is fired without a target and the player steers it from a first-person onboard camera until detonation.
+        Steps 1–4 and 8 still apply (scene start, target discovery, look input, turret rotation, fire).
+        From step 9 onward the flight is replaced by the guided sequence below.
+        See the <router-link :to="localePath('/homing-missile/docs/manual-guidance')">Manual Guidance</router-link>
+        page for the full reference.
+      </p>
+      <p v-else>
+        Quando il flag <span class="hm-code">playerGuided</span> del launcher è attivo, gli step 5–7 sopra
+        (aggancio bersaglio, progresso aggancio, lock acquisito) vengono <strong>saltati completamente</strong>:
+        il missile viene lanciato senza bersaglio e il player lo guida da una camera onboard in prima persona
+        fino alla detonazione. Gli step 1–4 e 8 restano validi (avvio scena, scoperta bersagli, input look,
+        rotazione torretta, fuoco). Dallo step 9 in poi il volo è sostituito dalla sequenza guidata qui sotto.
+        Vedi la pagina <router-link :to="localePath('/homing-missile/docs/manual-guidance')">Guida Manuale</router-link>
+        per il riferimento completo.
+      </p>
+
+      <ol class="hm-step-list">
+        <li class="hm-step-item">
+          <span class="hm-step-num">G1</span>
+          <span v-if="locale === 'en'" class="hm-step-text">
+            <strong>Fire (no lock required):</strong> <span class="hm-code">MissileLauncher.Fire()</span>
+            instantiates the missile prefab and calls
+            <span class="hm-code">HomingMissile.Initialize(target=null, velocity, launcherRoot, extraIgnoreRoots)</span>.
+            All colliders on the launcher root — plus anything added to <span class="hm-code">extraIgnoreRoots</span> —
+            are ignored so the missile cannot self-collide on spawn.
+          </span>
+          <span v-else class="hm-step-text">
+            <strong>Fuoco (senza lock):</strong> <span class="hm-code">MissileLauncher.Fire()</span>
+            istanzia il prefab del missile e chiama
+            <span class="hm-code">HomingMissile.Initialize(target=null, velocity, launcherRoot, extraIgnoreRoots)</span>.
+            Tutti i collider sulla root del launcher — più quelli aggiunti a <span class="hm-code">extraIgnoreRoots</span> —
+            vengono ignorati così il missile non collide con se stesso al lancio.
+          </span>
+        </li>
+        <li class="hm-step-item">
+          <span class="hm-step-num">G2</span>
+          <span v-if="locale === 'en'" class="hm-step-text">
+            <strong>Engage manual guidance:</strong> <span class="hm-code">PlayerGuidedMissile.Engage()</span>
+            sets <span class="hm-code">HomingMissile.manualGuidanceActive = true</span>, which bypasses
+            Proportional Navigation in <span class="hm-code">FixedUpdate</span>, ensures the onboard
+            <span class="hm-code">Camera</span> exists, and applies the Rigidbody interpolation defined
+            in <span class="hm-code">PlayerGuidedMissileConfig</span>.
+          </span>
+          <span v-else class="hm-step-text">
+            <strong>Attivazione guida manuale:</strong> <span class="hm-code">PlayerGuidedMissile.Engage()</span>
+            imposta <span class="hm-code">HomingMissile.manualGuidanceActive = true</span>, bypassando
+            la Navigazione Proporzionale in <span class="hm-code">FixedUpdate</span>, garantisce l'esistenza
+            della <span class="hm-code">Camera</span> onboard e applica l'interpolazione del Rigidbody definita in
+            <span class="hm-code">PlayerGuidedMissileConfig</span>.
+          </span>
+        </li>
+        <li class="hm-step-item">
+          <span class="hm-step-num">G3</span>
+          <span v-if="locale === 'en'" class="hm-step-text">
+            <strong>Camera handoff:</strong> <span class="hm-code">MissileLauncher</span> raises
+            <span class="hm-code">OnGuidedMissileLaunched</span>. <span class="hm-code">PlayerController</span>
+            subscribes to it, hides the launcher HUD via <span class="hm-code">LauncherHUDController.SetHidden(true)</span>,
+            enables the missile's onboard camera, and adds the <span class="hm-code">MissileCameraOverlay</span> component
+            (auto-created if not already on the prefab).
+          </span>
+          <span v-else class="hm-step-text">
+            <strong>Handoff camera:</strong> <span class="hm-code">MissileLauncher</span> emette
+            <span class="hm-code">OnGuidedMissileLaunched</span>. <span class="hm-code">PlayerController</span>
+            si iscrive all'evento, nasconde l'HUD del launcher tramite
+            <span class="hm-code">LauncherHUDController.SetHidden(true)</span>, attiva la camera onboard del missile
+            e aggiunge il componente <span class="hm-code">MissileCameraOverlay</span>
+            (auto-creato se non è già presente sul prefab).
+          </span>
+        </li>
+        <li class="hm-step-item">
+          <span class="hm-step-num">G4</span>
+          <span v-if="locale === 'en'" class="hm-step-text">
+            <strong>Steering loop:</strong> The <span class="hm-code">Look</span> action from the
+            <span class="hm-code">"Rocket"</span> map is rerouted by <span class="hm-code">PlayerController</span>
+            to <span class="hm-code">PlayerGuidedMissile.SetSteerInput()</span>. In
+            <span class="hm-code">FixedUpdate</span> at 50 Hz the missile applies yaw and pitch clamped by
+            <span class="hm-code">maxTurnRate</span> and bends its velocity vector toward
+            <span class="hm-code">transform.forward</span> at a rate controlled by
+            <span class="hm-code">velocityAlignSpeed</span>.
+          </span>
+          <span v-else class="hm-step-text">
+            <strong>Loop di steering:</strong> L'azione <span class="hm-code">Look</span> della action map
+            <span class="hm-code">"Rocket"</span> viene reindirizzata da <span class="hm-code">PlayerController</span>
+            a <span class="hm-code">PlayerGuidedMissile.SetSteerInput()</span>. In
+            <span class="hm-code">FixedUpdate</span> a 50 Hz il missile applica yaw e pitch clampati da
+            <span class="hm-code">maxTurnRate</span> e piega il vettore velocità verso
+            <span class="hm-code">transform.forward</span> a una velocità controllata da
+            <span class="hm-code">velocityAlignSpeed</span>.
+          </span>
+        </li>
+        <li class="hm-step-item">
+          <span class="hm-step-num">G5</span>
+          <span v-if="locale === 'en'" class="hm-step-text">
+            <strong>Overlay render:</strong> The missile camera renders into a <span class="hm-code">RenderTexture</span>;
+            <span class="hm-code">MissileCameraOverlay.OnGUI</span> blits it fullscreen through
+            <span class="hm-code">Shaders/MissileCamFX.shader</span> (saturation, contrast, brightness, vignette, tint),
+            then draws the IMGUI HUD on top: scanlines, glitch bands, TV noise, crosshair, REC blink, warning bar, header.
+          </span>
+          <span v-else class="hm-step-text">
+            <strong>Render overlay:</strong> La camera del missile renderizza in una <span class="hm-code">RenderTexture</span>;
+            <span class="hm-code">MissileCameraOverlay.OnGUI</span> la blitta a tutto schermo attraverso
+            <span class="hm-code">Shaders/MissileCamFX.shader</span> (saturazione, contrasto, luminosità, vignette, tint),
+            poi disegna sopra l'HUD IMGUI: scanlines, glitch, rumore TV, mirino, lampeggio REC, barra di warning, header.
+          </span>
+        </li>
+        <li class="hm-step-item">
+          <span class="hm-step-num">G6</span>
+          <span v-if="locale === 'en'" class="hm-step-text">
+            <strong>Detonation &amp; restore:</strong> Proximity / direct collision triggers
+            <span class="hm-code">HomingMissile.Explode()</span> exactly as in the auto-homing flow (steps 10–11).
+            On detonation <span class="hm-code">OnDetonated</span> fires; <span class="hm-code">PlayerController.ExitPiloting</span>
+            re-shows the launcher HUD and reroutes Look back to the turret.
+            <span class="hm-code">MissileCameraOverlay.OnDestroy</span> releases the RenderTexture, material and procedural textures.
+          </span>
+          <span v-else class="hm-step-text">
+            <strong>Detonazione &amp; ripristino:</strong> Prossimità / collisione diretta triggerano
+            <span class="hm-code">HomingMissile.Explode()</span> esattamente come nel flusso auto-homing (step 10–11).
+            Alla detonazione viene emesso <span class="hm-code">OnDetonated</span>;
+            <span class="hm-code">PlayerController.ExitPiloting</span> riattiva l'HUD del launcher e reindirizza Look alla torretta.
+            <span class="hm-code">MissileCameraOverlay.OnDestroy</span> rilascia la RenderTexture, il materiale e le texture procedurali.
+          </span>
+        </li>
+      </ol>
+    </div>
+
     <div class="hm-alert hm-alert-info">
       <template v-if="locale === 'en'">
         <strong>Miss Detection</strong>
@@ -216,12 +348,14 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
 
 export default {
   name: 'HMHowItWorks',
   setup() {
     const { locale } = useI18n()
-    return { locale }
+    const { localePath } = useLocalePath()
+    return { locale, localePath }
   }
 }
 </script>

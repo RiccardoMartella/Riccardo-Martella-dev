@@ -37,6 +37,7 @@
                   </ul>
                 </li>
                 <li class="hm-vtree-file">Documentation.pdf</li>
+                <li class="hm-vtree-file">DocumentationOffline.pdf</li>
                 <li class="hm-vtree-file">HomingMissile.asmdef</li>
                 <li class="hm-vtree-folder">Input/
                   <ul>
@@ -139,6 +140,8 @@
                         <li class="hm-vtree-file">LauncherControllerConfig.cs</li>
                         <li class="hm-vtree-file">MissileConfig.cs</li>
                         <li class="hm-vtree-file">MissileLauncher.cs</li>
+                        <li class="hm-vtree-file">PlayerGuidedMissile.cs</li>
+                        <li class="hm-vtree-file">PlayerGuidedMissileConfig.cs</li>
                         <li class="hm-vtree-file">TargetHealth.cs</li>
                       </ul>
                     </li>
@@ -156,6 +159,8 @@
                     <li class="hm-vtree-folder">UI/
                       <ul>
                         <li class="hm-vtree-file">LauncherHUDController.cs</li>
+                        <li class="hm-vtree-file">MissileCameraOverlay.cs</li>
+                        <li class="hm-vtree-file">MissileCameraOverlayConfig.cs</li>
                       </ul>
                     </li>
                     <li class="hm-vtree-folder">Utility/
@@ -163,8 +168,14 @@
                         <li class="hm-vtree-file">ExplosionLightFade.cs</li>
                         <li class="hm-vtree-file">SceneSwitcher.cs</li>
                         <li class="hm-vtree-file">SessionAnimator.cs</li>
+                        <li class="hm-vtree-file">TestTerrainGenerator.cs</li>
                       </ul>
                     </li>
+                  </ul>
+                </li>
+                <li class="hm-vtree-folder">Shaders/
+                  <ul>
+                    <li class="hm-vtree-file">MissileCamFX.shader</li>
                   </ul>
                 </li>
                 <li class="hm-vtree-folder">SkyBox/
@@ -210,6 +221,7 @@
                       <ul>
                         <li class="hm-vtree-file">LauncherHUD.uss</li>
                         <li class="hm-vtree-file">LauncherHUD.uxml</li>
+                        <li class="hm-vtree-file">PanelSettings.asset</li>
                       </ul>
                     </li>
                   </ul>
@@ -273,8 +285,8 @@
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/Core/</span></td>
-            <td v-if="locale === 'en'">The primary runtime scripts: missile flight controller, launcher manager, turret rotation controller, ScriptableObject configs (<span class="hm-code">MissileConfig</span>, <span class="hm-code">LauncherConfig</span>, <span class="hm-code">LauncherControllerConfig</span>), and target health.</td>
-            <td v-else>Gli script runtime principali: controllore di volo del missile, gestore del lanciatore, controllore di rotazione della torretta, configurazioni ScriptableObject (<span class="hm-code">MissileConfig</span>, <span class="hm-code">LauncherConfig</span>, <span class="hm-code">LauncherControllerConfig</span>) e salute del bersaglio.</td>
+            <td v-if="locale === 'en'">The primary runtime scripts: missile flight controller, launcher manager, turret rotation controller, player-guided missile component (<span class="hm-code">PlayerGuidedMissile.cs</span>), ScriptableObject configs (<span class="hm-code">MissileConfig</span>, <span class="hm-code">LauncherConfig</span>, <span class="hm-code">LauncherControllerConfig</span>, <span class="hm-code">PlayerGuidedMissileConfig</span>) and target health.</td>
+            <td v-else>Gli script runtime principali: controllore di volo del missile, gestore del lanciatore, controllore di rotazione della torretta, componente per il missile guidato dal player (<span class="hm-code">PlayerGuidedMissile.cs</span>), configurazioni ScriptableObject (<span class="hm-code">MissileConfig</span>, <span class="hm-code">LauncherConfig</span>, <span class="hm-code">LauncherControllerConfig</span>, <span class="hm-code">PlayerGuidedMissileConfig</span>) e salute del bersaglio.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/Editor/</span></td>
@@ -288,13 +300,18 @@
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/UI/</span></td>
-            <td v-if="locale === 'en'">The HUD controller. Subscribes to launcher events and updates the UI Toolkit document each frame.</td>
-            <td v-else>Il controllore dell'HUD. Si iscrive agli eventi del lanciatore e aggiorna il documento UI Toolkit ad ogni frame.</td>
+            <td v-if="locale === 'en'">The HUD controller (subscribes to launcher events and updates the UI Toolkit document each frame) and the missile-cam retro overlay (<span class="hm-code">MissileCameraOverlay.cs</span> + <span class="hm-code">MissileCameraOverlayConfig.cs</span>) used when piloting a guided missile.</td>
+            <td v-else>Il controllore dell'HUD (si iscrive agli eventi del lanciatore e aggiorna il documento UI Toolkit ad ogni frame) e l'overlay retrò della missile-cam (<span class="hm-code">MissileCameraOverlay.cs</span> + <span class="hm-code">MissileCameraOverlayConfig.cs</span>) usato durante il pilotaggio di un missile guidato.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/Utility/</span></td>
-            <td v-if="locale === 'en'">Three helper scripts: explosion light fade, scene switching, and animator auto-play.</td>
-            <td v-else>Tre script di utilità: dissolvenza luce esplosione, cambio scena e auto-play dell'animator.</td>
+            <td v-if="locale === 'en'">Helper scripts: explosion light fade, scene switching, animator auto-play and <span class="hm-code">TestTerrainGenerator.cs</span> (procedural terrain used by the demo scenes).</td>
+            <td v-else>Script di utilità: dissolvenza luce esplosione, cambio scena, auto-play dell'animator e <span class="hm-code">TestTerrainGenerator.cs</span> (terreno procedurale usato dalle scene demo).</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">Shaders/</span></td>
+            <td v-if="locale === 'en'">Contains <span class="hm-code">MissileCamFX.shader</span> — the pipeline-agnostic post-FX shader (saturation, contrast, brightness, vignette, tint) blitted by <span class="hm-code">MissileCameraOverlay</span>. Path: <span class="hm-code">Hidden/HomingMissile/MissileCamFX</span>.</td>
+            <td v-else>Contiene <span class="hm-code">MissileCamFX.shader</span> — lo shader post-FX agnostico rispetto alla pipeline (saturazione, contrasto, luminosità, vignette, tint) blittato da <span class="hm-code">MissileCameraOverlay</span>. Path: <span class="hm-code">Hidden/HomingMissile/MissileCamFX</span>.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">skybox/</span></td>
@@ -308,8 +325,8 @@
           </tr>
           <tr>
             <td><span class="hm-field-name">UI/</span></td>
-            <td v-if="locale === 'en'">The UI Toolkit source files for the HUD — the UXML layout and USS stylesheet inside <span class="hm-code">LauncherHUD/</span>.</td>
-            <td v-else>I file sorgente UI Toolkit per l'HUD — il layout UXML e il foglio di stile USS dentro <span class="hm-code">LauncherHUD/</span>.</td>
+            <td v-if="locale === 'en'">The UI Toolkit source files for the HUD inside <span class="hm-code">LauncherHUD/</span>: the UXML layout, the USS stylesheet and <span class="hm-code">PanelSettings.asset</span> — the panel configuration (scale mode, reference resolution, sort order) that the <span class="hm-code">UIDocument</span> on the launcher prefab points to.</td>
+            <td v-else>I file sorgente UI Toolkit per l'HUD dentro <span class="hm-code">LauncherHUD/</span>: il layout UXML, il foglio di stile USS e <span class="hm-code">PanelSettings.asset</span> — la configurazione del pannello (scale mode, risoluzione di riferimento, sort order) a cui punta lo <span class="hm-code">UIDocument</span> sul prefab del launcher.</td>
           </tr>
         </tbody>
       </table>
