@@ -180,14 +180,14 @@ export const seoConfigs = {
 
   hmPricing: {
     en: {
-      title: 'Homing Missile Pricing - Unity Asset for Missile Systems - $19',
-      description: 'Homing Missile Unity asset available for $19 one-time purchase. Complete missile system with launcher, HUD, demo scenes, and full documentation.',
+      title: 'Homing Missile Pricing - Unity Asset for Missile Systems - $27.99',
+      description: 'Homing Missile Unity asset available for $27.99 one-time purchase. Complete missile system with launcher, HUD, demo scenes, and full documentation.',
       keywords: 'Homing Missile price, Unity asset price, missile system tool, Unity asset store',
       url: 'https://riccardomartella-dev.com/homing-missile/pricing'
     },
     it: {
-      title: 'Prezzi Homing Missile - Asset Unity per Sistemi di Missili - $19',
-      description: 'Asset Unity Homing Missile disponibile a $19 acquisto una tantum. Sistema completo di missili con lanciatore, HUD, scene demo e documentazione completa.',
+      title: 'Prezzi Homing Missile - Asset Unity per Sistemi di Missili - $27.99',
+      description: 'Asset Unity Homing Missile disponibile a $27.99 acquisto una tantum. Sistema completo di missili con lanciatore, HUD, scene demo e documentazione completa.',
       keywords: 'Prezzo Homing Missile, prezzo asset Unity, strumento sistema missili, Unity asset store',
       url: 'https://riccardomartella-dev.com/it/homing-missile/pricing',
       locale: 'it_IT'
