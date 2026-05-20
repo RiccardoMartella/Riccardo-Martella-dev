@@ -185,10 +185,10 @@
       <div id="demo" class="hm-demo-section">
         <h2 class="hm-section-title">{{ $t('hmIntro.demoTitle') }}</h2>
         <p class="hm-demo-lead">{{ $t('hmIntro.demoLead') }}</p>
-        <div class="hm-demo-v13-notice">
+        <!-- <div class="hm-demo-v13-notice">
           <i class="bi bi-rocket-takeoff-fill me-2"></i>
           <span><strong>{{ $t('hmIntro.v13NoticeStrong') }}</strong> {{ $t('hmIntro.v13NoticeText') }}</span>
-        </div>
+        </div> -->
         <div class="hm-demo-disclaimer">
           <i class="bi bi-exclamation-triangle-fill me-2"></i>
           <span>{{ $t('hmIntro.disclaimerText') }}</span>
