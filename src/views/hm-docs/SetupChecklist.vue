@@ -15,12 +15,12 @@
       <div class="hm-doc-section-title" v-else>Passaggio 1 — Verificare i Requisiti</div>
       <div class="hm-content-block">
         <ul class="hm-checklist" v-if="locale === 'en'">
-          <li class="hm-checklist-item">Unity 6 (6000.0+) is open with a URP project.</li>
+          <li class="hm-checklist-item">Unity 6 (6000.0+) or Unity 2022.3.23f1 LTS is open with a URP project.</li>
           <li class="hm-checklist-item">The <strong>Input System</strong> package is installed (Package Manager &gt; Input System). Both <em>Input System</em> and <em>Active Input Handling</em> should be set to <strong>Input System Package (New)</strong> in Project Settings &gt; Player.</li>
           <li class="hm-checklist-item">The <span class="hm-code">HomingMissile</span> folder has been imported from the Asset Store.</li>
         </ul>
         <ul class="hm-checklist" v-else>
-          <li class="hm-checklist-item">Unity 6 (6000.0+) è aperto con un progetto URP.</li>
+          <li class="hm-checklist-item">Unity 6 (6000.0+) o Unity 2022.3.23f1 LTS è aperto con un progetto URP.</li>
           <li class="hm-checklist-item">Il pacchetto <strong>Input System</strong> è installato (Package Manager &gt; Input System). Sia <em>Input System</em> che <em>Active Input Handling</em> devono essere impostati su <strong>Input System Package (New)</strong> in Project Settings &gt; Player.</li>
           <li class="hm-checklist-item">La cartella <span class="hm-code">HomingMissile</span> è stata importata dall'Asset Store.</li>
         </ul>

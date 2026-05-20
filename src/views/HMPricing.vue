@@ -47,6 +47,10 @@
                     <i class="bi bi-check-circle-fill hm-check-icon me-2"></i>
                     <span>{{ $t('hmPricing.feature6') }}</span>
                   </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill hm-check-icon me-2"></i>
+                    <span>{{ $t('hmPricing.feature7') }}</span>
+                  </li>
                 </ul>
               </div>
 

@@ -58,9 +58,9 @@
         <tbody>
           <tr>
             <td><span class="hm-field-name">Unity</span></td>
-            <td><span class="hm-field-type">6000.0+</span></td>
-            <td v-if="locale === 'en'">Unity 6 (6000.x) required</td>
-            <td v-else>Richiesto Unity 6 (6000.x)</td>
+            <td><span class="hm-field-type">6000.0+ / 2022.3.23f1+</span></td>
+            <td v-if="locale === 'en'">Unity 6 (6000.x) or Unity 2022.3.23f1 LTS</td>
+            <td v-else>Unity 6 (6000.x) o Unity 2022.3.23f1 LTS</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Universal Render Pipeline</span></td>

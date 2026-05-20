@@ -116,6 +116,7 @@
               <p class="card-desc card-desc--hm">{{ $t('hub.hmCardDesc') }}</p>
               <div class="card-meta">
                 <span class="meta-item meta-item--hm"><span class="meta-dot meta-dot--cyan"></span>Unity 6</span>
+                <span class="meta-item meta-item--hm"><span class="meta-dot meta-dot--cyan"></span>Unity 2022.3 LTS</span>
                 <span class="meta-item meta-item--hm"><span class="meta-dot meta-dot--cyan"></span>URP 17</span>
               </div>
               <router-link :to="localePath('/homing-missile')" class="card-btn card-btn--hm">

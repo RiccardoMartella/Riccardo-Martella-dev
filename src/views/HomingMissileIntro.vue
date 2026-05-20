@@ -67,6 +67,7 @@
             </div>
             <div class="hm-hero-meta">
               <span class="hm-meta-pill"><span class="hm-dot hm-dot--cyan"></span>Unity 6</span>
+              <span class="hm-meta-pill"><span class="hm-dot hm-dot--cyan"></span>Unity 2022.3 LTS</span>
               <span class="hm-meta-pill"><span class="hm-dot hm-dot--cyan"></span>URP 17</span>
               <span class="hm-meta-pill"><span class="hm-dot hm-dot--green"></span>C# Namespace: HomingMissile</span>
               <span class="hm-meta-pill"><span class="hm-dot hm-dot--green"></span>Input System 1.14+</span>
