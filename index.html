@@ -130,7 +130,6 @@
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
-        'analytics_storage': 'denied',
         'wait_for_update': 500
       });
     </script>
@@ -155,20 +154,16 @@
           "onPreferenceExpressedOrNotNeeded": function(preference) {
             if (!preference) return;
             var p = preference.purposes || {};
-            var analyticsGranted = p[4] ? 'granted' : 'denied';
             gtag('consent', 'update', {
-              'analytics_storage': analyticsGranted,
               'ad_storage': p[5] ? 'granted' : 'denied',
               'ad_user_data': p[5] ? 'granted' : 'denied',
               'ad_personalization': p[5] ? 'granted' : 'denied'
             });
-            if (analyticsGranted === 'granted') {
-              gtag('event', 'page_view', {
-                page_location: window.location.href,
-                page_title: document.title,
-                page_path: window.location.pathname
-              });
-            }
+            gtag('event', 'page_view', {
+              page_location: window.location.href,
+              page_title: document.title,
+              page_path: window.location.pathname
+            });
           }
         }
       };
