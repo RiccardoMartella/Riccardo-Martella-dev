@@ -124,10 +124,24 @@ export default {
       const t = this.t
       return [
         {
+          number: '1.3.1',
+          version: t('hmVersions.v131version'),
+          date: t('hmVersions.v131date'),
+          isLatest: true,
+          changes: [
+            t('hmVersions.v131c1'),
+            t('hmVersions.v131c2'),
+            t('hmVersions.v131c3')
+          ],
+          requirements: {
+            unity: t('hmVersions.unityReq')
+          }
+        },
+        {
           number: '1.3.0',
           version: t('hmVersions.v130version'),
           date: t('hmVersions.v130date'),
-          isLatest: true,
+          isLatest: false,
           changes: [
             t('hmVersions.v130c1'),
             t('hmVersions.v130c2'),

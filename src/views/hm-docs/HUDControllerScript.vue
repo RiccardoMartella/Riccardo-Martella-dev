@@ -113,6 +113,41 @@
             <td v-else>Velocità di rotazione (gradi/secondo) dei bracket agganciati.</td>
           </tr>
           <tr>
+            <td><span class="hm-field-name">lockCornerLength</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">16.0</span></td>
+            <td v-if="locale === 'en'">Length (px) of the L-shaped arms on each lock-on corner bracket. Range 4–60.</td>
+            <td v-else>Lunghezza (px) dei bracci a L di ogni bracket angolare di aggancio. Range 4–60.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockLineThickness</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">2.0</span></td>
+            <td v-if="locale === 'en'">Stroke thickness (px) of the lock-on bracket lines. Range 1–12.</td>
+            <td v-else>Spessore (px) delle linee dei bracket di aggancio. Range 1–12.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockAcquiringColor</span></td>
+            <td><span class="hm-field-type">Color</span></td>
+            <td><span class="hm-field-default">rgba(.333,.765,.922,.90)</span></td>
+            <td v-if="locale === 'en'">Colour of the brackets, status label and progress bar while a target is being acquired (blinking phase).</td>
+            <td v-else>Colore dei bracket, dell'etichetta di stato e della barra di avanzamento mentre un bersaglio è in fase di acquisizione (fase di lampeggio).</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockLockedColor</span></td>
+            <td><span class="hm-field-type">Color</span></td>
+            <td><span class="hm-field-default">rgba(.157,.863,.392,1)</span></td>
+            <td v-if="locale === 'en'">Colour applied to the brackets, status label and progress bar once the target is fully locked.</td>
+            <td v-else>Colore applicato ai bracket, all'etichetta di stato e alla barra di avanzamento una volta che il bersaglio è completamente agganciato.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockDistanceFontSize</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">13.0</span></td>
+            <td v-if="locale === 'en'">Font size (px) of the target-distance label shown on the lock-on overlay. Range 6–40.</td>
+            <td v-else>Dimensione del carattere (px) dell'etichetta della distanza del bersaglio mostrata sull'overlay di aggancio. Range 6–40.</td>
+          </tr>
+          <tr>
             <td><span class="hm-field-name">lowAmmoWarningThreshold</span></td>
             <td><span class="hm-field-type">int</span></td>
             <td><span class="hm-field-default">3</span></td>
