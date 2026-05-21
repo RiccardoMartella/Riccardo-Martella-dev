@@ -156,6 +156,85 @@
           </tbody>
         </table>
       </div>
+
+      <!-- LauncherHUDConfig -->
+      <div class="hm-content-block" style="margin-top: 2rem;">
+        <h3 class="hm-doc-subsection-title">LauncherHUDConfig.cs</h3>
+        <p v-if="locale === 'en'">
+          <strong style="color: #E1EBF2;">Create:</strong> Assets &rarr; Create &rarr; Homing Missile &rarr; Launcher HUD Config<br>
+          <strong style="color: #E1EBF2;">Path:</strong> <span class="hm-code">Scripts/UI/LauncherHUDConfig.cs</span>
+        </p>
+        <p v-else>
+          <strong style="color: #E1EBF2;">Crea:</strong> Assets &rarr; Create &rarr; Homing Missile &rarr; Launcher HUD Config<br>
+          <strong style="color: #E1EBF2;">Percorso:</strong> <span class="hm-code">Scripts/UI/LauncherHUDConfig.cs</span>
+        </p>
+        <p v-if="locale === 'en'">
+          Overrides the Inspector fields of <span class="hm-code">LauncherHUDController</span>. When assigned to its
+          <span class="hm-code">config</span> slot, the values below are applied in <span class="hm-code">Awake()</span>
+          and live in the Editor via <span class="hm-code">OnValidate</span>.
+        </p>
+        <p v-else>
+          Sovrascrive i campi Inspector di <span class="hm-code">LauncherHUDController</span>. Quando assegnato al suo
+          slot <span class="hm-code">config</span>, i valori sottostanti vengono applicati in <span class="hm-code">Awake()</span>
+          e in tempo reale nell'Editor tramite <span class="hm-code">OnValidate</span>.
+        </p>
+        <table class="hm-field-table">
+          <thead>
+            <tr v-if="locale === 'en'"><th>Group</th><th>Parameters</th></tr>
+            <tr v-else><th>Gruppo</th><th>Parametri</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="hm-field-name">Lock-On &mdash; Bracket</span></td>
+              <td><span class="hm-code">lockBlinkIntervalMs</span>, <span class="hm-code">lockBracketStartSize</span>, <span class="hm-code">lockBracketLockedSize</span>, <span class="hm-code">lockBracketRotation</span>, <span class="hm-code">lockCornerLength</span>, <span class="hm-code">lockLineThickness</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Lock-On &mdash; Colors</span></td>
+              <td><span class="hm-code">lockAcquiringColor</span>, <span class="hm-code">lockLockedColor</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Lock-On &mdash; Status Text</span></td>
+              <td><span class="hm-code">lockStatusFontSize</span>, <span class="hm-code">lockStatusOffset</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Lock-On &mdash; Distance Text</span></td>
+              <td><span class="hm-code">lockDistanceFontSize</span>, <span class="hm-code">lockDistanceOffset</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Lock-On &mdash; Progress Bar</span></td>
+              <td><span class="hm-code">lockBarThickness</span>, <span class="hm-code">lockBarOffset</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Crosshair</span></td>
+              <td><span class="hm-code">crosshairSize</span>, <span class="hm-code">crosshairCornerSize</span>, <span class="hm-code">crosshairCornerAngle</span>, <span class="hm-code">crosshairThickness</span>, <span class="hm-code">crosshairRotation</span>, <span class="hm-code">crosshairColor</span>, <span class="hm-code">crosshairCenterDot</span>, <span class="hm-code">crosshairCenterDotSize</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Ammo</span></td>
+              <td><span class="hm-code">lowAmmoWarningThreshold</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">UI Effects</span></td>
+              <td><span class="hm-code">slotFiredFlashDurationMs</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Scale &amp; Resolution</span></td>
+              <td><span class="hm-code">hudScale</span>, <span class="hm-code">referenceResolution</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Bottom Strip Position</span></td>
+              <td><span class="hm-code">bottomOffset</span>, <span class="hm-code">sideOffset</span>, <span class="hm-code">panelCenterOffset</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Panel Padding</span></td>
+              <td><span class="hm-code">panelPadding</span></td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Compass</span></td>
+              <td><span class="hm-code">azimuthTopOffset</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- HOW SCRIPTS WERE MODIFIED -->
@@ -164,14 +243,16 @@
       <div class="hm-doc-section-title" v-else>Come Funziona Internamente</div>
       <div class="hm-content-block">
         <p v-if="locale === 'en'">
-          Each of the three core scripts (<span class="hm-code">HomingMissile.cs</span>,
-          <span class="hm-code">MissileLauncher.cs</span>, <span class="hm-code">LauncherController.cs</span>)
-          now has a public <span class="hm-code">config</span> field and a private <span class="hm-code">ApplyConfig()</span> method.
+          Each script that supports a config — <span class="hm-code">HomingMissile.cs</span>,
+          <span class="hm-code">MissileLauncher.cs</span>, <span class="hm-code">LauncherController.cs</span> and
+          <span class="hm-code">LauncherHUDController.cs</span> — has a public <span class="hm-code">config</span> field
+          and a private <span class="hm-code">ApplyConfig()</span> method.
         </p>
         <p v-else>
-          Ognuno dei tre script principali (<span class="hm-code">HomingMissile.cs</span>,
-          <span class="hm-code">MissileLauncher.cs</span>, <span class="hm-code">LauncherController.cs</span>)
-          ora ha un campo pubblico <span class="hm-code">config</span> e un metodo privato <span class="hm-code">ApplyConfig()</span>.
+          Ogni script che supporta un config — <span class="hm-code">HomingMissile.cs</span>,
+          <span class="hm-code">MissileLauncher.cs</span>, <span class="hm-code">LauncherController.cs</span> e
+          <span class="hm-code">LauncherHUDController.cs</span> — ha un campo pubblico <span class="hm-code">config</span>
+          e un metodo privato <span class="hm-code">ApplyConfig()</span>.
         </p>
         <table class="hm-field-table">
           <thead>
@@ -193,6 +274,11 @@
               <td><span class="hm-field-name">LauncherController.cs</span></td>
               <td v-if="locale === 'en'">In <span class="hm-code">Awake()</span>, before applying the initial rotation</td>
               <td v-else>In <span class="hm-code">Awake()</span>, prima di applicare la rotazione iniziale</td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">LauncherHUDController.cs</span></td>
+              <td v-if="locale === 'en'">In <span class="hm-code">Awake()</span> and on every <span class="hm-code">OnValidate</span>, before the HUD layout is applied</td>
+              <td v-else>In <span class="hm-code">Awake()</span> e ad ogni <span class="hm-code">OnValidate</span>, prima che il layout dell'HUD venga applicato</td>
             </tr>
           </tbody>
         </table>

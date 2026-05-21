@@ -34,6 +34,7 @@
                   <ul>
                     <li class="hm-vtree-file">AirDemo.unity</li>
                     <li class="hm-vtree-file">GroundDemo.unity</li>
+                    <li class="hm-vtree-file">GuidedDemo.unity</li>
                   </ul>
                 </li>
                 <li class="hm-vtree-file">Documentation.pdf</li>
@@ -158,6 +159,7 @@
                     </li>
                     <li class="hm-vtree-folder">UI/
                       <ul>
+                        <li class="hm-vtree-file">LauncherHUDConfig.cs</li>
                         <li class="hm-vtree-file">LauncherHUDController.cs</li>
                         <li class="hm-vtree-file">MissileCameraOverlay.cs</li>
                         <li class="hm-vtree-file">MissileCameraOverlayConfig.cs</li>
@@ -168,7 +170,6 @@
                         <li class="hm-vtree-file">ExplosionLightFade.cs</li>
                         <li class="hm-vtree-file">SceneSwitcher.cs</li>
                         <li class="hm-vtree-file">SessionAnimator.cs</li>
-                        <li class="hm-vtree-file">TestTerrainGenerator.cs</li>
                       </ul>
                     </li>
                   </ul>
@@ -255,8 +256,8 @@
           </tr>
           <tr>
             <td><span class="hm-field-name">Demo/</span></td>
-            <td v-if="locale === 'en'">The two playable demo scenes: <span class="hm-code">GroundDemo.unity</span> and <span class="hm-code">AirDemo.unity</span>. Open either scene and press Play to explore the system immediately.</td>
-            <td v-else>Le due scene demo giocabili: <span class="hm-code">GroundDemo.unity</span> e <span class="hm-code">AirDemo.unity</span>. Apri una qualsiasi delle scene e premi Play per esplorare il sistema immediatamente.</td>
+            <td v-if="locale === 'en'">The three playable demo scenes: <span class="hm-code">GroundDemo.unity</span>, <span class="hm-code">AirDemo.unity</span> and <span class="hm-code">GuidedDemo.unity</span>. Open any scene and press Play to explore the system immediately.</td>
+            <td v-else>Le tre scene demo giocabili: <span class="hm-code">GroundDemo.unity</span>, <span class="hm-code">AirDemo.unity</span> e <span class="hm-code">GuidedDemo.unity</span>. Apri una qualsiasi delle scene e premi Play per esplorare il sistema immediatamente.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Input/</span></td>
@@ -300,13 +301,13 @@
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/UI/</span></td>
-            <td v-if="locale === 'en'">The HUD controller (subscribes to launcher events and updates the UI Toolkit document each frame) and the missile-cam retro overlay (<span class="hm-code">MissileCameraOverlay.cs</span> + <span class="hm-code">MissileCameraOverlayConfig.cs</span>) used when piloting a guided missile.</td>
-            <td v-else>Il controllore dell'HUD (si iscrive agli eventi del lanciatore e aggiorna il documento UI Toolkit ad ogni frame) e l'overlay retrò della missile-cam (<span class="hm-code">MissileCameraOverlay.cs</span> + <span class="hm-code">MissileCameraOverlayConfig.cs</span>) usato durante il pilotaggio di un missile guidato.</td>
+            <td v-if="locale === 'en'">The HUD controller (subscribes to launcher events and updates the UI Toolkit document each frame), its optional ScriptableObject config (<span class="hm-code">LauncherHUDConfig.cs</span>), and the missile-cam retro overlay (<span class="hm-code">MissileCameraOverlay.cs</span> + <span class="hm-code">MissileCameraOverlayConfig.cs</span>) used when piloting a guided missile.</td>
+            <td v-else>Il controllore dell'HUD (si iscrive agli eventi del lanciatore e aggiorna il documento UI Toolkit ad ogni frame), il suo config ScriptableObject opzionale (<span class="hm-code">LauncherHUDConfig.cs</span>) e l'overlay retrò della missile-cam (<span class="hm-code">MissileCameraOverlay.cs</span> + <span class="hm-code">MissileCameraOverlayConfig.cs</span>) usato durante il pilotaggio di un missile guidato.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Scripts/Utility/</span></td>
-            <td v-if="locale === 'en'">Helper scripts: explosion light fade, scene switching, animator auto-play and <span class="hm-code">TestTerrainGenerator.cs</span> (procedural terrain used by the demo scenes).</td>
-            <td v-else>Script di utilità: dissolvenza luce esplosione, cambio scena, auto-play dell'animator e <span class="hm-code">TestTerrainGenerator.cs</span> (terreno procedurale usato dalle scene demo).</td>
+            <td v-if="locale === 'en'">Helper scripts: explosion light fade, scene switching and animator auto-play.</td>
+            <td v-else>Script di utilità: dissolvenza luce esplosione, cambio scena e auto-play dell'animator.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">Shaders/</span></td>

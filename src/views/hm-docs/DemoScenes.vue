@@ -2,13 +2,13 @@
   <div class="hm-doc-page">
     <h1 class="hm-doc-title"><span>15</span><template v-if="locale === 'en'">DEMO SCENES</template><template v-else>SCENE DEMO</template></h1>
     <p class="hm-text-lead" v-if="locale === 'en'">
-      Two demo scenes are included in the <span class="hm-code">Demo/</span> folder.
-      Both are fully configured — open either scene and press Play to immediately
+      Three demo scenes are included in the <span class="hm-code">Demo/</span> folder.
+      All three are fully configured — open any scene and press Play to immediately
       explore the complete system with no additional setup.
     </p>
     <p class="hm-text-lead" v-else>
-      Due scene demo sono incluse nella cartella <span class="hm-code">Demo/</span>.
-      Entrambe sono completamente configurate — apri una qualsiasi delle scene e premi Play
+      Tre scene demo sono incluse nella cartella <span class="hm-code">Demo/</span>.
+      Tutte e tre sono completamente configurate — apri una qualsiasi delle scene e premi Play
       per esplorare immediatamente il sistema completo senza alcuna configurazione aggiuntiva.
     </p>
 
@@ -146,9 +146,72 @@
       </div>
     </div>
 
+    <div class="hm-doc-section">
+      <div class="hm-doc-section-title">GuidedDemo.unity</div>
+      <div class="hm-content-block">
+        <p>
+          <strong style="color: #E1EBF2;">Path:</strong> <span class="hm-code">Assets/HomingMissile/Demo/GuidedDemo.unity</span>
+        </p>
+        <p v-if="locale === 'en'">
+          The showcase scene for the first-person guided-missile mode. The launcher in this scene
+          has player-guided mode enabled, so on launch control switches from the turret to the
+          missile itself — you pilot it toward the target through the onboard camera with the
+          retro military overlay, and control returns to the launcher on detonation.
+        </p>
+        <p v-else>
+          La scena dimostrativa per la modalità missile guidato in prima persona. Il lanciatore in
+          questa scena ha la modalità guidata dal giocatore abilitata, quindi al lancio il controllo
+          passa dalla torretta al missile stesso — lo piloti verso il bersaglio attraverso la camera
+          onboard con l'overlay militare retrò, e il controllo torna al lanciatore alla detonazione.
+        </p>
+        <p v-if="locale === 'en'">
+          Use this scene to tune the guided-missile steering parameters
+          (<span class="hm-code">PlayerGuidedMissileConfig</span>) and the missile-cam overlay look
+          (<span class="hm-code">MissileCameraOverlayConfig</span>).
+        </p>
+        <p v-else>
+          Usa questa scena per regolare i parametri di steering del missile guidato
+          (<span class="hm-code">PlayerGuidedMissileConfig</span>) e l'aspetto dell'overlay della missile-cam
+          (<span class="hm-code">MissileCameraOverlayConfig</span>).
+        </p>
+        <table class="hm-field-table" style="margin-top: 0.5rem;" v-if="locale === 'en'">
+          <tbody>
+            <tr>
+              <td style="width: 140px;"><span class="hm-field-name">Controls</span></td>
+              <td>Mouse — aim turret / steer missile after launch &nbsp;|&nbsp; Left click — fire &nbsp;|&nbsp; 1 — switch scene</td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Targets</span></td>
+              <td>Targets positioned for guiding the missile in first person</td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Use case</span></td>
+              <td>Player-guided missile steering, missile-cam overlay tuning</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="hm-field-table" style="margin-top: 0.5rem;" v-else>
+          <tbody>
+            <tr>
+              <td style="width: 140px;"><span class="hm-field-name">Controlli</span></td>
+              <td>Mouse — mira torretta / pilota il missile dopo il lancio &nbsp;|&nbsp; Click sinistro — spara &nbsp;|&nbsp; 1 — cambia scena</td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Bersagli</span></td>
+              <td>Bersagli posizionati per guidare il missile in prima persona</td>
+            </tr>
+            <tr>
+              <td><span class="hm-field-name">Caso d'uso</span></td>
+              <td>Steering del missile guidato dal giocatore, regolazione overlay missile-cam</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
       <strong>Environment Lighting</strong>
-      Both demo scenes ship with a custom dark skybox (<span class="hm-code">skybox/Skybox_Dark.mat</span> —
+      All three demo scenes ship with a custom dark skybox (<span class="hm-code">skybox/Skybox_Dark.mat</span> —
       a Skybox/Procedural material with low exposure and a deep-blue tint) and a reduced ambient
       intensity of <span class="hm-code">0.8</span>. This keeps the cyan military HUD readable and gives
       the missile trails and explosions more contrast. Swap the scene's Skybox Material under
@@ -156,7 +219,7 @@
     </div>
     <div class="hm-alert hm-alert-info" v-else>
       <strong>Illuminazione Ambiente</strong>
-      Entrambe le scene demo includono uno skybox scuro personalizzato (<span class="hm-code">skybox/Skybox_Dark.mat</span> —
+      Tutte e tre le scene demo includono uno skybox scuro personalizzato (<span class="hm-code">skybox/Skybox_Dark.mat</span> —
       un materiale Skybox/Procedural con esposizione bassa e tinta blu scura) e un'intensità ambientale
       ridotta a <span class="hm-code">0.8</span>. Questo mantiene leggibile l'HUD militare ciano e dà più
       contrasto alle scie dei missili e alle esplosioni. Cambia il Skybox Material della scena in
@@ -164,15 +227,15 @@
     </div>
     <div class="hm-alert hm-alert-info" v-if="locale === 'en'">
       <strong>Scene Switching</strong>
-      Both scenes include the <span class="hm-code">SceneSwitcher</span> component configured with
-      <span class="hm-code">1</span>. Make sure both scenes are added to your
+      All three scenes include the <span class="hm-code">SceneSwitcher</span> component configured with
+      <span class="hm-code">1</span>. Make sure all three scenes are added to your
       <strong>Build Settings</strong> (File &gt; Build Settings &gt; Add Open Scenes) for the
       scene switch to work at runtime.
     </div>
     <div class="hm-alert hm-alert-info" v-else>
       <strong>Cambio Scena</strong>
-      Entrambe le scene includono il componente <span class="hm-code">SceneSwitcher</span> configurato
-      con <span class="hm-code">1</span>. Assicurati che entrambe le scene siano aggiunte alle
+      Tutte e tre le scene includono il componente <span class="hm-code">SceneSwitcher</span> configurato
+      con <span class="hm-code">1</span>. Assicurati che tutte e tre le scene siano aggiunte alle
       <strong>Build Settings</strong> (File &gt; Build Settings &gt; Add Open Scenes) perché il
       cambio scena funzioni a runtime.
     </div>
