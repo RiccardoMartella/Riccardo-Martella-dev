@@ -144,8 +144,43 @@
             <td><span class="hm-field-name">lockDistanceFontSize</span></td>
             <td><span class="hm-field-type">float</span></td>
             <td><span class="hm-field-default">13.0</span></td>
-            <td v-if="locale === 'en'">Font size (px) of the target-distance label shown on the lock-on overlay. Range 6–40.</td>
-            <td v-else>Dimensione del carattere (px) dell'etichetta della distanza del bersaglio mostrata sull'overlay di aggancio. Range 6–40.</td>
+            <td v-if="locale === 'en'">Font size (px) of the target-distance readout shown on the lock-on overlay. Range 6–40.</td>
+            <td v-else>Dimensione del carattere (px) della lettura della distanza del bersaglio mostrata sull'overlay di aggancio. Range 6–40.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockStatusFontSize</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">8.0</span></td>
+            <td v-if="locale === 'en'">Font size (px) of the LOCKED / ACQUIRING status text on the lock-on overlay. Range 6–40.</td>
+            <td v-else>Dimensione del carattere (px) del testo di stato LOCKED / ACQUIRING sull'overlay di aggancio. Range 6–40.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockStatusOffset</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">20.0</span></td>
+            <td v-if="locale === 'en'">Vertical gap (px) between the LOCKED / ACQUIRING text and the top edge of the lock bracket. Range 0–80.</td>
+            <td v-else>Distanza verticale (px) tra il testo LOCKED / ACQUIRING e il bordo superiore del bracket di aggancio. Range 0–80.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockDistanceOffset</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">36.0</span></td>
+            <td v-if="locale === 'en'">Vertical gap (px) between the target-distance readout and the bottom edge of the lock bracket. Range 0–100.</td>
+            <td v-else>Distanza verticale (px) tra la lettura della distanza del bersaglio e il bordo inferiore del bracket di aggancio. Range 0–100.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockBarThickness</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">3.0</span></td>
+            <td v-if="locale === 'en'">Thickness (px) of the lock-on progress bar — applied to both the track and the fill. Range 1–20.</td>
+            <td v-else>Spessore (px) della barra di avanzamento dell'aggancio — applicato sia alla traccia che al riempimento. Range 1–20.</td>
+          </tr>
+          <tr>
+            <td><span class="hm-field-name">lockBarOffset</span></td>
+            <td><span class="hm-field-type">float</span></td>
+            <td><span class="hm-field-default">7.0</span></td>
+            <td v-if="locale === 'en'">Vertical gap (px) between the top edge of the lock-on progress bar and the bottom edge of the lock bracket. The gap stays constant regardless of <span class="hm-code">lockBarThickness</span>. Range 0–60.</td>
+            <td v-else>Distanza verticale (px) tra il bordo superiore della barra di avanzamento dell'aggancio e il bordo inferiore del bracket di aggancio. La distanza resta costante indipendentemente da <span class="hm-code">lockBarThickness</span>. Range 0–60.</td>
           </tr>
           <tr>
             <td><span class="hm-field-name">lowAmmoWarningThreshold</span></td>
