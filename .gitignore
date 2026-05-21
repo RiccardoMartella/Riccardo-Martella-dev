@@ -28,5 +28,8 @@ coverage
 *.sw?
 .claude/
 *.tsbuildinfo
+# Internal notes — keep out of the repo
 CLAUDE.md
 HomingMissile_AssetDocumentation.txt
+error
+struttura homing
