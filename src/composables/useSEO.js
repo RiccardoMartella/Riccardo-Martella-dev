@@ -229,14 +229,14 @@ export const seoConfigs = {
   // Free key page — kept out of search engines on purpose (shared by direct link only)
   hmFreeKey: {
     en: {
-      title: 'Free Key — Homing Missile Unity Asset',
+      title: 'Free Key for Homing Missile Unity Asset',
       description: 'Request a free key for the Homing Missile Unity asset.',
       keywords: 'Homing Missile, free key, Unity asset',
       url: 'https://riccardomartella-dev.com/homing-missile/free-key',
       robots: 'noindex, nofollow'
     },
     it: {
-      title: 'Chiave Gratuita — Asset Unity Homing Missile',
+      title: 'Chiave Gratuita per Asset Unity Homing Missile',
       description: 'Richiedi una chiave gratuita per l\'asset Unity Homing Missile.',
       keywords: 'Homing Missile, chiave gratuita, asset Unity',
       url: 'https://riccardomartella-dev.com/it/homing-missile/free-key',

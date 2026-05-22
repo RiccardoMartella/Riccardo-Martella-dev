@@ -1155,10 +1155,10 @@
   },
   "hmFreeKey": {
     "badge": "Free Key",
-    "title": "Free Key — Homing Missile",
-    "lead": "A free copy of my Homing Missile Unity asset — for you to try, with no strings attached.",
+    "title": "Free Key for Homing Missile",
+    "lead": "A free copy of my Homing Missile Unity asset for you to try, with no strings attached.",
     "reviewTitle": "Your honest opinion matters to me",
-    "reviewText": "I care a lot about what you think. If you try Homing Missile and you enjoy it, I'd be genuinely happy if you left an honest review on the Unity Asset Store — in your own words, whether it's positive or critical. Real, sincere feedback is what helps me make the asset better and reach more developers. There's no obligation: take the key, try it, and review it only if you feel like it.",
+    "reviewText": "I care a lot about what you think. If you try Homing Missile and you enjoy it, I'd be genuinely happy if you left an honest review on the Unity Asset Store, in your own words, whether it's positive or critical. Real, sincere feedback is what helps me make the asset better and reach more developers. There's no obligation: take the key, try it, and review it only if you feel like it.",
     "howTitle": "How to get your free key",
     "step1Title": "Message me on Discord",
     "step1Text": "If you're interested, contact me directly here:",
@@ -1171,7 +1171,7 @@
     "step3Title": "Get the asset and try it",
     "step3Text": "I'll send you your personal key as soon as I can. Redeem it on the Unity Asset Store, import the asset and enjoy it. If you like it, an honest review would mean the world to me.",
     "noteTitle": "Good to know:",
-    "noteText": "Free keys are limited and handed out personally, so it may take a little time before I reply. Thank you for your patience — and for giving Homing Missile a try!",
+    "noteText": "Free keys are limited and handed out personally, so it may take a little time before I reply. Thank you for your patience and for giving Homing Missile a try!",
     "backHome": "Back to Homing Missile"
   }
 }
