@@ -86,6 +86,9 @@ function generateRoutes() {
   routes.push({ path: '/it/homing-missile/cookie-policy', name: 'hm-cookie-policy-it', component: () => import('@/views/HMCookiePolicy.vue'), meta: { locale: 'it' } })
   routes.push({ path: '/homing-missile/versions', name: 'hm-versions', component: () => import('@/views/HMVersions.vue'), meta: { locale: 'en' } })
   routes.push({ path: '/it/homing-missile/versions', name: 'hm-versions-it', component: () => import('@/views/HMVersions.vue'), meta: { locale: 'it' } })
+  // Free key page — non-indexed (noindex), shared by direct link only, not in sitemap
+  routes.push({ path: '/homing-missile/free-key', name: 'hm-free-key', component: () => import('@/views/HMFreeKey.vue'), meta: { locale: 'en' } })
+  routes.push({ path: '/it/homing-missile/free-key', name: 'hm-free-key-it', component: () => import('@/views/HMFreeKey.vue'), meta: { locale: 'it' } })
 
   // Shared pages (contacts, pricing, etc.)
   for (const page of pages) {

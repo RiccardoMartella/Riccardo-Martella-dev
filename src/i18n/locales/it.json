@@ -1152,5 +1152,26 @@
     "moreInfo": "Hai bisogno di pi\u00f9 informazioni prima di decidere?",
     "contactMe": "Contattami",
     "readDocs": "Leggi la Documentazione"
+  },
+  "hmFreeKey": {
+    "badge": "Chiave Gratuita",
+    "title": "Chiave Gratuita — Homing Missile",
+    "lead": "Una copia gratuita del mio asset Unity Homing Missile — da provare, senza alcun obbligo.",
+    "reviewTitle": "La tua opinione onesta conta per me",
+    "reviewText": "Ci tengo molto a quello che pensi. Se provi Homing Missile e ti piace, sarei davvero contento se lasciassi una recensione onesta sull'Unity Asset Store — con parole tue, positiva o critica che sia. Un feedback vero e sincero è ciò che mi aiuta a migliorare l'asset e a raggiungere più sviluppatori. Nessun obbligo: prendi la chiave, provala, e recensiscila solo se ne hai voglia.",
+    "howTitle": "Come ottenere la tua chiave gratuita",
+    "step1Title": "Scrivimi su Discord",
+    "step1Text": "Se sei interessato, contattami direttamente qui:",
+    "step1Btn": "Scrivimi su Discord",
+    "step2Title": "Chiedi la chiave gratuita",
+    "step2Text": "Nel messaggio, scrivi semplicemente:",
+    "step2Message": "Ciao! Vorrei usufruire della chiave gratuita per Homing Missile.",
+    "copy": "Copia",
+    "copied": "Copiato!",
+    "step3Title": "Ottieni l'asset e provalo",
+    "step3Text": "Ti invierò la tua chiave personale appena possibile. Riscattala sull'Unity Asset Store, importa l'asset e divertiti. Se ti piace, una recensione onesta significherebbe moltissimo per me.",
+    "noteTitle": "Buono a sapersi:",
+    "noteText": "Le chiavi gratuite sono limitate e vengono consegnate personalmente, quindi potrebbe volerci un po' prima che ti risponda. Grazie per la pazienza — e per aver dato una possibilità a Homing Missile!",
+    "backHome": "Torna a Homing Missile"
   }
 }
