@@ -14,7 +14,7 @@
               <h2 class="hm-product-name">Homing Missile</h2>
               <div class="hm-price-container">
                 <span class="hm-currency">$</span>
-                <span class="hm-price">27</span>
+                <span class="hm-price">33</span>
                 <span class="hm-price-decimal">.99</span>
                 <span class="hm-period">{{ $t('hmPricing.period') }}</span>
               </div>

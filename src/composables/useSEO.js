@@ -100,14 +100,14 @@ export const seoConfigs = {
 
   pricing: {
     en: {
-      title: 'Assembly Station Pricing - Unity Asset for 3D Assembly Documentation - €29.44',
-      description: 'Assembly Station Unity asset available for €29.44 one-time purchase. Create interactive 3D assembly guides and documentation. Professional tool for developers and educators.',
+      title: 'Assembly Station Pricing - Unity Asset for 3D Assembly Documentation - $9.37',
+      description: 'Assembly Station Unity asset available for $9.37 one-time purchase. Create interactive 3D assembly guides and documentation. Professional tool for developers and educators.',
       keywords: 'Assembly Station price, Unity asset price, 3D assembly tool, Unity asset store, professional Unity tools',
       url: 'https://riccardomartella-dev.com/pricing'
     },
     it: {
-      title: 'Prezzi Assembly Station - Asset Unity per Documentazione Assemblaggio 3D - €29.44',
-      description: 'Asset Unity Assembly Station disponibile per €29.44 acquisto una tantum. Crea guide di assemblaggio 3D interattive e documentazione. Strumento professionale per sviluppatori ed educatori.',
+      title: 'Prezzi Assembly Station - Asset Unity per Documentazione Assemblaggio 3D - $9.37',
+      description: 'Asset Unity Assembly Station disponibile per $9.37 acquisto una tantum. Crea guide di assemblaggio 3D interattive e documentazione. Strumento professionale per sviluppatori ed educatori.',
       keywords: 'Prezzo Assembly Station, prezzo asset Unity, strumento assemblaggio 3D, Unity asset store, strumenti Unity professionali',
       url: 'https://riccardomartella-dev.com/it/pricing',
       locale: 'it_IT'
@@ -180,14 +180,14 @@ export const seoConfigs = {
 
   hmPricing: {
     en: {
-      title: 'Homing Missile Pricing - Unity Asset for Missile Systems - $27.99',
-      description: 'Homing Missile Unity asset available for $27.99 one-time purchase. Complete missile system with launcher, HUD, demo scenes, and full documentation.',
+      title: 'Homing Missile Pricing - Unity Asset for Missile Systems - $33.99',
+      description: 'Homing Missile Unity asset available for $33.99 one-time purchase. Complete missile system with launcher, HUD, demo scenes, and full documentation.',
       keywords: 'Homing Missile price, Unity asset price, missile system tool, Unity asset store',
       url: 'https://riccardomartella-dev.com/homing-missile/pricing'
     },
     it: {
-      title: 'Prezzi Homing Missile - Asset Unity per Sistemi di Missili - $27.99',
-      description: 'Asset Unity Homing Missile disponibile a $27.99 acquisto una tantum. Sistema completo di missili con lanciatore, HUD, scene demo e documentazione completa.',
+      title: 'Prezzi Homing Missile - Asset Unity per Sistemi di Missili - $33.99',
+      description: 'Asset Unity Homing Missile disponibile a $33.99 acquisto una tantum. Sistema completo di missili con lanciatore, HUD, scene demo e documentazione completa.',
       keywords: 'Prezzo Homing Missile, prezzo asset Unity, strumento sistema missili, Unity asset store',
       url: 'https://riccardomartella-dev.com/it/homing-missile/pricing',
       locale: 'it_IT'
