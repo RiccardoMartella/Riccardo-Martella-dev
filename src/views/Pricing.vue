@@ -202,7 +202,8 @@ export default {
 }
 
 .price-decimal {
-  font-size: 0.4em;
+  font-size: 2.6rem;
+  font-weight: 700;
   position: relative;
   top: -1.5rem;
 }
