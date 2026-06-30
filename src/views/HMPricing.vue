@@ -12,12 +12,15 @@
           <div class="hm-pricing-card mb-5">
             <div class="hm-pricing-card-header text-center py-4">
               <h2 class="hm-product-name">Homing Missile</h2>
+              <div class="hm-sale-badge">⚡ MEGA SALE — Save 76%!</div>
+              <div class="hm-price-original">$33.99</div>
               <div class="hm-price-container">
                 <span class="hm-currency">$</span>
-                <span class="hm-price">33</span>
+                <span class="hm-price">7</span>
                 <span class="hm-price-decimal">.99</span>
                 <span class="hm-period">{{ $t('hmPricing.period') }}</span>
               </div>
+              <div class="hm-sale-note">{{ $t('hmPricing.saleNote') }}</div>
             </div>
             <div class="hm-pricing-card-body p-4">
               <div class="hm-package-features">
@@ -188,9 +191,41 @@ export default {
   margin-bottom: 0.5rem;
 }
 
+.hm-sale-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff5e3a 0%, #ff2d55 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 16px rgba(255, 45, 85, 0.35);
+  text-transform: uppercase;
+}
+
+.hm-price-original {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(225, 235, 242, 0.45);
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 45, 85, 0.7);
+  margin-bottom: -0.25rem;
+}
+
 .hm-price-container {
   font-size: 1.25rem;
   color: #E1EBF2;
+}
+
+.hm-sale-note {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff5e3a;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .hm-currency {
