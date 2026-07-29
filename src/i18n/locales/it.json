@@ -155,6 +155,8 @@
     "emailPlaceholder": "tua.email{'@'}esempio.com",
     "formPrivacy": "",
     "submitBtn": "Invia Segnalazione",
+    "fileTooLarge": "\"{name}\" è troppo grande. La dimensione massima è 8 MB per file.",
+    "fileTypeInvalid": "\"{name}\" non è consentito. Puoi allegare solo immagini e video.",
     "submitting": "Invio in corso...",
     "submitSuccess": "Grazie! La tua segnalazione è stata inviata con successo. Ti risponderò presto.",
     "submitError": "Qualcosa è andato storto durante l'invio. Riprova, oppure scrivimi direttamente a riccardomartella77{'@'}gmail.com.",

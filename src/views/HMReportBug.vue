@@ -141,10 +141,14 @@
               <div class="mb-3">
                 <label class="form-label hm-text">{{ $t('reportBug.screenshotsLabel') }}</label>
                 <div class="input-group">
-                  <input type="file" class="form-control hm-input" id="attachments" name="attachments" multiple>
+                  <input type="file" class="form-control hm-input" id="attachments" name="attachments" multiple
+                    accept="image/*,video/*" @change="validateFiles">
                   <label class="input-group-text hm-input-addon" for="attachments">{{ $t('reportBug.upload') }}</label>
                 </div>
                 <div class="form-text hm-muted-text">{{ $t('reportBug.screenshotsHelp') }}</div>
+                <div v-if="fileError" class="hm-alert-secondary mt-2">
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i>{{ fileError }}
+                </div>
               </div>
 
               <div class="mb-3">
@@ -199,7 +203,7 @@ export default {
     return { localePath, locale }
   },
   data() {
-    return { openFaq: -1, submitting: false, submitted: false, submitError: false }
+    return { openFaq: -1, submitting: false, submitted: false, submitError: false, fileError: '' }
   },
   computed: {
     formName() {
@@ -209,6 +213,25 @@ export default {
   methods: {
     toggleFaq(i) {
       this.openFaq = this.openFaq === i ? -1 : i
+    },
+    validateFiles(e) {
+      this.fileError = ''
+      const maxBytes = 8 * 1024 * 1024 // 8 MB per file
+      const allowedExt = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'bmp', 'mp4', 'webm', 'mov', 'avi', 'mkv']
+      for (const file of e.target.files) {
+        const ext = file.name.split('.').pop().toLowerCase()
+        const typeOk = file.type.startsWith('image/') || file.type.startsWith('video/') || allowedExt.includes(ext)
+        if (!typeOk) {
+          this.fileError = this.$t('reportBug.fileTypeInvalid', { name: file.name })
+          e.target.value = ''
+          return
+        }
+        if (file.size > maxBytes) {
+          this.fileError = this.$t('reportBug.fileTooLarge', { name: file.name })
+          e.target.value = ''
+          return
+        }
+      }
     },
     async handleSubmit() {
       this.submitting = true

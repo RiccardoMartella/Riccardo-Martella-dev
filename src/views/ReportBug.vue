@@ -161,10 +161,14 @@
                 <div class="mb-3">
                   <label class="form-label">{{ $t('reportBug.screenshotsLabel') }}</label>
                   <div class="input-group">
-                    <input type="file" class="form-control" id="attachments" name="attachments" multiple>
+                    <input type="file" class="form-control" id="attachments" name="attachments" multiple
+                      accept="image/*,video/*" @change="validateFiles">
                     <label class="input-group-text" for="attachments">{{ $t('reportBug.upload') }}</label>
                   </div>
                   <div class="form-text">{{ $t('reportBug.screenshotsHelp') }}</div>
+                  <div v-if="fileError" class="alert alert-danger mt-2">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>{{ fileError }}
+                  </div>
                 </div>
 
                 <div class="mb-3">
@@ -253,7 +257,7 @@ export default {
     return { localePath, locale }
   },
   data() {
-    return { submitting: false, submitted: false, submitError: false }
+    return { submitting: false, submitted: false, submitError: false, fileError: '' }
   },
   computed: {
     isHM() {
@@ -265,6 +269,25 @@ export default {
     }
   },
   methods: {
+    validateFiles(e) {
+      this.fileError = ''
+      const maxBytes = 8 * 1024 * 1024 // 8 MB per file
+      const allowedExt = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'bmp', 'mp4', 'webm', 'mov', 'avi', 'mkv']
+      for (const file of e.target.files) {
+        const ext = file.name.split('.').pop().toLowerCase()
+        const typeOk = file.type.startsWith('image/') || file.type.startsWith('video/') || allowedExt.includes(ext)
+        if (!typeOk) {
+          this.fileError = this.$t('reportBug.fileTypeInvalid', { name: file.name })
+          e.target.value = ''
+          return
+        }
+        if (file.size > maxBytes) {
+          this.fileError = this.$t('reportBug.fileTooLarge', { name: file.name })
+          e.target.value = ''
+          return
+        }
+      }
+    },
     async handleSubmit() {
       this.submitting = true
       this.submitted = false
