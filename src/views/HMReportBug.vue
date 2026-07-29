@@ -91,8 +91,11 @@
               <p class="hm-muted-text">{{ $t('reportBug.formSubtitle') }}</p>
             </div>
 
-            <form :name="formName" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form ref="bugForm" :name="formName" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" @submit.prevent="handleSubmit">
               <input type="hidden" name="form-name" :value="formName" />
+              <p class="d-none">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
               <div class="mb-3">
                 <label for="bugTitle" class="form-label hm-text">{{ $t('reportBug.bugTitleLabel') }}</label>
                 <input type="text" class="form-control hm-input" id="bugTitle" name="bugTitle" :placeholder="$t('reportBug.bugTitlePlaceholder')">
@@ -150,7 +153,17 @@
               </div>
               <div><p class="form-text hm-muted-text">{{ $t('reportBug.formPrivacy') }}</p></div>
 
-              <button type="submit" class="hm-btn-primary w-100 py-2 mt-3 justify-content-center">{{ $t('reportBug.submitBtn') }}</button>
+              <button type="submit" class="hm-btn-primary w-100 py-2 mt-3 justify-content-center" :disabled="submitting">
+                <span v-if="submitting" class="spinner-border spinner-border-sm me-2" role="status"></span>
+                {{ submitting ? $t('reportBug.submitting') : $t('reportBug.submitBtn') }}
+              </button>
+
+              <div v-if="submitted" class="hm-alert-info mt-3">
+                <i class="bi bi-check-circle-fill me-2"></i>{{ $t('reportBug.submitSuccess') }}
+              </div>
+              <div v-if="submitError" class="hm-alert-secondary mt-3">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>{{ $t('reportBug.submitError') }}
+              </div>
             </form>
           </div>
 
@@ -186,7 +199,7 @@ export default {
     return { localePath, locale }
   },
   data() {
-    return { openFaq: -1 }
+    return { openFaq: -1, submitting: false, submitted: false, submitError: false }
   },
   computed: {
     formName() {
@@ -196,6 +209,23 @@ export default {
   methods: {
     toggleFaq(i) {
       this.openFaq = this.openFaq === i ? -1 : i
+    },
+    async handleSubmit() {
+      this.submitting = true
+      this.submitted = false
+      this.submitError = false
+      try {
+        const formData = new FormData(this.$refs.bugForm)
+        // Let the browser set the multipart boundary; do NOT set Content-Type manually.
+        const response = await fetch('/', { method: 'POST', body: formData })
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+        this.submitted = true
+        this.$refs.bugForm.reset()
+      } catch (e) {
+        this.submitError = true
+      } finally {
+        this.submitting = false
+      }
     }
   },
   mounted() {

@@ -111,8 +111,11 @@
                 </p>
               </div>
 
-              <form :name="formName" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <form ref="bugForm" :name="formName" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" @submit.prevent="handleSubmit">
                 <input type="hidden" name="form-name" :value="formName" />
+                <p class="d-none">
+                  <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
                 <div class="mb-3">
                   <label for="bugTitle" class="form-label">{{ $t('reportBug.bugTitleLabel') }}</label>
                   <input type="text" class="form-control" id="bugTitle" name="bugTitle" :placeholder="$t('reportBug.bugTitlePlaceholder')">
@@ -170,7 +173,17 @@
                 </div>
                 <div><p class="form-text">{{ $t('reportBug.formPrivacy') }}</p></div>
 
-                <button type="submit" class="btn btn-primary w-100 py-2 mt-3">{{ $t('reportBug.submitBtn') }}</button>
+                <button type="submit" class="btn btn-primary w-100 py-2 mt-3" :disabled="submitting">
+                  <span v-if="submitting" class="spinner-border spinner-border-sm me-2" role="status"></span>
+                  {{ submitting ? $t('reportBug.submitting') : $t('reportBug.submitBtn') }}
+                </button>
+
+                <div v-if="submitted" class="alert alert-success mt-3">
+                  <i class="bi bi-check-circle-fill me-2"></i>{{ $t('reportBug.submitSuccess') }}
+                </div>
+                <div v-if="submitError" class="alert alert-danger mt-3">
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i>{{ $t('reportBug.submitError') }}
+                </div>
               </form>
             </div>
           </div>
@@ -239,6 +252,9 @@ export default {
     const { localePath } = useLocalePath()
     return { localePath, locale }
   },
+  data() {
+    return { submitting: false, submitted: false, submitError: false }
+  },
   computed: {
     isHM() {
       return this.$route.path.includes('homing-missile')
@@ -246,6 +262,25 @@ export default {
     formName() {
       const prefix = this.isHM ? 'hm-' : ''
       return this.locale === 'it' ? `${prefix}reportbugit` : `${prefix}reportbugen`
+    }
+  },
+  methods: {
+    async handleSubmit() {
+      this.submitting = true
+      this.submitted = false
+      this.submitError = false
+      try {
+        const formData = new FormData(this.$refs.bugForm)
+        // Let the browser set the multipart boundary; do NOT set Content-Type manually.
+        const response = await fetch('/', { method: 'POST', body: formData })
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+        this.submitted = true
+        this.$refs.bugForm.reset()
+      } catch (e) {
+        this.submitError = true
+      } finally {
+        this.submitting = false
+      }
     }
   },
   mounted() {
